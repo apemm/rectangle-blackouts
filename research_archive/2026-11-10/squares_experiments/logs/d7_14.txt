@@ -1,0 +1,1 @@
+{'n': 7, 'k': 14, 'rectangles': 640, 'clauses': 22534, 'solver': 'cadical195', 'cube': None, 'seconds': 1.62, 'status': 'SAT', 'size': 14, 'verified': True}

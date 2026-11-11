@@ -1,0 +1,1 @@
+{"n": 6, "k": 13, "rectangles": 313, "clauses": 27777, "solver": "cadical195", "window_bounds": true, "extra_bounds": null, "cube": null, "seconds": 5.24, "status": "UNSAT"}

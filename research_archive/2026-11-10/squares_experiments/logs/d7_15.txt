@@ -1,0 +1,1 @@
+{'n': 7, 'k': 15, 'rectangles': 640, 'clauses': 22534, 'solver': 'cadical195', 'cube': None, 'seconds': 280.72, 'status': 'UNSAT'}

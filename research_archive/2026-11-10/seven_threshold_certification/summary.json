@@ -1,0 +1,573 @@
+{
+ "height_7_equality": {
+  "12": {
+   "cadical195": {
+    "unsat_classes": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     15,
+     16,
+     17,
+     19,
+     20,
+     25
+    ],
+    "other": [],
+    "seconds": 16.4
+   },
+   "glucose4": {
+    "unsat_classes": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     15,
+     16,
+     17,
+     19,
+     20,
+     25
+    ],
+    "other": [],
+    "seconds": 12.4
+   },
+   "both": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    15,
+    16,
+    17,
+    19,
+    20,
+    25
+   ],
+   "missing_any": []
+  },
+  "13": {
+   "cadical195": {
+    "unsat_classes": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     15,
+     16,
+     17,
+     19,
+     20,
+     25
+    ],
+    "other": [],
+    "seconds": 45.3
+   },
+   "glucose4": {
+    "unsat_classes": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     15,
+     16,
+     17,
+     19,
+     20,
+     25
+    ],
+    "other": [],
+    "seconds": 36.1
+   },
+   "both": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    15,
+    16,
+    17,
+    19,
+    20,
+    25
+   ],
+   "missing_any": []
+  },
+  "14": {
+   "cadical195": {
+    "unsat_classes": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     15,
+     16,
+     17,
+     19,
+     20,
+     25
+    ],
+    "other": [],
+    "seconds": 113.7
+   },
+   "glucose4": {
+    "unsat_classes": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     15,
+     16,
+     17,
+     19,
+     20,
+     25
+    ],
+    "other": [],
+    "seconds": 91.3
+   },
+   "both": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    15,
+    16,
+    17,
+    19,
+    20,
+    25
+   ],
+   "missing_any": []
+  },
+  "15": {
+   "cadical195": {
+    "unsat_classes": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     15,
+     16,
+     17,
+     19,
+     25
+    ],
+    "other": [],
+    "seconds": 276.5
+   },
+   "glucose4": {
+    "unsat_classes": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     15,
+     16,
+     17,
+     19,
+     20,
+     25
+    ],
+    "other": [],
+    "seconds": 295.6
+   },
+   "both": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    15,
+    16,
+    17,
+    19,
+    25
+   ],
+   "missing_any": []
+  },
+  "16": {
+   "cadical195": {
+    "unsat_classes": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     15,
+     16,
+     17,
+     19
+    ],
+    "other": [],
+    "seconds": 723.9
+   },
+   "glucose4": {
+    "unsat_classes": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     15,
+     16,
+     17,
+     19
+    ],
+    "other": [],
+    "seconds": 532.6
+   },
+   "both": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    15,
+    16,
+    17,
+    19
+   ],
+   "missing_any": [
+    20,
+    25
+   ]
+  },
+  "20": {
+   "cadical195": {
+    "unsat_classes": [
+     0
+    ],
+    "other": [],
+    "seconds": 332.0
+   },
+   "glucose4": {
+    "unsat_classes": [
+     0,
+     1
+    ],
+    "other": [],
+    "seconds": 1268.9
+   },
+   "both": [
+    0
+   ],
+   "missing_any": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    15,
+    16,
+    17,
+    19,
+    20,
+    25
+   ]
+  }
+ },
+ "incidents": [
+  {
+   "event": "nonzero exit",
+   "rc": 124,
+   "m": 20,
+   "part_index": 20,
+   "solver": "cadical195",
+   "limit_seconds": 1200
+  },
+  {
+   "event": "manual abort after about 10 seconds, no result",
+   "m": 20,
+   "part_index": 20,
+   "solver": "glucose4"
+  },
+  {
+   "event": "nonzero exit",
+   "rc": 124,
+   "m": 15,
+   "part_index": 20,
+   "solver": "cadical195",
+   "limit_seconds": 120
+  },
+  {
+   "event": "second-stage loop stopped by the system (low memory) and not restarted; any instance in progress has no result"
+  }
+ ],
+ "window_bounds": {
+  "instances": 188,
+  "unsat": 188,
+  "proof_files_kept": 62,
+  "proof_bytes_kept": 69747416,
+  "proof_bytes_total": 2390281115,
+  "solve_seconds": 585.2
+ },
+ "small_heights": {
+  "struct h=4 m=5": {
+   "cadical195": {
+    "UNSAT": 3
+   },
+   "glucose4": {
+    "UNSAT": 3
+   }
+  },
+  "struct h=4 m=6": {
+   "cadical195": {
+    "UNSAT": 1,
+    "SAT": 2
+   },
+   "glucose4": {
+    "UNSAT": 1,
+    "SAT": 2
+   }
+  },
+  "struct h=5 m=7": {
+   "cadical195": {
+    "UNSAT": 10
+   },
+   "glucose4": {
+    "UNSAT": 10
+   }
+  },
+  "struct h=5 m=8": {
+   "cadical195": {
+    "UNSAT": 9,
+    "SAT": 1
+   },
+   "glucose4": {
+    "UNSAT": 9,
+    "SAT": 1
+   }
+  },
+  "direct h=4 m=5 k=9": {
+   "cadical195": {
+    "UNSAT": 1
+   },
+   "glucose4": {
+    "UNSAT": 1
+   }
+  },
+  "direct h=4 m=6 k=10": {
+   "cadical195": {
+    "SAT": 1
+   },
+   "glucose4": {
+    "SAT": 1
+   }
+  },
+  "direct h=5 m=7 k=13": {
+   "cadical195": {
+    "UNSAT": 1
+   },
+   "glucose4": {
+    "UNSAT": 1
+   }
+  },
+  "direct h=5 m=8 k=14": {
+   "cadical195": {
+    "SAT": 1
+   },
+   "glucose4": {
+    "SAT": 1
+   }
+  },
+  "struct h=6 m=14": {
+   "cadical195": {
+    "UNSAT": 10
+   },
+   "glucose4": {
+    "UNSAT": 10
+   }
+  },
+  "struct h=6 m=15": {
+   "cadical195": {
+    "UNSAT": 9,
+    "SAT": 1
+   },
+   "glucose4": {
+    "UNSAT": 9,
+    "SAT": 1
+   }
+  }
+ },
+ "acceptance": [
+  {
+   "part_index": 12,
+   "word": "27,25,3,36,6,6,47,1,67,16,6,1,12,1,14,1,1,23,34,45,56",
+   "status": "UNSAT"
+  },
+  {
+   "part_index": 12,
+   "word": "23,34,45,56,7,7,47,7,67,7,2,27,12,7,14,2,2,25,5,36,16",
+   "status": "UNSAT"
+  },
+  {
+   "part_index": 12,
+   "word": "16,36,5,25,2,2,14,7,12,27,2,7,67,7,47,7,7,56,45,34,23",
+   "status": "UNSAT"
+  },
+  {
+   "part_index": 12,
+   "word": "56,45,34,23,1,1,14,1,12,1,6,16,67,1,47,6,6,36,3,25,27",
+   "status": "UNSAT"
+  },
+  {
+   "part_index": 20,
+   "word": "27,25,3,36,6,6,47,1,67,16,6,1,12,1,14,1,1,23,34,45,56",
+   "status": "SAT"
+  },
+  {
+   "part_index": 20,
+   "word": "23,34,45,56,7,7,47,7,67,7,2,27,12,7,14,2,2,25,5,36,16",
+   "status": "SAT"
+  },
+  {
+   "part_index": 20,
+   "word": "16,36,5,25,2,2,14,7,12,27,2,7,67,7,47,7,7,56,45,34,23",
+   "status": "SAT"
+  },
+  {
+   "part_index": 20,
+   "word": "56,45,34,23,1,1,14,1,12,1,6,16,67,1,47,6,6,36,3,25,27",
+   "status": "SAT"
+  }
+ ]
+}
