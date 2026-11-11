@@ -1,0 +1,135 @@
+\section{The row bound and the equality structure}\label{sec:graph}
+
+A blackout $S$ is \emph{axis-valid} if distinct axis-aligned rectangles have distinct
+presentations. Recall that the row-column graph $G_S$ joins row $r_j$ to column $c_i$ for
+each black point $(i,j)$.
+
+\begin{lemma}\label{lem:girth}
+If $G_S$ has no cycle of length $4$ or $6$, then $S$ is axis-valid. The converse holds for
+$m\ge3$.
+\end{lemma}
+
+\begin{proof}
+Let $R_1\ne R_2$ be axis-aligned with the same presentation, so that
+$C(R_1)\triangle C(R_2)\subseteq S$. They cannot share opposite corners. Hence their common
+corners lie in one row or in one column, and by symmetry we can assume that they lie in one
+row $a$. With no common corner, $R_1$ is fully black, which gives a cycle of length $4$.
+With 2 common corners $(x,a)$ and $(y,a)$, the other rows $b\ne c$ of $R_1$ and $R_2$ give
+the cycle $r_b\,c_x\,r_c\,c_y$. With just 1 common corner $(x,a)$, write
+$R_1=\{x,y\}\times\{a,b\}$ and $R_2=\{x,z\}\times\{a,c\}$. Then $y\ne z$ and $b\ne c$, and
+the 6 black points give the cycle $r_a\,c_y\,r_b\,c_x\,r_c\,c_z$.
+
+Conversely, let $m\ge3$. A cycle $r_j\,c_i\,r_{j'}\,c_{i'}$ gives the rectangles
+$\{i,w\}\times\{j,j'\}$ and $\{i',w\}\times\{j,j'\}$ for a third column $w$, and both show
+exactly their white corners in column $w$. A cycle $r_a\,c_x\,r_b\,c_y\,r_c\,c_z$ gives the
+rectangles $\{x,y\}\times\{a,b\}$ and $\{y,z\}\times\{a,c\}$. Both are black except possibly
+at $(y,a)$.
+\end{proof}
+
+\begin{theorem}[row bound]\label{thm:rowbound}
+Let $m\ge3$. Every axis-valid blackout of the $h\times m$ grid has at most $m+q_h$ points.
+Hence $f(h,m)\le m+q_h$.
+\end{theorem}
+
+In graph terms this is the bound of Neuwirth \cite[Theorem~1(ii) and
+Proposition~17]{neuwirth2001} for bipartite graphs without cycles of length $4$ and $6$,
+which he states for $m\ge q_h$. He contracts each column to the set of all pairs of its
+black rows and applies Mantel's theorem~\cite{mantel1907}. We give the short proof because
+we need its cases of equality. We join the black rows $B_i$ of each nonempty column by a
+tree $T_i$ instead of a complete graph, since a column with 3 black rows would give a
+triangle. Let $H$ be the union of these trees, a graph on the $h$ rows.
+
+\begin{lemma}\label{lem:H}
+Let $m\ge3$ and let $S$ be axis-valid. For any choice of the trees, $H$ is simple and
+triangle-free, and $e(H)=|S|-t$, where $t$ is the number of nonempty columns.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lem:girth}, $G_S$ has no cycle of length $4$ or $6$. A repeated edge of $H$
+would put the same row pair in 2 columns, which gives a cycle of length $4$. Hence
+$e(H)=\sum_i(|B_i|-1)=|S|-t$. Suppose that $H$ contains a triangle $r_ar_br_c$. Its edges
+do not all belong to one tree. If 2 columns $i,i'$ supply them, then 2 of $a,b,c$ belong to
+$B_i\cap B_{i'}$, which again gives a cycle of length $4$. If 3 columns supply them, we get
+the cycle $r_a\,c_i\,r_b\,c_{i'}\,r_c\,c_{i''}$ of length $6$.
+\end{proof}
+
+\begin{lemma}[Mantel]\label{lem:mantel}
+Let $H$ be a simple triangle-free graph on $h$ vertices. Let a vertex of maximum degree
+$\Delta$ have neighbor set $\Gamma$, and let $\Omega$ be the set of the other $h-\Delta$
+vertices, which spans $e(\Omega)$ edges. Then
+\[
+e(H)=\sum_{b\in\Omega}d(b)-e(\Omega)\le(h-\Delta)\Delta-e(\Omega)\le q_h.
+\]
+\end{lemma}
+
+\begin{proof}
+The set $\Gamma$ is independent, so every edge meets $\Omega$. The degree sum over $\Omega$
+counts the edges inside $\Omega$ twice. Then use $d(b)\le\Delta$ and
+$(h-\Delta)\Delta\le q_h$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:rowbound}]
+Lemmas~\ref{lem:H} and~\ref{lem:mantel} give $|S|=t+e(H)\le m+q_h$.
+\end{proof}
+
+\begin{theorem}[equality structure]\label{thm:equality}
+Let $h\ge4$ and $m\ge3$. A blackout of the $h\times m$ grid with $m+q_h$ points is
+axis-valid if and only if
+\begin{enumerate}[(a)]
+\item every column is a singleton or a double,
+\item the $q_h$ doubles have distinct row pairs, and
+\item these pairs are the edges of a complete bipartite graph on the rows with parts of
+sizes $\lfloor h/2\rfloor$ and $\lceil h/2\rceil$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Let $S$ be axis-valid with $m+q_h$ points. Equality in the proof of the row bound forces
+$t=m$, $e(\Omega)=0$, $(h-\Delta)\Delta=q_h$, and $d(b)=\Delta$ for every $b\in\Omega$.
+Thus $H$ is the complete bipartite graph between $\Gamma$ and $\Omega$, as in (c), for
+every choice of the trees. Suppose that $|B_i|\ge3$. Then $T_i$ has a vertex $v$ with 2
+neighbors $u$ and $w$, which lie in one part. Since $h\ge4$, the part of $v$ contains
+another vertex $z$. Replace the edge $vw$ of $T_i$ by $uw$. This gives another tree on
+$B_i$, and the new graph $H$ contains $uz$, $wz$, and $uw$, which contradicts
+Lemma~\ref{lem:H}. This proves (a). The tree edges are now the row pairs of the doubles,
+which gives (b) and (c).
+
+Conversely, assume (a) to (c). By (a) and (b), no 2 columns share 2 black rows, so $G_S$
+has no cycle of length $4$. A cycle $r_a\,c_x\,r_b\,c_y\,r_c\,c_z$ needs doubles on
+$\{a,b\}$, $\{b,c\}$, and $\{a,c\}$, which contradicts (c). Now apply
+Lemma~\ref{lem:girth}.
+\end{proof}
+
+Hence there are $p_h\,(m)_{q_h}\,h^{m-q_h}$ axis-valid blackouts with $m+q_h$ points, where
+$(m)_q$ is the falling factorial and $p_h$ is the number of bipartitions in (c). The graph
+$G_S$ of such a blackout is the extremal graph of Neuwirth from the introduction.
+
+\begin{corollary}\label{cor:small-m}
+Let $h\ge4$ and $3\le m<q_h$. Then $f(h,m)\le m+q_h-1$. Hence $m_h\ge q_h$ for $h\ge4$.
+\end{corollary}
+
+\begin{proof}
+A valid blackout with $m+q_h$ points would have $q_h$ doubles in different columns by
+Theorem~\ref{thm:equality}. For the last statement, note that $q_h-1\ge3$.
+\end{proof}
+
+This proves Theorem~\ref{thm:threshold}(a). We end the section with a lower bound that
+holds on every grid.
+
+\begin{lemma}[boundary cross]\label{lem:cross}
+The first row and the first column of the $h\times m$ grid form a valid blackout. Hence
+$f(h,m)\ge h+m-1$.
+\end{lemma}
+
+\begin{proof}
+The graph $G_S$ is a tree, so (i) of Lemma~\ref{lem:criterion} holds. Let $R$ be a tilted
+rectangle with corners~\eqref{eq:tilt-param}. By Lemma~\ref{lem:leftmost}, its only
+possible corner in column $1$ is $\ell$, and its only possible corner in row $1$ is
+$\ell+(a,-b)$. Hence (ii) holds, and 2 black corners of a tilted rectangle are always
+adjacent. Let $(R_1,R_2)$ be a mixed pair with black support $A,B,C,D$. The corners $C,D$
+of $R_2$ are black and opposite, so $R_2$ is axis-aligned and $R_1$ is tilted. Then
+$\{A,B\}=\{\ell,\ell+(a,-b)\}$ with $\ell=(1,1+b)$, and the common corners
+$p=(1+c,1+b+d)$ and $q=(1+a+c,1+d)$ lie in columns and rows at least $2$. The other
+corners $C,D$ of the axis-aligned rectangle with diagonal $pq$ also lie in columns and rows
+at least $2$, so they are white, a contradiction. Thus (iii) holds.
+\end{proof}

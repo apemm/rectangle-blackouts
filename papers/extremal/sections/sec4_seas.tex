@@ -1,0 +1,127 @@
+\section{An explicit construction at every height}\label{sec:general}
+
+We now prove Theorem~\ref{thm:general}. We place the doubles far apart and let the
+singletons between them be black in a boundary row. Call a singleton a \emph{sea} if its
+black point lies in row $1$ or in row $h$.
+
+\begin{proposition}[alternating seas]\label{prop:seas}
+Let $h\ge3$ and let $H$ be a triangle-free graph on the rows with edges $e_1,\dots,e_q$,
+where $q\ge1$. Let $Z$ be the blackout of the $h\times m$ grid with the following columns.
+The columns $p_1<\dots<p_q$ are doubles, where column $p_j$ is black exactly in the 2 rows
+of $e_j$ and $p_{j+1}-p_j\ge W_h+1$. Every other column is a sea. The seas to the left of
+$p_1$ are black in row $1$, and the row of the seas switches between $1$ and $h$ at every
+double. Then $Z$ is valid and $|Z|=m+q$.
+\end{proposition}
+
+\begin{figure}[ht]
+\centering
+\input{figs/seas.tex}
+\caption{The blackout of Proposition~\ref{prop:seas} for $h=4$ and $m=15$, with the 4 edges
+of the complete bipartite graph between $\{1,2\}$ and $\{3,4\}$. Here $W_4+1=4$.}
+\label{fig:seas}
+\end{figure}
+
+\begin{proof}[Proof of Theorem~\ref{thm:general}]
+Theorem~\ref{thm:rowbound} gives the upper bound. Take $H$ to be the complete bipartite
+graph with parts of sizes $\lfloor h/2\rfloor$ and $\lceil h/2\rceil$, so $q=q_h$, and
+place the doubles at $p_j=1+(j-1)(W_h+1)$. The last double is in column
+$1+(q_h-1)(W_h+1)=M_h$. Hence Proposition~\ref{prop:seas} gives a valid blackout with
+$m+q_h$ points for every $m\ge M_h$.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:seas}]
+Each double adds 1 point to a column, so $|Z|=m+q$. We check the 3 conditions of
+Lemma~\ref{lem:criterion}.
+
+\emph{Condition (i).} Only doubles have 2 black rows, and their pairs are distinct, so
+$G_Z$ has no cycle of length $4$. A cycle $r_a\,c_x\,r_b\,c_y\,r_c\,c_z$ would need doubles
+on $\{a,b\}$, $\{b,c\}$, and $\{a,c\}$, a triangle in $H$.
+
+\emph{The black corners of a tilted rectangle.} Let $R$ be a tilted rectangle. In this
+proof, \emph{the columns of $R$} are all columns from its smallest to its largest column,
+not only the columns of its corners. The span of $R$ is at most $W_h$
+(Lemma~\ref{lem:span}), so its columns contain at most 1 double. With no
+double, all black points in the columns of $R$ lie in one boundary row, and $R$ has at most
+1 black corner by (F1). Otherwise, shift the double to column $0$ and write its black rows as
+$a<b$. Reflecting the rows if needed, we can assume that the seas in the columns of $R$ are
+black in row $1$ to the left of column $0$ and in row $h$ to the right.
+
+Let $K$ be the set of black corners of $R$. By (F1), the elements of $K$ can only be one
+point $u=(x_1,1)$ with $x_1<0$, one point $v=(x_2,h)$ with $x_2>0$, and points $(0,c)$ with
+$c\in\{a,b\}$. A corner $(0,1)$ excludes $u$, and a corner $(0,h)$ excludes $v$. We now
+list the sets $K$ with $|K|\ge2$. In each case we find the other corners of $R$.
+\begin{enumerate}[(a)]
+\item $K=\{u,v\}$. These corners are opposite by (F2). The other diagonal has midpoint
+$\bigl(\frac{x_1+x_2}2,\frac{1+h}2\bigr)$ and endpoints at this midpoint plus and minus a
+vector $w$ with $|w|^2=\frac14\bigl((x_2-x_1)^2+(h-1)^2\bigr)$. By (F1) the endpoints lie in
+rows $2$ to $h-1$. Hence $|w_2|\le\frac{h-3}2$ and $w_1^2>\frac14(x_2-x_1)^2$. So one
+endpoint lies to the left of column $x_1$ and the other to the right of column $x_2$.
+\item $K=\{(0,a),(0,b)\}$. These corners are opposite by (F3). The other diagonal has
+midpoint $\bigl(0,\frac{a+b}2\bigr)$ and length $b-a$, and it is not vertical. Hence its
+endpoints lie in columns $-w_1$ and $w_1$ for some $w_1\ne0$, and in rows strictly between
+$a$ and $b$.
+\item $K=\{u,d\}$ with $d=(0,c)$, and $u,d$ are opposite. Here $c\ge2$ by (F1). The other
+diagonal has midpoint $\bigl(\frac{x_1}2,\frac{1+c}2\bigr)$ and endpoints at this midpoint
+plus and minus a vector $w$ with $|w|^2=\frac14\bigl(x_1^2+(c-1)^2\bigr)$. The endpoints
+are not in row $1$ by (F1). They are not in row $h$ by (F2), since the corner opposite to
+$u$ is $d$. They are not in column $0$ by (F3), for the same reason. Since their rows are
+at least $2$, we get $|w_2|\le\frac{c-3}2$. In particular $c\ge3$, and
+$w_1^2>\frac14x_1^2$. Thus one endpoint
+lies to the right of column $0$ and the other to the left of column $x_1$.
+\item $K=\{u,d\}$ with $d=(0,c)$, and $u,d$ are adjacent. Again $c\ge2$. The side $d-u$ is
+$(|x_1|,c-1)$, and the other corners are $u+n$ and $d+n$ with $n=t\,(-(c-1),|x_1|)$ for
+some real $t\ne0$. The corner $u+n$ lies in row $1+t|x_1|$, so $t>0$. Hence both corners lie in
+columns to the left of column $0$ and in rows at least $2$.
+\item $K=\{v,d\}$ with $d=(0,c)$. The half turn $(x,j)\mapsto(-x,h+1-j)$ exchanges the 2
+seas and fixes column $0$. It reduces this case to (c) or (d).
+\item $|K|\ge3$. This is impossible. If $K$ contains $(0,a)$ and $(0,b)$, then the other 2
+corners lie in rows strictly between $a$ and $b$ by (b), so they are neither $u$ nor $v$,
+and they are not in column $0$. Otherwise $K=\{u,d,v\}$ with $d=(0,c)$. Then $u$ and $v$
+are opposite by (F2) and $d$ is adjacent to both. So $(u-d)\cdot(v-d)=0$, that is
+$x_1x_2=(c-1)(h-c)$. The left side is negative and the right side is not.
+\end{enumerate}
+In (a) to (d), the 2 other corners lie in columns different from $0$ and in rows $2$ to
+$h-1$, or to the left of column $0$ and in rows at least $2$. The seas in these columns are
+black only in row $1$ or only in row $h$, so the 2 other corners are white. By (e) the same
+holds in the reflected cases. We have proved the following 3 statements for a tilted
+rectangle $R$.
+\begin{enumerate}[(1)]
+\item $R$ has at most 2 black corners. Hence condition (ii) holds.
+\item If $R$ has 2 opposite black corners, then its 2 white corners lie in rows $2$ to $h-1$,
+one of them to the left and the other to the right of the double in the columns of $R$.
+\item If $R$ has 2 adjacent black corners, then both white corners of $R$ lie on one side
+of the double in the columns of $R$. On this side the seas in the columns of $R$ are black
+in one boundary row, and the white corners are not in that row.
+\end{enumerate}
+
+\emph{Condition (iii).} Let $(R_1,R_2)$ be a mixed pair with common corners $p,q$ whose
+support is black. A tilted rectangle of the pair has 2 black corners in the support, so its
+corners $p,q$ are white by (1).
+
+Suppose that $R_1$ is axis-aligned. Then $R_2$ is tilted with 2 opposite black corners. By
+(2), $p$ and $q$ lie in different columns $x<z$ on the 2 sides of the double of $R_2$. So
+the side $pq$ of $R_1$ is horizontal. The other 2 corners of $R_1$ are black points of the
+columns $x$ and $z$ in a common row. But these columns are seas, one black only in row $1$
+and the other only in row $h$, a contradiction.
+
+Suppose that $R_2$ is axis-aligned. Then $R_1$ is tilted with 2 adjacent black corners. By
+(3), $p=(x,j)$ and $q=(z,k)$ lie in sea columns that are black only in one boundary row
+$\sigma$, and $j,k\ne\sigma$. The other corners of $R_2$ are $(x,k)$ and $(z,j)$, which are
+white, a contradiction.
+
+Suppose finally that both are tilted. The side opposite to $pq$ in $R_1$ is black, so (3)
+applies to $R_1$. Let $D_1$ be the column of the double in the columns of $R_1$. Then $p$
+and $q$ lie on one side of column $D_1$. The diagonal of $R_2$ other than $pq$ is black, so
+(2) applies to $R_2$. Let $D_2$ be the column of the double in the columns of $R_2$. Then
+$D_2$ lies strictly between the columns of $p$ and $q$. Hence $D_2\ne D_1$, and $D_2$ is a
+second double in the columns of $R_1$, a contradiction. Thus (iii) holds, and $Z$ is valid by
+Lemma~\ref{lem:criterion}.
+\end{proof}
+
+\begin{remark}\label{rem:spacing}
+The proof uses the spacing $W_h+1$ only to keep 2 doubles out of the columns of one tilted
+rectangle. The spacing $W_h$ is not enough. For $h=4$ and $h=6$, the blackout with spacing $W_h$ is
+not valid for the complete bipartite graph between the rows $1,\dots,h/2$ and the other
+rows, with the doubles in lexicographic order of their row pairs. The threshold $M_h$ is
+far from $m_h$ for small heights. For example $M_5=31$, while $m_5=8$.
+\end{remark}

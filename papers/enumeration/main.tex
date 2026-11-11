@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage}
+\usepackage{combelow}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{capt-of}
+\usepackage[shortlabels]{enumitem}
+\setlist[enumerate]{itemsep=1pt,topsep=3pt,parsep=0pt}
+\setlength{\emergencystretch}{2em}
+\setlength{\textfloatsep}{12pt plus 2pt minus 2pt}
+\setlength{\intextsep}{10pt plus 2pt minus 2pt}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\hypersetup{pdftitle={Counting the Maximum Blackouts That Keep Every Lattice Rectangle Identifiable},pdfauthor={Arjun Pemmasani}}
+
+\definecolor{kgray}{HTML}{AAAAAA}
+\definecolor{kyellow}{HTML}{FFF64C}
+\definecolor{kred}{HTML}{FF6666}
+\definecolor{kblue}{HTML}{4A86E8}
+\tikzset{
+  lab/.style={font=\scriptsize,text=black!55},
+  capt/.style={font=\small},
+}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\seqnum}[1]{\href{https://oeis.org/#1}{\rm \underline{#1}}}
+\newcommand{\pres}{P_S}
+\newcommand{\kA}{\mathsf{A}}
+\newcommand{\kB}{\mathsf{B}}
+\newcommand{\kC}{\mathsf{C}}
+\newcommand{\kE}{\mathsf{E}}
+
+\title{Counting the Maximum Blackouts That Keep Every Lattice Rectangle Identifiable}
+\author{Arjun Pemmasani\\
+Department of Mathematics\\
+Harvey Mudd College\\
+Claremont, CA 91711\\
+USA\\
+\texttt{apemmasani@hmc.edu}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Black out points of an $h\times m$ grid so that every lattice rectangle, tilted
+or not, is still determined by its white corners. Kagey asked for the largest
+number of black points. We count the blackouts that attain it. On two rows
+there are $m2^{m-1}$ of them. On three rows we find the exact number, with a
+closed form, a rational generating function, and the count up to symmetry. On
+four rows a finite automaton accepts the maximum blackouts. With computer help
+we obtain their generating function, which is rational with a denominator of
+degree $420$, and the growth rate $3.35199\ldots$ of their number. For every
+fixed height the generating function of the counts is rational. We also prove
+a conjecture on the largest entry in each row of the sequence A338885.
+\end{abstract}
+
+\input{sections/sec1_intro}
+\input{sections/sec2_setup}
+\input{sections/sec3_two}
+\input{sections/sec4_three}
+\input{sections/sec5_four}
+\input{sections/sec6_five}
+\input{sections/sec7_height}
+\input{sections/sec8_verify}
+\input{sections/sec9_end}
+
+\bibliographystyle{jis}
+\bibliography{enumeration}
+
+\noindent 2020 {\it Mathematics Subject Classification}: Primary 05A15; Secondary
+05A16, 05B40, 52C05, 68Q45, 68R15.
+
+\noindent \emph{Keywords:} blackout, lattice rectangle, rational generating function,
+transfer matrix, finite automaton, regular language.
+
+\noindent (Concerned with sequences
+\seqnum{A001787},
+\seqnum{A002620},
+\seqnum{A033638},
+\seqnum{A228286},
+\seqnum{A322284},
+\seqnum{A338885},
+\seqnum{A397315},
+\seqnum{A398321},
+\seqnum{A398448},
+\seqnum{A399580},
+\seqnum{A401223},
+\seqnum{A401224},
+\seqnum{A401225}, and
+\seqnum{A401226}.)
+
+\end{document}

@@ -1,0 +1,176 @@
+\section{Definitions and a criterion for validity}\label{sec:prelim}
+
+We use the following conventions.
+\begin{enumerate}[(1),leftmargin=*]
+\item The $h\times m$ grid has $h$ rows and $m$ columns. The point $(i,j)$ lies in column
+$i$ and row $j$, and $(1,1)$ is the top left point (Figure~\ref{fig:game}).
+\item A \emph{rectangle} has 4 grid points as corners and positive area. We write $C(R)$
+for the corner set of $R$. A rectangle is \emph{axis-aligned} if its sides follow the grid
+lines, and \emph{tilted} otherwise.
+\item A \emph{blackout} is a set $S$ of grid points, which we call black. The other points
+are white. The \emph{presentation} of a rectangle $R$ is $C(R)\setminus S$, the set of its
+white corners.
+\item Column $i$ has the set $B_i=\{j:(i,j)\in S\}$ of \emph{black rows}. It is
+\emph{empty}, a \emph{singleton}, or a \emph{double} when $|B_i|$ is $0$, $1$, or $2$.
+\end{enumerate}
+
+\begin{definition}\label{def:valid}
+A blackout $S$ is \emph{valid} if distinct rectangles have distinct presentations. We write
+$f(h,m)$ for the largest size of a valid blackout of the $h\times m$ grid.
+\end{definition}
+
+Transposing the grid gives $f(h,m)=f(m,h)$. A grid with 1 row has no rectangles, so
+$f(1,m)=m$. The $2\times2$ grid has 1 rectangle, so $f(2,2)=4$. A rectangle is allowed to
+show no corners, but at most 1 rectangle can do so in a valid blackout.
+
+\begin{lemma}\label{lem:diff}
+Two rectangles $R_1$ and $R_2$ have the same presentation if and only if the set
+$C(R_1)\triangle C(R_2)$ is contained in $S$. Hence every subset of a valid blackout is
+valid.
+\end{lemma}
+
+\begin{proof}
+The 2 presentations agree exactly when every point that lies in just one of the sets
+$C(R_1)$ and $C(R_2)$ belongs to $S$.
+\end{proof}
+
+\begin{lemma}\label{lem:threecorners}
+Any 3 corners of a rectangle determine it. Hence distinct rectangles have at most 2 common
+corners, and if they have the same presentation, then each shows at most 2 corners.
+\end{lemma}
+
+\begin{proof}
+Three corners form a right triangle. Its right angle is at the corner $x$ adjacent to the
+other 2 corners $y$ and $z$, and the fourth corner is $y+z-x$.
+\end{proof}
+
+\begin{lemma}\label{lem:compress}
+Let the rectangles $R_1\ne R_2$ have exactly 2 common corners $p$ and $q$. If $pq$ is a
+side of both or a diagonal of both, then $C(R_1)\triangle C(R_2)$ is the corner set of a
+rectangle.
+\end{lemma}
+
+\begin{proof}
+Suppose first that $pq$ is a side of both. Then the other corners are $p+u,q+u$ and
+$p+v,q+v$, where $u\ne v$ are nonzero and perpendicular to $q-p$. These 4 points form a
+rectangle with sides $q-p$ and $v-u$. Suppose now that $pq$ is a diagonal of both, with
+midpoint $o$. Then the other corners are $o\pm u$ and $o\pm v$ with $|u|=|v|$ and
+$v\ne\pm u$. The segments from $o-u$ to $o+u$ and from $o-v$ to $o+v$ have the same
+midpoint and the same length. Hence they are the diagonals of a rectangle.
+\end{proof}
+
+\subsection{Tilted rectangles}
+
+\begin{lemma}\label{lem:leftmost}
+A tilted rectangle $R$ has a unique corner $\ell=(x,r)$ in its smallest column. The sides
+from $\ell$ are $(a,-b)$ and $(c,d)$ with positive integers $a,b,c,d$ and $ac=bd$, and
+the corners are
+\begin{equation}\label{eq:tilt-param}
+(x,r),\qquad(x+a,\,r-b),\qquad(x+c,\,r+d),\qquad(x+a+c,\,r-b+d).
+\end{equation}
+The rows of $R$ are $r-b$ to $r+d$. Each of the smallest row, the largest row, and the
+largest column of $R$ contains exactly 1 corner.
+\end{lemma}
+
+\begin{proof}
+No side is vertical. Two corners in the smallest column would then be opposite, and their
+midpoint would force the other 2 corners into that column as well. Thus $\ell$ is unique,
+and the 2 sides from $\ell$ point strictly to the right. Their dot product is $0$, so one
+points up and the other down, which gives~\eqref{eq:tilt-param} and $ac=bd$. The last
+statement follows from~\eqref{eq:tilt-param}.
+\end{proof}
+
+We call $a+c$ the \emph{span} of $R$.
+
+\begin{lemma}\label{lem:span}
+Every tilted rectangle on $h$ rows has span $a+c\le W_h$.
+\end{lemma}
+
+\begin{proof}
+The rectangle fits in $h$ rows, so $b+d\le h-1$. Also $(a-1)(c-1)\ge0$. Hence
+$a+c\le ac+1=bd+1\le W_h$, where we used that $bd\le\lfloor(b+d)^2/4\rfloor$ for integers.
+\end{proof}
+
+The bound is attained by the sides $(1,-b)$ and $(bd,d)$ with $b+d=h-1$ and $|b-d|\le1$.
+
+\begin{lemma}\label{lem:facts}
+Let $R$ be a tilted rectangle of the $h\times m$ grid.
+\begin{enumerate}[(F1)]
+\item $R$ has at most 1 corner in row $1$ and at most 1 corner in row $h$.
+\item If $R$ has corners in row $1$ and in row $h$, then they are opposite.
+\item Two corners of $R$ in one column are opposite, and so are 2 corners in one row.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(F1) follows from Lemma~\ref{lem:leftmost}, since a corner in row $1$ lies in the smallest
+row of $R$. (F3) holds because a vertical or a horizontal side would make $R$
+axis-aligned. For (F2), suppose that the 2 corners are adjacent. The other 2 corners are
+their translates by a nonzero vector $n=(n_1,n_2)$ perpendicular to the side. Staying in
+the grid requires $n_2\ge0$ at row $1$ and $n_2\le0$ at row $h$. Hence $n$ is horizontal
+and the side is vertical, a contradiction.
+\end{proof}
+
+\subsection{Mixed pairs}
+
+By Lemma~\ref{lem:compress}, the remaining way for 2 rectangles to share 2 corners is the
+following.
+
+\begin{definition}\label{def:mixed}
+A \emph{mixed pair} is a pair $(R_1,R_2)$ of rectangles with exactly 2 common corners $p$
+and $q$ such that $pq$ is a side of $R_1$ and a diagonal of $R_2$. Its \emph{support} is
+$C(R_1)\triangle C(R_2)$. The support consists of the side $AB$ of $R_1$ opposite to $pq$
+and of the diagonal $CD$ of $R_2$ other than $pq$ (Figure~\ref{fig:mixed}).
+\end{definition}
+
+\begin{figure}[ht]
+\centering
+\input{figs/mixed.tex}
+\caption{Two mixed pairs. The common corners $p,q$ are yellow, $R_1$ is blue, and $R_2$ is
+red. If the 4 points of the support are black, then both rectangles show exactly $p$
+and $q$.}
+\label{fig:mixed}
+\end{figure}
+
+In a mixed pair the rectangles are not both axis-aligned, since a side of an axis-aligned
+rectangle is horizontal or vertical and a diagonal is not. We record the equations of a
+support.
+
+\begin{lemma}\label{lem:mixedeq}
+Let $A,B,C,D$ be the support of a mixed pair as in Definition~\ref{def:mixed}. Then there is
+a nonzero integer vector $n$ such that
+\[
+ n\cdot(B-A)=0,\qquad C+D=A+B+2n,\qquad |D-C|=|B-A|,\qquad D-C\ne\pm(B-A).
+\]
+\end{lemma}
+
+\begin{proof}
+Name the common corners so that $p=A+n$ and $q=B+n$. Then $n$ is a nonzero integer vector
+perpendicular to the side $AB$. The diagonals $pq$ and $CD$ of $R_2$ have the same midpoint
+and the same length, which gives the next 2 equations. If $D-C=\pm(B-A)=\pm(q-p)$, then
+$\{C,D\}=\{p,q\}$.
+\end{proof}
+
+\begin{lemma}[criterion]\label{lem:criterion}
+Let $S$ be a blackout of the $h\times m$ grid. Suppose that
+\begin{enumerate}[(i)]
+\item the graph $G_S$ has no cycle of length $4$ or $6$,
+\item no tilted rectangle has 3 or more black corners, and
+\item no mixed pair has all 4 points of its support black.
+\end{enumerate}
+Then $S$ is valid.
+\end{lemma}
+
+\begin{proof}
+Suppose that $R_1\ne R_2$ have the same presentation. By Lemma~\ref{lem:diff}, the set
+$D=C(R_1)\triangle C(R_2)$ is black. By (i) and Lemma~\ref{lem:girth} below, whose proof
+does not use this lemma, the rectangles are not both axis-aligned. By
+Lemma~\ref{lem:threecorners} they have at most 2 common corners. With no common corner,
+both rectangles are fully black. With 1 common corner, both have 3 black corners. One of
+them is tilted, so both cases contradict (ii). Suppose finally that they have 2 common
+corners $p$ and $q$. If $pq$ is a side of both or a diagonal of both, then $D$ is the
+corner set of a rectangle $R_3$ by Lemma~\ref{lem:compress}, and $R_3$ is fully black. If
+$R_3$ is tilted, this contradicts (ii). If $R_3$ is axis-aligned, its corners give a cycle
+of length $4$ in $G_S$, which contradicts (i). Otherwise $(R_1,R_2)$ or $(R_2,R_1)$ is a
+mixed pair with support $D$, which contradicts (iii).
+\end{proof}

@@ -1,0 +1,481 @@
+\section{Three rows}\label{sec:three}
+
+Take $m\ge3$ and number the rows $1,2,3$ downward. We write a column as a
+letter. The singletons are $a=\{1\}$, $b=\{2\}$, and $c=\{3\}$, the doubles are
+$A=\{1,2\}$, $B=\{1,3\}$, and $C=\{2,3\}$, and the triple is $X=\{1,2,3\}$. We
+call $a$ and $c$ the \emph{outer} letters. A blackout without empty columns is
+then a word in these $7$ letters. We also write $A$, $B$, $C$ for the
+corresponding pairs of rows, so that the pair set $F$ is a set of letters.
+
+\subsection{The candidates and the window rules}
+
+\begin{proposition}[the two types]\label{prop:threeclass}
+Let $m\ge3$.
+\begin{enumerate}[(a)]
+\item A valid blackout of the $3\times m$ grid has at most $m+2$ points. If it has
+$m+2$ points, then its word consists of singletons and either one $X$
+\textup{(type~I)} or two different doubles \textup{(type~II)}.
+\item For every word of type~I or~II, the graph $G_S$ is a tree. Hence the
+blackout is axis-valid and hides no axis-aligned rectangle.
+\item There are $m3^{m-1}+\binom m2\cdot6\cdot3^{m-2}=m^23^{m-1}$ words of type~I
+or~II.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(a) Let $S$ be valid. By Lemma~\ref{lem:girth}, $G_S$ has no $4$-cycle and no
+$6$-cycle. So no $2$ columns share $2$ black rows. Suppose first that some
+column is a triple. Then every other column has at most $1$ black point, and
+$|S|\le3+(m-1)$, with equality only for type~I. Suppose next that no column is a
+triple. The doubles have different row pairs. Three doubles would carry
+all $3$ pairs, and their columns would form a $6$-cycle with the $3$ rows. So
+there are at most $2$ doubles and $|S|\le4+(m-2)$, with equality only for
+type~II.
+
+(b) The nonsingleton columns and the $3$ rows form a path or a star, and each
+singleton column is a leaf. Apply Lemma~\ref{lem:girth}. A hidden axis-aligned
+rectangle would be a $4$-cycle.
+
+(c) Place the triple, or an ordered pair of different doubles in $2$ of the
+columns, and choose each singleton freely.
+\end{proof}
+
+We call the words of type~I or~II \emph{candidates}. The only tilted
+rectangles are the diamonds $D(i,1)$ (Lemma~\ref{lem:tilted-narrow}). We say
+that the diamond $D(i,1)$ \emph{fails} in a candidate if it shows $1$ or $2$
+corners and this presentation has a rival in the sense of
+Lemma~\ref{lem:rival}. Otherwise it \emph{passes}.
+
+\begin{lemma}[diamond test]\label{lem:diamond}
+A candidate is valid if and only if every diamond $D(i,1)$ passes.
+\end{lemma}
+
+\begin{proof}
+Axis-aligned rectangles have distinct presentations by
+Proposition~\ref{prop:threeclass}(b). Two diamonds $D(i,1)$ and $D(i',1)$ with
+$i<i'$ share at most $1$ corner, which is a point of row $2$. If they had the
+same presentation, the points of rows $1$ and $3$ in the columns $i+1$ and
+$i'+1$ would be black by Lemma~\ref{lem:diff}. Then both columns would be $B$
+or $X$, and a candidate has at most $1$ such column. So the candidate is valid
+if and only if no diamond has the presentation of an axis-aligned rectangle.
+A diamond that shows at least $3$ corners is safe by
+Lemma~\ref{lem:threecorners}. A hidden diamond is safe because no axis-aligned
+rectangle is hidden. The remaining diamonds are the subject of
+Lemma~\ref{lem:rival}.
+\end{proof}
+
+A \emph{window} is a factor of $3$ consecutive letters $\ell\,t\,r$ of a
+candidate, in the columns $i$, $i+1$, and $i+2$. It \emph{passes} or
+\emph{fails} with $D(i,1)$. The corners of $D(i,1)$ are the \emph{tips} $(i,2)$
+and $(i+2,2)$ and the points $(i+1,1)$ and $(i+1,3)$ of the middle column. A
+tip is black exactly when its letter is $b$, $A$, $C$, or $X$.
+
+\begin{lemma}[window rules]\label{lem:windows}
+Let $\ell\,t\,r$ be a window of a candidate with pair set $F$.
+\begin{enumerate}[(a)]
+\item If $t$ is a singleton, the window fails if and only if both tips are black and
+$B\in F$.
+\item If $t=A$, the window fails if and only if both tips are black, or exactly $1$
+tip is black and the letter of the white tip is $c$ or $B$. If $t=C$, the same
+holds with $a$ in place of $c$.
+\item If $t$ is $B$ or $X$, the window fails if and only if both tips are white
+with the same letter, or exactly $1$ tip is black and the letter of the white tip
+is $a$ with $A\in F$ or $c$ with $C\in F$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) At most $1$ point of the middle column is black. If both tips are white, at
+least $3$ corners show. Suppose that exactly $1$ tip is black and the other tip
+$(x,2)$ is white. For $t=b$ again $3$ corners show. For $t=a$ the diamond shows
+the oblique pair $(x,2)$, $(i+1,3)$. A rival would need $(i+1,2)$ to be black
+(Lemma~\ref{lem:rival}(d)), and it is white. The case $t=c$ is the same.
+Suppose finally that both tips are black. For $t=b$ the diamond shows the
+vertical pair in rows $1$ and $3$, which has a rival if and only if $B\in F$
+(Lemma~\ref{lem:rival}(b)). For $t=a$ it shows only $(i+1,3)$, and
+$B_{i+1}=\{1\}$. By Lemma~\ref{lem:rival}(a) there is a rival if and only if
+$B\in F$. The case $t=c$ is the same.
+
+(b) Let $t=A$. Then $(i+1,1)$ and $(i+1,2)$ are black and $(i+1,3)$ is white. If
+both tips are white, $3$ corners show. If both are black, the diamond shows only
+$(i+1,3)$. The candidate has type~II, so $F$ contains a second pair, and this
+pair contains row $3$. Its other row is black in column $i+1$, so there is a
+rival by Lemma~\ref{lem:rival}(a). If exactly $1$ tip is black and $(x,2)$ is
+the white tip, the diamond shows the oblique pair $(x,2)$, $(i+1,3)$. Since
+$(i+1,2)$ is black, there is a rival if and only if $(x,3)$ is black, which
+means that the letter of column $x$ is $c$ or $B$. The case $t=C$ follows by
+reflecting the rows.
+
+(c) Now both points of the middle column are black. If both tips are black, the
+diamond is hidden and passes. A white tip has the letter $a$ or $c$, because the
+letters $A$, $C$ have black tips and the word has only one letter $B$ or $X$.
+If both tips are white, the diamond shows a horizontal pair, and by
+Lemma~\ref{lem:rival}(c) there is a rival if and only if the $2$ letters are
+equal. If exactly $1$ tip is black, the diamond shows only the white tip
+$(x,2)$, and $B_x=\{s\}$ with $s=1$ or $s=3$. By Lemma~\ref{lem:rival}(a) there
+is a rival if and only if $\{2,s\}\in F$.
+\end{proof}
+
+\begin{corollary}\label{cor:threevalue}
+For $m\ge3$ the word $Xa^{m-1}$ is valid, so $f(3,m)=m+2$, and the optima of
+the $3\times m$ grid are the candidates in which every window passes.
+\end{corollary}
+
+\begin{proof}
+In $Xa^{m-1}$ every window has the middle letter $a$ and a white right tip.
+It passes by Lemma~\ref{lem:windows}(a). Now use
+Proposition~\ref{prop:threeclass}(a) and Lemma~\ref{lem:diamond}.
+\end{proof}
+
+We sort the candidates into $7$ \emph{classes} by their nonsingleton letters
+read from left to right, namely $X$, $AC$, $CA$, $AB$, $BA$, $BC$, and $CB$. We
+write $AC_m$ for the set of valid words of width $m$ in the class $AC$, and
+likewise for the other classes. The row reflection exchanges $a$ with $c$ and
+$A$ with $C$, and it fixes $b$, $B$, and $X$. The column reversal reverses the
+word. Both preserve validity. Hence
+\begin{equation}\label{eq:classsym}
+|AC_m|=|CA_m|\qquad\text{and}\qquad|AB_m|=|BA_m|=|CB_m|=|BC_m| .
+\end{equation}
+Table~\ref{tab:windows} lists the failing windows in the classes $AC$, $AB$, and
+$X$. It is read off from Lemma~\ref{lem:windows}.
+
+\begin{figure}[t]
+\begin{minipage}[b]{0.5\textwidth}
+\centering\footnotesize
+\begin{tabular}{@{}lll@{}}
+\toprule
+class & middle & failing windows \\
+\midrule
+$AC$ & $A$ & $bAb$, $bAc$, $cAb$, $bAC$, $cAC$ \\
+ & $C$ & $bCb$, $bCa$, $aCb$, $ACb$, $ACa$ \\
+\midrule
+$AB$ & singleton $s$ & $bsb$, $bsA$, $Asb$ \\
+ & $A$ & $bAb$, $bAc$, $cAb$, $bAB$ \\
+ & $B$ & $aBa$, $cBc$, $aBb$, $bBa$, $ABa$ \\
+\midrule
+$X$ & singleton $s$ & $bsb$, $bsX$, $Xsb$ \\
+ & $X$ & $aXa$, $cXc$, $aXb$, $bXa$, $bXc$, $cXb$ \\
+\bottomrule
+\end{tabular}
+\captionof{table}{The failing windows, by class and middle letter. Here $s$ is any
+singleton. In the class $AC$ every window with a singleton in the middle passes.}
+\label{tab:windows}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.46\textwidth}
+\centering
+\resizebox{\textwidth}{!}{\input{figs/diamond.tex}}
+\caption{The diamond test. (a) In $aAbCc$ the diamond $D(1,1)$ shows $(1,2)$
+and $(2,3)$. This pair has no rival, since $(1,3)$ is white. (b) In $bAbCc$ it
+shows only $(2,3)$, and so does the blue rectangle. The window $bAb$ fails.}
+\label{fig:diamond}
+\end{minipage}
+\end{figure}
+
+\subsection{\texorpdfstring{The class $AC$ and the main count}{The class AC and the main count}}
+
+Set $G_{AC}(z)=\sum_{m\ge2}|AC_m|z^m$, and define $G_{AB}$ and $G_X$ in the same
+way, where the sum for $G_X$ starts at $m=1$. Write $\Phi=1-3z$. The nonempty
+singleton strings with a given first letter have the series $z/\Phi$, and so do
+those with a given last letter.
+
+\begin{proposition}[the class $AC$]\label{prop:threeGAC}
+We have
+\begin{equation}\label{eq:GAC}
+G_{AC}(z)=\frac{z^2-4z^3+10z^4-8z^5-3z^6}{(1-3z)^3},
+\end{equation}
+and
+\begin{equation}\label{eq:GACcoef}
+|AC_m|=2(m-1)(3m+2)\,3^{m-5}\qquad(m\ge4).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Write a word of the class as $UAVCW$ with singleton strings $U$, $V$, and $W$.
+By Table~\ref{tab:windows} only the windows centered on $A$ and on $C$ matter.
+Read $C$ as $b$ when it is a tip, and likewise $A$. Then the window $sAt$ fails
+exactly for $st\in\{bb,bc,cb\}$, and $sCt$ fails exactly for
+$st\in\{bb,ba,ab\}$. We count by the length of $V$.
+
+If $V$ is empty, a nonempty $U$ must end in $a$ and a nonempty $W$ must start
+with $c$. This case contributes $z^2(1+z/\Phi)^2$.
+
+If $V$ is a single letter $t$, let $p_t$ be the number of letters allowed at the
+end of $U$ and $q_t$ the number allowed at the start of $W$. Then
+$(p_a,p_b,p_c)=(3,1,2)$ and $(q_a,q_b,q_c)=(2,1,3)$. The contribution is
+\[
+z^3\sum_t\Bigl(1+\frac{p_tz}{\Phi}\Bigr)\Bigl(1+\frac{q_tz}{\Phi}\Bigr)
+=z^3\Bigl(3+\frac{12z}{\Phi}+\frac{13z^2}{\Phi^2}\Bigr).
+\]
+
+If $V$ has at least $2$ letters, its first letter and the last letter of $U$
+form one of $6$ allowed pairs, or $U$ is empty and the first letter of $V$ is
+free. This gives the factor $3+6z/\Phi$. The other end gives the same factor,
+and the letters of $V$ between its first and last are free. The contribution
+is $z^4(3+6z/\Phi)^2/\Phi=9z^4(1-z)^2/\Phi^3$.
+
+Adding the $3$ cases gives~\eqref{eq:GAC}. Since
+$[z^m]z^k\Phi^{-3}=\binom{m-k+2}23^{m-k}$, the coefficient of $z^m$ for $m\ge4$
+is~\eqref{eq:GACcoef}.
+\end{proof}
+
+\begin{theorem}[the number of three-row optima]\label{thm:threecount}
+Let $E_m$ be the number of optima of the $3\times m$ grid with a column that is
+black in rows $1$ and $3$ \textup{(}\seqnum{A398448}\textup{)}. For $m\ge4$,
+\begin{equation}\label{eq:threecount}
+a_3(m)=4(m-1)(3m+2)\,3^{m-5}+E_m .
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+A column that is black in rows $1$ and $3$ is $B$ or $X$. So $E_m$ counts the
+optima in the $5$ classes other than $AC$ and $CA$. By~\eqref{eq:classsym},
+\begin{equation}\label{eq:classsum}
+a_3(m)=2|AC_m|+4|AB_m|+|X_m|=2|AC_m|+E_m\qquad(m\ge3).
+\end{equation}
+Substituting~\eqref{eq:GACcoef} gives~\eqref{eq:threecount}.
+\end{proof}
+
+\subsection{\texorpdfstring{The classes $AB$ and $X$}{The classes AB and X}}\label{sec:threeruns}
+
+Put $L=1-2z-2z^2$, $N=1+2z^2$, and $\Psi=LN=1-2z-4z^3-4z^4$. Call a singleton
+string \emph{restricted} if it has no $2$ letters $b$ at distance $2$. In the
+classes $AB$ and $X$ the windows $bsb$ fail, so every run of singletons is
+restricted. Give the letter $b$ the type $1$ and the outer letters the type
+$0$. For types $i$ and $j$, let $h_{ij}(z)$ count by length the strings
+$y_1\cdots y_n$ with $n\ge0$ that can follow $2$ letters of types $i$ and $j$ in
+a restricted string. Write $h_{ij}=h_{ij}^0+h_{ij}^1$, where $h_{ij}^\beta$
+counts the strings whose last letter has type $\beta$, and the empty string is
+given the type $j$. The letter $y_1$ can be $a$ or $c$, and it can be $b$ when
+$i=0$. Hence, for $\beta\in\{0,1\}$,
+\[
+h_{ij}^\beta=[j=\beta]+2z\,h_{j0}^\beta+[i=0]\,z\,h_{j1}^\beta .
+\]
+Solving these $2$ linear systems gives
+\begin{equation}\label{eq:hsol}
+\begin{aligned}
+\Psi h_{00}^0&=1+2z^2+2z^3,&\Psi h_{00}^1&=z+z^2,&\Psi h_{10}^0&=1,&\Psi h_{10}^1&=2z^2+2z^3,\\
+\Psi h_{00}&=1+z+3z^2+2z^3,&\Psi h_{01}&=1+z,&\Psi h_{10}&=1+2z^2+2z^3,&\Psi h_{11}&=1.
+\end{aligned}
+\end{equation}
+
+We read a run of singletons away from the double or triple next to it, as
+$w_1w_2\cdots w_n$ with $n\ge1$. We need $4$ series for such runs. Let $g_0$
+count the restricted runs whose first letter is a given outer letter, and
+$g_1$ those with $w_1=b$. Let $u$ and $v$ count the same runs under the extra
+condition that $w_2$, if present, is outer. A missing letter before $w_1$ acts
+as a letter of type $0$, and the extra condition acts as a letter of type
+$1$. Hence
+\begin{equation}\label{eq:runs}
+g_0=zh_{00},\qquad g_1=zh_{01},\qquad u=zh_{10},\qquad v=zh_{11}.
+\end{equation}
+
+\begin{proposition}[the class $X$]\label{prop:GX}
+We have
+\[
+G_X(z)=z\bigl(1+4u+2v+2u^2+v^2\bigr)
+=\frac{z(1+2z-7z^2-4z^3-2z^4-8z^5-4z^6)}{L^2N}.
+\]
+\end{proposition}
+
+\begin{proof}
+Write the word as $UXW$. Both runs are restricted. The failing windows $bsX$
+and $Xsb$ of Table~\ref{tab:windows} say that the second letter from $X$ is
+outer. The window centered on $X$ allows the neighbor pairs $ac$, $ca$, and
+$bb$. So a run on one side only contributes $2u+v$, for either side, and
+runs on both sides contribute $2u^2+v^2$. The second form follows
+from~\eqref{eq:hsol} and~\eqref{eq:runs}.
+\end{proof}
+
+Now write a word of the class $AB$ as $UAVBW$. For a letter $t$ next to $A$ in
+$V$, let $\ell_t$ count the strings $U$ that are allowed, including the empty
+one. For a letter $t$ next to $B$ in $V$, let $r_t$ count the strings $W$ that
+are allowed. By Table~\ref{tab:windows}, the window $bsA$ makes the second
+letter of $U$ from $A$ outer, and nothing restricts the second letter of
+$W$. The windows centered on $A$ allow the letters $a,b,c$ before $At$ for
+$t=a$, only $a$ for $t=b$, and $a,c$ for $t=c$. The windows centered on $B$
+allow only $c$ after $tB$ for $t=a$, the letters $b,c$ for $t=b$, and $a,b$
+for $t=c$. Hence
+\begin{equation}\label{eq:lr}
+(\ell_a,\ell_b,\ell_c)=(1+2u+v,\ 1+u,\ 1+2u),\qquad
+(r_a,r_b,r_c)=(1+g_0,\ 1+g_0+g_1,\ 1+g_0+g_1).
+\end{equation}
+
+\begin{proposition}[the class $AB$, $P_B$ by computer algebra]\label{prop:GAB}
+With the series of~\eqref{eq:hsol} to~\eqref{eq:lr},
+\begin{equation}\label{eq:GAB}
+\begin{aligned}
+G_{AB}(z)={}&z^2(1+2u)(1+g_0+g_1)+z^3(\ell_ar_a+\ell_br_b+\ell_cr_c)\\
+&+z^4\sum_{\sigma\in\{0,1\}}\lambda_\sigma\bigl(h^0_{\sigma0}\,(r_a+r_c)+2h^1_{\sigma0}\,r_b\bigr),
+\end{aligned}
+\end{equation}
+where $\lambda_0=\ell_a+\ell_c$ and $\lambda_1=\ell_b$. Moreover $G_{AB}=P_B/\Psi^3$
+with
+\begin{equation}\label{eq:PB}
+P_B(z)=z^2(1+z)(1+z^2-3z^3+4z^6+4z^7).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Let $k$ be the length of $V=v_1\cdots v_k$. For $k=0$ the windows $sAB$ and
+$ABt$ of Table~\ref{tab:windows} require $s\ne b$ and $t\ne a$, which gives the
+first term. For $k=1$ the window $Av_1B$ passes, and the windows centered on
+$A$ and $B$ give $\ell_tr_t$ for $v_1=t$.
+
+Let $k\ge2$. The window $Av_1v_2$ makes $v_2$ outer, and the window
+$v_{k-1}v_kB$ passes. So $V$ is a restricted string whose second letter is
+outer, and its weight is $\ell_{v_1}r_{v_k}$. Let $\sigma$ be the type of
+$v_1$. Summing $\ell_{v_1}$ over the letters $v_1$ of type $\sigma$ gives
+$\lambda_\sigma$. The string $v_3\cdots v_k$ follows $2$ letters of types
+$\sigma$ and $0$. If it is empty, then $v_k=v_2$ is outer and the $2$ choices
+give $r_a+r_c$. If it is not empty and $v_k$ is outer, there are $2$ choices
+for $v_2$, and $h^0_{\sigma0}$ counts each string $v_3\cdots v_{k-1}$ twice,
+once for each $v_k$. So the weight is again $h^0_{\sigma0}(r_a+r_c)$. If
+$v_k=b$, the $2$ choices for $v_2$ give $2h^1_{\sigma0}r_b$. This
+proves~\eqref{eq:GAB}. Substituting~\eqref{eq:hsol} and~\eqref{eq:runs} and
+expanding gives~\eqref{eq:PB}.
+\end{proof}
+
+\subsection{Generating function, closed form, and asymptotics}
+
+\begin{theorem}[three-row generating function, $P$ by computer algebra]\label{thm:threegf}
+\leavevmode
+\begin{enumerate}[(a)]
+\item We have
+\begin{equation}\label{eq:PQ}
+\sum_{m\ge1}a_3(m)z^m=2G_{AC}+4G_{AB}+G_X=\frac{P(z)}{Q(z)},
+\end{equation}
+where $Q=(1-3z)^3(1-2z-2z^2)^3(1+2z^2)^3$ and
+\begin{align*}
+P(z)={}&z-3z^2-34z^3+228z^4-641z^5+1307z^6-2186z^7\\
+&+2056z^8-236z^9-1060z^{10}+2584z^{11}-4264z^{12}\\
+&-1440z^{13}+704z^{14}-1024z^{15}+2080z^{16}+2176z^{17}+384z^{18}.
+\end{align*}
+\item The polynomials $P$ and $Q$ are coprime. So $Q$ is the reduced denominator,
+and $a_3(m)$ satisfies the linear recurrence of order $15$ with characteristic
+polynomial $x^{15}Q(1/x)$ for $m\ge19$ and no recurrence of smaller order.
+\item We have
+\[
+\sum_{m\ge3}E_mz^m=\frac{z^3\,P_E(z)}{(1-2z-2z^2)^3(1+2z^2)^3},
+\]
+where $P_E=43-90z+128z^2-344z^3+44z^4+80z^5+328z^6+1728z^7+1888z^8+2208z^9
++2016z^{10}+640z^{11}$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(a) For $m\ge3$ the coefficient of $z^m$ in $2G_{AC}+4G_{AB}+G_X$ is $a_3(m)$
+by~\eqref{eq:classsum}. The coefficients of $z$ and $z^2$ are $1$ and $12$.
+These are $a_3(1)$ and $a_3(2)=a_2(3)$, by Section~\ref{sec:setup} and
+Theorem~\ref{thm:strip}. Bringing the $3$ series of
+Propositions~\ref{prop:threeGAC}, \ref{prop:GX}, and~\ref{prop:GAB} to the common
+denominator $Q$ gives $P$.
+
+(b) The factors $\Phi$, $L$, and $N$ of $Q$ are irreducible and distinct. At
+$z=\frac13$ only $G_{AC}$ has a pole, and the numerator of~\eqref{eq:GAC} takes
+the value $\frac4{81}$ there. So the pole at $\frac13$ has order $3$. The remainders of
+$P_B$ modulo $L$ and modulo $N$ are $\frac z2$ and $\frac14-\frac z2$. They are
+not zero, so $G_{AB}$ has poles of order $3$ at the roots of $L$ and of $N$.
+The series $G_X$ has poles of order at most $2$ there, and $G_{AC}$ has none.
+Hence the series~\eqref{eq:PQ} has a pole of order $3$ at every root of $Q$, and
+$P$ and $Q$ are coprime. The statement on recurrences follows, since
+$\deg P=18$.
+
+(c) By~\eqref{eq:classsum} the series is $4G_{AB}+G_X$ without its terms in
+$z$ and $z^2$, which are $z+10z^2$.
+\end{proof}
+
+The polynomials $P$, $P_B$, and $P_E$ were expanded in exact arithmetic with
+SymPy~\cite{sympy2017}.
+
+Let $\rho=1+\sqrt3$ and $\sigma=1-\sqrt3$, so that $L=(1-\rho z)(1-\sigma z)$.
+
+\begin{theorem}[three-row closed form, checked by computer algebra]\label{thm:threeclosed}
+For every $m\ge3$,
+\begin{equation}\label{eq:Eclosed}
+E_m=p_+(m)\,\rho^m+p_-(m)\,\sigma^m+(-2)^{\lfloor m/2\rfloor}\kappa(m),
+\end{equation}
+where
+\[
+432\,p_\pm(m)=(19\pm11\sqrt3)m^2+(61\pm41\sqrt3)m+104\pm28\sqrt3,
+\]
+and $\kappa(m)=(2m^2+41m-104)/216$ for even $m$ and
+$\kappa(m)=(7m^2-32m-175)/432$ for odd $m$. Moreover $E_m>0$ and
+\begin{equation}\label{eq:asymp1}
+E_m\sim\frac{19+11\sqrt3}{432}\,m^2(1+\sqrt3)^m,\qquad
+a_3(m)=\frac4{81}m^23^m-\frac4{243}(m+2)3^m+O\bigl(m^2(1+\sqrt3)^m\bigr).
+\end{equation}
+In particular, the fraction of the $m^23^{m-1}$ candidates that are valid tends to
+$\frac4{27}$.
+\end{theorem}
+
+\begin{proof}
+By Theorem~\ref{thm:threegf}(c), the sequence $E_m$ satisfies for $m\ge15$ the
+linear recurrence of order $12$ with characteristic polynomial
+$x^{12}L(1/x)^3N(1/x)^3$. Its roots are $\rho$, $\sigma$, and $\pm i\sqrt2$,
+each of multiplicity $3$. The right side of~\eqref{eq:Eclosed} is a
+combination of $m^j\rho^m$, $m^j\sigma^m$, and $m^j(\pm i\sqrt2)^m$ with
+$j\le2$, so it satisfies the same recurrence for all $m$. The two sides
+agree for $3\le m\le14$, which we checked in exact arithmetic. Hence they
+agree for all $m\ge3$.
+
+We have $|\sigma|<1$ and $|(-2)^{\lfloor m/2\rfloor}\kappa(m)|=O(m^22^{m/2})$,
+and $\sqrt2<\rho$. This gives the asymptotic form of $E_m$. The expansion of
+$a_3(m)$ follows from~\eqref{eq:threecount}, since
+$4(m-1)(3m+2)3^{m-5}=\frac4{81}m^23^m-\frac4{243}(m+2)3^m$. Finally $E_m>0$
+because $Xa^{m-1}$ is an optimum by Corollary~\ref{cor:threevalue}.
+\end{proof}
+
+\subsection{Optima up to symmetry}
+
+Let $o_3(m)$ be the number of optima of the $3\times m$ grid up to the row
+reflection and the column reversal. Its first values for $m=3,\dots,8$ are
+$15$, $58$, $227$, $864$, $3190$, and $11502$ (\seqnum{A401226}).
+
+\begin{theorem}[three-row orbits]\label{thm:threeorbits}
+Let $M=1-2z^2-2z^4$. Then
+\begin{align*}
+4\sum_{m\ge3}o_3(m)z^m={}&\sum_{m\ge3}a_3(m)z^m+z^3+\frac{4z^3(1+z^4+z^6)}{M\,(1+2z^4)}\\
+&+\frac{2z^3(1-z)(1+5z+3z^2-3z^3)}{(1-3z^2)^2}.
+\end{align*}
+For even $m\ge4$ we have $o_3(m)=\frac14\bigl(a_3(m)+2m\,3^{m/2-2}\bigr)$.
+\end{theorem}
+
+\begin{proof}
+By Burnside's lemma, $4o_3(m)$ is $a_3(m)$ plus the numbers of optima fixed by
+the row reflection, the column reversal, and the half turn.
+
+\emph{Row reflection.} A fixed word uses only $b$, $B$, and $X$. A candidate of
+this kind is $b^iXb^j$. For $i\ge2$ the window $bbX$ fails, and for $j\ge2$ the
+window $Xbb$ fails (Table~\ref{tab:windows}). So the only fixed optimum is
+$bXb$, which gives the term $z^3$.
+
+\emph{Column reversal.} A fixed word is a palindrome. A candidate has
+different doubles, so a fixed candidate has the form $UXU^{\mathrm{rev}}$ and
+$m$ is odd. The window centered on $X$ requires the last letter of $U$ to be
+$b$. As in Proposition~\ref{prop:GX}, the allowed strings $U$ are counted by
+$v$. This gives $z\,v(z^2)$.
+
+\emph{Half turn.} It reverses the word and exchanges $a$ with $c$ and $A$ with
+$C$. A fixed word of type~I is $UXU'$, where $U'$ is the image of $U$. The
+neighbors of $X$ are then $ac$, $ca$, or $bb$, which are the allowed pairs. So
+these words give $z\,(2u+v)(z^2)$. A fixed word of type~II has $A$ and $C$ in
+mirror columns $j$ and $m+1-j$. Put $m=2k$ or $m=2k+1$, where in the second
+case the middle letter is $b$. Take the class $AC$, so $j\le k$. The first $k$
+letters determine the word. Only the windows centered on $A$ and $C$ can fail,
+and these $2$ windows are mirror images. If $j=1$, the window on $A$ does not
+exist or does not restrict the first $k$ letters, and there are $3^{k-1}$
+words. If $j=k\ge2$, the right neighbor of $A$ is $C$ or the middle $b$, so the
+left neighbor is $a$ and there are $3^{k-2}$ words. If $1<j<k$, there are
+$6$ allowed pairs of neighbors and $2\cdot3^{k-2}$ words. The sum over $j$ is
+$2k\,3^{k-2}$ for $k\ge2$. The class $CA$ has the same count. So type~II
+gives $2$ fixed optima for $m=3$ and $4k\,3^{k-2}$ for $m\ge4$, with series
+\[
+2z^3+\tfrac49(1+z)\Bigl(\frac{3z^2}{(1-3z^2)^2}-3z^2\Bigr)
+=\frac{2z^3(1-z)(1+5z+3z^2-3z^3)}{(1-3z^2)^2}.
+\]
+
+By~\eqref{eq:hsol} and~\eqref{eq:runs} the $2$ contributions of the words
+$UXU^{\mathrm{rev}}$ and $UXU'$ add up to
+$2z\,(u+v)(z^2)=4z^3(1+z^4+z^6)/\Psi(z^2)$, and $\Psi(z^2)=M(1+2z^4)$. For even
+$m\ge4$ only the type~II words are fixed, and $4k\,3^{k-2}=2m\,3^{m/2-2}$.
+\end{proof}

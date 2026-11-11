@@ -1,4 +1,4 @@
-# Problem 001: rectangle identifiability
+# Rectangle blackouts
 
 Black out as many points of an n x m grid as possible so that every rectangle with corners on grid
 points (tilted ones included) is still determined by its visible corners. The blackout is chosen
@@ -6,7 +6,16 @@ before the rectangle.
 
 ## Results
 
-These are proved in the paper `jis/pemmasani.tex`. Results marked (computer) rest on a finite
+These are proved in the two manuscripts in `papers/`.
+
+- `papers/extremal/blackouts_extremal.tex` has the extremal results: the row bound, the large-width
+  theorem with its thresholds, and the exact values for small heights.
+- `papers/enumeration/blackouts_enumeration.tex` has the counting results: two, three and four
+  rows, the five-row counts, and the rationality of the counting series at fixed height.
+
+The folder `jis/` has the earlier combined manuscript `jis/pemmasani.tex`, and the scripts, data
+and UNSAT evidence that both manuscripts cite. This problem is Problem 1 of Peter Kagey's list
+(peterkagey.com/problems/001). Results marked (computer) rest on a finite
 computation, checked by at least two separately written programs. f(h,m) is the maximum blackout of
 h rows and m columns, and a_h(m) is the number of maximum blackouts.
 
@@ -38,12 +47,9 @@ incidence graph of the blackout has no 4-cycle and no 6-cycle (m >= 3). Replacin
 tree on its black rows gives a triangle-free graph on the rows, and Mantel's theorem gives the
 upper bound. The constructions for three and four rows are checked against every tilted rectangle.
 
-The main write-up is the paper, `jis/pemmasani.tex`. The notes `notes/notes.pdf` (source
-`notes/notes.tex`) are a longer companion that walks through the results with small examples
-and about 25 figures. The figures are drawn by
-`notes/make_figures.py`, which checks every blackout it draws against the definition first. The
-paper is `jis/pemmasani.tex` (sections in `jis/sections`, compiled: `jis/pemmasani.pdf`), and
-`jis/pemmasani_jis.tex` is the same paper as one file, built by `jis/scripts/make_jis_single_file.py`.
+The notes `notes/notes.pdf` (source `notes/notes.tex`) are a longer companion that walks through
+the results with small examples and about 25 figures. The figures are drawn by
+`notes/make_figures.py`, which checks every blackout it draws against the definition first.
 
 ## Verification
 
@@ -53,7 +59,7 @@ constructions at widths up to 128, and runs the two finite four-row checks.
 
 The ILP engine and the brute-force oracle used for the table of values are in `solver/`, with
 their tests; they need the packages in `requirements.txt`. The predictions and their outcomes are
-in `data/ledger.md`. Section 10 of the paper proves that the SAT encodings behind the
+in `data/ledger.md`. The extremal manuscript proves that the SAT encodings behind the
 computer-assisted bounds are faithful. The supplement `jis/supplement.tex` gives the table of
 values and lists, for each computer-assisted statement, its method, its independent check and its
 evidence file; `jis/scripts/README.md` gives the commands.
@@ -67,7 +73,7 @@ browser). It is the rectangle game from my website, with larger grids.
 
 ## Open
 
-- The least width m_h from which f(h,m) = m + floor(h^2/4); it is at most of order h^4.
+- The order of the least width m_h from which f(h,m) = m + floor(h^2/4).
 - The generating function and growth rate of a_5(m).
 - The order of growth of f(n,n), between n^(6/5) and n^(4/3) up to logarithms.
 - Excess-1 (f = n+m when both sides are at least 4, except 4 x 4 and 4 x 5) is refuted at 5 x 8.

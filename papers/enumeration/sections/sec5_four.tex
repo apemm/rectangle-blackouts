@@ -1,0 +1,229 @@
+\section{Four rows}\label{sec:four}
+
+Let $m\ge6$. Then $f(4,m)=m+4=m+q_4$ by Theorem~\ref{thm:imports}(c). So every
+optimum is an axis-valid blackout with $m+q_4$ points, and
+Theorem~\ref{thm:imports}(b) describes it. It has $4$ doubles and $m-4$
+singletons, and the row pairs of the doubles are the $4$ edges of a $4$-cycle
+on the rows. There are $3$ such cycles, one for each of the bipartitions
+$\{1,2\}\mid\{3,4\}$, $\{1,3\}\mid\{2,4\}$, and $\{1,4\}\mid\{2,3\}$. A
+\emph{candidate} is a word of singletons and doubles in which the doubles carry
+each edge of one of these cycles exactly once. Its pair set $F$ is the edge set
+of the cycle. There are $3\,(m)_4\,4^{m-4}$ candidates, where
+$(m)_4=m(m-1)(m-2)(m-3)$. Every candidate is axis-valid, and it hides no
+axis-aligned rectangle, since its doubles have different pairs. By
+Lemma~\ref{lem:tilted-narrow}, each tilted rectangle has span at most $3$.
+
+\subsection{Hidden rectangles and a bound by hand}
+
+\begin{theorem}[no hidden rectangle]\label{thm:hidden}
+For $m\ge4$, no valid blackout of the $4\times m$ grid hides a rectangle.
+\end{theorem}
+
+\begin{proof}
+Suppose that a rectangle $R$ is hidden. We find two other rectangles
+$R_1\ne R_2$ with $C(R)=C(R_1)\triangle C(R_2)$. By Lemma~\ref{lem:diff} they
+have the same presentation, so the blackout is not valid. If $R$ is
+axis-aligned with columns $x,y$, take a third column $w$ and let $R_1$ and $R_2$
+have the rows of $R$ and the columns $\{x,w\}$ and $\{y,w\}$. For the tilted
+rectangles, let $1\le i\le m-3$ and let $\mathsf Q_i$ be the axis-aligned
+rectangle with corners $(i,2)$, $(i,3)$, $(i+3,2)$, and $(i+3,3)$. Writing a
+rectangle for its corner set, we have
+\begin{equation}\label{eq:fourxor}
+\begin{gathered}
+\kC_i=\kA_i\,\triangle\,\mathsf Q_i,\qquad \kE_i=\kB_i\,\triangle\,\mathsf Q_i,\\
+D(i+1,1)=D(i,2)\,\triangle\,\kA_i,\qquad D(i+1,2)=D(i,1)\,\triangle\,\kE_i .
+\end{gathered}
+\end{equation}
+Each of the $3$ sets in an identity is the symmetric difference of the other
+$2$. The first line handles $\kA_i$, $\kB_i$, $\kC_i$, and $\kE_i$. For a
+diamond $D(j,1)$ or $D(j,2)$, use the second line with $i=j-1$ if $j\ge2$, and
+with $i=j$ if $j=1$. In the second case we need the column $j+3=4$, and
+$m\ge4$.
+\end{proof}
+
+The condition $m\ge4$ is needed. On the $4\times3$ grid the blackout
+$\{(1,2),(2,1),(3,2),(2,3)\}$ is valid and hides $D(1,1)$.
+
+\begin{theorem}[forbidden-block bound]\label{thm:foursurvival}
+For every $m\ge6$,
+\[
+a_4(m)\le3\,(m)_4\,4^{m-4}\Bigl(\frac{53}{64}\Bigr)^{k},\qquad
+k=\max\bigl(0,\lfloor m/4\rfloor-4\bigr).
+\]
+Hence $a_4(m)=O\bigl(m^4\,212^{m/4}\bigr)$, and $212^{1/4}<3.816$.
+\end{theorem}
+
+\begin{proof}
+Fix the pair set $F$ and the columns and pairs of the $4$ doubles. This can be
+done in $3\,(m)_4$ ways. Call $4$ consecutive singleton columns a \emph{block},
+and record it by the word of its $4$ black rows. We show that a block of an
+optimum avoids at least $44$ of the $256$ words.
+
+The \emph{template words} $2413$, $3412$, $2143$, and $3142$ are the rows of the
+corners of $\kC_x$, $\kA_x$, $\kE_x$, and $\kB_x$, where $x$ is the first column
+of the block. They are the permutations of $1234$ whose first and last letters
+both lie in $\{2,3\}$. Let $\tau$ be one of these $4$ rectangles and
+$t_1t_2t_3t_4$ its word.
+
+First, the block is not a template word, since $\tau$ would be hidden
+(Theorem~\ref{thm:hidden}). Second, the block is not obtained from
+$t_1t_2t_3t_4$ by exchanging $t_p$ and $t_q$. In that case $\tau$ would show
+exactly its corners $(x+p-1,t_p)$ and $(x+q-1,t_q)$, and so would the
+axis-aligned rectangle through these $2$ points. The words obtained by such
+exchanges are the templates and the $16$ permutations with exactly one of the
+first and last letters in $\{2,3\}$. So $20$ permutations are excluded.
+
+Third, the block is not obtained from $t_1t_2t_3t_4$ by changing one letter
+$t_p=r$ to a letter $s$ with $\{r,s\}\in F$. In that case $\tau$ would show only
+$(x+p-1,r)$. Let $d$ be the double column with the pair $\{r,s\}$. The
+axis-aligned rectangle on the rows $r,s$ and the columns $x+p-1$ and $d$ would
+also show only $(x+p-1,r)$. Each row lies in $2$ pairs of $F$, so each template
+gives $8$ such words. They repeat a letter, so they are not permutations.
+Two templates can give the same word only if they differ by exchanging $2$
+letters $r,s$ with $\{r,s\}\in F$, and then they share $2$ words. The $4$ pairs
+of templates that differ by one exchange use the letters $\{2,3\}$ twice and
+$\{1,4\}$ twice. So at least $32-8=24$ further words are excluded, and a block
+has at most $256-20-24=212=4^4\cdot\frac{53}{64}$ words.
+
+Cut the columns into the $\lfloor m/4\rfloor$ groups $4j-3,\ldots,4j$. At most
+$4$ groups contain a double, so at least $k$ groups are blocks. Every other
+singleton column has at most $4$ choices. This gives the bound.
+\end{proof}
+
+\subsection{The automaton}
+
+\begin{lemma}[six columns of memory]\label{lem:fourmemory}
+Let $m\ge6$. A candidate of the $4\times m$ grid is an optimum if and only if
+\begin{enumerate}[(i)]
+\item no tilted rectangle is hidden,
+\item no tilted rectangle that shows $1$ or $2$ corners has a rival in the sense
+of Lemma~\ref{lem:rival}, and
+\item no $2$ distinct tilted rectangles that lie in $7$ consecutive columns have
+the same presentation.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+An optimum is valid, so (ii) and (iii) hold, and (i) holds by
+Theorem~\ref{thm:hidden}. Conversely, let a candidate satisfy (i) to (iii), and
+suppose that $2$ distinct rectangles have the same presentation $P$. They are not
+both axis-aligned, since a candidate is axis-valid. If $P$ is empty, both
+are hidden. One of them is tilted, which contradicts (i). So $P$ is not empty,
+and $|P|\le2$ by Lemma~\ref{lem:threecorners}. If one rectangle is
+axis-aligned, it is a rival of $P$, which contradicts (ii). If both are tilted,
+choose a column $c$ that meets $P$. Both rectangles have a corner in column $c$
+and span at most $3$, so they lie in the columns $c-3$ to $c+3$. This
+contradicts (iii). Hence the candidate is valid. It has $m+4$ points, so it is
+an optimum.
+\end{proof}
+
+By Lemma~\ref{lem:rival}, whether a set $P$ of $1$ or $2$ white points has a
+rival depends only on $F$ and on the letters of the columns that meet $P$. So
+the $3$ conditions can be tested while the word is read from left to right.
+
+\begin{proposition}[the automaton]\label{prop:fourautomaton}
+Let $F$ be the edge set of a $4$-cycle on the rows. The automaton $\mathcal A_F$
+reads words in the $4$ singleton letters and the $4$ pairs of $F$. A state
+$(u,U)$ records the last $6$ letters $u$ (all letters, if fewer than $6$ have
+been read) and the set $U\subseteq F$ of pairs read so far. The start state is
+the empty word with $U=\emptyset$. On reading a letter $y$, the automaton
+rejects if $y\in U$, or if some tilted rectangle in the word $uy$ that has a
+corner in the new column
+\begin{enumerate}[(1)]
+\item is hidden, or
+\item shows $1$ or $2$ corners and has a rival, or
+\item has the same presentation as another tilted rectangle in $uy$.
+\end{enumerate}
+Otherwise it moves to the state given by $uy$ and $U\cup(\{y\}\cap F)$. A word
+is accepted if it is read to the end without rejection and the final state has
+$U=F$. For each $m\ge6$, the accepted words of length $m$ are exactly the optima
+of the $4\times m$ grid with pair set $F$.
+\end{proposition}
+
+\begin{proof}
+An accepted word contains each pair of $F$ exactly once, so it is a candidate
+with pair set $F$. A tilted rectangle has span at most $3$. When its last
+column is read, it lies in the last $4$ letters of $uy$, and it is tested for
+(1) and (2). Two tilted rectangles in $7$ consecutive columns both lie in $uy$
+when the later of their last columns is read, and they are compared in (3). So
+an accepted word of length $m\ge6$ satisfies the conditions of
+Lemma~\ref{lem:fourmemory} and is an optimum. Conversely, an optimum with pair
+set $F$ is a candidate, so no pair is read twice and the final state has $U=F$.
+It satisfies the conditions of Lemma~\ref{lem:fourmemory}, so no step rejects.
+\end{proof}
+
+\subsection{The generating function and the growth rate}
+
+The statements of this subsection are computer-assisted. We built
+$\mathcal A_F$ for the $3$ pair sets. The automata have $60975$, $138095$, and
+$55575$ states. For each we also have a smaller machine from an earlier search,
+with $2519$, $3089$, and $2119$ reachable states, and a program checks that it
+accepts the same words as $\mathcal A_F$. Two separately written transfer
+counters give the same counts for all $m\le1500$. For $m\le10$ the counts also
+agree with a test of every candidate against the definition. At $m=12$ the
+pair sets of $\{1,2\}\mid\{3,4\}$, $\{1,3\}\mid\{2,4\}$, and $\{1,4\}\mid\{2,3\}$
+give $114424$, $1785768$, and $137656$ optima.
+
+
+\begin{theorem}[four-row generating function, computer-assisted]\label{thm:fourgfexact}
+There are coprime integer polynomials $P_4=26z^6-826z^7+\cdots$ of degree $444$
+and $Q_4$ of degree $420$ with $Q_4(0)=1$ and
+\[
+\sum_{m\ge6}a_4(m)z^m=\frac{P_4(z)}{Q_4(z)}.
+\]
+Write $Q_4=\sum_jq_jz^j$. The recurrence $\sum_{j=0}^{420}q_j\,a_4(n-j)=0$ holds for
+every $n\ge445$ and fails at $n=444$. Over the integers,
+\[
+Q_4=(1-z)^2(1+z)^2\,g_5^3\,\tilde g_5^3\,g_6^3\,g_{11}^5\,g_{17}^3\,g_{19}^3\,g_{20}^5\,g_{21}^5,
+\]
+where $g_d$ and $\tilde g_d$ are irreducible of degree $d$ with constant term $1$.
+Here $g_5=1+3z^2-2z^3+2z^4-z^5$, $\tilde g_5=1+z^2-z^5$,
+$g_6=1-z^2-z^5-2z^6$, and
+\begin{align*}
+g_{20}={}&1-4z+2z^2+z^3-3z^4+5z^5+z^6-3z^7+7z^8+2z^9+30z^{10}-7z^{11}+10z^{12}\\
+&+12z^{13}+2z^{14}+17z^{15}+26z^{16}+19z^{17}-26z^{18}-4z^{19}+8z^{20}.
+\end{align*}
+\end{theorem}
+
+\begin{proof}
+By Proposition~\ref{prop:fourautomaton}, $a_4(m)$ is the number of words of
+length $m$ accepted by the $3$ automata. We computed $a_4(m)$ for $m\le1500$,
+and the Berlekamp--Massey algorithm, run modulo $8$ primes, produced $P_4$ and
+$Q_4$. This is only a guess, so we certify it. For each pair set let $M_F$ be the
+transfer matrix of the smaller machine and $v_F(n)=v_F(0)M_F^n$ its vector of
+state counts after $n$ letters. The programs check the vector identity
+$\sum_jq_j\,v_F(n_F-j)=0$ in exact integer arithmetic, with $n_F=436$, $435$, and
+$445$ for the $3$ pair sets. Multiplying by powers of $M_F$ gives the same
+identity at every larger index. Since $a_4(n)$ is a fixed linear function of the
+vectors $v_F(n)$, the recurrence holds for all $n\ge445$. Then $P_4$ is the
+product of $Q_4$ and the series, cut off after degree $444$. Its coefficient of
+$z^{444}$ is not zero, so the recurrence fails at $444$. The factorization and
+the coprimality were computed with SymPy~\cite{sympy2017}.
+\end{proof}
+
+The other factors of $Q_4$ and the coefficients of $P_4$ are in the file
+\nolinkurl{four_row_recurrence.json} of the repository~\cite{repo} and in the
+OEIS entry \seqnum{A401224}. The $3$ pair sets have rational series of their
+own, with reduced denominators of degrees $162$, $153$, and $107$. The factor
+$g_{20}$ occurs only for the pair set of $\{1,3\}\mid\{2,4\}$.
+
+\begin{corollary}[growth, computer-assisted]\label{cor:fourgrowth}
+Let $\rho_4=3.351996777310\ldots$ be the largest real root of
+$x^{20}g_{20}(1/x)$. There is a polynomial $\pi$ of degree $4$ with
+$a_4(m)=\rho_4^m\,\pi(m)+O\bigl((1000/341)^m\bigr)$. Hence
+$a_4(m)\sim c\,m^4\rho_4^m$ with $c=8.16109707\ldots\times10^{-5}$, and almost all
+optima have the pair set of $\{1,3\}\mid\{2,4\}$.
+\end{corollary}
+
+\begin{proof}
+We isolate the complex roots of every factor of $Q_4$ with exact rational
+bounds. The only root of modulus at most $0.341$ is $r=1/\rho_4=0.29832\ldots$.
+It is a simple root of $g_{20}$, so it is a pole of order $5$ of $P_4/Q_4$,
+because $P_4$ and $Q_4$ are coprime. Write
+$P_4/Q_4=\sum_{j=1}^{5}c_j(1-z/r)^{-j}+T(z)$ with $c_5\ne0$. The series $T$
+has no pole of modulus at most $0.341$, so its coefficients are
+$O((1000/341)^m)$. Since $[z^m](1-z/r)^{-j}=\rho_4^m\binom{m+j-1}{j-1}$, we get
+$\pi(m)=\sum_jc_j\binom{m+j-1}{j-1}$ and $c=c_5/24$. Interval arithmetic gives
+$8.1610970775\times10^{-5}<c<8.1610970776\times10^{-5}$. The last claim holds
+because $g_{20}$ does not divide the denominators of the other $2$ pair sets.
+\end{proof}

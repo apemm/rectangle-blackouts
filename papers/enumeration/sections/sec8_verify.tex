@@ -1,0 +1,32 @@
+\section{Computations and verification}\label{sec:verify}
+
+The code and the stored results are in the repository~\cite{repo}. From its
+root, the scripts are in \nolinkurl{jis/scripts} and the evidence files in
+\nolinkurl{jis/data}, and \nolinkurl{jis/scripts/README.md} gives the commands.
+Every computed count has $2$ separately written checks, except $a_7(8)\ge18$.
+
+\paragraph{Three rows.} The proofs in Section~\ref{sec:three} are by hand up to
+the expansion of rational functions, which we did with SymPy~\cite{sympy2017}.
+One program finds all optima of the
+$3\times m$ grid from Definition~\ref{def:valid} for $m\le10$, and its counts
+agree with~\eqref{eq:PQ}. A transfer matrix built from Table~\ref{tab:windows}
+agrees with~\eqref{eq:PQ} and~\eqref{eq:Eclosed} for $m\le100$. For
+Theorem~\ref{thm:threeorbits}, the fixed words are listed for $m\le24$ and the
+orbits for $m\le10$. The files are \nolinkurl{three_row_*.json}.
+
+\paragraph{Four rows.} A second certificate for Theorem~\ref{thm:fourgfexact} treats each pair set alone. It
+checks the recurrence of that pair set on as many consecutive widths as the
+machine has states, which is enough by the Cayley--Hamilton theorem. The files
+are \nolinkurl{four_row_*.json}.
+
+\paragraph{Five rows and small grids.} The files for
+Proposition~\ref{prop:fivecounts} are \nolinkurl{five_row_count_*.json} and
+\nolinkurl{five_row_optima_dp_w*.json}, and those for the other counts of
+Table~\ref{tab:values} are in \nolinkurl{table_counts}. The SAT enumerations use
+PySAT~\cite{pysat2018}. Each blackout found is tested again against
+Definition~\ref{def:valid}.
+
+\paragraph{Formal proofs.} The folder \nolinkurl{lean} of the repository
+contains proofs in Lean of Lemmas~\ref{lem:diff}, \ref{lem:threecorners},
+\ref{lem:span}, and~\ref{lem:girth}, of the Strip Theorem with its count, and of
+the example after Theorem~\ref{thm:hidden}.

@@ -1,0 +1,420 @@
+\section{The threshold is nearly quadratic}\label{sec:threshold}
+
+In this section we prove Theorem~\ref{thm:threshold}(b). A \emph{parity edge} is a pair
+$\{r,s\}$ of rows with $r$ odd and $s$ even. There are $q_h$ parity edges, and they are the
+edges of a complete bipartite graph as in Theorem~\ref{thm:equality}(c). Our blackouts have
+one double for each parity edge and a singleton in every other column. All singletons of a
+long block of columns are black in one of 2 fixed rows, which we call the \emph{sea rows}.
+
+\subsection{Obstructions}
+
+It is convenient to work in the strip $\strip=\ZZ\times\{1,\dots,h\}$. A rectangle
+\emph{of the strip} has its corners in $\strip$. The lemmas of Section~\ref{sec:prelim} hold
+in the strip with the same proofs. A \emph{configuration} is a subset of $\strip$, whose
+points we call black.
+
+\begin{definition}\label{def:obstruction}
+We use 3 kinds of \emph{obstructions}.
+\begin{enumerate}[(1)]
+\item A \emph{corner triple} consists of 3 corners of a tilted rectangle of the strip.
+\item A \emph{mixed quadruple} is the support $\{A,B,C,D\}$ of a mixed pair of the strip
+whose side $AB$ is not vertical.
+\item Let $R$ be a tilted rectangle of the strip that has a vertical diagonal $pq$, where
+the rows of $p$ and $q$ have different parity. The other 2 corners of $R$ form a
+\emph{rival pair}.
+\end{enumerate}
+A configuration \emph{contains} an obstruction if all points of the obstruction are black.
+\end{definition}
+
+The points of an obstruction always lie in $2W_h+1$ consecutive columns. For corner triples
+and rival pairs this holds because a tilted rectangle has span at most $W_h$. In a mixed
+pair $(R_1,R_2)$ with common corners $p,q$, at least one rectangle is tilted. If both are
+tilted, they share the corner $p$ and have span at most $W_h$. If $R_2$ is axis-aligned,
+its columns are those of $p$ and $q$, which are columns of $R_1$. If $R_1$ is axis-aligned
+and $pq$ is not vertical, then $pq$ is horizontal, and the columns of $R_1$ are again those
+of $p$ and $q$. A mixed pair with a vertical side $pq$ does not give a mixed quadruple. It
+gives a rival pair (Lemma~\ref{lem:reduction}).
+
+\begin{lemma}[reduction]\label{lem:reduction}
+Let $S$ be a blackout of the $h\times m$ grid. Suppose that every column is a singleton or a
+double, that the doubles have distinct row pairs, and that these pairs are parity edges. If
+$S$ contains no obstruction, then $S$ is valid.
+\end{lemma}
+
+\begin{proof}
+We check the conditions of Lemma~\ref{lem:criterion}. The graph $G_S$ has no cycle of length
+$4$ because the doubles have distinct pairs. A cycle of length $6$ would need 3 doubles
+whose pairs form a triangle, but the parity edges form a bipartite graph. A tilted
+rectangle with 3 black corners gives a corner triple. Let $(R_1,R_2)$ be a mixed pair with
+common corners $p,q$ and black support $A,B,C,D$. If the side $AB$ is not vertical, the
+support is a mixed quadruple. Suppose that $AB$ is vertical. Then $A$ and $B$ are 2 black
+points of one column, so their rows form a parity edge. The side $pq$ of $R_1$ is vertical
+with the same 2 rows. Now $pq$ is a diagonal of $R_2$, so $R_2$ is tilted, and $\{C,D\}$ is
+a rival pair.
+\end{proof}
+
+The next 3 lemmas show that some simple configurations contain no obstructions.
+
+\begin{lemma}[rival pairs]\label{lem:rival}
+Let $\{C,D\}$ be a rival pair with $C$ in row $c$, $D$ in row $c'$, and $c\le c'$. Then
+$c'-c$ is odd, and there is an integer $j\ge1$ with
+\[
+ c-j\ge1,\qquad c'+j\le h,\qquad 4j(c'-c+j)=(C_x-D_x)^2 ,
+\]
+where $C_x$ and $D_x$ are the columns of $C$ and $D$. In particular, no point of a rival
+pair lies in row $1$ or in row $h$, and the 2 points lie in rows of different parity.
+\end{lemma}
+
+\begin{proof}
+Let $R$ and $pq$ be as in Definition~\ref{def:obstruction}(3), and let $L$ be the length of
+$pq$. Then $L$ is an odd integer. The diagonals $pq$ and $CD$ have the same midpoint and the
+same length. Put $t=C_x-D_x$ and $d=c'-c$, so that $L^2=t^2+d^2$. Here $t\ne0$, since $CD$
+is not vertical, and so $L>d$. The rows of $p$ and $q$ are $\frac12(c+c'-L)$ and
+$\frac12(c+c'+L)$. They are integers, so $L-d$ is even. Write $L=d+2j$ with $j\ge1$. Then
+$d$ is odd, the rows of $p$ and $q$ are $c-j$ and $c'+j$, and
+$t^2=L^2-d^2=4j(d+j)$.
+\end{proof}
+
+\begin{lemma}[two sea rows]\label{lem:sea}
+Let $g$ be an even integer with $2\le g\le h$ and $2g-1>h$. No obstruction has all its
+points in the rows $1$ and $g$.
+\end{lemma}
+
+\begin{proof}
+Suppose that 3 corners of a tilted rectangle $R$ lie in the rows $1$ and $g$. Then 2 of
+them lie in one row $y_0$, and they are opposite by (F3). So no other corner lies in row
+$y_0$, and the third corner lies in the other row $y_1$. The center of $R$ is in row $y_0$, so the fourth corner is in row
+$2y_0-y_1$. This row is $2-g<1$ or $2g-1>h$, a contradiction.
+
+Let $\{A,B,C,D\}$ be a mixed quadruple in the rows $1$ and $g$, and let $n=(n_1,n_2)$ be as
+in Lemma~\ref{lem:mixedeq}. Write $B-A=(x,y)$, where $x\ne0$. The equation $C+D=A+B+2n$
+shows that the rows of $C$ and $D$ have the same sum modulo $2$ as the rows of $A$ and
+$B$. Since $1+g$ is odd, either both pairs lie in one row each, or both pairs meet both
+rows. In the first case $y=0$, so $n_1x=0$ gives $n_1=0$, and $D-C$ is horizontal with
+$|D-C|=|x|$. Then $D-C=\pm(B-A)$, a contradiction. In the second case the row sums are
+equal, so $n_2=0$. Then $n_1x=0$ gives $n=0$, a contradiction.
+
+By Lemma~\ref{lem:rival}, a rival pair has no point in row $1$ and does not lie in one row.
+\end{proof}
+
+A \emph{chain} is a set of points of $\ZZ^2$ in which any 2 points $P,P'$ satisfy $P\le P'$
+or $P'\le P$ in both coordinates.
+
+\begin{lemma}[chains]\label{lem:chain}
+A chain contains no corner triple and no mixed quadruple.
+\end{lemma}
+
+\begin{proof}
+Let $Q_0,Q_1,Q_2$ be a corner triple with the right angle at $Q_0$. The vectors $Q_1-Q_0$
+and $Q_2-Q_0$ are sides of a tilted rectangle, so all their coordinates are nonzero. In a
+chain, each of them has 2 positive or 2 negative coordinates. Then their dot product is not
+$0$, a contradiction.
+
+Let $\{A,B,C,D\}$ be a mixed quadruple in a chain, with $n$ as in
+Lemma~\ref{lem:mixedeq}. We can name the points so that $A\le B$ and $C\le D$. Put
+$U=B-A$ and $\varphi(P)=(P-A)\cdot U$. Then $\varphi(A)=0$ and $\varphi(B)=|U|^2$. The
+equations $C+D=A+B+2n$ and $n\cdot U=0$ give $\varphi(C)+\varphi(D)=|U|^2$. Also
+$|\varphi(D)-\varphi(C)|=|(D-C)\cdot U|<|U|^2$, because $|D-C|=|U|$ and $D-C\ne\pm U$.
+Hence $0<\varphi(P)<|U|^2$ for $P\in\{C,D\}$. The coordinates of $U$ are nonnegative. So a
+point $P\le A$ has $\varphi(P)\le0$, and a point $P\ge B$ has $\varphi(P)\ge|U|^2$. Since
+the 4 points form a chain, we get $A\le C\le D\le B$. Then $0\le D-C\le B-A$ in both
+coordinates, and $|D-C|=|B-A|$ forces $D-C=B-A$, a contradiction.
+\end{proof}
+
+Finally we count obstructions with given rows. Recall that
+$\tmax(h)=\max\{\tau(n):1\le n\le h^2\}$.
+
+\begin{lemma}[counting]\label{lem:count}
+Fix rows $y_0,y_1,y_2,y_3$.
+\begin{enumerate}[(a)]
+\item There are at most $2\tmax(h)$ triples $(Q_0,Q_1,Q_2)$ such that $\{Q_0,Q_1,Q_2\}$ is a
+corner triple with the right angle at $Q_0$, the point $Q_i$ lies in row $y_i$, and $Q_0$
+lies in column $0$.
+\item There are at most $4\tmax(h)$ quadruples $(A,B,C,D)$ that form a mixed quadruple with
+side $AB$ and diagonal $CD$, with these points in the rows $y_0,y_1,y_2,y_3$ and with $A$
+in column $0$.
+\item There are at most $2\tmax(h)$ rival pairs $\{C,D\}$ with $C=(0,y_0)$ and $D$ in row
+$y_1$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Write $Q_1-Q_0=(x_1,y_1-y_0)$ and $Q_2-Q_0=(x_2,y_2-y_0)$. All 4 coordinates are
+nonzero, and $x_1x_2=-(y_1-y_0)(y_2-y_0)$. So $x_1$ is a positive or negative divisor of a
+fixed integer $k$ with $1\le|k|\le h^2$, and $x_1$ determines $x_2$.
+
+(b) Let $n=(n_1,n_2)$ be as in Lemma~\ref{lem:mixedeq}, and write $B-A=(x,y)$ and
+$D-C=(z,v)$. The rows fix $y$, $v$, and $n_2$, and we have $x\ne0$, $n_1x=-n_2y$, and
+$x^2+y^2=z^2+v^2$. Suppose first that $y\ne0$. Then $n_2\ne0$, since otherwise $n=0$. So $x$
+is a divisor of the integer $n_2y$, where $1\le|n_2y|\le h^2$. There are at most
+$2\tmax(h)$ such $x$. Each of them determines $n_1$ and allows at most 2 values of $z$.
+Suppose now that $y=0$. Then $n_1=0$ and $x^2-z^2=v^2$. Here $v\ne0$, since otherwise
+$D-C=\pm(B-A)$. Hence $|x|-|z|$ is a divisor of $v^2$, and it determines $|x|$ and $|z|$.
+This gives at most $4\tau(v^2)\le4\tmax(h)$ pairs $(x,z)$. In both cases $x$, $z$, and $n$
+determine $B=A+(x,y)$ and then $C$ and $D$, by $C+D=A+B+2n$.
+
+(c) By Lemma~\ref{lem:rival}, the column $t$ of $D$ satisfies $t^2+d^2=L^2$ with
+$d=|y_1-y_0|\ge1$ and an integer $L$. Then $L-|t|$ is a divisor of $d^2$, and it
+determines $|t|$.
+\end{proof}
+
+\subsection{One double}
+
+Fix an even integer $g$ with $2\le g\le h$ and $2g-1>h$. The sea rows are $1$ and $g$.
+
+\begin{definition}\label{def:good}
+A parity edge $e=\{r,s\}$ with $r$ odd is \emph{good for $g$} if $r\le g$, $s\le g$, and
+$j(g-r+j)$ is not a perfect square for any integer $j$ with $1\le j\le\min(r-1,h-g)$. Its
+\emph{gadget} is the configuration
+\[
+ G_e=\{(x,1):x<0\}\cup\{(0,r),(0,s)\}\cup\{(x,g):x>0\}.
+\]
+An obstruction is \emph{private to $e$} if it has a point in column $0$, all its points
+in column $0$ lie in the rows $r$ and $s$, and all its other points lie in the rows $1$ and
+$g$. Let $A_e$ be the set of integers $a\ne0$ such that some corner triple or mixed
+quadruple private to $e$ has a point in column $a$.
+\end{definition}
+
+The set $A_e$ lists the columns near a double on $e$ whose singletons can take part in a
+confusion with this double alone. We will fix the singletons in these columns as in the
+gadget.
+
+\begin{lemma}[one double]\label{lem:onedouble}
+Let $e$ be good for $g$.
+\begin{enumerate}[(a)]
+\item We have $|A_e|\le2^{14}\,\tmax(h)$, and $|a|\le2W_h$ for every $a\in A_e$.
+\item The gadget $G_e$ contains no corner triple and no mixed quadruple.
+\item No rival pair consists of a point $(0,c)$ with $c\in e$ and a point in row $1$ or
+$g$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) In a private obstruction every point lies in one of the 4 rows $r,s,1,g$. By
+Lemma~\ref{lem:count}(a), there are at most $4^3\cdot2\tmax(h)$ corner triples with rows
+in this set, up to horizontal translations. Each of them has at most 3 translates with a
+point in column $0$, and each translate has at most 2 other columns. This gives at most
+$768\,\tmax(h)$ elements of $A_e$. In the same way, Lemma~\ref{lem:count}(b) gives at most
+$4^4\cdot4\tmax(h)\cdot4\cdot3=12288\,\tmax(h)$ elements. The bound on $|a|$ holds because
+an obstruction lies in $2W_h+1$ consecutive columns.
+
+(b) Since $r,s\le g$, the gadget is a chain. Apply Lemma~\ref{lem:chain}.
+
+(c) Let $\{(0,c),D\}$ be such a rival pair. By Lemma~\ref{lem:rival}, $D$ is not in row
+$1$. So $D$ is in row $g$, and $c$ is odd, that is $c=r<g$. Lemma~\ref{lem:rival} gives
+an integer $j$ with $1\le j\le\min(r-1,h-g)$ such that $4j(g-r+j)$ is a perfect square.
+Then $j(g-r+j)$ is a perfect square, which contradicts Definition~\ref{def:good}.
+\end{proof}
+
+\subsection{Many doubles}
+
+Let $\mathcal E$ be a set of parity edges that are good for $g$. We give each
+$e\in\mathcal E$ a column $X_e$, and we put $A_e^*=A_e\cup\{0\}$. For a set
+$L\subseteq\mathcal E$ with $2\le|L|\le4$, we say that the columns $(X_e)_{e\in L}$ are
+\emph{bad} if at least one of the following holds.
+\begin{enumerate}[(B1)]
+\item $L=\{e,f\}$ and the sets $X_e+A_e^*$ and $X_f+A_f^*$ intersect.
+\item $L=\{e,f\}$ and $\{(X_e,c),(X_f,c')\}$ is a rival pair for some $c\in e$ and
+$c'\in f$.
+\item The columns $X_e$ with $e\in L$ are distinct, and there is a corner triple or a
+mixed quadruple $Q$ with the following 2 properties. Every point of $Q$ in a column $X_e$
+with $e\in L$ lies in a row of $e$, and every other point of $Q$ lies in row $1$ or $g$.
+For every $e\in L$, at least one point of $Q$ lies in column $X_e$.
+\end{enumerate}
+
+\begin{lemma}[placement]\label{lem:placement}
+There is an absolute constant $c_0$ with the following property. Let $\mathcal E$ be a
+set of $n\ge1$ parity edges that are good for $g$, and let $N\ge c_0\,n\,\tmax(h)^2$ be
+an integer. Then there are columns $X_e\in\{1,\dots,N\}$ for $e\in\mathcal E$ such that
+$(X_e)_{e\in L}$ is not bad for any $L\subseteq\mathcal E$ with $2\le|L|\le4$.
+\end{lemma}
+
+\begin{proof}
+Choose the $X_e$ independently and uniformly from $\{1,\dots,N\}$, and let $E_L$ be the
+event that $(X_e)_{e\in L}$ is bad. Write $\tmax=\tmax(h)$.
+
+We first bound $\Pr(E_L)$. Fix one edge $e_0\in L$. Each of the conditions below fixes the
+differences $X_e-X_{e_0}$ for all $e\in L$, so it holds with probability at most
+$N^{-(|L|-1)}$. For (B1) there are at most $(|A_e|+1)(|A_f|+1)\le2^{30}\tmax^2$ possible
+differences $X_f-X_e$, by Lemma~\ref{lem:onedouble}(a). For (B2) there are 4 choices of
+$(c,c')$. By Lemma~\ref{lem:count}(c), the pair $\{(X_e,c),(X_f,c')\}$ is a rival pair only
+if $X_f-X_e$ is one of at most $2\tmax$ integers.
+
+For (B3), let $Q$ be as in (B3). If $Q$ is a corner triple, list its points as
+$(Q_0,Q_1,Q_2)$ with the right angle at $Q_0$. If $Q$ is a mixed quadruple, list them as
+$(A,B,C,D)$ with the side $AB$ and the diagonal $CD$. Give each point of the list a
+\emph{type}. A point in a column $X_e$ with $e\in L$ gets the type $(e,c)$, where $c\in e$
+is its row. This is well defined because the columns $X_e$ are distinct. Every other point
+gets its row, which is $1$ or $g$, as its type. There are at most 10 types, so there are at
+most $10^3+10^4$ lists of types, and every $e\in L$ occurs in the list of $Q$. Now fix a
+list of types in which every $e\in L$ occurs. It fixes the rows of the points. By
+Lemma~\ref{lem:count}(a) and (b), at most $4\tmax$ lists of points $Q^*$ of the same kind
+have these rows and their first point in column $0$, and $Q$ is a horizontal translate of
+one of them. Fix $Q^*$ as well. If $Q$ is the translate of $Q^*$ by $x$ columns, then $X_e$
+is $x$ plus the column of every point of $Q^*$ of type $(e,c)$. Hence $Q^*$ and the list of
+types determine all differences $X_e-X_{e_0}$ with $e\in L$. Altogether
+we get $\Pr(E_L)\le p_{|L|}$, where
+\[
+ p_2=c_1\,\tmax^2N^{-1},\qquad p_3=c_1\,\tmax N^{-2},\qquad p_4=c_1\,\tmax N^{-3},
+ \qquad c_1=2^{31}.
+\]
+
+The event $E_L$ depends only on the variables $X_e$ with $e\in L$. Hence $E_L$ is mutually
+independent of the family of all events $E_{L'}$ with $L'\cap L=\emptyset$. We apply the
+local lemma in its general form~\cite[Lemma~5.1.1]{alonspencer2016} with the weights
+$x_L=2p_{|L|}$. Put $c_0=48c_1$. An edge $e$ lies in at most $n^{k-1}$ sets $L$ of size $k$.
+For $N\ge c_0n\tmax^2$ this gives
+\[
+ \sum_{L\ni e}x_L\le2c_1\Bigl(\frac{n\tmax^2}{N}+\frac{n^2\tmax}{N^2}
+ +\frac{n^3\tmax}{N^3}\Bigr)\le\frac{6c_1}{c_0}=\frac18 .
+\]
+In particular $x_L<1$. Every set $L$ has at most 4 elements, so the weights of the sets
+$L'$ that meet $L$ sum to at most $\frac12$. Thus
+\[
+ x_L\prod_{L'\cap L\ne\emptyset}(1-x_{L'})\ge x_L\Bigl(1-\sum_{L'\cap L\ne\emptyset}x_{L'}
+ \Bigr)\ge\frac{x_L}2=p_{|L|}\ge\Pr(E_L).
+\]
+By the local lemma, with positive probability no event $E_L$ occurs.
+\end{proof}
+
+We now show that such columns give a configuration without obstructions, whatever the
+other singletons are. We state this for a window of columns, since for odd $h$ we will use
+several blocks with different sea rows.
+
+\begin{lemma}[one block]\label{lem:block}
+Let $\mathcal E$ be a set of parity edges that are good for $g$, and let
+$(X_e)_{e\in\mathcal E}$ be integers such that $(X_e)_{e\in L}$ is not bad for any
+$L\subseteq\mathcal E$ with $2\le|L|\le4$. Let
+$I\subseteq\ZZ$ be an interval and let $B$ be a configuration with the following 3
+properties for every column $x\in I$.
+\begin{enumerate}[(1)]
+\item If $x=X_e$ for some $e\in\mathcal E$, then column $x$ is black exactly in the 2 rows
+of $e$.
+\item If $x=X_e+a$ for some $e\in\mathcal E$ and $a\in A_e$, then column $x$ is black
+exactly in row $1$ if $a<0$, and exactly in row $g$ if $a>0$.
+\item Otherwise column $x$ is black in exactly 1 point, which lies in row $1$ or $g$.
+\end{enumerate}
+Then $B$ contains no obstruction whose points all lie in columns of $I$.
+\end{lemma}
+
+Since (B1) fails for all pairs, the columns $X_e$ are distinct, and (1) and (2) never apply
+to the same column or give 2 different rules for it. Note that the conditions (B1) to (B3) only depend on the differences of the columns, so
+they are not affected by a translation of all columns.
+
+\begin{proof}
+Let $Q$ be an obstruction in the columns of $I$ whose points are black. Let $L$ be the set
+of edges $e\in\mathcal E$ such that column $X_e$ contains a point of $Q$. By (1), a point of
+$Q$ in a column $X_e$ with $e\in L$ lies in a row of $e$. Every other point of $Q$ lies in
+a column that is not $X_f$ for any $f\in\mathcal E$, since otherwise $f\in L$. By (2) and
+(3), it is the only black point of its column and lies in row $1$ or $g$.
+
+Suppose first that $Q$ is a rival pair. Its 2 points lie in different columns. If $L$ is
+empty, this contradicts Lemma~\ref{lem:sea}. If $L=\{e\}$, then $Q$ consists of a point $(X_e,c)$ with
+$c\in e$ and a point in row $1$ or $g$, and its translate by $-X_e$ columns contradicts
+Lemma~\ref{lem:onedouble}(c). If $L=\{e,f\}$, then $Q=\{(X_e,c),(X_f,c')\}$ with $c\in e$
+and $c'\in f$, so (B2) holds for $L$.
+
+Suppose now that $Q$ is a corner triple or a mixed quadruple. If $L$ is empty, this
+contradicts Lemma~\ref{lem:sea}. Suppose that $|L|\ge2$. Then $|L|\le4$, because $Q$ has at most 4 points. The columns $X_e$
+with $e\in L$ are distinct, the first property in (B3) was shown at the start of the
+proof, and the second property is the definition of $L$. So (B3) holds for $L$, a
+contradiction.
+Suppose finally that $L=\{e\}$, and translate $Q$ by $-X_e$ columns to an obstruction $Q'$.
+Then $Q'$ is private to $e$. Hence every point of $Q'$ outside column $0$ lies in a column
+$a\in A_e$, and the corresponding point of $Q$ lies in column $X_e+a$. This column is
+not a column $X_f$, so (2) applies to it, and by the paragraph before the proof (2) gives
+only one rule for it. So this point is in row $1$ if $a<0$ and in row $g$ if $a>0$. Thus $Q'$ is contained
+in the gadget $G_e$, which contradicts Lemma~\ref{lem:onedouble}(b).
+\end{proof}
+
+\subsection{Proof of Theorem~\ref{thm:threshold}(b)}
+
+By Theorem~\ref{thm:rowbound} we only need valid blackouts with $m+q_h$ points. For $h\le8$
+the claim follows from Theorem~\ref{thm:general} after increasing $C$. So let $h\ge9$.
+
+\emph{Even $h$.} Take $g=h$. Every parity edge $\{r,s\}$ is good for $h$, since
+$\min(r-1,h-g)=0$. Let $\mathcal E$ be the set of all $q_h$ parity edges and let
+$N=\lceil c_0q_h\tmax(h)^2\rceil$. Take the columns $X_e$ of Lemma~\ref{lem:placement}, and
+let $B$ be a configuration as in Lemma~\ref{lem:block} with $I=\ZZ$. For example, let
+every column in (3) be black in row $1$. For $m\ge N$ let $S$ be the set of points
+of $B$ in the columns $1$ to $m$. It contains all doubles, so $|S|=m+q_h$. By
+Lemma~\ref{lem:block}, $S$ contains no obstruction, and it is valid by
+Lemma~\ref{lem:reduction}. Hence $m_h\le N$.
+
+\emph{Odd $h$.} Now $g=h$ is odd, so Lemma~\ref{lem:sea} does not apply to the sea rows
+$1$ and $h$. We use the 4 pairs of sea rows
+\[
+ \{1,h-1\},\qquad\{1,h-3\},\qquad\{2,h\},\qquad\{4,h\}.
+\]
+The last 2 are the images of the first 2 under the reflection $\rho(x,j)=(x,h+1-j)$. For
+odd $h$ this reflection maps parity edges to parity edges and obstructions to
+obstructions. Both $g=h-1$ and $g=h-3$ are even and satisfy $2g-1>h$, since $h\ge9$.
+
+We claim that for every parity edge $e=\{r,s\}$, with $r$ odd, one of $e$ and $\rho(e)$ is
+good for $h-1$ or for $h-3$. For $g=h-1$, Definition~\ref{def:good} only involves $j=1$.
+So $e$ is good for $h-1$ unless $r=h$, or $r\ge3$ and $h-r$ is a perfect square. Note that
+$h-r$ is even. Suppose that $h-r=4u^2$ with $u\ge1$ and that $s\le h-3$. Then $e$ lies in the rows $1$ to $h-3$,
+and for $g=h-3$ the numbers $j(g-r+j)$ with $j=1,2,3$ are
+\[
+ 4u^2-2,\qquad 2(4u^2-1),\qquad 12u^2 .
+\]
+The first 2 are even and not divisible by $4$, and the third is 3 times a square. None is a
+perfect square, so $e$ is good for $h-3$. This leaves the edges with $r=h$ and the edges
+with $r=h-4u^2\ge3$ and $s=h-1$. If $r=h$, then $\rho(e)$ has the odd row $1$ and is good
+for $h-1$. In the last case $\rho(e)=\{1+4u^2,2\}$, where $1+4u^2\le h-2$. If $h-1-4u^2$ is
+not a perfect square, then $\rho(e)$ is good for $h-1$. Otherwise $h-(1+4u^2)=4v^2$ with
+$v\ge1$, and $\rho(e)$ is good for $h-3$ by the computation above. This proves the claim.
+
+By the claim we can split the parity edges into 4 sets $\mathcal E_1,\dots,\mathcal E_4$
+such that the edges of $\mathcal E_1$ are good for $g_1=h-1$, the edges of $\mathcal E_2$
+are good for $g_2=h-3$, and the edges $\rho(e)$ with $e\in\mathcal E_3$ or
+$e\in\mathcal E_4$ are good for $g_3=h-1$ or $g_4=h-3$, respectively. Put
+$N_k=\lceil c_0\max(|\mathcal E_k|,1)\,\tmax(h)^2\rceil$, and define
+\[
+ s_1=1,\qquad s_{k+1}=s_k+N_k+8W_h,\qquad z=s_3-4W_h .
+\]
+If $\mathcal E_k$ is not empty, apply Lemma~\ref{lem:placement} with $g=g_k$ and $N=N_k$,
+to $\mathcal E_k$ for $k=1,2$ and to $\rho(\mathcal E_k)$ for $k=3,4$. In both cases we get
+columns
+$X_e\in\{1,\dots,N_k\}$ for $e\in\mathcal E_k$. Define a configuration $B$ as follows.
+\begin{itemize}
+\item For $e\in\mathcal E_k$, column $x_e=s_k-1+X_e$ is black exactly in the 2 rows of $e$.
+\item For $e\in\mathcal E_k$ with $k\le2$ and $a\in A_e$, column $x_e+a$ is black exactly
+in row $1$ if $a<0$, and exactly in row $g_k$ if $a>0$.
+\item For $e\in\mathcal E_k$ with $k\ge3$ and $a\in A_{\rho(e)}$, column $x_e+a$ is black
+exactly in row $h$ if $a<0$, and exactly in row $h+1-g_k$ if $a>0$.
+\item Every other column $x$ is black exactly in row $1$ if $x<z$, and exactly in row $h$
+if $x\ge z$.
+\end{itemize}
+Put $U_k=[s_k-2W_h,\,s_k+N_k-1+2W_h]$ and $I_k=[s_k-4W_h,\,s_k+N_k-1+4W_h]$. By
+Lemma~\ref{lem:onedouble}(a), the columns in the first 3 items for $\mathcal E_k$ lie in
+$U_k$. The intervals $I_1,\dots,I_4$ are disjoint, the intervals $I_1$ and $I_2$ lie to the
+left of column $z$, and $I_3$ and $I_4$ start at column $z$ or later. Hence $B$ is well
+defined, and in the columns of $I_k$ it satisfies the hypotheses of Lemma~\ref{lem:block}
+for $k\le2$. For $k\ge3$ the reflected configuration $\rho(B)$ satisfies them.
+
+We show that $B$ contains no obstruction $Q$. Recall that $Q$ lies in $2W_h+1$ consecutive
+columns. If $Q$ has a point in a column of some $U_k$, then $Q$ lies in the columns of
+$I_k$, which contradicts Lemma~\ref{lem:block} for $B$ or for $\rho(B)$. Otherwise every
+point of $Q$ lies in row $1$ and in a column $x<z$, or in row $h$ and in a column $x\ge z$.
+These points form a chain, so $Q$ is not a corner triple or a mixed quadruple by
+Lemma~\ref{lem:chain}. It is not a rival pair by Lemma~\ref{lem:rival}.
+
+All doubles of $B$ lie in the columns $1$ to $M=s_4+N_4-1$. For $m\ge M$ let $S$ be the
+set of points of $B$ in the columns $1$ to $m$. As for even $h$, the blackout $S$ is valid
+and has $m+q_h$ points. Finally
+\[
+ m_h\le M=N_1+N_2+N_3+N_4+24W_h\le c_0(q_h+4)\,\tmax(h)^2+4+6h^2 ,
+\]
+which is at most $C\,h^2\,\tmax(h)^2$. This completes the proof of
+Theorem~\ref{thm:threshold}.
+
+\begin{remark}\label{rem:sharper}
+By a theorem of Wigert~\cite[Theorem~317]{hardywright2008}, the bound of
+Theorem~\ref{thm:threshold}(b) is $h^2\exp\bigl(O(\log h/\log\log h)\bigr)$. The factor
+$\tmax(h)^2$ comes from worst cases, while the average of $\tau(n)$ over $n\le x$ is about
+$\log x$. So it is natural to expect that averaged divisor sums, for example the bounds of
+Henriot~\cite{henriot2012}, replace $\tmax(h)^2$ by a power of $\log h$. We do not prove
+this here, and we do not know whether $m_h=O(h^2)$.
+\end{remark}
+
