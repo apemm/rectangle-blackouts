@@ -1,12 +1,11 @@
 \section{Small heights}\label{sec:small}
 
 We now prove Theorem~\ref{thm:small}. We describe a blackout by listing the black rows of
-its columns from left to right. For example, $14,45,25,5$ has $B_1=\{1,4\}$ and
-$B_4=\{5\}$.
+its columns from left to right, so that $14,45,5$ has $B_1=\{1,4\}$ and $B_3=\{5\}$.
 
 \subsection{Two, three, and four rows}
 
-\begin{proof}[Proof of Theorem~\ref{thm:small}(a)]
+\begin{proof}[Proof of Theorem~\ref{thm:small} for $h=2,3$]
 By Lemma~\ref{lem:leftmost}, a tilted rectangle meets at least 3 rows. So on 2 rows every
 rectangle is axis-aligned. Let $m\ge3$. A cycle in $G_S$ needs 2 columns that are black in
 both rows. Hence, by Lemma~\ref{lem:girth}, a blackout of the $2\times m$ grid is valid if
@@ -65,11 +64,12 @@ $1$, and no column is black in the rows $1$ and $4$. So no axis-aligned rectangl
 only $(z,4)$.
 \end{proof}
 
-\begin{proof}[Proof of Theorem~\ref{thm:small}(b)]
+\begin{proof}[Proof of Theorem~\ref{thm:small} for $h=4$]
 By Proposition~\ref{prop:four} it remains to treat the widths $4$ and $5$.
-Lemma~\ref{lem:cross} gives $f(4,4)\ge7$ and $f(4,5)\ge8$. By Theorems~\ref{thm:rowbound}
-and~\ref{thm:equality}, a valid blackout with $m+4$ points is one of $3\,(m)_4\,4^{m-4}$
-candidates, that is one of $72$ candidates for $m=4$ and of $1440$ for $m=5$. A computer
+Lemma~\ref{lem:cross} gives $f(4,4)\ge7$ and $f(4,5)\ge8$. By
+Theorem~\ref{thm:equality}, a valid blackout with $m+4$ points has 4 doubles in different
+columns, on the edges of one of 3 cycles of length $4$ on the rows, and a singleton in
+every other column. This leaves $72$ candidates for $m=4$ and $1440$ for $m=5$. A computer
 search finds 2 rectangles with the same presentation in each candidate.
 \end{proof}
 
@@ -118,17 +118,14 @@ contradiction.
 \subsection{Five rows}
 
 Let $S_8$ be the blackout $14,45,25,5,5,34,23,12$ of the $5\times8$ grid, and let $S_0$ be
-the blackout $45,34,123,1,15$ of the $5\times5$ grid.
+the blackout $45,34,123,1,15$ of the $5\times5$ grid. All validity claims below are finite
+checks from Definition~\ref{def:valid} (Section~\ref{sec:verify}).
 
-
-All validity claims below are finite checks from Definition~\ref{def:valid}, which we ran
-with several independent programs (Section~\ref{sec:verify}).
-
-\begin{proof}[Proof of Theorem~\ref{thm:small}(c)]
+\begin{proof}[Proof of Theorem~\ref{thm:small} for $h=5$]
 Let $m\ge8$. The upper bound is Theorem~\ref{thm:rowbound}. Since $W_5=5$,
 Theorem~\ref{thm:collar} with padding row $1$ on the right reduces the lower bound to the
-validity of the test board $S_8,1,1,1,1,1$ on the $5\times13$ grid. This board has $954$ rectangles,
-and a direct check shows that their presentations are distinct.
+validity of the test board $S_8,1,1,1,1,1$ on the $5\times13$ grid. This board has $954$
+rectangles, and a direct check shows that their presentations are distinct.
 
 For $m=5$, Corollary~\ref{cor:small-m} gives $f(5,5)\le10$, and a direct check of its $130$
 rectangles shows that $S_0$ is valid. For $m=6$ and $m=7$ the blackouts
@@ -136,8 +133,6 @@ $15,12,23,3,34,45$ and $1,12,23,3,34,45,15$ are valid with $m+5$ points, and che
 certificates exclude $m+6$ points (Section~\ref{sec:verify}).
 \end{proof}
 
-Thus $f(5,8)=14$ is the first value with $f(h,m)>h+m$ among the grids with $h\le m$, in the
-order of increasing area.
 
 \subsection{Six and seven rows}
 
@@ -178,7 +173,7 @@ doubles are the edges of $H$.
 
 There are $90$ labeled graphs in case (a), $15$ in case (b), and $10$ in case (c).
 
-\begin{proof}[Proof of Theorem~\ref{thm:small}(d)]
+\begin{proof}[Proof of Theorem~\ref{thm:small} for $h=6$]
 \emph{Lower bounds.} The blackouts $14,1,12,2,23,3456$ of the $6\times6$ grid,
 $16,1,1,12,2,23,3456$ of the $6\times7$ grid, and $15,1,123,34,4,4,456,26$ of the
 $6\times8$ grid are valid with $12$, $13$, and $15$ points. The blackout
@@ -200,18 +195,21 @@ Lemma~\ref{lem:sixbelow}, a valid blackout with $m+8$ points has one of $115$ ro
 Checked SAT certificates exclude each of them, so $f(6,m)\le m+7$.
 \end{proof}
 
-\begin{proof}[Proof of Theorem~\ref{thm:small}(e)]
+\begin{proof}[Proof of Theorem~\ref{thm:small} for $h=7$]
 The blackouts $17,1,12,2,23,3456,67$ of the $7\times7$ grid and
 $27,367,46,2,6,24,125,16$ of the $7\times8$ grid are valid with $14$ and $16$ points, and
 checked SAT certificates exclude $15$ and $17$ points. Let $m\ge24$. The row bound gives
 $f(7,m)\le m+12$. The file \nolinkurl{papers/extremal/data/seven_row_blackouts.txt} of the
 repository~\cite{repo} lists 5 blackouts of the widths $24$ to $28$ that are valid with
-$m+12$ points. For example, the one of width $24$ is
-\[
-56,45,34,23,1,1,14,1,12,1,6,16,7,1,47,6,67,7,7,6,25,7,36,27 .
-\]
-The one of width $28$ stays valid after adding $W_7=10$ columns black only in row $7$ on
-its left. Hence Theorem~\ref{thm:collar}, with padding row $7$ on the left, gives $m+12$
-points for every $m\ge28$.
+$m+12$ points. The one of width $28$ stays valid after adding $W_7=10$ columns black only
+in row $7$ on its left. Hence Theorem~\ref{thm:collar}, with padding row $7$ on the left,
+gives $m+12$ points for every $m\ge28$.
 \end{proof}
 
+\begin{remark}\label{rem:seven}
+In fact $f(7,m)=m+12$ for every $m\ge21$, so that $m_7\le21$. The blackout
+$16,36,5,25,2,2,14,7,12,27,2,7,67,7,47,7,7,56,45,34,23$ of the $7\times21$ grid stays valid
+when it is extended by 3 columns black only in row $1$ and then by any number of columns
+black only in row $2$. Theorem~\ref{thm:collar} does not apply to row $2$. The supplement
+proves a variant for this tail, which reduces all widths to a check of the width $45$.
+\end{remark}

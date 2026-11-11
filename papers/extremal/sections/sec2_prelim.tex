@@ -1,18 +1,14 @@
 \section{Definitions and a criterion for validity}\label{sec:prelim}
 
-We use the following conventions.
-\begin{enumerate}[(1),leftmargin=*]
-\item The $h\times m$ grid has $h$ rows and $m$ columns. The point $(i,j)$ lies in column
-$i$ and row $j$, and $(1,1)$ is the top left point (Figure~\ref{fig:game}).
-\item A \emph{rectangle} has 4 grid points as corners and positive area. We write $C(R)$
-for the corner set of $R$. A rectangle is \emph{axis-aligned} if its sides follow the grid
-lines, and \emph{tilted} otherwise.
-\item A \emph{blackout} is a set $S$ of grid points, which we call black. The other points
-are white. The \emph{presentation} of a rectangle $R$ is $C(R)\setminus S$, the set of its
-white corners.
-\item Column $i$ has the set $B_i=\{j:(i,j)\in S\}$ of \emph{black rows}. It is
-\emph{empty}, a \emph{singleton}, or a \emph{double} when $|B_i|$ is $0$, $1$, or $2$.
-\end{enumerate}
+The $h\times m$ grid has $h$ rows and $m$ columns. The point $(i,j)$ lies in column $i$
+and row $j$, and $(1,1)$ is the top left point (Figure~\ref{fig:game}). A \emph{rectangle}
+has 4 grid points as corners and positive area, and $C(R)$ is the corner set of $R$. A
+rectangle is \emph{axis-aligned} if its sides follow the grid lines, and \emph{tilted}
+otherwise. A \emph{blackout} is a set $S$ of grid points, which we call black. The other
+points are white. The \emph{presentation} of a rectangle $R$ is the set $C(R)\setminus S$
+of its white corners. Column $i$ has the set $B_i=\{j:(i,j)\in S\}$ of \emph{black rows}.
+It is \emph{empty}, a \emph{singleton}, or a \emph{double} when $|B_i|$ is $0$, $1$, or
+$2$.
 
 \begin{definition}\label{def:valid}
 A blackout $S$ is \emph{valid} if distinct rectangles have distinct presentations. We write
@@ -20,8 +16,7 @@ $f(h,m)$ for the largest size of a valid blackout of the $h\times m$ grid.
 \end{definition}
 
 Transposing the grid gives $f(h,m)=f(m,h)$. A grid with 1 row has no rectangles, so
-$f(1,m)=m$. The $2\times2$ grid has 1 rectangle, so $f(2,2)=4$. A rectangle is allowed to
-show no corners, but at most 1 rectangle can do so in a valid blackout.
+$f(1,m)=m$. The $2\times2$ grid has 1 rectangle, so $f(2,2)=4$.
 
 \begin{lemma}\label{lem:diff}
 Two rectangles $R_1$ and $R_2$ have the same presentation if and only if the set
@@ -90,8 +85,6 @@ Every tilted rectangle on $h$ rows has span $a+c\le W_h$.
 The rectangle fits in $h$ rows, so $b+d\le h-1$. Also $(a-1)(c-1)\ge0$. Hence
 $a+c\le ac+1=bd+1\le W_h$, where we used that $bd\le\lfloor(b+d)^2/4\rfloor$ for integers.
 \end{proof}
-
-The bound is attained by the sides $(1,-b)$ and $(bd,d)$ with $b+d=h-1$ and $|b-d|\le1$.
 
 \begin{lemma}\label{lem:facts}
 Let $R$ be a tilted rectangle of the $h\times m$ grid.

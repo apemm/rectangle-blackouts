@@ -3,24 +3,19 @@
 On the $n\times n$ grid the row bound is of order $n^2$ and is far from the truth. For
 $n\ge3$, Lemma~\ref{lem:girth} and Neuwirth's bound for bipartite graphs of girth $8$ with
 $n$ vertices on each side~\cite[Corollary~16]{neuwirth2001} give
-$f(n,n)<n^{4/3}+\tfrac23\,n$. The incidence graphs of generalized quadrangles show that
-this is the right order for axis-aligned rectangles alone~\cite{benson1966}. With tilted
-rectangles we only have the following lower bound.
+$f(n,n)<n^{4/3}+\tfrac23\,n$, which is the right order for axis-aligned rectangles
+alone~\cite{benson1966}. With tilted rectangles we only have the following lower bound.
 
 \begin{remark}\label{rem:square}
 There is a constant $c>0$ such that $f(n,n)\ge c\,n^{6/5}(1+\ln n)^{-2/5}$ for every
-$n\ge2$. In particular $f(n,n)-2n\to\infty$. We only sketch the proof, which is the
-deletion method~\cite[Section~3.2]{alonspencer2016}. Put $\Lambda=1+\ln n$. By
-Lemmas~\ref{lem:diff}, \ref{lem:threecorners}, and~\ref{lem:compress}, a blackout is valid
-if it contains no set of the following 2 families. The family $\mathcal A$ consists of the
-corner sets of rectangles and of the supports of mixed pairs, which have 4 points. The
-family $\mathcal B$ consists of the sets $C(R_1)\triangle C(R_2)$ for rectangles with
-exactly 1 common corner, which have 6 points. A count of the sides at a point shows that
-at most $8n^2\Lambda$ rectangles have a corner at a given point. This gives
-$|\mathcal B|\le32n^6\Lambda^2$, and with the divisor bound it gives
-$|\mathcal A|\le Kn^{4+1/10}\Lambda$. Choose each point independently with probability
-$a\,n^{-4/5}\Lambda^{-2/5}$, where $a=192^{-1/5}$, and delete 1 point from each member of
-$\mathcal A\cup\mathcal B$ whose points are all chosen. The expected number of points that
-remain is at least $(\frac56a-o(1))\,n^{6/5}\Lambda^{-2/5}$. The exponent $6/5$ comes from
-the roughly $n^6$ members of $\mathcal B$.
+$n\ge2$. We only sketch the proof, which is the deletion
+method~\cite[Section~3.2]{alonspencer2016}. By Lemmas~\ref{lem:diff},
+\ref{lem:threecorners}, and~\ref{lem:compress}, a blackout is valid if it contains no
+corner set of a rectangle, no support of a mixed pair, and no set
+$C(R_1)\triangle C(R_2)$ for rectangles with exactly 1 common corner. With
+$\Lambda=1+\ln n$, there are at most $Kn^{4+1/10}\Lambda$ sets of the first 2 kinds, with 4
+points each, and at most $32n^6\Lambda^2$ sets of the third kind, with 6 points each.
+Choose each point independently with probability $192^{-1/5}n^{-4/5}\Lambda^{-2/5}$, and
+delete 1 point from each of these sets whose points are all chosen. The expected number of
+remaining points is of order $n^{6/5}\Lambda^{-2/5}$.
 \end{remark}

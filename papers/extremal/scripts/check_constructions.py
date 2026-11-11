@@ -5,14 +5,16 @@ points. It is valid if no 2 distinct rectangles (axis-aligned or tilted) show th
 corners.
 
 The script checks
-  1. the explicit blackouts and collar test boards of the section on small heights,
-  2. the alternating boundary seas with spacing W_h + 1 for 3 <= h <= 8, and the failure of
-     spacing W_h at h = 4 and h = 6,
-  3. blackouts built as in the section on the nearly quadratic threshold for 4 <= h <= 13:
-     doubles at random columns that avoid the bad events, the prescribed singletons next to
-     each double, and every other singleton chosen at random among the 2 sea rows.
+  1. the explicit blackouts and test boards of the section on small heights,
+  2. the alternating boundary seas with spacing W_h + 1 for 3 <= h <= 8, and spacing W_h
+     for the lexicographic order (valid for h = 3, 5, 7, not valid for h = 4, 6, 8),
+  3. blackouts built as in the section on the nearly quadratic threshold for 4 <= h <= 14
+     and h = 16: each double gets the smallest column that is not bad, with (B1), (B2), (B3)
+     tested as defined, the prescribed singletons are set next to each double, and the
+     blackout is checked from the definition. At h = 16 a control with only (B1) tested
+     gives blackouts that are not valid.
 
-It uses only the standard library and runs in about a minute. Run: py check_constructions.py
+It uses only the standard library and runs in about 2 minutes. Run: py check_constructions.py
 """
 import itertools
 import math
@@ -72,10 +74,11 @@ def is_valid(h, m, black):
     for shape in tilted_shapes(h):
         span = max(p[0] for p in shape)
         for x0 in range(1, m - span + 1):
-            corners = frozenset((x0 + px, py) for (px, py) in shape)
+            corners = [(x0 + px, py) for (px, py) in shape]
             pres = frozenset(p for p in corners if p not in black)
             if len(pres) >= 3:
                 continue
+            corners = frozenset(corners)
             if seen.setdefault(pres, corners) != corners:
                 return False
             if len(pres) == 1:
@@ -112,6 +115,7 @@ def check_small_heights():
     with open(os.path.join(here, '..', 'data', 'seven_row_blackouts.txt')) as fh:
         seven = [line.strip() for line in fh if line.strip() and not line.startswith('#')]
     assert [len(w.split(',')) for w in seven] == [24, 25, 26, 27, 28]
+    tail = '16,36,5,25,2,2,14,7,12,27,2,7,67,7,47,7,7,56,45,34,23,1,1,1' + ',2' * 21
     s16 = '36,14,25,6,6,16,6,6,56,45,4,4,4,34,23,12'
     cases = [
         ('S_8', 5, '14,45,25,5,5,34,23,12', 6, None, None),
@@ -130,12 +134,15 @@ def check_small_heights():
         ('7x7', 7, '17,1,12,2,23,3456,67', 7, None, None),
         ('7x8', 7, '27,367,46,2,6,24,125,16', 8, None, None),
         ('7x38 test board', 7, seven[-1], 12, (10, 7), None),
+        ('T (7x45)', 7, tail, 12, None, None),
     ]
     for m in (12, 13, 14):
         word = '16,36,25,12,' + ','.join(['1'] * (m - 8)) + ',23,34,45,56'
         cases.append(('6x%d' % m, 6, word, 8, None, None))
     for word in seven:
         cases.append(('7x%d' % len(word.split(',')), 7, word, 12, None, None))
+    for m in range(21, 45):
+        cases.append(('T_%d' % m, 7, ','.join(tail.split(',')[:m]), 12, None, None))
     for name, h, word, excess, left, right in cases:
         m, black = board(word, left, right)
         assert len(black) - m == excess, name
@@ -175,9 +182,8 @@ def check_alternating_seas():
         for extra in (0, 3):
             m, black = alternating_seas(h, span_bound(h) + 1, extra, edges)
             assert len(black) == m + h * h // 4 and is_valid(h, m, black)
-        if h in (4, 6):
-            m, black = alternating_seas(h, span_bound(h), 0, edges)
-            assert not is_valid(h, m, black)
+        m, black = alternating_seas(h, span_bound(h), 0, edges)
+        assert is_valid(h, m, black) == (h % 2 == 1)
         if h <= 7:
             for _ in range(5):
                 rows = list(range(1, h + 1))
@@ -187,7 +193,7 @@ def check_alternating_seas():
                 m, black = alternating_seas(h, span_bound(h) + 1, 2, shuffled)
                 assert is_valid(h, m, black)
     print('alternating seas: valid with spacing W_h + 1 for 3 <= h <= 8, '
-          'not valid with spacing W_h for h = 4, 6')
+          'with spacing W_h valid for h = 3, 5, 7 and not valid for h = 4, 6, 8')
 
 
 def normalize(points):
@@ -237,69 +243,94 @@ def rival_pairs(h):
     return out
 
 
-class Block:
-    """A set of parity edges with the sea rows alpha (row 1 or h) and gamma."""
+class Tools:
+    """Obstructions of the strip on h rows, indexed by pairs of their points."""
 
-    def __init__(self, alpha, gamma, edges, obs, index, rivals):
-        self.alpha, self.gamma, self.edges = alpha, gamma, edges
+    def __init__(self, h):
+        self.h = h
+        self.obs = obstructions(h)
+        self.rivals = rival_pairs(h)
+        self.index = defaultdict(list)
+        for s in self.obs:
+            for (x1, y1) in s:
+                for (x2, y2) in s:
+                    if x1 != x2:
+                        self.index[(x2 - x1, y1, y2)].append((s, x1))
+
+
+class Block:
+    """A set of parity edges with the sea rows alpha (row 1 or h) and gamma.
+
+    The columns are bad as in the paper: (B1) the translates of the sets A_e and of 0
+    intersect, (B2) 2 double points form a rival pair, (B3) a corner triple or a mixed
+    quadruple has points in 2 or more doubles, in rows of their edges, and all its other
+    points in the sea rows. With full=False only (B1) is tested.
+    """
+
+    def __init__(self, alpha, gamma, edges, tools, full=True):
+        self.alpha, self.gamma, self.edges = alpha, gamma, list(edges)
         self.sea = {alpha, gamma}
-        self.index, self.rivals = index, rivals
+        self.tools, self.full = tools, full
         self.influence = {}
-        for e in edges:
+        for e in self.edges:
             offsets = set()
-            for s in obs:
+            for s in tools.obs:
                 columns = defaultdict(list)
                 for (x, y) in s:
                     columns[x].append(y)
                 for x0, ys in columns.items():
                     if all(y in e for y in ys) and all(
-                            len(v) == 1 and v[0] in self.sea
-                            for x, v in columns.items() if x != x0):
+                            y in self.sea for x, v in columns.items() if x != x0 for y in v):
                         offsets |= {x - x0 for x in columns if x != x0}
             self.influence[e] = offsets
 
     def prescribed_row(self, offset):
         return self.alpha if offset < 0 else self.gamma
 
-    def bad(self, pos, new):
-        """True if the columns pos are bad for some set of edges that contains new."""
-        by_col = {pos[e]: e for e in pos}
-        if len(by_col) < len(pos):
+    def bad(self, pos, by_col, taken, new, x):
+        """True if column x for the edge new is bad together with the columns in pos."""
+        if x in taken or any(x + a in taken for a in self.influence[new]):
             return True
-        mine = {pos[new] + a for a in self.influence[new]} | {pos[new]}
-        for f in pos:
-            if f == new:
-                continue
-            if mine & ({pos[f] + a for a in self.influence[f]} | {pos[f]}):
-                return True
-            dx = pos[f] - pos[new]
+        if not self.full:
+            return False
+        tools = self.tools
+        for f, xf in pos.items():
+            dx = xf - x
             for c in new:
                 for c2 in f:
-                    if (dx, c, c2) in self.rivals:
+                    if (dx, c, c2) in tools.rivals:
                         return True
-                    for (s, shift) in self.index.get((dx, c, c2), ()):
+                    for (s, shift) in tools.index.get((dx, c, c2), ()):
+                        columns = defaultdict(list)
+                        for (px, py) in s:
+                            columns[px + x - shift].append(py)
                         ok = True
-                        for (x, y) in s:
-                            col = x + pos[new] - shift
-                            if col in by_col:
-                                ok = y in by_col[col]
+                        for col, rows in columns.items():
+                            if col == x:
+                                ok = all(r in new for r in rows)
+                            elif col == xf:
+                                ok = all(r in f for r in rows)
+                            elif col in by_col:
+                                t = by_col[col]
+                                ok = all(r in t for r in rows) or all(r in self.sea for r in rows)
                             else:
-                                ok = y in self.sea
+                                ok = all(r in self.sea for r in rows)
                             if not ok:
                                 break
                         if ok:
                             return True
         return False
 
-    def place(self, width, rng):
-        pos = {}
-        for e in self.edges:
-            for _ in range(20000):
-                pos[e] = rng.randrange(1, width + 1)
-                if not self.bad(pos, e):
-                    break
-            else:
-                raise RuntimeError('no placement found')
+    def first_fit(self, order):
+        """Give each edge, in the given order, the smallest column that is not bad."""
+        pos, by_col, taken = {}, {}, set()
+        for e in order:
+            x = 1
+            while self.bad(pos, by_col, taken, e, x):
+                x += 1
+            pos[e] = x
+            by_col[x] = e
+            taken |= {x} | {x + a for a in self.influence[e]}
         return pos
 
 
@@ -311,70 +342,110 @@ def good(h, e, g):
                for j in range(1, min(h - g, r - 1) + 1))
 
 
-def check_threshold_construction():
-    rng = random.Random(7)
-    for h in range(4, 14):
-        obs = obstructions(h)
-        rivals = rival_pairs(h)
-        index = defaultdict(list)
-        for s in obs:
-            for (x1, y1) in s:
-                for (x2, y2) in s:
-                    if x1 != x2:
-                        index[(x2 - x1, y1, y2)].append((s, x1))
-        edges = [tuple(sorted((r, s))) for r in range(1, h + 1, 2) for s in range(2, h + 1, 2)]
-        groups = [[], [], [], []]
-        if h % 2 == 0:
-            groups[0] = edges
-            seas = [(1, h)]
+def parity_edges(h):
+    return [tuple(sorted((r, s))) for r in range(1, h + 1, 2) for s in range(2, h + 1, 2)]
+
+
+def split_edges(h):
+    """The sea rows and the 4 sets of edges of the proof (1 set for even h)."""
+    edges = parity_edges(h)
+    if h % 2 == 0:
+        return [(1, h)], [edges]
+    groups = [[], [], [], []]
+    for e in edges:
+        mirror = tuple(sorted((h + 1 - e[0], h + 1 - e[1])))
+        if good(h, e, h - 1):
+            groups[0].append(e)
+        elif h >= 9 and good(h, e, h - 3):
+            groups[1].append(e)
+        elif good(h, mirror, h - 1):
+            groups[2].append(e)
+        elif h >= 9 and good(h, mirror, h - 3):
+            groups[3].append(e)
         else:
-            seas = [(1, h - 1), (1, h - 3), (h, 2), (h, 4)]
-            for e in edges:
-                mirror = tuple(sorted((h + 1 - e[0], h + 1 - e[1])))
-                if good(h, e, h - 1):
-                    groups[0].append(e)
-                elif h >= 9 and good(h, e, h - 3):
-                    groups[1].append(e)
-                elif good(h, mirror, h - 1):
-                    groups[2].append(e)
-                elif h >= 9 and good(h, mirror, h - 3):
-                    groups[3].append(e)
-                else:
-                    raise RuntimeError('edge %s is not covered' % (e,))
-        wide = span_bound(h)
-        black = set()
-        start = 1
-        layout = []
-        for k, group in enumerate(groups):
-            if not group:
-                continue
-            block = Block(seas[k][0], seas[k][1], group, obs, index, rivals)
-            width = 60 * len(group) + 10
-            layout.append((block, block.place(width, rng), start, width))
-            start += width + 8 * wide + 1
-        m = start - (8 * wide + 1) + 3
-        for k, (block, pos, first, width) in enumerate(layout):
-            lo = 1 if k == 0 else first - 4 * wide - 1
-            hi = m if k == len(layout) - 1 else first + width - 1 + 4 * wide
-            doubles = {first - 1 + pos[e]: e for e in block.edges}
-            fixed = {}
-            for e in block.edges:
-                for a in block.influence[e]:
-                    fixed[first - 1 + pos[e] + a] = block.prescribed_row(a)
-            for x in range(lo, hi + 1):
-                if x in doubles:
-                    black |= {(x, y) for y in doubles[x]}
-                elif x in fixed:
-                    black.add((x, fixed[x]))
-                elif first - 2 * wide <= x <= first + width - 1 + 2 * wide:
-                    black.add((x, rng.choice(sorted(block.sea))))
-                else:
-                    black.add((x, block.alpha))
-        black = {p for p in black if 1 <= p[0] <= m}
-        assert len(black) == m + h * h // 4
-        assert is_valid(h, m, black)
-        print('threshold construction: h = %d, m = %d, groups %s, valid'
-              % (h, m, [len(g) for g in groups]))
+            raise RuntimeError('edge %s is not covered' % (e,))
+    return [(1, h - 1), (1, h - 3), (h, 2), (h, 4)], groups
+
+
+def threshold_board(h, tools, rng, full=True, random_sea=False):
+    """A blackout as in the proof of the threshold theorem, cut after its last double.
+
+    Even h: 1 block with the sea rows 1 and h. Odd h: up to 4 blocks, 8 W_h columns apart,
+    with the free singletons in row 1 before column z and in row h from column z on.
+    Returns the width, the blackout, and the number of doubles in each block.
+    """
+    seas, groups = split_edges(h)
+    wide = span_bound(h)
+    layout = []
+    start = 1
+    for k, group in enumerate(groups):
+        width = 1
+        pos = {}
+        block = None
+        if group:
+            block = Block(seas[k][0], seas[k][1], group, tools, full)
+            order = list(group)
+            rng.shuffle(order)
+            pos = block.first_fit(order)
+            width = max(pos.values())
+        layout.append((block, pos, start, width))
+        start += width + 8 * wide
+    m = layout[-1][2] + layout[-1][3] - 1
+    while layout and layout[-1][0] is None:
+        layout.pop()
+        m = layout[-1][2] + layout[-1][3] - 1
+    z = layout[2][2] - 4 * wide if len(layout) > 2 else m + 1
+    doubles, fixed = {}, {}
+    for block, pos, first, width in layout:
+        if block is None:
+            continue
+        for e in block.edges:
+            doubles[first - 1 + pos[e]] = e
+            for a in block.influence[e]:
+                fixed[first - 1 + pos[e] + a] = block.prescribed_row(a)
+    assert not set(doubles) & set(fixed)
+    black = set()
+    for x in range(1, m + 1):
+        if x in doubles:
+            black |= {(x, y) for y in doubles[x]}
+        elif x in fixed:
+            black.add((x, fixed[x]))
+        elif h % 2 == 0:
+            black.add((x, rng.choice((1, h)) if random_sea else 1))
+        else:
+            black.add((x, 1 if x < z else h))
+    assert len(black) == m + h * h // 4
+    return m, black, [len(g) for g in groups]
+
+
+def check_threshold_construction():
+    """Blackouts of the threshold theorem with (B1), (B2), (B3) enforced, checked from the
+    definition. Also a control with only (B1) enforced at height 16."""
+    rng = random.Random(7)
+    for h in (4, 5, 6, 7, 8, 9, 10, 11):
+        tools = Tools(h)
+        for trial in range(2):
+            m, black, sizes = threshold_board(h, tools, rng, random_sea=(trial == 1))
+            assert is_valid(h, m, black)
+        print('threshold construction: h = %d valid (last width %d, blocks %s)' % (h, m, sizes))
+    for h in (12, 13, 14, 16):
+        tools = Tools(h)
+        best = None
+        for trial in range(3):
+            m, black, sizes = threshold_board(h, tools, rng)
+            assert is_valid(h, m, black)
+            if best is None or m < best:
+                best = m
+        q = h * h // 4
+        print('threshold construction: h = %d, 3 blackouts valid, smallest width %d, blocks %s, '
+              'explicit construction %d' % (h, best, sizes, q + (q - 1) * span_bound(h)))
+        if h == 16:
+            invalid = 0
+            for trial in range(5):
+                m, black, sizes = threshold_board(h, tools, rng, full=False)
+                invalid += not is_valid(h, m, black)
+            print('control at h = 16 with only (B1) enforced: %d of 5 blackouts are not valid'
+                  % invalid)
 
 
 if __name__ == '__main__':

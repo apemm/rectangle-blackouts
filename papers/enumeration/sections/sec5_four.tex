@@ -13,7 +13,7 @@ $(m)_4=m(m-1)(m-2)(m-3)$. Every candidate is axis-valid, and it hides no
 axis-aligned rectangle, since its doubles have different pairs. By
 Lemma~\ref{lem:tilted-narrow}, each tilted rectangle has span at most $3$.
 
-\subsection{Hidden rectangles and a bound by hand}
+\subsection{Hidden rectangles}
 
 \begin{theorem}[no hidden rectangle]\label{thm:hidden}
 For $m\ge4$, no valid blackout of the $4\times m$ grid hides a rectangle.
@@ -44,51 +44,24 @@ $m\ge4$.
 The condition $m\ge4$ is needed. On the $4\times3$ grid the blackout
 $\{(1,2),(2,1),(3,2),(2,3)\}$ is valid and hides $D(1,1)$.
 
-\begin{theorem}[forbidden-block bound]\label{thm:foursurvival}
-For every $m\ge6$,
+\begin{remark}[forbidden-block bound]\label{thm:foursurvival}
+A count of excluded blocks also bounds $a_4(m)$. Let $m\ge6$, and call $4$
+consecutive singleton columns of an optimum a \emph{block}, written as the word of
+its black rows. For each pair set $F$ at least $44$ of the $256$ words cannot
+occur. They are the words $2413$, $3412$, $2143$, and $3142$ of the corner rows of
+$\kC_i$, $\kA_i$, $\kE_i$, and $\kB_i$, the $16$ other words obtained from these by
+exchanging $2$ letters, and at least $24$ words obtained from them by changing $1$
+letter $r$ to $s$ with $\{r,s\}\in F$. Since at least $\lfloor m/4\rfloor-4$ disjoint
+blocks exist, this gives
 \[
 a_4(m)\le3\,(m)_4\,4^{m-4}\Bigl(\frac{53}{64}\Bigr)^{k},\qquad
-k=\max\bigl(0,\lfloor m/4\rfloor-4\bigr).
+k=\max\bigl(0,\lfloor m/4\rfloor-4\bigr),
 \]
-Hence $a_4(m)=O\bigl(m^4\,212^{m/4}\bigr)$, and $212^{1/4}<3.816$.
-\end{theorem}
-
-\begin{proof}
-Fix the pair set $F$ and the columns and pairs of the $4$ doubles. This can be
-done in $3\,(m)_4$ ways. Call $4$ consecutive singleton columns a \emph{block},
-and record it by the word of its $4$ black rows. We show that a block of an
-optimum avoids at least $44$ of the $256$ words.
-
-The \emph{template words} $2413$, $3412$, $2143$, and $3142$ are the rows of the
-corners of $\kC_x$, $\kA_x$, $\kE_x$, and $\kB_x$, where $x$ is the first column
-of the block. They are the permutations of $1234$ whose first and last letters
-both lie in $\{2,3\}$. Let $\tau$ be one of these $4$ rectangles and
-$t_1t_2t_3t_4$ its word.
-
-First, the block is not a template word, since $\tau$ would be hidden
-(Theorem~\ref{thm:hidden}). Second, the block is not obtained from
-$t_1t_2t_3t_4$ by exchanging $t_p$ and $t_q$. In that case $\tau$ would show
-exactly its corners $(x+p-1,t_p)$ and $(x+q-1,t_q)$, and so would the
-axis-aligned rectangle through these $2$ points. The words obtained by such
-exchanges are the templates and the $16$ permutations with exactly one of the
-first and last letters in $\{2,3\}$. So $20$ permutations are excluded.
-
-Third, the block is not obtained from $t_1t_2t_3t_4$ by changing one letter
-$t_p=r$ to a letter $s$ with $\{r,s\}\in F$. In that case $\tau$ would show only
-$(x+p-1,r)$. Let $d$ be the double column with the pair $\{r,s\}$. The
-axis-aligned rectangle on the rows $r,s$ and the columns $x+p-1$ and $d$ would
-also show only $(x+p-1,r)$. Each row lies in $2$ pairs of $F$, so each template
-gives $8$ such words. They repeat a letter, so they are not permutations.
-Two templates can give the same word only if they differ by exchanging $2$
-letters $r,s$ with $\{r,s\}\in F$, and then they share $2$ words. The $4$ pairs
-of templates that differ by one exchange use the letters $\{2,3\}$ twice and
-$\{1,4\}$ twice. So at least $32-8=24$ further words are excluded, and a block
-has at most $256-20-24=212=4^4\cdot\frac{53}{64}$ words.
-
-Cut the columns into the $\lfloor m/4\rfloor$ groups $4j-3,\ldots,4j$. At most
-$4$ groups contain a double, so at least $k$ groups are blocks. Every other
-singleton column has at most $4$ choices. This gives the bound.
-\end{proof}
+so $a_4(m)=O\bigl(m^4\,212^{m/4}\bigr)$ and $212^{1/4}<3.816$. We omit the proof,
+since Corollary~\ref{cor:fourgrowth} gives the exact rate. The script
+\nolinkurl{four_row_block_words.py} lists the excluded words and checks them on
+all optima with $m\le10$.
+\end{remark}
 
 \subsection{The automaton}
 
@@ -154,16 +127,14 @@ It satisfies the conditions of Lemma~\ref{lem:fourmemory}, so no step rejects.
 
 \subsection{The generating function and the growth rate}
 
-The statements of this subsection are computer-assisted. We built
-$\mathcal A_F$ for the $3$ pair sets. The automata have $60975$, $138095$, and
-$55575$ states. For each we also have a smaller machine from an earlier search,
-with $2519$, $3089$, and $2119$ reachable states, and a program checks that it
-accepts the same words as $\mathcal A_F$. Two separately written transfer
-counters give the same counts for all $m\le1500$. For $m\le10$ the counts also
-agree with a test of every candidate against the definition. At $m=12$ the
-pair sets of $\{1,2\}\mid\{3,4\}$, $\{1,3\}\mid\{2,4\}$, and $\{1,4\}\mid\{2,3\}$
-give $114424$, $1785768$, and $137656$ optima.
-
+The statements of this subsection are computer-assisted. For the $3$ pair sets
+the script \nolinkurl{four_row_certificate.py} builds $\mathcal A_F$ from
+Proposition~\ref{prop:fourautomaton}. The automata have
+$60975$, $138095$, and $55575$ states. Write $a_F(m)$ for the number of words of
+length $m$ that $\mathcal A_F$ accepts, so that $a_4(m)=\sum_Fa_F(m)$ for
+$m\ge6$. At $m=12$ the pair sets of $\{1,2\}\mid\{3,4\}$, $\{1,3\}\mid\{2,4\}$,
+and $\{1,4\}\mid\{2,3\}$ give $114424$, $1785768$, and $137656$ optima. For
+$m\le10$ the counts agree with a test of every candidate against the definition.
 
 \begin{theorem}[four-row generating function, computer-assisted]\label{thm:fourgfexact}
 There are coprime integer polynomials $P_4=26z^6-826z^7+\cdots$ of degree $444$
@@ -186,26 +157,34 @@ g_{20}={}&1-4z+2z^2+z^3-3z^4+5z^5+z^6-3z^7+7z^8+2z^9+30z^{10}-7z^{11}+10z^{12}\\
 \end{theorem}
 
 \begin{proof}
-By Proposition~\ref{prop:fourautomaton}, $a_4(m)$ is the number of words of
-length $m$ accepted by the $3$ automata. We computed $a_4(m)$ for $m\le1500$,
-and the Berlekamp--Massey algorithm, run modulo $8$ primes, produced $P_4$ and
-$Q_4$. This is only a guess, so we certify it. For each pair set let $M_F$ be the
-transfer matrix of the smaller machine and $v_F(n)=v_F(0)M_F^n$ its vector of
-state counts after $n$ letters. The programs check the vector identity
-$\sum_jq_j\,v_F(n_F-j)=0$ in exact integer arithmetic, with $n_F=436$, $435$, and
-$445$ for the $3$ pair sets. Multiplying by powers of $M_F$ gives the same
-identity at every larger index. Since $a_4(n)$ is a fixed linear function of the
-vectors $v_F(n)$, the recurrence holds for all $n\ge445$. Then $P_4$ is the
-product of $Q_4$ and the series, cut off after degree $444$. Its coefficient of
-$z^{444}$ is not zero, so the recurrence fails at $444$. The factorization and
-the coprimality were computed with SymPy~\cite{sympy2017}.
+The polynomials $P_4$ and $Q_4$ were first found from the values $a_4(m)$ with
+$m\le1500$ by the Berlekamp--Massey algorithm~\cite{massey1969}. This is only a
+guess, so we certify it on the automata $\mathcal A_F$. For a state $s$ of
+$\mathcal A_F$ let $u_F(n)_s$ be the number of words of length $n$ that lead
+from $s$ to acceptance. Then $a_F(n)$ is the entry of $u_F(n)$ at the start
+state, and $u_F(n+1)=T_Fu_F(n)$ for the transition matrix $T_F$. The script
+checks that the vector $R_F=\sum_jq_j\,u_F(445-j)$ is zero for each $F$. Applying
+$T_F^{\,n-445}$ gives $\sum_jq_j\,a_F(n-j)=0$ for all $n\ge445$, and we sum over
+$F$. The number $a_F(n)$ counts optima only for $n\ge6$, and this recurrence
+uses only the indices $n-j\ge25$. The check is exact for the following reason. The script works modulo each
+of $48$ primes below $2^{31}$. An entry of $u_F(n)$ is at most $8^n$, so an entry
+of $R_F$ has absolute value at most $8^{445}\sum_j|q_j|$. This is less than half
+the product of the primes. So $R_F$ vanishes because it vanishes modulo every
+prime. The script also checks, modulo the same primes, that the product of
+$Q_4$ and $\sum_{m=6}^{444}a_4(m)z^m$ agrees with $P_4$ up to $z^{444}$. Here
+$a_4(m)\le3\cdot8^m$, so a coefficient of the product differs from the
+coefficient of $P_4$ by at most $3\cdot8^{444}\sum_j|q_j|$ plus the largest
+coefficient of $P_4$ in absolute value. This is again less than half the
+product of the primes, so the agreement is exact. The coefficient of
+$z^{444}$ in $P_4$ is not zero, so the recurrence fails at $444$. The
+factorization and the coprimality were computed with SymPy~\cite{sympy2017}.
 \end{proof}
 
-The other factors of $Q_4$ and the coefficients of $P_4$ are in the file
-\nolinkurl{four_row_recurrence.json} of the repository~\cite{repo} and in the
-OEIS entry \seqnum{A401224}. The $3$ pair sets have rational series of their
-own, with reduced denominators of degrees $162$, $153$, and $107$. The factor
-$g_{20}$ occurs only for the pair set of $\{1,3\}\mid\{2,4\}$.
+All coefficients of $P_4$ and $Q_4$ and all factors of $Q_4$ are in the
+ancillary file \nolinkurl{four_row_gf.txt}, which is also attached to the OEIS
+entry \seqnum{A401224}. The $3$ series $\sum_ma_F(m)z^m$ are rational, with
+reduced denominators of degrees $162$, $153$, and $107$. The factor $g_{20}$
+occurs only for the pair set of $\{1,3\}\mid\{2,4\}$.
 
 \begin{corollary}[growth, computer-assisted]\label{cor:fourgrowth}
 Let $\rho_4=3.351996777310\ldots$ be the largest real root of
@@ -226,4 +205,6 @@ $O((1000/341)^m)$. Since $[z^m](1-z/r)^{-j}=\rho_4^m\binom{m+j-1}{j-1}$, we get
 $\pi(m)=\sum_jc_j\binom{m+j-1}{j-1}$ and $c=c_5/24$. Interval arithmetic gives
 $8.1610970775\times10^{-5}<c<8.1610970776\times10^{-5}$. The last claim holds
 because $g_{20}$ does not divide the denominators of the other $2$ pair sets.
+The order $5$ of the pole matches the $5$ runs of singletons that the $4$
+doubles separate.
 \end{proof}

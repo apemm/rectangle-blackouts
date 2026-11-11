@@ -327,22 +327,38 @@ only one rule for it. So this point is in row $1$ if $a<0$ and in row $g$ if $a>
 in the gadget $G_e$, which contradicts Lemma~\ref{lem:onedouble}(b).
 \end{proof}
 
-\subsection{Proof of Theorem~\ref{thm:threshold}(b)}
+\subsection{The constructions}
 
-By Theorem~\ref{thm:rowbound} we only need valid blackouts with $m+q_h$ points. For $h\le8$
-the claim follows from Theorem~\ref{thm:general} after increasing $C$. So let $h\ge9$.
+We now build valid blackouts whose doubles carry a given set of parity edges. Recall the
+constant $c_0$ of Lemma~\ref{lem:placement}.
 
-\emph{Even $h$.} Take $g=h$. Every parity edge $\{r,s\}$ is good for $h$, since
-$\min(r-1,h-g)=0$. Let $\mathcal E$ be the set of all $q_h$ parity edges and let
-$N=\lceil c_0q_h\tmax(h)^2\rceil$. Take the columns $X_e$ of Lemma~\ref{lem:placement}, and
-let $B$ be a configuration as in Lemma~\ref{lem:block} with $I=\ZZ$. For example, let
-every column in (3) be black in row $1$. For $m\ge N$ let $S$ be the set of points
-of $B$ in the columns $1$ to $m$. It contains all doubles, so $|S|=m+q_h$. By
-Lemma~\ref{lem:block}, $S$ contains no obstruction, and it is valid by
-Lemma~\ref{lem:reduction}. Hence $m_h\le N$.
+\begin{proposition}\label{prop:partial}
+Let $\mathcal F$ be a set of $n\ge1$ parity edges on $h$ rows. In each of the following
+3 cases there is, for every integer $m\ge M$, a valid blackout of the $h\times m$ grid with
+$m+n$ points.
+\begin{enumerate}[(a)]
+\item $h\ge4$ is even, and $M=\lceil c_0\,n\,\tmax(h)^2\rceil$.
+\item $h\ge5$ is odd, every edge of $\mathcal F$ is good for $h-1$, and
+$M=\lceil c_0\,n\,\tmax(h)^2\rceil$.
+\item $h\ge9$ is odd, and $M=c_0(n+4)\,\tmax(h)^2+6h^2+4$.
+\end{enumerate}
+\end{proposition}
 
-\emph{Odd $h$.} Now $g=h$ is odd, so Lemma~\ref{lem:sea} does not apply to the sea rows
-$1$ and $h$. We use the 4 pairs of sea rows
+\begin{proof}
+\emph{Cases (a) and (b).} Take $g=h$ in (a) and $g=h-1$ in (b). Then $g$ is even and
+$2g-1>h$. In (a) every parity edge $\{r,s\}$ is good for $h$, since $\min(r-1,h-g)=0$. So
+in both cases the edges of $\mathcal F$ are good for $g$. Take the columns $X_e$ of
+Lemma~\ref{lem:placement} for $\mathcal E=\mathcal F$ and $N=M$. Let $B$ be the
+configuration in which column $X_e$ is black exactly in the 2 rows of $e$, column $X_e+a$
+with $a\in A_e$ is black exactly in row $1$ if $a<0$ and exactly in row $g$ if $a>0$, and
+every other column is black exactly in row $1$. It satisfies the hypotheses of
+Lemma~\ref{lem:block} with $I=\ZZ$, so it contains no obstruction. For $m\ge M$ let $S$ be
+the set of points of $B$ in the columns $1$ to $m$. Every column of $S$ is a singleton or
+a double. The doubles are the $n$ columns $X_e\le M\le m$, and their row pairs are the
+edges of $\mathcal F$. Hence $|S|=m+n$, and $S$ is valid by Lemma~\ref{lem:reduction}.
+
+\emph{Case (c).} Now Lemma~\ref{lem:sea} does not apply to the sea rows $1$ and $h$. We
+use the 4 pairs of sea rows
 \[
  \{1,h-1\},\qquad\{1,h-3\},\qquad\{2,h\},\qquad\{4,h\}.
 \]
@@ -353,8 +369,8 @@ obstructions. Both $g=h-1$ and $g=h-3$ are even and satisfy $2g-1>h$, since $h\g
 We claim that for every parity edge $e=\{r,s\}$, with $r$ odd, one of $e$ and $\rho(e)$ is
 good for $h-1$ or for $h-3$. For $g=h-1$, Definition~\ref{def:good} only involves $j=1$.
 So $e$ is good for $h-1$ unless $r=h$, or $r\ge3$ and $h-r$ is a perfect square. Note that
-$h-r$ is even. Suppose that $h-r=4u^2$ with $u\ge1$ and that $s\le h-3$. Then $e$ lies in the rows $1$ to $h-3$,
-and for $g=h-3$ the numbers $j(g-r+j)$ with $j=1,2,3$ are
+$h-r$ is even. Suppose that $h-r=4u^2$ with $u\ge1$ and that $s\le h-3$. Then $e$ lies in
+the rows $1$ to $h-3$, and for $g=h-3$ the numbers $j(g-r+j)$ with $j=1,2,3$ are
 \[
  4u^2-2,\qquad 2(4u^2-1),\qquad 12u^2 .
 \]
@@ -365,18 +381,18 @@ for $h-1$. In the last case $\rho(e)=\{1+4u^2,2\}$, where $1+4u^2\le h-2$. If $h
 not a perfect square, then $\rho(e)$ is good for $h-1$. Otherwise $h-(1+4u^2)=4v^2$ with
 $v\ge1$, and $\rho(e)$ is good for $h-3$ by the computation above. This proves the claim.
 
-By the claim we can split the parity edges into 4 sets $\mathcal E_1,\dots,\mathcal E_4$
-such that the edges of $\mathcal E_1$ are good for $g_1=h-1$, the edges of $\mathcal E_2$
-are good for $g_2=h-3$, and the edges $\rho(e)$ with $e\in\mathcal E_3$ or
-$e\in\mathcal E_4$ are good for $g_3=h-1$ or $g_4=h-3$, respectively. Put
-$N_k=\lceil c_0\max(|\mathcal E_k|,1)\,\tmax(h)^2\rceil$, and define
+By the claim we can split $\mathcal F$ into 4 sets $\mathcal E_1,\dots,\mathcal E_4$, some
+of which may be empty, such that the edges of $\mathcal E_1$ are good for $g_1=h-1$, the
+edges of $\mathcal E_2$ are good for $g_2=h-3$, and the edges $\rho(e)$ with
+$e\in\mathcal E_3$ or $e\in\mathcal E_4$ are good for $g_3=h-1$ or $g_4=h-3$, respectively.
+Put $N_k=\lceil c_0\max(|\mathcal E_k|,1)\,\tmax(h)^2\rceil$, and define
 \[
  s_1=1,\qquad s_{k+1}=s_k+N_k+8W_h,\qquad z=s_3-4W_h .
 \]
 If $\mathcal E_k$ is not empty, apply Lemma~\ref{lem:placement} with $g=g_k$ and $N=N_k$,
 to $\mathcal E_k$ for $k=1,2$ and to $\rho(\mathcal E_k)$ for $k=3,4$. In both cases we get
-columns
-$X_e\in\{1,\dots,N_k\}$ for $e\in\mathcal E_k$. Define a configuration $B$ as follows.
+columns $X_e\in\{1,\dots,N_k\}$ for $e\in\mathcal E_k$. Define a configuration $B$ as
+follows.
 \begin{itemize}
 \item For $e\in\mathcal E_k$, column $x_e=s_k-1+X_e$ is black exactly in the 2 rows of $e$.
 \item For $e\in\mathcal E_k$ with $k\le2$ and $a\in A_e$, column $x_e+a$ is black exactly
@@ -400,21 +416,75 @@ point of $Q$ lies in row $1$ and in a column $x<z$, or in row $h$ and in a colum
 These points form a chain, so $Q$ is not a corner triple or a mixed quadruple by
 Lemma~\ref{lem:chain}. It is not a rival pair by Lemma~\ref{lem:rival}.
 
-All doubles of $B$ lie in the columns $1$ to $M=s_4+N_4-1$. For $m\ge M$ let $S$ be the
-set of points of $B$ in the columns $1$ to $m$. As for even $h$, the blackout $S$ is valid
-and has $m+q_h$ points. Finally
+All doubles of $B$ lie in the columns $1$ to $s_4+N_4-1$, and
 \[
- m_h\le M=N_1+N_2+N_3+N_4+24W_h\le c_0(q_h+4)\,\tmax(h)^2+4+6h^2 ,
+ s_4+N_4-1=N_1+N_2+N_3+N_4+24W_h\le c_0(n+4)\,\tmax(h)^2+4+6h^2=M ,
 \]
-which is at most $C\,h^2\,\tmax(h)^2$. This completes the proof of
-Theorem~\ref{thm:threshold}.
+since $W_h\le h^2/4$. For $m\ge M$ let $S$ be the set of points of $B$ in the columns $1$
+to $m$. As in the cases (a) and (b), the blackout $S$ is valid and has $m+n$ points.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:threshold}(b)]
+By Theorem~\ref{thm:rowbound} we only need valid blackouts with $m+q_h$ points. For $h\le8$
+they exist for $m\ge M_h$ by Proposition~\ref{thm:general}, so $m_h\le M_h\le M_8=211$. For
+$h\ge9$ apply Proposition~\ref{prop:partial}(a) or (c) to the set of all $q_h$ parity
+edges. The number $M$ in (c) need not be an integer, so this gives
+\begin{equation}\label{eq:explicitbound}
+ m_h\le c_0(q_h+4)\,\tmax(h)^2+6h^2+5\qquad\text{for every }h\ge9 ,
+\end{equation}
+and both bounds are at most $C\,h^2\,\tmax(h)^2$ with $C=c_0$.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:everywidth}]
+We show the claim with $C'=2c_0$. Let $n$ be the minimum in the claim. If $n=0$, the claim
+is $f(h,m)\ge m$, which holds by Lemma~\ref{lem:cross}. Let $n\ge1$. Then
+$m\ge2c_0\,n\,\tmax(h)^2$. If $h\le8$, then $m\ge2c_0\ge211=M_8\ge M_h$, and
+$f(h,m)=m+q_h$ by Proposition~\ref{thm:general}. If $h\ge10$ is even, apply Proposition~\ref{prop:partial}(a)
+to any $n$ parity edges. Let $h\ge9$ be odd. An edge $\{r,s\}$ with $r$ odd is good for
+$h-1$ if $r\le h-2$ and $h-r$ is not a perfect square. There are $\frac{h-1}2$ odd rows
+$r\le h-2$, fewer than $\frac12\sqrt h$ of them have $h-r=4u^2$, and each odd row lies in
+$\frac{h-1}2$ parity edges. So at least $\frac14(h-1-\sqrt h)(h-1)$ parity edges are good
+for $h-1$, and this is at least $\frac18(h^2-1)=\frac12q_h$ because $h-3\ge2\sqrt h$. If
+$n\le\frac12q_h$, apply Proposition~\ref{prop:partial}(b) to $n$ edges that are good for
+$h-1$. If $n>\frac12q_h$, apply Proposition~\ref{prop:partial}(c) to any $n$ parity edges.
+Its condition on $m$ holds because
+\[
+ c_0\,n\,\tmax(h)^2\ \ge\ 4c_0\,\tmax(h)^2+c_0\bigl(\tfrac12q_h-4\bigr)
+ \ \ge\ 4c_0\,\tmax(h)^2+6h^2+4 ,
+\]
+where the last step uses $\frac12q_h-4=\frac18(h^2-33)$, $h\ge9$, and $c_0\ge100$. In
+every case we get $f(h,m)\ge m+n$.
+\end{proof}
+
+\begin{remark}[constants and measured widths]\label{rem:constants}
+The proof gives $c_0=3\cdot2^{35}$, which is about $10^{11}$, and we did not try to make
+it smaller. With this constant the bound~\eqref{eq:explicitbound} is first below the bound $M_h$ of
+Proposition~\ref{thm:general} at $h=710132287759$. The comparison is not monotone, since
+$\tmax(h)$ jumps. For example~\eqref{eq:explicitbound} is again at least $M_h$ at
+$h=757474440275$. The construction itself is much better than its constant. We ran it with
+a greedy choice in place of the local lemma. The edges are taken in a random order, and
+each double gets the smallest column that is not bad together with the earlier ones, with
+(B1) to (B3) tested as defined. The best of 3 runs gave the widths below. Each blackout
+was then checked from Definition~\ref{def:valid}.
+\begin{center}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+$h$ & $12$ & $13$ & $14$ & $16$\\
+\midrule
+width of the greedy blackout & $1180$ & $1872$ & $2154$ & $2919$\\
+$M_h$ & $1121$ & $1559$ & $2113$ & $3655$\\
+\bottomrule
+\end{tabular}
+\end{center}
+For $h=13$ the width includes 2 gaps of $8W_h=296$ columns between the 3 blocks that
+occur. At $h=16$ the conditions (B2) and (B3) matter. In 5 runs with only (B1) tested,
+all 5 blackouts were not valid.
+\end{remark}
 
 \begin{remark}\label{rem:sharper}
 By a theorem of Wigert~\cite[Theorem~317]{hardywright2008}, the bound of
 Theorem~\ref{thm:threshold}(b) is $h^2\exp\bigl(O(\log h/\log\log h)\bigr)$. The factor
-$\tmax(h)^2$ comes from worst cases, while the average of $\tau(n)$ over $n\le x$ is about
-$\log x$. So it is natural to expect that averaged divisor sums, for example the bounds of
-Henriot~\cite{henriot2012}, replace $\tmax(h)^2$ by a power of $\log h$. We do not prove
-this here, and we do not know whether $m_h=O(h^2)$.
+$\tmax(h)^2$ comes from worst cases, while $\tau(n)$ is about $\log n$ on average. So
+averaged divisor sums~\cite{henriot2012} may replace $\tmax(h)^2$ by a power of $\log h$.
+We do not prove this, and we do not know whether $m_h=O(h^2)$.
 \end{remark}
-

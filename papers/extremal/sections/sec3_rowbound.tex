@@ -33,11 +33,18 @@ Hence $f(h,m)\le m+q_h$.
 
 In graph terms this is the bound of Neuwirth \cite[Theorem~1(ii) and
 Proposition~17]{neuwirth2001} for bipartite graphs without cycles of length $4$ and $6$,
-which he states for $m\ge q_h$. He contracts each column to the set of all pairs of its
-black rows and applies Mantel's theorem~\cite{mantel1907}. We give the short proof because
-we need its cases of equality. We join the black rows $B_i$ of each nonempty column by a
-tree $T_i$ instead of a complete graph, since a column with 3 black rows would give a
-triangle. Let $H$ be the union of these trees, a graph on the $h$ rows.
+which he states for $m\ge q_h$. His proof contracts each column to the pairs of its black
+rows. The contracted graph on the rows is triangle-free with at most $q_h$ edges, so at
+most $q_h$ columns have 2 or more black points \cite[Proposition~3]{neuwirth2001}, and he
+bounds the number of edges at these columns by his cubic inequality
+\cite[Theorem~1(i)]{neuwirth2001}. He shows that the bound is attained, but he does not
+describe all graphs that attain it. His Remark~18 gives the maximum for $h\le5$. It is
+$m+h-1$ for $h\le3$, $m+4$ for $h=4\le m$, and $m+6$ for $h=5<m$. For example the maximum
+for the graph is $8$ when $h=m=4$, while $f(4,4)=7$. We give a short proof by Mantel's
+theorem~\cite{mantel1907} because we need its cases of equality. We join the black rows
+$B_i$ of each nonempty column by a tree $T_i$, so that the graph on the rows stays
+triangle-free when a column has 3 or more black rows. Let $H$ be the union of these trees,
+a graph on the $h$ rows.
 
 \begin{lemma}\label{lem:H}
 Let $m\ge3$ and let $S$ be axis-valid. For any choice of the trees, $H$ is simple and
@@ -100,9 +107,8 @@ $\{a,b\}$, $\{b,c\}$, and $\{a,c\}$, which contradicts (c). Now apply
 Lemma~\ref{lem:girth}.
 \end{proof}
 
-Hence there are $p_h\,(m)_{q_h}\,h^{m-q_h}$ axis-valid blackouts with $m+q_h$ points, where
-$(m)_q$ is the falling factorial and $p_h$ is the number of bipartitions in (c). The graph
-$G_S$ of such a blackout is the extremal graph of Neuwirth from the introduction.
+The graph $G_S$ of such a blackout is the extremal graph of Neuwirth from the
+introduction.
 
 \begin{corollary}\label{cor:small-m}
 Let $h\ge4$ and $3\le m<q_h$. Then $f(h,m)\le m+q_h-1$. Hence $m_h\ge q_h$ for $h\ge4$.

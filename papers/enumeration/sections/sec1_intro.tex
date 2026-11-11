@@ -22,11 +22,12 @@ Write $f(h,m)$ for the largest size of a valid blackout, and $a_h(m)$ for the
 number of valid blackouts of that size. We call them \emph{optima}. The
 values $f(h,m)$ form the table \seqnum{A397315} of the OEIS~\cite{oeis}, and
 the counts $a_h(m)$ form the table \seqnum{A399580}. The companion
-paper~\cite{pemmasaniExtremal} is about $f$. It finds $f(h,m)$ for every
-$h\le6$, and it proves that $f(h,m)=m+\lfloor h^2/4\rfloor$ for every $h\ge3$
-once $m$ is large. This paper is about the counts. We state the facts that
-we take from the companion paper in Theorem~\ref{thm:imports}. Every other
-result is proved here, and the paper can be read on its own.
+paper~\cite{pemmasaniExtremal} is about $f$. It proves the bound
+$f(h,m)\le m+\lfloor h^2/4\rfloor$ with its cases of equality, shows that
+equality holds for all large $m$, finds the order of the least such width, and
+gives $f(h,m)$ for every $h\le6$. This paper is about the counts. It uses from
+the companion paper only the statements listed in Theorem~\ref{thm:imports},
+and the companion paper uses nothing from this one.
 
 Put $q_h=\lfloor h^2/4\rfloor$. We record a blackout by the set of black rows
 of each column, read from left to right. The results are as follows.
@@ -35,33 +36,31 @@ of each column, read from left to right. The results are as follows.
 \item \emph{Two rows.} We have $a_2(m)=m2^{m-1}$ for $m\ge3$ (\seqnum{A001787}).
 Up to symmetry the optima are counted by \seqnum{A322284}, by a bijection with
 placements of kings (Theorem~\ref{thm:strip} and Proposition~\ref{prop:kings}).
-\item \emph{Three rows.} For $m\ge4$ we prove
-$a_3(m)=4(m-1)(3m+2)\,3^{m-5}+E_m$, where $E_m$ counts the optima with a column
-black in rows $1$ and $3$ (Theorem~\ref{thm:threecount}). These sequences are
+\item \emph{Three rows.} We find $a_3(m)$ in closed form
+(Theorem~\ref{thm:threecount}). For $m\ge4$ it is $4(m-1)(3m+2)\,3^{m-5}+E_m$,
+where $E_m$ counts the optima with a column black in rows $1$ and $3$ and has
+order $m^2(1+\sqrt3)^m$. So $a_3(m)\sim\frac4{81}m^23^m$. These sequences are
 \seqnum{A401223} and \seqnum{A398448}. The series $\sum_{m\ge1}a_3(m)z^m$ is
 rational with denominator $(1-3z)^3(1-2z-2z^2)^3(1+2z^2)^3$
-(Theorem~\ref{thm:threegf}). A closed form for $E_m$ shows that it has order
-$m^2(1+\sqrt3)^m$, so $a_3(m)\sim\frac4{81}m^23^m$
-(Theorem~\ref{thm:threeclosed}). The optima up to symmetry are counted in
+(Theorem~\ref{thm:threegf}). The optima up to symmetry are counted in
 Theorem~\ref{thm:threeorbits}, which gives \seqnum{A401226}.
 \item \emph{Four rows.} For $m\ge4$ no valid blackout hides all $4$ corners of a
 rectangle (Theorem~\ref{thm:hidden}). For $m\ge6$ a finite automaton with $6$
 columns of memory accepts exactly the optima
-(Proposition~\ref{prop:fourautomaton}), and a count of forbidden blocks gives
-$a_4(m)=O(m^4\,212^{m/4})$ by hand (Theorem~\ref{thm:foursurvival}). With
-computer help we find the generating function of $a_4(m)$
+(Proposition~\ref{prop:fourautomaton}). With computer help we find the generating function of $a_4(m)$
 (\seqnum{A401224}). It is rational with a reduced denominator of degree $420$, and
 $a_4(m)\sim c\,m^4\rho_4^m$, where $\rho_4=3.35199\ldots$ is algebraic of
 degree $20$ (Theorem~\ref{thm:fourgfexact} and Corollary~\ref{cor:fourgrowth}).
 \item \emph{Five rows.} Two transfer counters give $a_5(m)$ for $8\le m\le23$
-(\seqnum{A401225}, Proposition~\ref{prop:fivecounts}).
+(\seqnum{A401225}, Table~\ref{tab:fivevalues}).
 \item \emph{Fixed height.} For every $h$ the valid column words form a regular
-language, and $\sum_{m\ge1}a_h(m)z^m$ is rational
-(Theorems~\ref{thm:regular} and~\ref{thm:rational}).
+language, $f(h,m)-m$ is ultimately periodic in $m$, and $\sum_{m\ge1}a_h(m)z^m$
+is rational (Theorems~\ref{thm:regular} and~\ref{thm:rational}). The proof does
+not use the companion paper.
 \item \emph{Tilted rectangles.} A tilted lattice rectangle whose bounding box has
-height $n$ has width at most $\lfloor n^2/4\rfloor+1$. This proves the conjecture
-in \seqnum{A338885} that the largest entry of its row $n$ is
-\seqnum{A033638}$(n)$ (Corollary~\ref{cor:oeisconj}).
+height $n$ has width at most $\lfloor n^2/4\rfloor+1$. This proves a conjecture
+of Kagey in \seqnum{A338885}, that the largest entry of its row $n$ is
+\seqnum{A033638}$(n)$ (Remark~\ref{cor:oeisconj}).
 \end{enumerate}
 
 Statements that rest on a computation are marked as computer-assisted, and
@@ -72,5 +71,8 @@ in Lean by the Omega Institute~\cite{trureturing2026}. The row bound
 $f(h,m)\le m+q_h$ of the companion paper is, in graph form, due to
 Neuwirth~\cite[Theorem~1(ii) and Proposition~17]{neuwirth2001}. Counting
 configurations on a grid of fixed height by a transfer matrix is a standard
-method~\cite[Proposition~V.6]{flajolet2009}. An example in this journal is the
-count of independent sets of grid graphs by Euler~\cite{euler2005}.
+method~\cite[Section~4.7]{stanley2012}, \cite[Proposition~V.6]{flajolet2009}.
+Examples are the independent sets of grid
+graphs~\cite{calkinwilf1998,euler2005}, the nonattacking kings of
+Wilf~\cite{wilf1995}, and the dominating sets of grids and king graphs counted
+by Mertens~\cite{mertens2024}.

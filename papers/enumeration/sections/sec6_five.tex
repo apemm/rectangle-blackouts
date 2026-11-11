@@ -1,25 +1,12 @@
-\section{Five rows and small grids}\label{sec:five}
+\section{Five rows}\label{sec:five}
 
-Let $m\ge8$. Then $f(5,m)=m+6=m+q_5$ by Theorem~\ref{thm:imports}(c). As on $4$
-rows, Theorem~\ref{thm:imports}(b) describes the optima. An optimum has $6$
-doubles and $m-6$ singletons, and the row pairs of the doubles are the $6$ edges
-of a complete bipartite graph with parts of sizes $2$ and $3$ on the rows. There
-are $10$ such graphs, so there are $10\,(m)_6\,5^{m-6}$ words of this form. Each
-of them is axis-valid and hides no axis-aligned rectangle. A tilted rectangle
-has span at most $W_5=5$ by Lemma~\ref{lem:span}. As in
-Lemma~\ref{lem:fourmemory}, validity can then be tested on windows of $11$
-consecutive columns. We have no analogue of Theorem~\ref{thm:hidden}, so the
-test must also remember whether a tilted rectangle has been hidden. We did not
-build the automaton. Two separately written programs count the valid words by
-a transfer over the columns.
-
-\begin{proposition}[five-row counts, computer-assisted]\label{prop:fivecounts}
-The numbers $a_5(m)$ for $8\le m\le23$ are those of Table~\ref{tab:fivevalues}
-\textup{(}\seqnum{A401225}\textup{)}. The $4$ optima of the $5\times8$ grid are the
-blackout with the column word $14,45,25,5,5,34,23,12$, where each entry lists
-the black rows of a column, and its images under the row reflection and the
-column reversal.
-\end{proposition}
+Let $m\ge8$. By Theorem~\ref{thm:imports}, $f(5,m)=m+6$, and an optimum has $6$
+doubles, whose row pairs are the edges of a complete bipartite graph with parts
+of sizes $2$ and $3$, and $m-6$ singletons. Table~\ref{tab:fivevalues} lists the
+number of optima for $8\le m\le23$ (\seqnum{A401225}). These values are
+computer-assisted. Two separately written transfer counters over the columns
+agree for $13\le m\le23$, and for $8\le m\le12$ the values agree with complete
+enumerations (Section~\ref{sec:verify}).
 
 \begin{table}[!htb]
 \centering\footnotesize\setlength{\tabcolsep}{5pt}
@@ -36,18 +23,3 @@ $11$ & $3004$ & $15$ & $8650416$ & $19$ & $8828301226$ & $23$ & $5510071794736$\
 \caption{The number of optima of the $5\times m$ grid (computer-assisted).}
 \label{tab:fivevalues}
 \end{table}
-
-The evidence is as follows. One transfer counter gives all $16$ values. A second
-one, written separately, gives the same values for $13\le m\le23$. For
-$8\le m\le12$ the values agree with complete enumerations by a SAT solver and by
-a column search, and at $m=8$ also with a test of all
-$10\,(8)_6\,5^2=5040000$ words of the form above.
-
-Table~\ref{tab:values} contains $9$ more counts for grids with both sides at
-least $4$, from $a_4(4)=316$ to $a_7(7)=7300$. On these grids the largest size
-is below the row bound, so
-Theorem~\ref{thm:imports}(b) does not apply. The counts come from complete
-enumerations, each done by $2$ separately written programs
-(Section~\ref{sec:verify}). On the $7\times8$ grid one enumeration lists $18$ optima,
-which proves only $a_7(8)\ge18$. The counts drop where $f(h,m)-m$ increases,
-for example from $a_5(7)=1184$ to $a_5(8)=4$.

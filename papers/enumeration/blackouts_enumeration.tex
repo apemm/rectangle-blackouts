@@ -187,11 +187,12 @@ Write $f(h,m)$ for the largest size of a valid blackout, and $a_h(m)$ for the
 number of valid blackouts of that size. We call them \emph{optima}. The
 values $f(h,m)$ form the table \seqnum{A397315} of the OEIS~\cite{oeis}, and
 the counts $a_h(m)$ form the table \seqnum{A399580}. The companion
-paper~\cite{pemmasaniExtremal} is about $f$. It finds $f(h,m)$ for every
-$h\le6$, and it proves that $f(h,m)=m+\lfloor h^2/4\rfloor$ for every $h\ge3$
-once $m$ is large. This paper is about the counts. We state the facts that
-we take from the companion paper in Theorem~\ref{thm:imports}. Every other
-result is proved here, and the paper can be read on its own.
+paper~\cite{pemmasaniExtremal} is about $f$. It proves the bound
+$f(h,m)\le m+\lfloor h^2/4\rfloor$ with its cases of equality, shows that
+equality holds for all large $m$, finds the order of the least such width, and
+gives $f(h,m)$ for every $h\le6$. This paper is about the counts. It uses from
+the companion paper only the statements listed in Theorem~\ref{thm:imports},
+and the companion paper uses nothing from this one.
 
 Put $q_h=\lfloor h^2/4\rfloor$. We record a blackout by the set of black rows
 of each column, read from left to right. The results are as follows.
@@ -200,33 +201,31 @@ of each column, read from left to right. The results are as follows.
 \item \emph{Two rows.} We have $a_2(m)=m2^{m-1}$ for $m\ge3$ (\seqnum{A001787}).
 Up to symmetry the optima are counted by \seqnum{A322284}, by a bijection with
 placements of kings (Theorem~\ref{thm:strip} and Proposition~\ref{prop:kings}).
-\item \emph{Three rows.} For $m\ge4$ we prove
-$a_3(m)=4(m-1)(3m+2)\,3^{m-5}+E_m$, where $E_m$ counts the optima with a column
-black in rows $1$ and $3$ (Theorem~\ref{thm:threecount}). These sequences are
+\item \emph{Three rows.} We find $a_3(m)$ in closed form
+(Theorem~\ref{thm:threecount}). For $m\ge4$ it is $4(m-1)(3m+2)\,3^{m-5}+E_m$,
+where $E_m$ counts the optima with a column black in rows $1$ and $3$ and has
+order $m^2(1+\sqrt3)^m$. So $a_3(m)\sim\frac4{81}m^23^m$. These sequences are
 \seqnum{A401223} and \seqnum{A398448}. The series $\sum_{m\ge1}a_3(m)z^m$ is
 rational with denominator $(1-3z)^3(1-2z-2z^2)^3(1+2z^2)^3$
-(Theorem~\ref{thm:threegf}). A closed form for $E_m$ shows that it has order
-$m^2(1+\sqrt3)^m$, so $a_3(m)\sim\frac4{81}m^23^m$
-(Theorem~\ref{thm:threeclosed}). The optima up to symmetry are counted in
+(Theorem~\ref{thm:threegf}). The optima up to symmetry are counted in
 Theorem~\ref{thm:threeorbits}, which gives \seqnum{A401226}.
 \item \emph{Four rows.} For $m\ge4$ no valid blackout hides all $4$ corners of a
 rectangle (Theorem~\ref{thm:hidden}). For $m\ge6$ a finite automaton with $6$
 columns of memory accepts exactly the optima
-(Proposition~\ref{prop:fourautomaton}), and a count of forbidden blocks gives
-$a_4(m)=O(m^4\,212^{m/4})$ by hand (Theorem~\ref{thm:foursurvival}). With
-computer help we find the generating function of $a_4(m)$
+(Proposition~\ref{prop:fourautomaton}). With computer help we find the generating function of $a_4(m)$
 (\seqnum{A401224}). It is rational with a reduced denominator of degree $420$, and
 $a_4(m)\sim c\,m^4\rho_4^m$, where $\rho_4=3.35199\ldots$ is algebraic of
 degree $20$ (Theorem~\ref{thm:fourgfexact} and Corollary~\ref{cor:fourgrowth}).
 \item \emph{Five rows.} Two transfer counters give $a_5(m)$ for $8\le m\le23$
-(\seqnum{A401225}, Proposition~\ref{prop:fivecounts}).
+(\seqnum{A401225}, Table~\ref{tab:fivevalues}).
 \item \emph{Fixed height.} For every $h$ the valid column words form a regular
-language, and $\sum_{m\ge1}a_h(m)z^m$ is rational
-(Theorems~\ref{thm:regular} and~\ref{thm:rational}).
+language, $f(h,m)-m$ is ultimately periodic in $m$, and $\sum_{m\ge1}a_h(m)z^m$
+is rational (Theorems~\ref{thm:regular} and~\ref{thm:rational}). The proof does
+not use the companion paper.
 \item \emph{Tilted rectangles.} A tilted lattice rectangle whose bounding box has
-height $n$ has width at most $\lfloor n^2/4\rfloor+1$. This proves the conjecture
-in \seqnum{A338885} that the largest entry of its row $n$ is
-\seqnum{A033638}$(n)$ (Corollary~\ref{cor:oeisconj}).
+height $n$ has width at most $\lfloor n^2/4\rfloor+1$. This proves a conjecture
+of Kagey in \seqnum{A338885}, that the largest entry of its row $n$ is
+\seqnum{A033638}$(n)$ (Remark~\ref{cor:oeisconj}).
 \end{enumerate}
 
 Statements that rest on a computation are marked as computer-assisted, and
@@ -237,8 +236,11 @@ in Lean by the Omega Institute~\cite{trureturing2026}. The row bound
 $f(h,m)\le m+q_h$ of the companion paper is, in graph form, due to
 Neuwirth~\cite[Theorem~1(ii) and Proposition~17]{neuwirth2001}. Counting
 configurations on a grid of fixed height by a transfer matrix is a standard
-method~\cite[Proposition~V.6]{flajolet2009}. An example in this journal is the
-count of independent sets of grid graphs by Euler~\cite{euler2005}.
+method~\cite[Section~4.7]{stanley2012}, \cite[Proposition~V.6]{flajolet2009}.
+Examples are the independent sets of grid
+graphs~\cite{calkinwilf1998,euler2005}, the nonattacking kings of
+Wilf~\cite{wilf1995}, and the dominating sets of grids and king graphs counted
+by Mertens~\cite{mertens2024}.
 \section{Definitions and tools}\label{sec:setup}
 
 \subsection{Blackouts}
@@ -328,23 +330,16 @@ The rectangle fits in $h$ rows, so $b+d\le h-1$. Since $(a-1)(c-1)\ge0$, we get
 $a+c\le ac+1=bd+1$. Finally $bd\le\lfloor(b+d)^2/4\rfloor\le W_h-1$.
 \end{proof}
 
-The same computation settles a conjecture in the OEIS. Row $n$ of the triangle
+\begin{remark}[a conjecture in \seqnum{A338885}]\label{cor:oeisconj}
+The same computation settles a conjecture of Kagey. Row $n$ of his triangle
 \seqnum{A338885} lists all $k$ such that some tilted lattice rectangle touches
-all $4$ sides of an $n\times k$ rectangle. Its comments conjecture that the
-largest such $k$ is \seqnum{A033638}$(n)=\lfloor n^2/4\rfloor+1$.
-
-\begin{corollary}[the conjecture in \seqnum{A338885}]\label{cor:oeisconj}
-Let $n\ge2$. If a tilted lattice rectangle has a bounding box of height $n$ and
-width $k$, then $k\le\lfloor n^2/4\rfloor+1$, and equality occurs. So row $n$ of
-\seqnum{A338885} has largest entry \seqnum{A033638}$(n)$.
-\end{corollary}
-
-\begin{proof}
-In~\eqref{eq:tilt-param} the bounding box has height $b+d=n$ and width $k=a+c$.
-As in Lemma~\ref{lem:span}, $k\le bd+1\le\lfloor n^2/4\rfloor+1$. For equality
-take $b=\lfloor n/2\rfloor$, $d=\lceil n/2\rceil$, and the sides $(1,-b)$ and
-$(bd,d)$, which are perpendicular.
-\end{proof}
+all $4$ sides of an $n\times k$ rectangle, and he conjectures there that the
+largest such $k$ is \seqnum{A033638}$(n)=\lfloor n^2/4\rfloor+1$. This is true
+for every $n\ge2$. In~\eqref{eq:tilt-param} the bounding box has height $b+d=n$
+and width $k=a+c$. As in Lemma~\ref{lem:span}, $k\le bd+1\le\lfloor n^2/4\rfloor+1$.
+For equality take $b=\lfloor n/2\rfloor$, $d=\lceil n/2\rceil$, and the
+perpendicular sides $(1,-b)$ and $(bd,d)$.
+\end{remark}
 
 The \emph{diamond} $D(i,j)$ is the square with corners $(i,j+1)$, $(i+1,j)$,
 $(i+2,j+1)$, and $(i+1,j+2)$. The rectangles $\kA_i$, $\kB_i$, $\kC_i$, and
@@ -559,65 +554,60 @@ and $\lceil h/2\rceil$.
 \item \textup{(Values.)} We have $f(2,m)=m+1$ and $f(3,m)=m+2$. We have
 $f(4,4)=7$, $f(4,5)=8$, and $f(4,m)=m+4$ for $m\ge6$. We have $f(5,5)=10$,
 $f(5,6)=11$, $f(5,7)=12$, and $f(5,m)=m+6$ for $m\ge8$.
-\item \textup{(Large widths.)} For every $h\ge3$ there is a width $m_h$ such that
-$f(h,m)=m+q_h$ for all $m\ge m_h$.
 \end{enumerate}
 \end{theorem}
 
 In the companion paper the values $f(4,4)$, $f(4,5)$, $f(5,6)$, and $f(5,7)$
 rest on computer searches, and $f(5,m)=m+6$ rests on a finite check that is
-also verified in Lean. For (d) it gives the width $q_h+(q_h-1)W_h$ and shows that the least such
-width is $h^{2+o(1)}$. We use only that $m_h$ exists. We do not need (c) for $2$ and $3$ rows, since
+also verified in Lean. We do not need (c) for $2$ and $3$ rows, since
 Theorem~\ref{thm:strip} and Corollary~\ref{cor:threevalue} prove these cases
-again. Table~\ref{tab:values} lists the known values for $h\le7$. The values of
-$f$ for $h=6$ and $h=7$ are also from the companion paper. The diagonal $f(n,n)$
-is \seqnum{A398321}.
+again. Table~\ref{tab:values} lists $f(h,m)$ and $a_h(m)$ for $h\le5$.
 
 \begin{table}[!htb]
 \centering\footnotesize\setlength{\tabcolsep}{4pt}
-\begin{tabular}{@{}r|rrrrrr@{}}
-\multicolumn{7}{c}{$f(h,m)$}\\
+\begin{tabular}{@{}r|rrrr@{}}
+\multicolumn{5}{c}{$f(h,m)$}\\
 \toprule
-$m\backslash h$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$\\
+$m\backslash h$ & $2$ & $3$ & $4$ & $5$\\
 \midrule
-$2$ & $4$ & $4$ & $5$ & $6$ & $7$ & $8$\\
-$3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$\\
-$4$ & $5$ & $6$ & $7$ & $8$ & $10$ & $11$\\
-$5$ & $6$ & $7$ & $8$ & $10$ & $11$ & $12$\\
-$6$ & $7$ & $8$ & $10$ & $11$ & $12$ & $13$\\
-$7$ & $8$ & $9$ & $11$ & $12$ & $13$ & $14$\\
-$8$ & $9$ & $10$ & $12$ & $14$ & $15$ & $16$\\
-$9$ & $10$ & $11$ & $13$ & $15$ & $16$ & \\
-$10$ & $11$ & $12$ & $14$ & $16$ & $17$ & \\
-$11$ & $12$ & $13$ & $15$ & $17$ & $18$ & \\
-$12$ & $13$ & $14$ & $16$ & $18$ & $20$ & \\
-$13$ & $14$ & $15$ & $17$ & $19$ & $21$ & \\
+$2$ & $4$ & $4$ & $5$ & $6$\\
+$3$ & $4$ & $5$ & $6$ & $7$\\
+$4$ & $5$ & $6$ & $7$ & $8$\\
+$5$ & $6$ & $7$ & $8$ & $10$\\
+$6$ & $7$ & $8$ & $10$ & $11$\\
+$7$ & $8$ & $9$ & $11$ & $12$\\
+$8$ & $9$ & $10$ & $12$ & $14$\\
+$9$ & $10$ & $11$ & $13$ & $15$\\
+$10$ & $11$ & $12$ & $14$ & $16$\\
+$11$ & $12$ & $13$ & $15$ & $17$\\
+$12$ & $13$ & $14$ & $16$ & $18$\\
+$13$ & $14$ & $15$ & $17$ & $19$\\
 \bottomrule
 \end{tabular}\hspace{1.2em}
-\begin{tabular}{@{}r|rrrrrr@{}}
-\multicolumn{7}{c}{$a_h(m)$}\\
+\begin{tabular}{@{}r|rrrr@{}}
+\multicolumn{5}{c}{$a_h(m)$}\\
 \toprule
-$m\backslash h$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$\\
+$m\backslash h$ & $2$ & $3$ & $4$ & $5$\\
 \midrule
-$2$ & $1$ & $12$ & $32$ & $80$ & $192$ & $448$\\
-$3$ & $12$ & $53$ & $224$ & $892$ & $3420$ & $12704$\\
-$4$ & $32$ & $224$ & $316$ & $1810$ & $26$ & $292$\\
-$5$ & $80$ & $892$ & $1810$ & $8$ & $76$ & $1184$\\
-$6$ & $192$ & $3420$ & $26$ & $76$ & $160$ & $2536$\\
-$7$ & $448$ & $12704$ & $292$ & $1184$ & $2536$ & $7300$\\
-$8$ & $1024$ & $45864$ & $2118$ & $4$ & $8$ & $\ge18$\\
-$9$ & $2304$ & $161992$ & $13332$ & $44$ & & \\
-$10$ & $5120$ & $562912$ & $75398$ & $350$ & & \\
-$11$ & $11264$ & $1930312$ & $402656$ & $3004$ & & \\
-$12$ & $24576$ & $6545496$ & $2037848$ & $24706$ & & \\
-$13$ & $53248$ & $21988784$ & $9894016$ & $193406$ & & \\
+$2$ & $1$ & $12$ & $32$ & $80$\\
+$3$ & $12$ & $53$ & $224$ & $892$\\
+$4$ & $32$ & $224$ & $316$ & $1810$\\
+$5$ & $80$ & $892$ & $1810$ & $8$\\
+$6$ & $192$ & $3420$ & $26$ & $76$\\
+$7$ & $448$ & $12704$ & $292$ & $1184$\\
+$8$ & $1024$ & $45864$ & $2118$ & $4$\\
+$9$ & $2304$ & $161992$ & $13332$ & $44$\\
+$10$ & $5120$ & $562912$ & $75398$ & $350$\\
+$11$ & $11264$ & $1930312$ & $402656$ & $3004$\\
+$12$ & $24576$ & $6545496$ & $2037848$ & $24706$\\
+$13$ & $53248$ & $21988784$ & $9894016$ & $193406$\\
 \bottomrule
 \end{tabular}
-\caption{Known values of $f(h,m)$ (\seqnum{A397315}) and $a_h(m)$
-(\seqnum{A399580}). A blank entry is not known. The columns $h=2$, $3$, $4$ of
-the counts are \seqnum{A001787} from $m=3$, \seqnum{A401223}, and
-\seqnum{A401224}, and the column $h=5$ is \seqnum{A401225} from $m=8$. The
-counts with $\min(h,m)\ge4$ are computer-assisted.}
+\caption{The values of $f(h,m)$ (\seqnum{A397315}) and $a_h(m)$
+(\seqnum{A399580}) for $h\le5$. The columns $h=2$, $3$, $4$ of the counts are
+\seqnum{A001787} from $m=3$, \seqnum{A401223}, and \seqnum{A401224}, and the
+column $h=5$ is \seqnum{A401225} from $m=8$. The counts $a_4(m)$ and $a_5(m)$ with
+$m\ge4$ are computer-assisted.}
 \label{tab:values}
 \end{table}
 \section{Two rows}\label{sec:strip}
@@ -932,7 +922,7 @@ shows only $(2,3)$, and so does the blue rectangle. The window $bAb$ fails.}
 \end{minipage}
 \end{figure}
 
-\subsection{\texorpdfstring{The class $AC$ and the main count}{The class AC and the main count}}
+\subsection{\texorpdfstring{The class $AC$}{The class AC}}
 
 Set $G_{AC}(z)=\sum_{m\ge2}|AC_m|z^m$, and define $G_{AB}$ and $G_X$ in the same
 way, where the sum for $G_X$ starts at $m=1$. Write $\Phi=1-3z$. The nonempty
@@ -979,22 +969,13 @@ $[z^m]z^k\Phi^{-3}=\binom{m-k+2}23^{m-k}$, the coefficient of $z^m$ for $m\ge4$
 is~\eqref{eq:GACcoef}.
 \end{proof}
 
-\begin{theorem}[the number of three-row optima]\label{thm:threecount}
 Let $E_m$ be the number of optima of the $3\times m$ grid with a column that is
-black in rows $1$ and $3$ \textup{(}\seqnum{A398448}\textup{)}. For $m\ge4$,
-\begin{equation}\label{eq:threecount}
-a_3(m)=4(m-1)(3m+2)\,3^{m-5}+E_m .
-\end{equation}
-\end{theorem}
-
-\begin{proof}
-A column that is black in rows $1$ and $3$ is $B$ or $X$. So $E_m$ counts the
-optima in the $5$ classes other than $AC$ and $CA$. By~\eqref{eq:classsym},
+black in rows $1$ and $3$ (\seqnum{A398448}). Such a column is $B$ or $X$. So
+$E_m$ counts the optima in the $5$ classes other than $AC$ and $CA$, and
+by~\eqref{eq:classsym},
 \begin{equation}\label{eq:classsum}
 a_3(m)=2|AC_m|+4|AB_m|+|X_m|=2|AC_m|+E_m\qquad(m\ge3).
 \end{equation}
-Substituting~\eqref{eq:GACcoef} gives~\eqref{eq:threecount}.
-\end{proof}
 
 \subsection{\texorpdfstring{The classes $AB$ and $X$}{The classes AB and X}}\label{sec:threeruns}
 
@@ -1150,40 +1131,52 @@ SymPy~\cite{sympy2017}.
 
 Let $\rho=1+\sqrt3$ and $\sigma=1-\sqrt3$, so that $L=(1-\rho z)(1-\sigma z)$.
 
-\begin{theorem}[three-row closed form, checked by computer algebra]\label{thm:threeclosed}
-For every $m\ge3$,
-\begin{equation}\label{eq:Eclosed}
-E_m=p_+(m)\,\rho^m+p_-(m)\,\sigma^m+(-2)^{\lfloor m/2\rfloor}\kappa(m),
+\begin{theorem}[the number of three-row optima, checked by computer algebra]\label{thm:threecount}
+For every $m\ge4$,
+\begin{equation}\label{eq:threecount}
+a_3(m)=4(m-1)(3m+2)\,3^{m-5}+p_+(m)\,\rho^m+p_-(m)\,\sigma^m+(-2)^{\lfloor m/2\rfloor}\kappa(m),
 \end{equation}
 where
 \[
 432\,p_\pm(m)=(19\pm11\sqrt3)m^2+(61\pm41\sqrt3)m+104\pm28\sqrt3,
 \]
 and $\kappa(m)=(2m^2+41m-104)/216$ for even $m$ and
-$\kappa(m)=(7m^2-32m-175)/432$ for odd $m$. Moreover $E_m>0$ and
+$\kappa(m)=(7m^2-32m-175)/432$ for odd $m$. The last $3$ terms are $E_m$, and
+\begin{equation}\label{eq:Eclosed}
+E_m=p_+(m)\,\rho^m+p_-(m)\,\sigma^m+(-2)^{\lfloor m/2\rfloor}\kappa(m)
+\end{equation}
+holds for every $m\ge2$. Moreover $E_m>0$,
 \begin{equation}\label{eq:asymp1}
 E_m\sim\frac{19+11\sqrt3}{432}\,m^2(1+\sqrt3)^m,\qquad
-a_3(m)=\frac4{81}m^23^m-\frac4{243}(m+2)3^m+O\bigl(m^2(1+\sqrt3)^m\bigr).
+a_3(m)=\frac4{81}m^23^m-\frac4{243}(m+2)3^m+O\bigl(m^2(1+\sqrt3)^m\bigr),
 \end{equation}
-In particular, the fraction of the $m^23^{m-1}$ candidates that are valid tends to
+and the fraction of the $m^23^{m-1}$ candidates that are valid tends to
 $\frac4{27}$.
 \end{theorem}
 
 \begin{proof}
-By Theorem~\ref{thm:threegf}(c), the sequence $E_m$ satisfies for $m\ge15$ the
-linear recurrence of order $12$ with characteristic polynomial
-$x^{12}L(1/x)^3N(1/x)^3$. Its roots are $\rho$, $\sigma$, and $\pm i\sqrt2$,
-each of multiplicity $3$. The right side of~\eqref{eq:Eclosed} is a
-combination of $m^j\rho^m$, $m^j\sigma^m$, and $m^j(\pm i\sqrt2)^m$ with
-$j\le2$, so it satisfies the same recurrence for all $m$. The two sides
-agree for $3\le m\le14$, which we checked in exact arithmetic. Hence they
-agree for all $m\ge3$.
+By~\eqref{eq:classsum} and~\eqref{eq:GACcoef} we have
+$a_3(m)=4(m-1)(3m+2)3^{m-5}+E_m$ for $m\ge4$. So it is enough to
+prove~\eqref{eq:Eclosed}. By~\eqref{eq:classsum}, $E_m$ is the coefficient of
+$z^m$ in $4G_{AB}+G_X$ for $m\ge3$. This also holds for $m=2$. Indeed the optima
+of the $3\times2$ grid are the transposes of the optima of
+Theorem~\ref{thm:strip}. They are the $12$ words of type~I or~II, and $10$ of
+them contain $B$ or $X$. By Propositions~\ref{prop:GX} and~\ref{prop:GAB}, the
+series $4G_{AB}+G_X$ has the denominator $L^3N^3$ of degree $12$ and a numerator
+of degree $13$. So $E_m$ satisfies for $m\ge14$ the linear recurrence of order
+$12$ with characteristic polynomial $x^{12}L(1/x)^3N(1/x)^3$. Its roots are
+$\rho$, $\sigma$, and $\pm i\sqrt2$, each of multiplicity $3$. The right side
+of~\eqref{eq:Eclosed} is a combination of $m^j\rho^m$, $m^j\sigma^m$, and
+$m^j(\pm i\sqrt2)^m$ with $j\le2$, so it satisfies the same recurrence for all
+$m$. The two sides agree for $2\le m\le13$, which we checked in exact
+arithmetic. Hence they agree for all $m\ge2$.
 
 We have $|\sigma|<1$ and $|(-2)^{\lfloor m/2\rfloor}\kappa(m)|=O(m^22^{m/2})$,
 and $\sqrt2<\rho$. This gives the asymptotic form of $E_m$. The expansion of
-$a_3(m)$ follows from~\eqref{eq:threecount}, since
+$a_3(m)$ follows, since
 $4(m-1)(3m+2)3^{m-5}=\frac4{81}m^23^m-\frac4{243}(m+2)3^m$. Finally $E_m>0$
-because $Xa^{m-1}$ is an optimum by Corollary~\ref{cor:threevalue}.
+because $Xa^{m-1}$ is an optimum by Corollary~\ref{cor:threevalue}, and
+$E_2=10$.
 \end{proof}
 
 \subsection{Optima up to symmetry}
@@ -1255,7 +1248,7 @@ $(m)_4=m(m-1)(m-2)(m-3)$. Every candidate is axis-valid, and it hides no
 axis-aligned rectangle, since its doubles have different pairs. By
 Lemma~\ref{lem:tilted-narrow}, each tilted rectangle has span at most $3$.
 
-\subsection{Hidden rectangles and a bound by hand}
+\subsection{Hidden rectangles}
 
 \begin{theorem}[no hidden rectangle]\label{thm:hidden}
 For $m\ge4$, no valid blackout of the $4\times m$ grid hides a rectangle.
@@ -1286,51 +1279,24 @@ $m\ge4$.
 The condition $m\ge4$ is needed. On the $4\times3$ grid the blackout
 $\{(1,2),(2,1),(3,2),(2,3)\}$ is valid and hides $D(1,1)$.
 
-\begin{theorem}[forbidden-block bound]\label{thm:foursurvival}
-For every $m\ge6$,
+\begin{remark}[forbidden-block bound]\label{thm:foursurvival}
+A count of excluded blocks also bounds $a_4(m)$. Let $m\ge6$, and call $4$
+consecutive singleton columns of an optimum a \emph{block}, written as the word of
+its black rows. For each pair set $F$ at least $44$ of the $256$ words cannot
+occur. They are the words $2413$, $3412$, $2143$, and $3142$ of the corner rows of
+$\kC_i$, $\kA_i$, $\kE_i$, and $\kB_i$, the $16$ other words obtained from these by
+exchanging $2$ letters, and at least $24$ words obtained from them by changing $1$
+letter $r$ to $s$ with $\{r,s\}\in F$. Since at least $\lfloor m/4\rfloor-4$ disjoint
+blocks exist, this gives
 \[
 a_4(m)\le3\,(m)_4\,4^{m-4}\Bigl(\frac{53}{64}\Bigr)^{k},\qquad
-k=\max\bigl(0,\lfloor m/4\rfloor-4\bigr).
+k=\max\bigl(0,\lfloor m/4\rfloor-4\bigr),
 \]
-Hence $a_4(m)=O\bigl(m^4\,212^{m/4}\bigr)$, and $212^{1/4}<3.816$.
-\end{theorem}
-
-\begin{proof}
-Fix the pair set $F$ and the columns and pairs of the $4$ doubles. This can be
-done in $3\,(m)_4$ ways. Call $4$ consecutive singleton columns a \emph{block},
-and record it by the word of its $4$ black rows. We show that a block of an
-optimum avoids at least $44$ of the $256$ words.
-
-The \emph{template words} $2413$, $3412$, $2143$, and $3142$ are the rows of the
-corners of $\kC_x$, $\kA_x$, $\kE_x$, and $\kB_x$, where $x$ is the first column
-of the block. They are the permutations of $1234$ whose first and last letters
-both lie in $\{2,3\}$. Let $\tau$ be one of these $4$ rectangles and
-$t_1t_2t_3t_4$ its word.
-
-First, the block is not a template word, since $\tau$ would be hidden
-(Theorem~\ref{thm:hidden}). Second, the block is not obtained from
-$t_1t_2t_3t_4$ by exchanging $t_p$ and $t_q$. In that case $\tau$ would show
-exactly its corners $(x+p-1,t_p)$ and $(x+q-1,t_q)$, and so would the
-axis-aligned rectangle through these $2$ points. The words obtained by such
-exchanges are the templates and the $16$ permutations with exactly one of the
-first and last letters in $\{2,3\}$. So $20$ permutations are excluded.
-
-Third, the block is not obtained from $t_1t_2t_3t_4$ by changing one letter
-$t_p=r$ to a letter $s$ with $\{r,s\}\in F$. In that case $\tau$ would show only
-$(x+p-1,r)$. Let $d$ be the double column with the pair $\{r,s\}$. The
-axis-aligned rectangle on the rows $r,s$ and the columns $x+p-1$ and $d$ would
-also show only $(x+p-1,r)$. Each row lies in $2$ pairs of $F$, so each template
-gives $8$ such words. They repeat a letter, so they are not permutations.
-Two templates can give the same word only if they differ by exchanging $2$
-letters $r,s$ with $\{r,s\}\in F$, and then they share $2$ words. The $4$ pairs
-of templates that differ by one exchange use the letters $\{2,3\}$ twice and
-$\{1,4\}$ twice. So at least $32-8=24$ further words are excluded, and a block
-has at most $256-20-24=212=4^4\cdot\frac{53}{64}$ words.
-
-Cut the columns into the $\lfloor m/4\rfloor$ groups $4j-3,\ldots,4j$. At most
-$4$ groups contain a double, so at least $k$ groups are blocks. Every other
-singleton column has at most $4$ choices. This gives the bound.
-\end{proof}
+so $a_4(m)=O\bigl(m^4\,212^{m/4}\bigr)$ and $212^{1/4}<3.816$. We omit the proof,
+since Corollary~\ref{cor:fourgrowth} gives the exact rate. The script
+\nolinkurl{four_row_block_words.py} lists the excluded words and checks them on
+all optima with $m\le10$.
+\end{remark}
 
 \subsection{The automaton}
 
@@ -1396,16 +1362,14 @@ It satisfies the conditions of Lemma~\ref{lem:fourmemory}, so no step rejects.
 
 \subsection{The generating function and the growth rate}
 
-The statements of this subsection are computer-assisted. We built
-$\mathcal A_F$ for the $3$ pair sets. The automata have $60975$, $138095$, and
-$55575$ states. For each we also have a smaller machine from an earlier search,
-with $2519$, $3089$, and $2119$ reachable states, and a program checks that it
-accepts the same words as $\mathcal A_F$. Two separately written transfer
-counters give the same counts for all $m\le1500$. For $m\le10$ the counts also
-agree with a test of every candidate against the definition. At $m=12$ the
-pair sets of $\{1,2\}\mid\{3,4\}$, $\{1,3\}\mid\{2,4\}$, and $\{1,4\}\mid\{2,3\}$
-give $114424$, $1785768$, and $137656$ optima.
-
+The statements of this subsection are computer-assisted. For the $3$ pair sets
+the script \nolinkurl{four_row_certificate.py} builds $\mathcal A_F$ from
+Proposition~\ref{prop:fourautomaton}. The automata have
+$60975$, $138095$, and $55575$ states. Write $a_F(m)$ for the number of words of
+length $m$ that $\mathcal A_F$ accepts, so that $a_4(m)=\sum_Fa_F(m)$ for
+$m\ge6$. At $m=12$ the pair sets of $\{1,2\}\mid\{3,4\}$, $\{1,3\}\mid\{2,4\}$,
+and $\{1,4\}\mid\{2,3\}$ give $114424$, $1785768$, and $137656$ optima. For
+$m\le10$ the counts agree with a test of every candidate against the definition.
 
 \begin{theorem}[four-row generating function, computer-assisted]\label{thm:fourgfexact}
 There are coprime integer polynomials $P_4=26z^6-826z^7+\cdots$ of degree $444$
@@ -1428,26 +1392,34 @@ g_{20}={}&1-4z+2z^2+z^3-3z^4+5z^5+z^6-3z^7+7z^8+2z^9+30z^{10}-7z^{11}+10z^{12}\\
 \end{theorem}
 
 \begin{proof}
-By Proposition~\ref{prop:fourautomaton}, $a_4(m)$ is the number of words of
-length $m$ accepted by the $3$ automata. We computed $a_4(m)$ for $m\le1500$,
-and the Berlekamp--Massey algorithm, run modulo $8$ primes, produced $P_4$ and
-$Q_4$. This is only a guess, so we certify it. For each pair set let $M_F$ be the
-transfer matrix of the smaller machine and $v_F(n)=v_F(0)M_F^n$ its vector of
-state counts after $n$ letters. The programs check the vector identity
-$\sum_jq_j\,v_F(n_F-j)=0$ in exact integer arithmetic, with $n_F=436$, $435$, and
-$445$ for the $3$ pair sets. Multiplying by powers of $M_F$ gives the same
-identity at every larger index. Since $a_4(n)$ is a fixed linear function of the
-vectors $v_F(n)$, the recurrence holds for all $n\ge445$. Then $P_4$ is the
-product of $Q_4$ and the series, cut off after degree $444$. Its coefficient of
-$z^{444}$ is not zero, so the recurrence fails at $444$. The factorization and
-the coprimality were computed with SymPy~\cite{sympy2017}.
+The polynomials $P_4$ and $Q_4$ were first found from the values $a_4(m)$ with
+$m\le1500$ by the Berlekamp--Massey algorithm~\cite{massey1969}. This is only a
+guess, so we certify it on the automata $\mathcal A_F$. For a state $s$ of
+$\mathcal A_F$ let $u_F(n)_s$ be the number of words of length $n$ that lead
+from $s$ to acceptance. Then $a_F(n)$ is the entry of $u_F(n)$ at the start
+state, and $u_F(n+1)=T_Fu_F(n)$ for the transition matrix $T_F$. The script
+checks that the vector $R_F=\sum_jq_j\,u_F(445-j)$ is zero for each $F$. Applying
+$T_F^{\,n-445}$ gives $\sum_jq_j\,a_F(n-j)=0$ for all $n\ge445$, and we sum over
+$F$. The number $a_F(n)$ counts optima only for $n\ge6$, and this recurrence
+uses only the indices $n-j\ge25$. The check is exact for the following reason. The script works modulo each
+of $48$ primes below $2^{31}$. An entry of $u_F(n)$ is at most $8^n$, so an entry
+of $R_F$ has absolute value at most $8^{445}\sum_j|q_j|$. This is less than half
+the product of the primes. So $R_F$ vanishes because it vanishes modulo every
+prime. The script also checks, modulo the same primes, that the product of
+$Q_4$ and $\sum_{m=6}^{444}a_4(m)z^m$ agrees with $P_4$ up to $z^{444}$. Here
+$a_4(m)\le3\cdot8^m$, so a coefficient of the product differs from the
+coefficient of $P_4$ by at most $3\cdot8^{444}\sum_j|q_j|$ plus the largest
+coefficient of $P_4$ in absolute value. This is again less than half the
+product of the primes, so the agreement is exact. The coefficient of
+$z^{444}$ in $P_4$ is not zero, so the recurrence fails at $444$. The
+factorization and the coprimality were computed with SymPy~\cite{sympy2017}.
 \end{proof}
 
-The other factors of $Q_4$ and the coefficients of $P_4$ are in the file
-\nolinkurl{four_row_recurrence.json} of the repository~\cite{repo} and in the
-OEIS entry \seqnum{A401224}. The $3$ pair sets have rational series of their
-own, with reduced denominators of degrees $162$, $153$, and $107$. The factor
-$g_{20}$ occurs only for the pair set of $\{1,3\}\mid\{2,4\}$.
+All coefficients of $P_4$ and $Q_4$ and all factors of $Q_4$ are in the
+ancillary file \nolinkurl{four_row_gf.txt}, which is also attached to the OEIS
+entry \seqnum{A401224}. The $3$ series $\sum_ma_F(m)z^m$ are rational, with
+reduced denominators of degrees $162$, $153$, and $107$. The factor $g_{20}$
+occurs only for the pair set of $\{1,3\}\mid\{2,4\}$.
 
 \begin{corollary}[growth, computer-assisted]\label{cor:fourgrowth}
 Let $\rho_4=3.351996777310\ldots$ be the largest real root of
@@ -1468,29 +1440,18 @@ $O((1000/341)^m)$. Since $[z^m](1-z/r)^{-j}=\rho_4^m\binom{m+j-1}{j-1}$, we get
 $\pi(m)=\sum_jc_j\binom{m+j-1}{j-1}$ and $c=c_5/24$. Interval arithmetic gives
 $8.1610970775\times10^{-5}<c<8.1610970776\times10^{-5}$. The last claim holds
 because $g_{20}$ does not divide the denominators of the other $2$ pair sets.
+The order $5$ of the pole matches the $5$ runs of singletons that the $4$
+doubles separate.
 \end{proof}
-\section{Five rows and small grids}\label{sec:five}
+\section{Five rows}\label{sec:five}
 
-Let $m\ge8$. Then $f(5,m)=m+6=m+q_5$ by Theorem~\ref{thm:imports}(c). As on $4$
-rows, Theorem~\ref{thm:imports}(b) describes the optima. An optimum has $6$
-doubles and $m-6$ singletons, and the row pairs of the doubles are the $6$ edges
-of a complete bipartite graph with parts of sizes $2$ and $3$ on the rows. There
-are $10$ such graphs, so there are $10\,(m)_6\,5^{m-6}$ words of this form. Each
-of them is axis-valid and hides no axis-aligned rectangle. A tilted rectangle
-has span at most $W_5=5$ by Lemma~\ref{lem:span}. As in
-Lemma~\ref{lem:fourmemory}, validity can then be tested on windows of $11$
-consecutive columns. We have no analogue of Theorem~\ref{thm:hidden}, so the
-test must also remember whether a tilted rectangle has been hidden. We did not
-build the automaton. Two separately written programs count the valid words by
-a transfer over the columns.
-
-\begin{proposition}[five-row counts, computer-assisted]\label{prop:fivecounts}
-The numbers $a_5(m)$ for $8\le m\le23$ are those of Table~\ref{tab:fivevalues}
-\textup{(}\seqnum{A401225}\textup{)}. The $4$ optima of the $5\times8$ grid are the
-blackout with the column word $14,45,25,5,5,34,23,12$, where each entry lists
-the black rows of a column, and its images under the row reflection and the
-column reversal.
-\end{proposition}
+Let $m\ge8$. By Theorem~\ref{thm:imports}, $f(5,m)=m+6$, and an optimum has $6$
+doubles, whose row pairs are the edges of a complete bipartite graph with parts
+of sizes $2$ and $3$, and $m-6$ singletons. Table~\ref{tab:fivevalues} lists the
+number of optima for $8\le m\le23$ (\seqnum{A401225}). These values are
+computer-assisted. Two separately written transfer counters over the columns
+agree for $13\le m\le23$, and for $8\le m\le12$ the values agree with complete
+enumerations (Section~\ref{sec:verify}).
 
 \begin{table}[!htb]
 \centering\footnotesize\setlength{\tabcolsep}{5pt}
@@ -1507,27 +1468,13 @@ $11$ & $3004$ & $15$ & $8650416$ & $19$ & $8828301226$ & $23$ & $5510071794736$\
 \caption{The number of optima of the $5\times m$ grid (computer-assisted).}
 \label{tab:fivevalues}
 \end{table}
-
-The evidence is as follows. One transfer counter gives all $16$ values. A second
-one, written separately, gives the same values for $13\le m\le23$. For
-$8\le m\le12$ the values agree with complete enumerations by a SAT solver and by
-a column search, and at $m=8$ also with a test of all
-$10\,(8)_6\,5^2=5040000$ words of the form above.
-
-Table~\ref{tab:values} contains $9$ more counts for grids with both sides at
-least $4$, from $a_4(4)=316$ to $a_7(7)=7300$. On these grids the largest size
-is below the row bound, so
-Theorem~\ref{thm:imports}(b) does not apply. The counts come from complete
-enumerations, each done by $2$ separately written programs
-(Section~\ref{sec:verify}). On the $7\times8$ grid one enumeration lists $18$ optima,
-which proves only $a_7(8)\ge18$. The counts drop where $f(h,m)-m$ increases,
-for example from $a_5(7)=1184$ to $a_5(8)=4$.
 \section{Every fixed height}\label{sec:height}
 
 Fix the height $h$. The letters are now all subsets of $\{1,\dots,h\}$, and a
 blackout of the $h\times m$ grid is the column word $w=B_1\cdots B_m$. Write
 $|w|=m$ for its length and $S(w)$ for the blackout. Let $\mathcal L_h$ be the
-set of words of valid blackouts, of all lengths.
+set of words of valid blackouts, of all lengths. This section does not use the
+companion paper.
 
 \begin{theorem}[regularity]\label{thm:regular}
 For every $h\ge1$ the language $\mathcal L_h$ is regular. Hence the series
@@ -1562,44 +1509,67 @@ accepting path, so the series is $\alpha(I-T(z,u))^{-1}\beta$. This is rational
 by Cramer's rule~\cite[Proposition~V.6]{flajolet2009}.
 \end{proof}
 
+The \emph{excess} of a word is $e(w)=|S(w)|-|w|$, so that $e(uv)=e(u)+e(v)$ and
+$f(h,m)-m$ is the largest excess of a word of length $m$ in $\mathcal L_h$.
+
 \begin{theorem}[fixed height]\label{thm:rational}
-Let $h\ge1$. The column words of the optima of the grids with $h$ rows form a
-regular language, and $\sum_{m\ge1}a_h(m)z^m$ is a rational function.
+Let $h\ge1$.
+\begin{enumerate}[(a)]
+\item For every integer $k$ the words of $\mathcal L_h$ with excess $k$ form a
+regular language.
+\item The sequence $f(h,m)-m$ is ultimately periodic in $m$.
+\item The column words of the optima of the grids with $h$ rows form a regular
+language, and $\sum_{m\ge1}a_h(m)z^m$ is a rational function.
+\end{enumerate}
 \end{theorem}
 
 \begin{proof}
-For $h=1$ every blackout is valid, and $a_1(m)=1$. For $h=2$ the optima are
-described in Theorem~\ref{thm:strip}, and the series is $z/(1-2z)^2$ up to its
-first $2$ terms. Let $h\ge3$. By Theorem~\ref{thm:imports}(d) we have
-$f(h,m)=m+q_h$ for all $m\ge m_h$. So $f(h,m)-m$ is eventually constant. Changing finitely many words keeps a language regular and changes the
-series by a polynomial. It is therefore enough to treat the language
-$\mathcal L_{h,q_h}$, where $\mathcal L_{h,k}$ is the set of words
-$w\in\mathcal L_h$ with $|S(w)|-|w|=k$.
-
-Put $e(w)=|S(w)|-|w|$, so that $e(uv)=e(u)+e(v)$. Every factor $v$ of a valid
-word is the word of a valid blackout of a smaller grid. If $|v|\ge3$, then
-$e(v)\le q_h$ by Theorem~\ref{thm:imports}(a). If $|v|\le2$, then
-$e(v)\le2h-2$. Put $c_h=\max(q_h,2h-2)$. Now let $w=uv$ be valid with
-$e(w)=k$. Then
+(a) We first bound the excess of a valid word $v$. If $|v|\le2$, then
+$e(v)\le2h-2$. Let $|v|\ge3$. By Lemma~\ref{lem:girth} no $2$ columns share $2$
+black rows, so $\sum_i\binom{|B_i|}2\le\binom h2$. Since
+$|B_i|-1\le\binom{|B_i|}2$, we get $e(v)\le\binom h2$. Put
+$c_h=\max\bigl(\binom h2,2h-2\bigr)$. Every factor of a valid word is the word
+of a valid blackout of a smaller grid. Now let $w=uv$ be valid with $e(w)=k$.
+Then
 \[
 k-c_h\le e(u)=k-e(v)\le c_h .
 \]
-So an automaton for $\mathcal L_h$ can also keep the value $e(u)$ of the prefix
-read so far. It rejects when this value leaves the interval $[k-c_h,c_h]$, and
-at the end it accepts when the value is $k$. This is a finite automaton for
-$\mathcal L_{h,k}$. The series of a regular language is rational, as in the
-proof of Theorem~\ref{thm:regular}.
+So an automaton for $\mathcal L_h$ can also keep the excess of the prefix read
+so far. It rejects when this value leaves the interval $[k-c_h,c_h]$, and at
+the end it accepts when the value is $k$. This is a finite automaton for the
+words of $\mathcal L_h$ with excess $k$.
+
+(b) Let $\Lambda_k$ be the set of lengths of the words in (a). Replacing every
+letter by the same symbol turns a regular language into a regular language
+over $1$ letter, and a deterministic automaton over $1$ letter is a path that
+ends in a cycle. So each $\Lambda_k$ is ultimately periodic. The blackout that
+consists of row $1$ is valid. Indeed a tilted rectangle has only $1$ corner in
+its top row, as in Lemma~\ref{lem:leftmost}. So a rectangle with fewer than $3$
+white corners is axis-aligned with a side in row $1$, and its $2$ white corners
+determine it. Hence $f(h,m)-m$ is the largest $k$ with $0\le k\le c_h$ and
+$m\in\Lambda_k$. These are finitely many ultimately periodic sets, so
+$f(h,m)-m$ is ultimately periodic.
+
+(c) For each $k$ let $D_k$ be the set of all $m\ge1$ with $f(h,m)-m=k$. It is
+ultimately periodic by (b), so the words with length in $D_k$ form a regular
+language. The words of the optima are the words of $\mathcal L_h$ with excess
+$k$ and length in $D_k$, for $0\le k\le c_h$. This is a finite union of regular
+languages. Its series is rational, as in the proof of
+Theorem~\ref{thm:regular}.
 \end{proof}
 
-The regularity of $\mathcal L_{h,q_h}$ also follows from a result of Guilhot,
-Little, and Parkinson~\cite[Theorem~1(3)]{glp2025} on additive weights that are
-bounded above on a regular language. Here the weight is $e$.
+By the companion paper~\cite{pemmasaniExtremal}, the sequence $f(h,m)-m$ is in
+fact eventually constant, equal to $q_h$ for $h\ge3$. For the largest excess
+that occurs, part (a) also follows from a result of Guilhot, Little, and
+Parkinson~\cite[Theorem~1(3)]{glp2025} on additive weights that are bounded
+above on a regular language.
 \section{Computations and verification}\label{sec:verify}
 
 The code and the stored results are in the repository~\cite{repo}. From its
 root, the scripts are in \nolinkurl{jis/scripts} and the evidence files in
 \nolinkurl{jis/data}, and \nolinkurl{jis/scripts/README.md} gives the commands.
-Every computed count has $2$ separately written checks, except $a_7(8)\ge18$.
+The ancillary files of this paper are in \nolinkurl{papers/enumeration/anc}.
+Every computed count has $2$ separately written checks.
 
 \paragraph{Three rows.} The proofs in Section~\ref{sec:three} are by hand up to
 the expansion of rational functions, which we did with SymPy~\cite{sympy2017}.
@@ -1610,17 +1580,23 @@ agrees with~\eqref{eq:PQ} and~\eqref{eq:Eclosed} for $m\le100$. For
 Theorem~\ref{thm:threeorbits}, the fixed words are listed for $m\le24$ and the
 orbits for $m\le10$. The files are \nolinkurl{three_row_*.json}.
 
-\paragraph{Four rows.} A second certificate for Theorem~\ref{thm:fourgfexact} treats each pair set alone. It
-checks the recurrence of that pair set on as many consecutive widths as the
-machine has states, which is enough by the Cayley--Hamilton theorem. The files
-are \nolinkurl{four_row_*.json}.
+\paragraph{Four rows.} The ancillary script \nolinkurl{four_row_certificate.py}
+builds the automata of Proposition~\ref{prop:fourautomaton} and carries out the
+proof of Theorem~\ref{thm:fourgfexact} in about $5$ minutes. It needs only
+\nolinkurl{four_row_gf.txt}. The repository also holds an earlier computation
+that does not use this script (\nolinkurl{four_row_*.json}). It works with
+smaller deterministic machines found by a search, checks on the product
+automaton that they accept the same words as $\mathcal A_F$, and gives the
+same counts for all $m\le1500$ with $2$ transfer counters. It also provides the
+series of the $3$ pair sets and the isolation of the roots of $Q_4$.
 
-\paragraph{Five rows and small grids.} The files for
-Proposition~\ref{prop:fivecounts} are \nolinkurl{five_row_count_*.json} and
-\nolinkurl{five_row_optima_dp_w*.json}, and those for the other counts of
-Table~\ref{tab:values} are in \nolinkurl{table_counts}. The SAT enumerations use
-PySAT~\cite{pysat2018}. Each blackout found is tested again against
-Definition~\ref{def:valid}.
+\paragraph{Five rows and small grids.} The files for Table~\ref{tab:fivevalues}
+are \nolinkurl{five_row_count_*.json} and \nolinkurl{five_row_optima_dp_w*.json}.
+The counts $a_4(4)$, $a_4(5)$, $a_5(5)$, $a_5(6)$, and $a_5(7)$ of
+Table~\ref{tab:values} come from complete enumerations, each done by $2$
+programs (\nolinkurl{verify_narrow.py} and \nolinkurl{table_counts}). The SAT
+enumerations use PySAT~\cite{pysat2018}. Each blackout found is tested again
+against Definition~\ref{def:valid}.
 
 \paragraph{Formal proofs.} The folder \nolinkurl{lean} of the repository
 contains proofs in Lean of Lemmas~\ref{lem:diff}, \ref{lem:threecorners},
@@ -1632,7 +1608,7 @@ the example after Theorem~\ref{thm:hidden}.
 \item What is the rational series $\sum_m a_5(m)z^m$, and what is the growth rate
 of $a_5(m)$?
 \item Is $a_h(m)\sim c_h\,m^{q_h}\rho_h^m$ for every $h$, as it is for $2\le h\le4$?
-\item Corollary~\ref{cor:oeisconj} settles the largest entry in each row of
+\item Remark~\ref{cor:oeisconj} settles the largest entry in each row of
 \seqnum{A338885}. Is its smallest entry in row $n$ equal to
 \seqnum{A228286}$(n)$, as conjectured there?
 \end{enumerate}
@@ -1645,6 +1621,10 @@ graph-theoretic approach to the narrow grids. The design of Figure~\ref{fig:game
 Problem 001~\cite{kagey001}.
 
 \begin{thebibliography}{10}
+
+\bibitem{calkinwilf1998}
+N.~J. Calkin and H.~S. Wilf, The number of independent sets in a grid graph,
+  {\em SIAM J. Discrete Math.} {\bf 11} (1998), 54--60.
 
 \bibitem{euler2005}
 R.~Euler, The {F}ibonacci number of a grid graph and a new class of integer
@@ -1677,6 +1657,14 @@ P.~Kagey, Open problem collection, {P}roblem 1, G4G14 gift exchange,
   \url{https://www.gathering4gardner.org/g4g14gift/G4G14-PeterKagey-OpenishProblems.pdf},
   2020.
 
+\bibitem{massey1969}
+J.~L. Massey, Shift-register synthesis and {BCH} decoding, {\em IEEE Trans.
+  Inform. Theory} {\bf 15} (1969), 122--127.
+
+\bibitem{mertens2024}
+S.~Mertens, Domination polynomials of the grid, the cylinder, the torus, and
+  the king graph, {\em J. Integer Sequences} {\bf 27} (2024), Article 24.7.6.
+
 \bibitem{sympy2017}
 A.~Meurer, C.~P. Smith, M.~Paprocki, O.~{\v{C}}ert{\'{\i}}k, S.~B. Kirpichev,
   M.~Rocklin, A.~Kumar, S.~Ivanov, J.~K. Moore, S.~Singh, T.~Rathnayake,
@@ -1702,11 +1690,19 @@ A.~Pemmasani, rectangle-blackouts repository,
 N.~J.~A. Sloane and {The OEIS Foundation Inc.}, The {O}n-{L}ine {E}ncyclopedia
   of {I}nteger {S}equences, \url{https://oeis.org}, 2026.
 
+\bibitem{stanley2012}
+R.~P. Stanley, {\em Enumerative Combinatorics, Vol. 1}, Cambridge University
+  Press, 2nd edition, 2012.
+
 \bibitem{trureturing2026}
 {The Omega Institute}, Prove the exact {T}hree-{R}ow blackout maximum, pull
   request 8084, merged on 15 September 2026 into the branch \texttt{dev} as
   commit \texttt{ace272f},
   \url{https://github.com/the-omega-institute/trureturing/pull/8084}, 2026.
+
+\bibitem{wilf1995}
+H.~S. Wilf, The problem of the kings, {\em Electron. J. Combin.} {\bf 2}
+  (1995), Paper R3.
 
 \end{thebibliography}
 
@@ -1724,7 +1720,6 @@ transfer matrix, finite automaton, regular language.
 \seqnum{A322284},
 \seqnum{A338885},
 \seqnum{A397315},
-\seqnum{A398321},
 \seqnum{A398448},
 \seqnum{A399580},
 \seqnum{A401223},

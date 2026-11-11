@@ -171,7 +171,7 @@ shows only $(2,3)$, and so does the blue rectangle. The window $bAb$ fails.}
 \end{minipage}
 \end{figure}
 
-\subsection{\texorpdfstring{The class $AC$ and the main count}{The class AC and the main count}}
+\subsection{\texorpdfstring{The class $AC$}{The class AC}}
 
 Set $G_{AC}(z)=\sum_{m\ge2}|AC_m|z^m$, and define $G_{AB}$ and $G_X$ in the same
 way, where the sum for $G_X$ starts at $m=1$. Write $\Phi=1-3z$. The nonempty
@@ -218,22 +218,13 @@ $[z^m]z^k\Phi^{-3}=\binom{m-k+2}23^{m-k}$, the coefficient of $z^m$ for $m\ge4$
 is~\eqref{eq:GACcoef}.
 \end{proof}
 
-\begin{theorem}[the number of three-row optima]\label{thm:threecount}
 Let $E_m$ be the number of optima of the $3\times m$ grid with a column that is
-black in rows $1$ and $3$ \textup{(}\seqnum{A398448}\textup{)}. For $m\ge4$,
-\begin{equation}\label{eq:threecount}
-a_3(m)=4(m-1)(3m+2)\,3^{m-5}+E_m .
-\end{equation}
-\end{theorem}
-
-\begin{proof}
-A column that is black in rows $1$ and $3$ is $B$ or $X$. So $E_m$ counts the
-optima in the $5$ classes other than $AC$ and $CA$. By~\eqref{eq:classsym},
+black in rows $1$ and $3$ (\seqnum{A398448}). Such a column is $B$ or $X$. So
+$E_m$ counts the optima in the $5$ classes other than $AC$ and $CA$, and
+by~\eqref{eq:classsym},
 \begin{equation}\label{eq:classsum}
 a_3(m)=2|AC_m|+4|AB_m|+|X_m|=2|AC_m|+E_m\qquad(m\ge3).
 \end{equation}
-Substituting~\eqref{eq:GACcoef} gives~\eqref{eq:threecount}.
-\end{proof}
 
 \subsection{\texorpdfstring{The classes $AB$ and $X$}{The classes AB and X}}\label{sec:threeruns}
 
@@ -389,40 +380,52 @@ SymPy~\cite{sympy2017}.
 
 Let $\rho=1+\sqrt3$ and $\sigma=1-\sqrt3$, so that $L=(1-\rho z)(1-\sigma z)$.
 
-\begin{theorem}[three-row closed form, checked by computer algebra]\label{thm:threeclosed}
-For every $m\ge3$,
-\begin{equation}\label{eq:Eclosed}
-E_m=p_+(m)\,\rho^m+p_-(m)\,\sigma^m+(-2)^{\lfloor m/2\rfloor}\kappa(m),
+\begin{theorem}[the number of three-row optima, checked by computer algebra]\label{thm:threecount}
+For every $m\ge4$,
+\begin{equation}\label{eq:threecount}
+a_3(m)=4(m-1)(3m+2)\,3^{m-5}+p_+(m)\,\rho^m+p_-(m)\,\sigma^m+(-2)^{\lfloor m/2\rfloor}\kappa(m),
 \end{equation}
 where
 \[
 432\,p_\pm(m)=(19\pm11\sqrt3)m^2+(61\pm41\sqrt3)m+104\pm28\sqrt3,
 \]
 and $\kappa(m)=(2m^2+41m-104)/216$ for even $m$ and
-$\kappa(m)=(7m^2-32m-175)/432$ for odd $m$. Moreover $E_m>0$ and
+$\kappa(m)=(7m^2-32m-175)/432$ for odd $m$. The last $3$ terms are $E_m$, and
+\begin{equation}\label{eq:Eclosed}
+E_m=p_+(m)\,\rho^m+p_-(m)\,\sigma^m+(-2)^{\lfloor m/2\rfloor}\kappa(m)
+\end{equation}
+holds for every $m\ge2$. Moreover $E_m>0$,
 \begin{equation}\label{eq:asymp1}
 E_m\sim\frac{19+11\sqrt3}{432}\,m^2(1+\sqrt3)^m,\qquad
-a_3(m)=\frac4{81}m^23^m-\frac4{243}(m+2)3^m+O\bigl(m^2(1+\sqrt3)^m\bigr).
+a_3(m)=\frac4{81}m^23^m-\frac4{243}(m+2)3^m+O\bigl(m^2(1+\sqrt3)^m\bigr),
 \end{equation}
-In particular, the fraction of the $m^23^{m-1}$ candidates that are valid tends to
+and the fraction of the $m^23^{m-1}$ candidates that are valid tends to
 $\frac4{27}$.
 \end{theorem}
 
 \begin{proof}
-By Theorem~\ref{thm:threegf}(c), the sequence $E_m$ satisfies for $m\ge15$ the
-linear recurrence of order $12$ with characteristic polynomial
-$x^{12}L(1/x)^3N(1/x)^3$. Its roots are $\rho$, $\sigma$, and $\pm i\sqrt2$,
-each of multiplicity $3$. The right side of~\eqref{eq:Eclosed} is a
-combination of $m^j\rho^m$, $m^j\sigma^m$, and $m^j(\pm i\sqrt2)^m$ with
-$j\le2$, so it satisfies the same recurrence for all $m$. The two sides
-agree for $3\le m\le14$, which we checked in exact arithmetic. Hence they
-agree for all $m\ge3$.
+By~\eqref{eq:classsum} and~\eqref{eq:GACcoef} we have
+$a_3(m)=4(m-1)(3m+2)3^{m-5}+E_m$ for $m\ge4$. So it is enough to
+prove~\eqref{eq:Eclosed}. By~\eqref{eq:classsum}, $E_m$ is the coefficient of
+$z^m$ in $4G_{AB}+G_X$ for $m\ge3$. This also holds for $m=2$. Indeed the optima
+of the $3\times2$ grid are the transposes of the optima of
+Theorem~\ref{thm:strip}. They are the $12$ words of type~I or~II, and $10$ of
+them contain $B$ or $X$. By Propositions~\ref{prop:GX} and~\ref{prop:GAB}, the
+series $4G_{AB}+G_X$ has the denominator $L^3N^3$ of degree $12$ and a numerator
+of degree $13$. So $E_m$ satisfies for $m\ge14$ the linear recurrence of order
+$12$ with characteristic polynomial $x^{12}L(1/x)^3N(1/x)^3$. Its roots are
+$\rho$, $\sigma$, and $\pm i\sqrt2$, each of multiplicity $3$. The right side
+of~\eqref{eq:Eclosed} is a combination of $m^j\rho^m$, $m^j\sigma^m$, and
+$m^j(\pm i\sqrt2)^m$ with $j\le2$, so it satisfies the same recurrence for all
+$m$. The two sides agree for $2\le m\le13$, which we checked in exact
+arithmetic. Hence they agree for all $m\ge2$.
 
 We have $|\sigma|<1$ and $|(-2)^{\lfloor m/2\rfloor}\kappa(m)|=O(m^22^{m/2})$,
 and $\sqrt2<\rho$. This gives the asymptotic form of $E_m$. The expansion of
-$a_3(m)$ follows from~\eqref{eq:threecount}, since
+$a_3(m)$ follows, since
 $4(m-1)(3m+2)3^{m-5}=\frac4{81}m^23^m-\frac4{243}(m+2)3^m$. Finally $E_m>0$
-because $Xa^{m-1}$ is an optimum by Corollary~\ref{cor:threevalue}.
+because $Xa^{m-1}$ is an optimum by Corollary~\ref{cor:threevalue}, and
+$E_2=10$.
 \end{proof}
 
 \subsection{Optima up to symmetry}
