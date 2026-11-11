@@ -1,0 +1,228 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage[shortlabels]{enumitem}
+\usepackage[colorlinks=true,citecolor=black,linkcolor=black,urlcolor=blue]{hyperref}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thetable}{S\arabic{table}}
+\newtheorem{lemma}{Lemma}
+\renewcommand{\thelemma}{S\arabic{lemma}}
+
+\title{Supplement to ``The maximum size of a blackout that keeps every lattice rectangle
+identifiable''}
+\author{Arjun Pemmasani}
+\date{}
+
+\begin{document}
+\maketitle
+
+This supplement describes the SAT encodings behind the upper bounds of the theorem on small
+heights, proves that they are faithful, and lists the instances, the certificates, and the
+formal proofs. It also proves the remark on 7 rows. We refer to results of the paper by their names. Paths are relative to the
+root of the repository \url{https://github.com/apemm/rectangle-blackouts}.
+
+\section{The SAT encodings}
+
+Let $C(R)$ be the corner set of a rectangle $R$. A blackout $S$ is valid if and only if it
+contains no set $C(R_1)\triangle C(R_2)$ with $R_1\ne R_2$ (the lemma on presentations in
+Section 2 of the paper).
+
+\emph{Encoding A} has a variable for each grid point and a clause for each
+inclusion-minimal set of the form $C(R_1)\triangle C(R_2)$ with $R_1\ne R_2$. The clause
+says that this set is not fully black.
+
+\emph{Encoding B} has such clauses only for the pairs of rectangles that share a corner.
+It also has a variable $y_R$ for each rectangle $R$, which is forced to be true if $R$ is
+fully black, and it allows at most 1 true $y_R$.
+
+A \emph{structured} instance on 6 rows fixes one row graph from the equality structure
+theorem (a $K_{3,3}$, for $m+9$ points) or from the lemma on 6 rows and $m+8$ points
+($K_{3,3}$ minus an edge, $K_{2,4}$, or $K_{3,3}$ with 1 empty column). Each column chooses
+a type, which is a single row, an edge of the graph, or the empty set in the last case. Each
+edge is used once, and the empty type is used once in the last case. The instance keeps
+those clauses of encoding B that involve a tilted rectangle and whose set can be fully
+black for these types. The size of the blackout is fixed by a sequential
+counter~\cite{sinz} or a totalizer~\cite{bailleux}.
+
+\begin{lemma}\label{lem:enc}
+Let $S$ be a blackout of the $h\times m$ grid.
+\begin{enumerate}[(a)]
+\item $S$ is valid if and only if it contains no inclusion-minimal set of the form
+$C(R_1)\triangle C(R_2)$ with $R_1\ne R_2$.
+\item $S$ is valid if and only if at most 1 rectangle is fully black and $S$ contains no
+set $C(R_1)\triangle C(R_2)$ for distinct rectangles $R_1,R_2$ that share a corner.
+\item Let $h=6$ and $m\ge3$, and let $S$ be valid with $m+9$ or $m+8$ points. Then for one
+of the row graphs above, the choice of the black rows of column $i$ as the type of column
+$i$ extends to a satisfying assignment of the structured instance.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Every set $C(R_1)\triangle C(R_2)$ contains an inclusion-minimal one. (b) For rectangles
+without a common corner, the set $C(R_1)\triangle C(R_2)$ is $C(R_1)\cup C(R_2)$, which is
+black exactly when both rectangles are fully black. (c) The equality structure theorem or
+the lemma on $m+8$ points gives the row graph, and the black rows of every column form an
+allowed type. Set $y_R$ to true exactly for the fully black rectangles. By (b) this
+satisfies encoding B, and the structured instance has a subset of its clauses.
+\end{proof}
+
+Hence the point variables of encodings A and B describe exactly the valid blackouts of the
+chosen size. On 6 rows, $f(6,m)\le m+8$ once the 10 structured instances with $m+9$ points
+are unsatisfiable, and $f(6,m)\le m+7$ once the further $115$ instances with $m+8$ points
+are.
+
+\section{Instances and certificates}
+
+CaDiCaL~\cite{cadical} produced an LRAT proof for every unsatisfiable instance in
+Table~\ref{tab:instances}. Each of the $739$ proofs was accepted by 2 checkers, the program
+\texttt{lrat-check} of drat-trim~\cite{drattrim,cruzfilipe} and the LRAT checker of the
+Lean core library. The proofs are large and are not stored. Their hashes, the hashes of
+the CNF files, and the results of both checkers are in
+\nolinkurl{jis/data/unsat_certificates.json} and
+\nolinkurl{jis/data/six_row_excess8_certificates.json}. The pipeline in
+\nolinkurl{jis/unsat} recreates the proofs. Two separately written generators produce the
+same clauses for the instances of encoding A and for the $70$ structured instances with
+$m+9$ points. Encoding B also finds all $345$ structured instances with $m+8$ points
+unsatisfiable. SAT enumeration uses PySAT~\cite{pysat}.
+
+\begin{table}[ht]
+\centering
+\small\begin{tabular}{@{}llr@{}}
+\toprule
+bound & instances & proofs\\
+\midrule
+$f(5,6)<12$, $f(5,7)<13$ & encoding A, 1 instance each & $2$\\
+$f(6,6)<13$, $f(6,7)<14$ & encoding A, 1 instance each & $2$\\
+$f(6,8)<16$ & encoding A, split by the first column & $64$\\
+$f(7,7)<15$ & encoding A, split by the first column & $128$\\
+$f(7,8)<17$ & encoding A, split by the first column & $128$\\
+$f(6,m)<m+9$ for $8\le m\le14$ & structured, 10 row graphs for each width & $70$\\
+$f(6,m)<m+8$ for $9\le m\le11$ & structured, 115 row graphs for each width & $345$\\
+\bottomrule
+\end{tabular}
+\caption{The unsatisfiable instances.}
+\label{tab:instances}
+\end{table}
+
+The $72$ and $1440$ candidates with $m+4$ points on the $4\times4$ and $4\times5$ grids are
+searched by \nolinkurl{verify_narrow.py}, which finds 2 rectangles with the same
+presentation in each of them.
+
+\section{Explicit blackouts}
+
+The blackouts and test boards of Section 6 of the paper are checked from the definition by
+the scripts in \nolinkurl{jis/scripts} and by
+\nolinkurl{papers/extremal/scripts/check_constructions.py}. The second script lists the
+tilted rectangles through their leftmost corner, compares all presentations with at most 2
+points, and looks for an axis-aligned rectangle with the same presentation. It also checks
+the explicit construction with spacing $W_h+1$ for $3\le h\le8$, and blackouts built as in
+Section 5 for $4\le h\le14$ and $h=16$. In these, each double gets the smallest column that
+is not bad, where the conditions (B1), (B2), and (B3) are tested as defined. At $h=16$, all 3
+blackouts built in this way are valid, and all 5 blackouts built with (B1) alone are not
+valid. The script runs in about 2 minutes.
+
+\section{Seven rows from width 21}
+
+This section proves the remark on 7 rows in Section 6 of the paper. Let $T$ be the blackout
+\[
+16,36,5,25,2,2,14,7,12,27,2,7,67,7,47,7,7,56,45,34,23,1,1,1,2^{21}
+\]
+of the $7\times45$ grid, written as the list of the black rows of its columns, where
+$2^{21}$ stands for $21$ columns black only in row $2$. Its 12 doubles lie in the first 21
+columns and carry the 12 pairs of an odd and an even row. For $m\ge21$ let $T_m$ be the
+blackout of the $7\times m$ grid that agrees with $T$ on the columns $1$ to $45$ and whose
+later columns are black only in row $2$. The script
+\nolinkurl{papers/extremal/scripts/check_constructions.py} checks that $T$ is valid. Since
+$f(7,m)\le m+12$ by the row bound, the next lemma gives $f(7,m)=m+12$ for every $m\ge21$.
+
+\begin{lemma}\label{lem:tail}
+If $T$ is valid, then $T_m$ is valid for every $m\ge21$.
+\end{lemma}
+
+\begin{proof}
+For $m\le45$ the blackout $T_m$ is the part of $T$ in its first $m$ columns, and every
+rectangle of the smaller grid has the same presentation in $T$. Let $m>45$, and suppose
+that distinct rectangles $R_1,R_2$ have the same presentation in $T_m$. Then the corners
+that belong to just one of them are black. We show that both rectangles lie in the columns
+$1$ to $45$, which contradicts the validity of $T$. A tilted rectangle on 7 rows meets at
+most $11$ consecutive columns (the span bound with $W_7=10$). The doubles have distinct
+pairs, which form a bipartite graph. So the row-column graph has no cycle of length $4$ or
+$6$. Hence $R_1,R_2$ are not both axis-aligned, and no axis-aligned rectangle is fully
+black. A tilted rectangle has at most 2 corners in one row. So a tilted rectangle with 3
+or more black corners has a corner in a column $x\le24$, and it lies in the columns $1$ to
+$34$.
+
+Suppose that $R_1,R_2$ have at most 1 common corner. Then both have 3 or more black
+corners. A tilted one lies in the columns $1$ to $34$. If $R_2$ is axis-aligned, then it
+is not fully black, so it has a common corner $p$ with the tilted rectangle $R_1$, and its
+other column contains 2 black points. This column is a double, so $R_2$ also lies in the
+columns $1$ to $34$.
+
+Suppose that $R_1,R_2$ have 2 common corners $p,q$, and that $pq$ is a side of both or a
+diagonal of both. By the lemma on such pairs in Section 2 of the paper, their other
+corners form a fully black rectangle $R_3$. It is tilted, so it lies in the columns $1$ to
+$34$. A tilted $R_i$ shares 2 corners with $R_3$, so it lies in the columns $1$ to $44$.
+If $R_i$ is axis-aligned, then the other rectangle is tilted and has no horizontal or
+vertical side. So $pq$ is a diagonal of $R_i$, and the columns of $R_i$ are those of its 2
+corners in $R_3$.
+
+In the remaining case $pq$ is a side of one rectangle, say $R_1$, and a diagonal of $R_2$.
+Let $AB$ be the side of $R_1$ opposite to $pq$, and let $CD$ be the other diagonal of
+$R_2$. The points $A,B,C,D$ are black. Suppose first that $AB$ is not vertical. Then both
+rectangles lie in $21$ consecutive columns. Indeed, if both are tilted, they share the
+corner $p$ and each meets at most $11$ consecutive columns. If one of them is
+axis-aligned, its columns are those of $p$ and $q$, which are columns of the other
+rectangle (compare Section 5.1 of the paper). If one of $A,B,C,D$
+lies in a column $x\le24$, then both rectangles lie in the columns $1$ to $44$. Otherwise
+$A,B,C,D$ lie in row $2$. Then $pq$ is parallel to $AB$ and horizontal, and the midpoint of
+$CD$, which is the midpoint of $pq$, lies in row $2$. So $p,q$ lie in row $2$ as well, and
+$R_1$ has no area, a contradiction. Suppose now that $AB$ is vertical. Then $A,B$ are the
+2 points of a double, $R_1$ is axis-aligned, and the rows of $p,q$ are an odd and an even
+row. The rectangle $R_2$ is tilted with the vertical diagonal $pq$ and the black diagonal
+$CD$. If $C$ or $D$ lies in a column $x\le24$, then $R_2$ and $R_1$ lie in the columns $1$
+to $34$. Otherwise $C$ and $D$ lie in row $2$. Then the rows of $p$ and $q$ are $1$ and
+$3$, a contradiction.
+\end{proof}
+
+\section{Formal proofs}
+
+The Lean files are in \nolinkurl{lean/KageyProblems/Problem001}. They contain formal proofs
+of the lemma on presentations, of the lemma that 3 corners determine a rectangle, of the
+span bound, of the row bound, of the finite collar theorem, and of the alternating seas
+proposition under the assumption that the doubles are $2W_h+2$ columns apart
+(\nolinkurl{GeneralLocal.lean} and \nolinkurl{GeneralTheorem.lean}). This gives
+$f(h,m)=m+\lfloor h^2/4\rfloor$ for every $h\ge3$ and
+$m\ge q_h+(q_h-1)(2W_h+1)$. Validity tests of $S_0$, $S_8$, the $6\times8$ and $6\times15$
+blackouts, and the $5\times13$ and $6\times23$ test boards are checked by the Lean kernel.
+Together with the formal row bound and collar theorem, this proves $f(5,m)=m+6$ for
+$m\ge8$, $f(6,m)=m+9$ for $m\ge15$, $f(5,5)\ge10$, and $f(6,8)\ge15$ in Lean.
+
+Not formalized are the spacing $W_h+1$, the threshold theorem and its corollary, the
+equality structure theorem, the lemma on 6 rows and $m+8$ points, the blackouts on 7 rows,
+and Lemmas~\ref{lem:enc} and~\ref{lem:tail}.
+
+\begin{thebibliography}{9}
+\bibitem{bailleux} O. Bailleux and Y. Boufkhad. Efficient CNF encoding of Boolean
+cardinality constraints. In \emph{Principles and Practice of Constraint Programming -- CP
+2003}, Lecture Notes in Comput. Sci. 2833, pages 108--122. Springer, 2003.
+\bibitem{cadical} A. Biere, T. Faller, K. Fazekas, M. Fleury, N. Froleyks, and F. Pollitt.
+CaDiCaL 2.0. In \emph{Computer Aided Verification, CAV 2024}, Lecture Notes in Comput. Sci.
+14681, pages 133--152. Springer, 2024.
+\bibitem{cruzfilipe} L. Cruz-Filipe, M. J. H. Heule, W. A. Hunt, Jr., M. Kaufmann, and P.
+Schneider-Kamp. Efficient certified RAT verification. In \emph{Automated Deduction -- CADE
+26}, Lecture Notes in Comput. Sci. 10395, pages 220--236. Springer, 2017.
+\bibitem{pysat} A. Ignatiev, A. Morgado, and J. Marques-Silva. PySAT: a Python toolkit for
+prototyping with SAT oracles. In \emph{Theory and Applications of Satisfiability Testing --
+SAT 2018}, Lecture Notes in Comput. Sci. 10929, pages 428--437. Springer, 2018.
+\bibitem{sinz} C. Sinz. Towards an optimal CNF encoding of Boolean cardinality
+constraints. In \emph{Principles and Practice of Constraint Programming -- CP 2005},
+Lecture Notes in Comput. Sci. 3709, pages 827--831. Springer, 2005.
+\bibitem{drattrim} N. Wetzler, M. J. H. Heule, and W. A. Hunt, Jr. DRAT-trim: efficient
+checking and trimming using expressive clausal proofs. In \emph{Theory and Applications of
+Satisfiability Testing -- SAT 2014}, Lecture Notes in Comput. Sci. 8561, pages 422--429.
+Springer, 2014.
+\end{thebibliography}
+
+\end{document}

@@ -3,7 +3,8 @@
 The code and the stored results are in the repository~\cite{repo}. From its
 root, the scripts are in \nolinkurl{jis/scripts} and the evidence files in
 \nolinkurl{jis/data}, and \nolinkurl{jis/scripts/README.md} gives the commands.
-Every computed count has $2$ separately written checks, except $a_7(8)\ge18$.
+The ancillary files of this paper are in \nolinkurl{papers/enumeration/anc}.
+Every computed count has $2$ separately written checks.
 
 \paragraph{Three rows.} The proofs in Section~\ref{sec:three} are by hand up to
 the expansion of rational functions, which we did with SymPy~\cite{sympy2017}.
@@ -14,17 +15,23 @@ agrees with~\eqref{eq:PQ} and~\eqref{eq:Eclosed} for $m\le100$. For
 Theorem~\ref{thm:threeorbits}, the fixed words are listed for $m\le24$ and the
 orbits for $m\le10$. The files are \nolinkurl{three_row_*.json}.
 
-\paragraph{Four rows.} A second certificate for Theorem~\ref{thm:fourgfexact} treats each pair set alone. It
-checks the recurrence of that pair set on as many consecutive widths as the
-machine has states, which is enough by the Cayley--Hamilton theorem. The files
-are \nolinkurl{four_row_*.json}.
+\paragraph{Four rows.} The ancillary script \nolinkurl{four_row_certificate.py}
+builds the automata of Proposition~\ref{prop:fourautomaton} and carries out the
+proof of Theorem~\ref{thm:fourgfexact} in about $5$ minutes. It needs only
+\nolinkurl{four_row_gf.txt}. The repository also holds an earlier computation
+that does not use this script (\nolinkurl{four_row_*.json}). It works with
+smaller deterministic machines found by a search, checks on the product
+automaton that they accept the same words as $\mathcal A_F$, and gives the
+same counts for all $m\le1500$ with $2$ transfer counters. It also provides the
+series of the $3$ pair sets and the isolation of the roots of $Q_4$.
 
-\paragraph{Five rows and small grids.} The files for
-Proposition~\ref{prop:fivecounts} are \nolinkurl{five_row_count_*.json} and
-\nolinkurl{five_row_optima_dp_w*.json}, and those for the other counts of
-Table~\ref{tab:values} are in \nolinkurl{table_counts}. The SAT enumerations use
-PySAT~\cite{pysat2018}. Each blackout found is tested again against
-Definition~\ref{def:valid}.
+\paragraph{Five rows and small grids.} The files for Table~\ref{tab:fivevalues}
+are \nolinkurl{five_row_count_*.json} and \nolinkurl{five_row_optima_dp_w*.json}.
+The counts $a_4(4)$, $a_4(5)$, $a_5(5)$, $a_5(6)$, and $a_5(7)$ of
+Table~\ref{tab:values} come from complete enumerations, each done by $2$
+programs (\nolinkurl{verify_narrow.py} and \nolinkurl{table_counts}). The SAT
+enumerations use PySAT~\cite{pysat2018}. Each blackout found is tested again
+against Definition~\ref{def:valid}.
 
 \paragraph{Formal proofs.} The folder \nolinkurl{lean} of the repository
 contains proofs in Lean of Lemmas~\ref{lem:diff}, \ref{lem:threecorners},

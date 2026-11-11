@@ -43,14 +43,14 @@ Black out some points of an $h\times m$ grid. The blackout is valid if every rec
 corners in the grid, tilted or not, is determined by its white corners. Kagey asked for the
 largest size $f(h,m)$ of a valid blackout. For axis-aligned rectangles alone this is a
 Tur\'an problem for bipartite graphs without cycles of length $4$ and $6$, and a bound of
-Neuwirth gives $f(h,m)\le m+\lfloor h^2/4\rfloor$ for $m\ge3$. We prove that equality holds
-for every height $h\ge3$ and every width $m\ge h^4/16+O(h^3)$, by an explicit construction.
-Let $m_h$ be the least width from which equality always holds. We prove that
-$\lfloor h^2/4\rfloor\le m_h\le h^{2+o(1)}$. The upper bound places the columns that
-contain two black points at random and uses the local lemma. We also determine $f(h,m)$ for
-every $h\le6$ and every $m$, and for $h=7$ and $m\ge24$. Some of these small values rest on
-computer checks with verified certificates. On square grids the deletion method gives $f(n,n)\ge
-n^{6/5-o(1)}$, while the girth condition gives $f(n,n)\le(1+o(1))\,n^{4/3}$.
+Neuwirth gives $f(h,m)\le m+\lfloor h^2/4\rfloor$ for $m\ge3$. Let $m_h$ be the least width
+from which equality always holds. We prove that
+$\lfloor h^2/4\rfloor\le m_h\le h^{2+o(1)}$ for every height $h\ge4$. The upper bound places
+the columns that contain two black points at random and uses the local lemma. The same
+construction gives a lower bound for $f(h,m)$ at every width. An explicit construction
+gives equality for every $h\ge3$ and every $m\ge h^4/16+O(h^3)$. We also determine
+$f(h,m)$ for every $h\le6$ and every $m$, and for $h=7$ and $m\ge24$. Some of these small
+values rest on computer checks with verified certificates.
 \end{abstract}
 
 \input{sections/sec1_intro}

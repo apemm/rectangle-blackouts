@@ -87,23 +87,16 @@ The rectangle fits in $h$ rows, so $b+d\le h-1$. Since $(a-1)(c-1)\ge0$, we get
 $a+c\le ac+1=bd+1$. Finally $bd\le\lfloor(b+d)^2/4\rfloor\le W_h-1$.
 \end{proof}
 
-The same computation settles a conjecture in the OEIS. Row $n$ of the triangle
+\begin{remark}[a conjecture in \seqnum{A338885}]\label{cor:oeisconj}
+The same computation settles a conjecture of Kagey. Row $n$ of his triangle
 \seqnum{A338885} lists all $k$ such that some tilted lattice rectangle touches
-all $4$ sides of an $n\times k$ rectangle. Its comments conjecture that the
-largest such $k$ is \seqnum{A033638}$(n)=\lfloor n^2/4\rfloor+1$.
-
-\begin{corollary}[the conjecture in \seqnum{A338885}]\label{cor:oeisconj}
-Let $n\ge2$. If a tilted lattice rectangle has a bounding box of height $n$ and
-width $k$, then $k\le\lfloor n^2/4\rfloor+1$, and equality occurs. So row $n$ of
-\seqnum{A338885} has largest entry \seqnum{A033638}$(n)$.
-\end{corollary}
-
-\begin{proof}
-In~\eqref{eq:tilt-param} the bounding box has height $b+d=n$ and width $k=a+c$.
-As in Lemma~\ref{lem:span}, $k\le bd+1\le\lfloor n^2/4\rfloor+1$. For equality
-take $b=\lfloor n/2\rfloor$, $d=\lceil n/2\rceil$, and the sides $(1,-b)$ and
-$(bd,d)$, which are perpendicular.
-\end{proof}
+all $4$ sides of an $n\times k$ rectangle, and he conjectures there that the
+largest such $k$ is \seqnum{A033638}$(n)=\lfloor n^2/4\rfloor+1$. This is true
+for every $n\ge2$. In~\eqref{eq:tilt-param} the bounding box has height $b+d=n$
+and width $k=a+c$. As in Lemma~\ref{lem:span}, $k\le bd+1\le\lfloor n^2/4\rfloor+1$.
+For equality take $b=\lfloor n/2\rfloor$, $d=\lceil n/2\rceil$, and the
+perpendicular sides $(1,-b)$ and $(bd,d)$.
+\end{remark}
 
 The \emph{diamond} $D(i,j)$ is the square with corners $(i,j+1)$, $(i+1,j)$,
 $(i+2,j+1)$, and $(i+1,j+2)$. The rectangles $\kA_i$, $\kB_i$, $\kC_i$, and
@@ -204,64 +197,59 @@ and $\lceil h/2\rceil$.
 \item \textup{(Values.)} We have $f(2,m)=m+1$ and $f(3,m)=m+2$. We have
 $f(4,4)=7$, $f(4,5)=8$, and $f(4,m)=m+4$ for $m\ge6$. We have $f(5,5)=10$,
 $f(5,6)=11$, $f(5,7)=12$, and $f(5,m)=m+6$ for $m\ge8$.
-\item \textup{(Large widths.)} For every $h\ge3$ there is a width $m_h$ such that
-$f(h,m)=m+q_h$ for all $m\ge m_h$.
 \end{enumerate}
 \end{theorem}
 
 In the companion paper the values $f(4,4)$, $f(4,5)$, $f(5,6)$, and $f(5,7)$
 rest on computer searches, and $f(5,m)=m+6$ rests on a finite check that is
-also verified in Lean. For (d) it gives the width $q_h+(q_h-1)W_h$ and shows that the least such
-width is $h^{2+o(1)}$. We use only that $m_h$ exists. We do not need (c) for $2$ and $3$ rows, since
+also verified in Lean. We do not need (c) for $2$ and $3$ rows, since
 Theorem~\ref{thm:strip} and Corollary~\ref{cor:threevalue} prove these cases
-again. Table~\ref{tab:values} lists the known values for $h\le7$. The values of
-$f$ for $h=6$ and $h=7$ are also from the companion paper. The diagonal $f(n,n)$
-is \seqnum{A398321}.
+again. Table~\ref{tab:values} lists $f(h,m)$ and $a_h(m)$ for $h\le5$.
 
 \begin{table}[!htb]
 \centering\footnotesize\setlength{\tabcolsep}{4pt}
-\begin{tabular}{@{}r|rrrrrr@{}}
-\multicolumn{7}{c}{$f(h,m)$}\\
+\begin{tabular}{@{}r|rrrr@{}}
+\multicolumn{5}{c}{$f(h,m)$}\\
 \toprule
-$m\backslash h$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$\\
+$m\backslash h$ & $2$ & $3$ & $4$ & $5$\\
 \midrule
-$2$ & $4$ & $4$ & $5$ & $6$ & $7$ & $8$\\
-$3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$\\
-$4$ & $5$ & $6$ & $7$ & $8$ & $10$ & $11$\\
-$5$ & $6$ & $7$ & $8$ & $10$ & $11$ & $12$\\
-$6$ & $7$ & $8$ & $10$ & $11$ & $12$ & $13$\\
-$7$ & $8$ & $9$ & $11$ & $12$ & $13$ & $14$\\
-$8$ & $9$ & $10$ & $12$ & $14$ & $15$ & $16$\\
-$9$ & $10$ & $11$ & $13$ & $15$ & $16$ & \\
-$10$ & $11$ & $12$ & $14$ & $16$ & $17$ & \\
-$11$ & $12$ & $13$ & $15$ & $17$ & $18$ & \\
-$12$ & $13$ & $14$ & $16$ & $18$ & $20$ & \\
-$13$ & $14$ & $15$ & $17$ & $19$ & $21$ & \\
+$2$ & $4$ & $4$ & $5$ & $6$\\
+$3$ & $4$ & $5$ & $6$ & $7$\\
+$4$ & $5$ & $6$ & $7$ & $8$\\
+$5$ & $6$ & $7$ & $8$ & $10$\\
+$6$ & $7$ & $8$ & $10$ & $11$\\
+$7$ & $8$ & $9$ & $11$ & $12$\\
+$8$ & $9$ & $10$ & $12$ & $14$\\
+$9$ & $10$ & $11$ & $13$ & $15$\\
+$10$ & $11$ & $12$ & $14$ & $16$\\
+$11$ & $12$ & $13$ & $15$ & $17$\\
+$12$ & $13$ & $14$ & $16$ & $18$\\
+$13$ & $14$ & $15$ & $17$ & $19$\\
 \bottomrule
 \end{tabular}\hspace{1.2em}
-\begin{tabular}{@{}r|rrrrrr@{}}
-\multicolumn{7}{c}{$a_h(m)$}\\
+\begin{tabular}{@{}r|rrrr@{}}
+\multicolumn{5}{c}{$a_h(m)$}\\
 \toprule
-$m\backslash h$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$\\
+$m\backslash h$ & $2$ & $3$ & $4$ & $5$\\
 \midrule
-$2$ & $1$ & $12$ & $32$ & $80$ & $192$ & $448$\\
-$3$ & $12$ & $53$ & $224$ & $892$ & $3420$ & $12704$\\
-$4$ & $32$ & $224$ & $316$ & $1810$ & $26$ & $292$\\
-$5$ & $80$ & $892$ & $1810$ & $8$ & $76$ & $1184$\\
-$6$ & $192$ & $3420$ & $26$ & $76$ & $160$ & $2536$\\
-$7$ & $448$ & $12704$ & $292$ & $1184$ & $2536$ & $7300$\\
-$8$ & $1024$ & $45864$ & $2118$ & $4$ & $8$ & $\ge18$\\
-$9$ & $2304$ & $161992$ & $13332$ & $44$ & & \\
-$10$ & $5120$ & $562912$ & $75398$ & $350$ & & \\
-$11$ & $11264$ & $1930312$ & $402656$ & $3004$ & & \\
-$12$ & $24576$ & $6545496$ & $2037848$ & $24706$ & & \\
-$13$ & $53248$ & $21988784$ & $9894016$ & $193406$ & & \\
+$2$ & $1$ & $12$ & $32$ & $80$\\
+$3$ & $12$ & $53$ & $224$ & $892$\\
+$4$ & $32$ & $224$ & $316$ & $1810$\\
+$5$ & $80$ & $892$ & $1810$ & $8$\\
+$6$ & $192$ & $3420$ & $26$ & $76$\\
+$7$ & $448$ & $12704$ & $292$ & $1184$\\
+$8$ & $1024$ & $45864$ & $2118$ & $4$\\
+$9$ & $2304$ & $161992$ & $13332$ & $44$\\
+$10$ & $5120$ & $562912$ & $75398$ & $350$\\
+$11$ & $11264$ & $1930312$ & $402656$ & $3004$\\
+$12$ & $24576$ & $6545496$ & $2037848$ & $24706$\\
+$13$ & $53248$ & $21988784$ & $9894016$ & $193406$\\
 \bottomrule
 \end{tabular}
-\caption{Known values of $f(h,m)$ (\seqnum{A397315}) and $a_h(m)$
-(\seqnum{A399580}). A blank entry is not known. The columns $h=2$, $3$, $4$ of
-the counts are \seqnum{A001787} from $m=3$, \seqnum{A401223}, and
-\seqnum{A401224}, and the column $h=5$ is \seqnum{A401225} from $m=8$. The
-counts with $\min(h,m)\ge4$ are computer-assisted.}
+\caption{The values of $f(h,m)$ (\seqnum{A397315}) and $a_h(m)$
+(\seqnum{A399580}) for $h\le5$. The columns $h=2$, $3$, $4$ of the counts are
+\seqnum{A001787} from $m=3$, \seqnum{A401223}, and \seqnum{A401224}, and the
+column $h=5$ is \seqnum{A401225} from $m=8$. The counts $a_4(m)$ and $a_5(m)$ with
+$m\ge4$ are computer-assisted.}
 \label{tab:values}
 \end{table}

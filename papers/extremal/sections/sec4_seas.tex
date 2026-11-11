@@ -1,6 +1,6 @@
 \section{An explicit construction at every height}\label{sec:general}
 
-We now prove Theorem~\ref{thm:general}. We place the doubles far apart and let the
+We now prove Proposition~\ref{thm:general}. We place the doubles far apart and let the
 singletons between them be black in a boundary row. Call a singleton a \emph{sea} if its
 black point lies in row $1$ or in row $h$.
 
@@ -21,7 +21,7 @@ of the complete bipartite graph between $\{1,2\}$ and $\{3,4\}$. Here $W_4+1=4$.
 \label{fig:seas}
 \end{figure}
 
-\begin{proof}[Proof of Theorem~\ref{thm:general}]
+\begin{proof}[Proof of Proposition~\ref{thm:general}]
 Theorem~\ref{thm:rowbound} gives the upper bound. Take $H$ to be the complete bipartite
 graph with parts of sizes $\lfloor h/2\rfloor$ and $\lceil h/2\rceil$, so $q=q_h$, and
 place the doubles at $p_j=1+(j-1)(W_h+1)$. The last double is in column
@@ -120,8 +120,8 @@ Lemma~\ref{lem:criterion}.
 
 \begin{remark}\label{rem:spacing}
 The proof uses the spacing $W_h+1$ only to keep 2 doubles out of the columns of one tilted
-rectangle. The spacing $W_h$ is not enough. For $h=4$ and $h=6$, the blackout with spacing $W_h$ is
-not valid for the complete bipartite graph between the rows $1,\dots,h/2$ and the other
-rows, with the doubles in lexicographic order of their row pairs. The threshold $M_h$ is
-far from $m_h$ for small heights. For example $M_5=31$, while $m_5=8$.
+rectangle. The spacing $W_h$ is not always enough. Take the complete bipartite graph
+between the rows $1,\dots,\lfloor h/2\rfloor$ and the other rows, with the doubles in
+lexicographic order of their row pairs. Then the blackout with spacing $W_h$ is valid for
+$h=3,5,7$ and not valid for $h=4,6,8$. Note that $M_5=31$, while $m_5=8$.
 \end{remark}

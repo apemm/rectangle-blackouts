@@ -3,7 +3,8 @@
 Fix the height $h$. The letters are now all subsets of $\{1,\dots,h\}$, and a
 blackout of the $h\times m$ grid is the column word $w=B_1\cdots B_m$. Write
 $|w|=m$ for its length and $S(w)$ for the blackout. Let $\mathcal L_h$ be the
-set of words of valid blackouts, of all lengths.
+set of words of valid blackouts, of all lengths. This section does not use the
+companion paper.
 
 \begin{theorem}[regularity]\label{thm:regular}
 For every $h\ge1$ the language $\mathcal L_h$ is regular. Hence the series
@@ -38,35 +39,57 @@ accepting path, so the series is $\alpha(I-T(z,u))^{-1}\beta$. This is rational
 by Cramer's rule~\cite[Proposition~V.6]{flajolet2009}.
 \end{proof}
 
+The \emph{excess} of a word is $e(w)=|S(w)|-|w|$, so that $e(uv)=e(u)+e(v)$ and
+$f(h,m)-m$ is the largest excess of a word of length $m$ in $\mathcal L_h$.
+
 \begin{theorem}[fixed height]\label{thm:rational}
-Let $h\ge1$. The column words of the optima of the grids with $h$ rows form a
-regular language, and $\sum_{m\ge1}a_h(m)z^m$ is a rational function.
+Let $h\ge1$.
+\begin{enumerate}[(a)]
+\item For every integer $k$ the words of $\mathcal L_h$ with excess $k$ form a
+regular language.
+\item The sequence $f(h,m)-m$ is ultimately periodic in $m$.
+\item The column words of the optima of the grids with $h$ rows form a regular
+language, and $\sum_{m\ge1}a_h(m)z^m$ is a rational function.
+\end{enumerate}
 \end{theorem}
 
 \begin{proof}
-For $h=1$ every blackout is valid, and $a_1(m)=1$. For $h=2$ the optima are
-described in Theorem~\ref{thm:strip}, and the series is $z/(1-2z)^2$ up to its
-first $2$ terms. Let $h\ge3$. By Theorem~\ref{thm:imports}(d) we have
-$f(h,m)=m+q_h$ for all $m\ge m_h$. So $f(h,m)-m$ is eventually constant. Changing finitely many words keeps a language regular and changes the
-series by a polynomial. It is therefore enough to treat the language
-$\mathcal L_{h,q_h}$, where $\mathcal L_{h,k}$ is the set of words
-$w\in\mathcal L_h$ with $|S(w)|-|w|=k$.
-
-Put $e(w)=|S(w)|-|w|$, so that $e(uv)=e(u)+e(v)$. Every factor $v$ of a valid
-word is the word of a valid blackout of a smaller grid. If $|v|\ge3$, then
-$e(v)\le q_h$ by Theorem~\ref{thm:imports}(a). If $|v|\le2$, then
-$e(v)\le2h-2$. Put $c_h=\max(q_h,2h-2)$. Now let $w=uv$ be valid with
-$e(w)=k$. Then
+(a) We first bound the excess of a valid word $v$. If $|v|\le2$, then
+$e(v)\le2h-2$. Let $|v|\ge3$. By Lemma~\ref{lem:girth} no $2$ columns share $2$
+black rows, so $\sum_i\binom{|B_i|}2\le\binom h2$. Since
+$|B_i|-1\le\binom{|B_i|}2$, we get $e(v)\le\binom h2$. Put
+$c_h=\max\bigl(\binom h2,2h-2\bigr)$. Every factor of a valid word is the word
+of a valid blackout of a smaller grid. Now let $w=uv$ be valid with $e(w)=k$.
+Then
 \[
 k-c_h\le e(u)=k-e(v)\le c_h .
 \]
-So an automaton for $\mathcal L_h$ can also keep the value $e(u)$ of the prefix
-read so far. It rejects when this value leaves the interval $[k-c_h,c_h]$, and
-at the end it accepts when the value is $k$. This is a finite automaton for
-$\mathcal L_{h,k}$. The series of a regular language is rational, as in the
-proof of Theorem~\ref{thm:regular}.
+So an automaton for $\mathcal L_h$ can also keep the excess of the prefix read
+so far. It rejects when this value leaves the interval $[k-c_h,c_h]$, and at
+the end it accepts when the value is $k$. This is a finite automaton for the
+words of $\mathcal L_h$ with excess $k$.
+
+(b) Let $\Lambda_k$ be the set of lengths of the words in (a). Replacing every
+letter by the same symbol turns a regular language into a regular language
+over $1$ letter, and a deterministic automaton over $1$ letter is a path that
+ends in a cycle. So each $\Lambda_k$ is ultimately periodic. The blackout that
+consists of row $1$ is valid. Indeed a tilted rectangle has only $1$ corner in
+its top row, as in Lemma~\ref{lem:leftmost}. So a rectangle with fewer than $3$
+white corners is axis-aligned with a side in row $1$, and its $2$ white corners
+determine it. Hence $f(h,m)-m$ is the largest $k$ with $0\le k\le c_h$ and
+$m\in\Lambda_k$. These are finitely many ultimately periodic sets, so
+$f(h,m)-m$ is ultimately periodic.
+
+(c) For each $k$ let $D_k$ be the set of all $m\ge1$ with $f(h,m)-m=k$. It is
+ultimately periodic by (b), so the words with length in $D_k$ form a regular
+language. The words of the optima are the words of $\mathcal L_h$ with excess
+$k$ and length in $D_k$, for $0\le k\le c_h$. This is a finite union of regular
+languages. Its series is rational, as in the proof of
+Theorem~\ref{thm:regular}.
 \end{proof}
 
-The regularity of $\mathcal L_{h,q_h}$ also follows from a result of Guilhot,
-Little, and Parkinson~\cite[Theorem~1(3)]{glp2025} on additive weights that are
-bounded above on a regular language. Here the weight is $e$.
+By the companion paper~\cite{pemmasaniExtremal}, the sequence $f(h,m)-m$ is in
+fact eventually constant, equal to $q_h$ for $h\ge3$. For the largest excess
+that occurs, part (a) also follows from a result of Guilhot, Little, and
+Parkinson~\cite[Theorem~1(3)]{glp2025} on additive weights that are bounded
+above on a regular language.

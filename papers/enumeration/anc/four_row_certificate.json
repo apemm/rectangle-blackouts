@@ -1,0 +1,122 @@
+{
+ "nmax": 1000,
+ "primes": [
+  2147483629,
+  2147483587
+ ],
+ "degree_Q": 420,
+ "degree_P": 444,
+ "pair_sets": {
+  "{1,2}|{3,4}": {
+   "states": 60975,
+   "transitions": 202582,
+   "vector_identity_first_index_mod_2147483629": 445,
+   "counts_6_to_12_mod_2147483629": [
+    0,
+    4,
+    128,
+    920,
+    4852,
+    24112,
+    114424
+   ],
+   "vector_identity_first_index_mod_2147483587": 445,
+   "counts_6_to_12_mod_2147483587": [
+    0,
+    4,
+    128,
+    920,
+    4852,
+    24112,
+    114424
+   ]
+  },
+  "{1,3}|{2,4}": {
+   "states": 138095,
+   "transitions": 519530,
+   "vector_identity_first_index_mod_2147483629": 445,
+   "counts_6_to_12_mod_2147483629": [
+    20,
+    256,
+    1780,
+    11128,
+    63540,
+    346320,
+    1785768
+   ],
+   "vector_identity_first_index_mod_2147483587": 445,
+   "counts_6_to_12_mod_2147483587": [
+    20,
+    256,
+    1780,
+    11128,
+    63540,
+    346320,
+    1785768
+   ]
+  },
+  "{1,4}|{2,3}": {
+   "states": 55575,
+   "transitions": 175622,
+   "vector_identity_first_index_mod_2147483629": 445,
+   "counts_6_to_12_mod_2147483629": [
+    6,
+    32,
+    210,
+    1284,
+    7006,
+    32224,
+    137656
+   ],
+   "vector_identity_first_index_mod_2147483587": 445,
+   "counts_6_to_12_mod_2147483587": [
+    6,
+    32,
+    210,
+    1284,
+    7006,
+    32224,
+    137656
+   ]
+  }
+ },
+ "mod_2147483629": {
+  "recurrence_holds_445_to_nmax": true,
+  "last_index_where_it_fails": 444,
+  "product_Q_times_series_equals_P": true,
+  "a4_6_to_12": [
+   26,
+   292,
+   2118,
+   13332,
+   75398,
+   402656,
+   2037848
+  ]
+ },
+ "mod_2147483587": {
+  "recurrence_holds_445_to_nmax": true,
+  "last_index_where_it_fails": 444,
+  "product_Q_times_series_equals_P": true,
+  "a4_6_to_12": [
+   26,
+   292,
+   2118,
+   13332,
+   75398,
+   402656,
+   2037848
+  ]
+ },
+ "exact": {
+  "index": 445,
+  "number_of_primes": 48,
+  "smallest_prime": 2147482621,
+  "largest_prime": 2147483647,
+  "bits_of_product": 1488,
+  "bits_of_bound": 1458,
+  "vector_identity_exact": true,
+  "numerator_exact": true
+ },
+ "seconds": 274.3
+}

@@ -1,0 +1,48 @@
+% Removed from Section 5 in the revision of 11 November 2026 (review item E1).
+% The statement is kept in the paper as a remark. This file keeps the full proof.
+
+\begin{theorem}[forbidden-block bound]\label{thm:foursurvival}
+For every $m\ge6$,
+\[
+a_4(m)\le3\,(m)_4\,4^{m-4}\Bigl(\frac{53}{64}\Bigr)^{k},\qquad
+k=\max\bigl(0,\lfloor m/4\rfloor-4\bigr).
+\]
+Hence $a_4(m)=O\bigl(m^4\,212^{m/4}\bigr)$, and $212^{1/4}<3.816$.
+\end{theorem}
+
+\begin{proof}
+Fix the pair set $F$ and the columns and pairs of the $4$ doubles. This can be
+done in $3\,(m)_4$ ways. Call $4$ consecutive singleton columns a \emph{block},
+and record it by the word of its $4$ black rows. We show that a block of an
+optimum avoids at least $44$ of the $256$ words.
+
+The \emph{template words} $2413$, $3412$, $2143$, and $3142$ are the rows of the
+corners of $\kC_x$, $\kA_x$, $\kE_x$, and $\kB_x$, where $x$ is the first column
+of the block. They are the permutations of $1234$ whose first and last letters
+both lie in $\{2,3\}$. Let $\tau$ be one of these $4$ rectangles and
+$t_1t_2t_3t_4$ its word.
+
+First, the block is not a template word, since $\tau$ would be hidden
+(Theorem~\ref{thm:hidden}). Second, the block is not obtained from
+$t_1t_2t_3t_4$ by exchanging $t_p$ and $t_q$. In that case $\tau$ would show
+exactly its corners $(x+p-1,t_p)$ and $(x+q-1,t_q)$, and so would the
+axis-aligned rectangle through these $2$ points. The words obtained by such
+exchanges are the templates and the $16$ permutations with exactly one of the
+first and last letters in $\{2,3\}$. So $20$ permutations are excluded.
+
+Third, the block is not obtained from $t_1t_2t_3t_4$ by changing one letter
+$t_p=r$ to a letter $s$ with $\{r,s\}\in F$. In that case $\tau$ would show only
+$(x+p-1,r)$. Let $d$ be the double column with the pair $\{r,s\}$. The
+axis-aligned rectangle on the rows $r,s$ and the columns $x+p-1$ and $d$ would
+also show only $(x+p-1,r)$. Each row lies in $2$ pairs of $F$, so each template
+gives $8$ such words. They repeat a letter, so they are not permutations.
+Two templates can give the same word only if they differ by exchanging $2$
+letters $r,s$ with $\{r,s\}\in F$, and then they share $2$ words. The $4$ pairs
+of templates that differ by one exchange use the letters $\{2,3\}$ twice and
+$\{1,4\}$ twice. So at least $32-8=24$ further words are excluded, and a block
+has at most $256-20-24=212=4^4\cdot\frac{53}{64}$ words.
+
+Cut the columns into the $\lfloor m/4\rfloor$ groups $4j-3,\ldots,4j$. At most
+$4$ groups contain a double, so at least $k$ groups are blocks. Every other
+singleton column has at most $4$ choices. This gives the bound.
+\end{proof}
