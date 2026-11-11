@@ -1,10 +1,10 @@
-# Notes on the extremal paper (state after revision round 1, 10 November 2026)
+# Notes on the extremal paper (state after revision round 2, 10 November 2026)
 
 Files: `blackouts_extremal.tex`, `sections/sec1_intro.tex` to `sec9_open.tex`, `extremal.bib`,
 `e-jc.sty` (unchanged copy from combinatorics.org), `figs/`, `data/seven_row_blackouts.txt`,
 `scripts/check_constructions.py`, `removed/four_row_hand_proof.tex`.
 Build: `pdflatex`, `bibtex`, `pdflatex` twice. The build is clean: no undefined references and
-no overfull boxes. The PDF has 25 pages.
+no overfull boxes. The PDF has 26 pages.
 
 Labels used by the companion paper and not to be renamed: `thm:rowbound`, `thm:equality`,
 `thm:small`, `thm:general`.
@@ -37,10 +37,11 @@ Audit fixes (`AUDIT_sections_4_5.md`), all applied:
 
 Length cuts:
 
-- f(4,m) = m+4: the hand proof is removed (kept in `removed/four_row_hand_proof.tex`). The
-  companion paper imports this value from here, so it cannot be cited there. The paper now
-  uses Theorem 1 for m >= 13 and a computer check of the 7 widths 6 to 12. Theorem 3 says that
-  part (b) is computer-assisted for m <= 12.
+- f(4,m) = m+4 for m >= 6: round 1 had replaced the hand proof by a computer check of the
+  widths 6 to 12. Round 2 restored the hand proof (Proposition `prop:four`), because the
+  companion paper and an OEIS entry rest on it. Theorem 3 again says that in part (b) only
+  f(4,4) and f(4,5) are computer-assisted. A copy of the proof stays in
+  `removed/four_row_hand_proof.tex`.
 - The 5 seven-row blackouts are in `data/seven_row_blackouts.txt`. The text shows the one of
   width 24. The checker script reads the file.
 - The lemma on the SAT encodings is folded into the text of Section 7.
@@ -53,7 +54,6 @@ Length cuts:
 ## Changes to statements of the old manuscript
 
 - Theorem D: threshold q_h + (q_h - 1) W_h instead of q_h + (q_h - 1)(2 W_h + 1).
-- f(4,m) for 6 <= m <= 12 rests on a computer check (see above).
 - The boundary cross lemma has a new proof through the criterion.
 - f(5,5) >= 10: the hand table for S_0 is dropped. The paper cites the finite check (130
   rectangles) and the Lean kernel check.
@@ -64,7 +64,9 @@ Length cuts:
 
 ## What was checked and how
 
-By hand: every proof in Sections 2 to 6.
+By hand: every proof in Sections 2 to 6. The table in the proof of `prop:four` was also
+compared with a computer listing of the tilted rectangles with 2 or more black corners for
+m = 6, 7, 8, 10.
 
 By `scripts/check_constructions.py` (definition-level check, about 16 seconds): all explicit
 blackouts and test boards of Section 6, the four-row family for 6 <= m <= 13, the boundary
