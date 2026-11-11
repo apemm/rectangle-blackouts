@@ -1,0 +1,70 @@
+\section{Computer checks}\label{sec:verify}
+
+The computer-assisted parts of Theorem~\ref{thm:small} are of 2 kinds. The lower bounds
+need the validity of explicit blackouts, including the test boards of
+Theorem~\ref{thm:collar}. The upper bounds below the row bound need the unsatisfiability of
+SAT instances. The repository~\cite{repo} contains the code, the evidence files, and the
+commands. The scripts are in \nolinkurl{jis/scripts}, the evidence in
+\nolinkurl{jis/data}, the certificate pipeline in \nolinkurl{jis/unsat}, and the formal
+proofs in \nolinkurl{lean/KageyProblems/Problem001}.
+
+\paragraph{Validity of explicit blackouts.} Every blackout and test board of
+Section~\ref{sec:small} was checked from Definition~\ref{def:valid} by at least 2 separately
+written programs, which list all rectangles and compare their presentations. The script
+\nolinkurl{papers/extremal/scripts/check_constructions.py} is one more such program. It
+checks all blackouts of Section~\ref{sec:small}, including the 5 blackouts on 7 rows in
+\nolinkurl{papers/extremal/data/seven_row_blackouts.txt}, the blackouts of
+Proposition~\ref{prop:seas} for $3\le h\le8$, and blackouts built as in
+Section~\ref{sec:threshold} for $4\le h\le13$. In the last test the columns $X_e$ are found
+by a random search in a shorter window, and the singletons in (3) of
+Lemma~\ref{lem:block} are chosen at random. For $h=5$ and $h=7$, where $g=h-3$ is not
+allowed, the sea rows $\{1,h-1\}$ and $\{2,h\}$ suffice, and the test uses the same layout
+with 2 blocks. The $72$ and $1440$ candidates on the
+$4\times4$ and $4\times5$ grids are searched by \nolinkurl{verify_narrow.py}.
+
+\paragraph{SAT encodings.} Encoding A has a variable for each grid point and a clause for
+each inclusion-minimal set of the form $C(R_1)\triangle C(R_2)$ with $R_1\ne R_2$. The
+clause says that this set is not fully black. Encoding B has such clauses only for the
+pairs of rectangles that share a corner. It also has a variable $y_R$ for each rectangle
+$R$, which is forced to be true if $R$ is fully black, and it allows at most 1 true $y_R$.
+A \emph{structured} instance on 6 rows fixes one row graph from
+Theorem~\ref{thm:equality} or Lemma~\ref{lem:sixbelow}. Each column chooses a type, which is
+a single row, an edge of the graph, or the empty set in case (c) of the lemma. Each edge is
+used once, and the empty type is used once in case (c). The instance keeps those clauses of
+encoding B that involve a tilted rectangle and whose set can be fully black for these
+types. The size of the blackout is fixed by a cardinality constraint.
+
+These encodings are faithful for the following reasons. By Lemma~\ref{lem:diff}, a blackout
+is valid if and only if it contains no set $C(R_1)\triangle C(R_2)$ with $R_1\ne R_2$, and
+it is enough to exclude the inclusion-minimal sets. This is encoding A. For rectangles
+without a common corner, the set $C(R_1)\triangle C(R_2)$ is black exactly when both are
+fully black. Hence a blackout is valid if and only if at most 1 rectangle is fully black and
+no set $C(R_1)\triangle C(R_2)$ of 2 rectangles with a common corner is black. This is
+encoding B. Finally let $S$ be a valid blackout of the $6\times m$ grid with $m+9$ or $m+8$
+points, where $m\ge3$. Theorem~\ref{thm:equality} or Lemma~\ref{lem:sixbelow} gives its row
+graph, and every $B_i$ is an allowed type. With $y_R$ true exactly for the fully black
+rectangles, $S$ satisfies encoding B, and the structured instance of its row graph has a
+subset of these clauses. So if all structured instances of a width and a size are
+unsatisfiable, there is no valid blackout of that width and size.
+
+\paragraph{Certificates.} CaDiCaL~\cite{biere2024} produced LRAT proofs for every
+unsatisfiable instance that we use. These are the instances of encoding A for
+$f(5,6)<12$, $f(5,7)<13$, $f(6,6)<13$, $f(6,7)<14$, $f(7,7)<15$, $f(6,8)<16$, and
+$f(7,8)<17$, the $70$ structured instances with $m+9$ points for the widths $8$ to $14$,
+and the $345$ structured instances with $m+8$ points for the widths $9$ to $11$. The
+instances for $6\times8$, $7\times7$, and $7\times8$ are split by the content of the first
+column. Each of the $739$ proofs was accepted by 2 checkers, the program
+\texttt{lrat-check} of drat-trim~\cite{cruzfilipe2017,wetzler2014} and the LRAT checker of
+the Lean core library. The proofs are large and are not stored, but their hashes are, and
+the pipeline recreates them.
+
+\paragraph{Formal proofs.} The Lean development contains formal proofs of
+Lemmas~\ref{lem:diff}, \ref{lem:threecorners}, and~\ref{lem:span}, of the row bound, of the
+finite collar theorem, and of Proposition~\ref{prop:seas} under the stronger assumption
+$p_{j+1}-p_j\ge2W_h+2$. This gives a formal proof of $f(h,m)=m+q_h$ for every $h\ge3$ and
+$m\ge q_h+(q_h-1)(2W_h+1)$. The spacing $W_h+1$ of Proposition~\ref{prop:seas} and the
+results of Section~\ref{sec:threshold} are not formalized. Validity tests of $S_0$, $S_8$,
+the $6\times8$ and $6\times15$ blackouts of Section~\ref{sec:small}, and the $5\times13$
+and $6\times23$ test boards are checked by the Lean kernel. Together with the formal row
+bound and collar theorem, this proves $f(5,m)=m+6$ for $m\ge8$, $f(6,m)=m+9$ for
+$m\ge15$, $f(5,5)\ge10$, and $f(6,8)\ge15$ in Lean.

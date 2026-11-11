@@ -1,0 +1,267 @@
+\section{Definitions and tools}\label{sec:setup}
+
+\subsection{Blackouts}
+
+An $h\times m$ grid has $h$ rows, $m$ columns, and point set $V$. The point
+$(i,j)$ lies in column $i$ and row $j$, with $(1,1)$ at the top left
+(Figure~\ref{fig:game}(a)). A \emph{rectangle} has four grid points as corners
+and positive area. We write $C(R)$ for the corner set of a rectangle $R$. It is
+\emph{axis-aligned} if its sides follow the grid lines, and \emph{tilted}
+otherwise.
+
+A \emph{blackout} is a set $S\subseteq V$ of black points. The other points are
+white. The \emph{presentation} of a rectangle $R$ is $\pres(R)=C(R)\setminus S$,
+the set of its white corners. We say that $R$ \emph{shows} these corners, and
+that $R$ is \emph{hidden} if it shows none.
+
+\begin{definition}[valid blackout]\label{def:valid}
+A blackout $S$ is \emph{valid} if distinct rectangles have distinct
+presentations. We write $f(h,m)$ for the largest size of a valid blackout
+of the $h\times m$ grid, and $a_h(m)$ for the number of valid blackouts of that
+size, which we call \emph{optima}. We count them as sets of points, so
+reflections and rotations are not identified.
+\end{definition}
+
+Transposing the grid gives $f(h,m)=f(m,h)$ and $a_h(m)=a_m(h)$. A grid with
+$1$ row or $1$ column has no rectangles, so $f(1,m)=m$ and $a_1(m)=1$.
+
+Column $i$ of a blackout has \emph{black rows} $B_i=\{j:(i,j)\in S\}$. It is
+\emph{empty}, a \emph{singleton}, a \emph{double}, or a \emph{triple} when
+$|B_i|$ is $0$, $1$, $2$, or $3$, and \emph{full} when $|B_i|=h$. The \emph{column
+word} of $S$ is $B_1B_2\cdots B_m$. The \emph{pair set} $F$ of $S$ is the set of
+pairs of rows that are both black in some column. Throughout,
+$q_h=\lfloor h^2/4\rfloor$, which is \seqnum{A002620}$(h)$.
+
+\begin{lemma}[difference sets]\label{lem:diff}
+Two rectangles $R_1$ and $R_2$ have the same presentation if and only if
+$C(R_1)\triangle C(R_2)\subseteq S$.
+\end{lemma}
+
+\begin{proof}
+The sets $C(R_1)\setminus S$ and $C(R_2)\setminus S$ agree exactly when every
+point that lies in just one of $C(R_1)$ and $C(R_2)$ belongs to $S$.
+\end{proof}
+
+\begin{lemma}[three corners suffice]\label{lem:threecorners}
+Three corners of a rectangle determine it. Hence two distinct rectangles with the
+same presentation show at most $2$ corners, and a valid blackout hides at most
+$1$ rectangle.
+\end{lemma}
+
+\begin{proof}
+Three corners form a right triangle. Its right angle is at the corner $q$
+adjacent to the other two, $p$ and $r$, so the fourth corner is $p+r-q$. Two
+hidden rectangles would both have the empty presentation.
+\end{proof}
+
+\subsection{Tilted rectangles}
+
+Put $W_h=1+\lfloor(h-1)^2/4\rfloor$, so $W_3=2$, $W_4=3$, and $W_5=5$.
+
+\begin{lemma}[leftmost corner]\label{lem:leftmost}
+A tilted rectangle $R$ has a unique corner $\ell=(x,r)$ in its smallest column.
+The sides from $\ell$ are $(a,-b)$ and $(c,d)$ with positive integers $a,b,c,d$
+and $ac=bd$, and the corners are
+\begin{equation}\label{eq:tilt-param}
+(x,r),\qquad(x+a,\,r-b),\qquad(x+c,\,r+d),\qquad(x+a+c,\,r-b+d).
+\end{equation}
+The rectangle meets the rows $r-b$ to $r+d$ and the columns $x$ to $x+a+c$. We
+call $a+c$ its \emph{span}.
+\end{lemma}
+
+\begin{proof}
+No side of $R$ is vertical. Hence two corners in the smallest column $x$ would
+be opposite. The other two corners have the same midpoint, so they would also
+lie in column $x$, and $R$ would have no area. The two sides from
+$\ell$ therefore have positive first coordinates $a$ and $c$. They are
+perpendicular, so their second coordinates have product $-ac$. Thus one
+side points up and the other down, which gives the form above with $ac=bd$.
+\end{proof}
+
+\begin{lemma}[span bound]\label{lem:span}
+Every tilted rectangle of the $h\times m$ grid has span $a+c\le W_h$.
+\end{lemma}
+
+\begin{proof}
+The rectangle fits in $h$ rows, so $b+d\le h-1$. Since $(a-1)(c-1)\ge0$, we get
+$a+c\le ac+1=bd+1$. Finally $bd\le\lfloor(b+d)^2/4\rfloor\le W_h-1$.
+\end{proof}
+
+The same computation settles a conjecture in the OEIS. Row $n$ of the triangle
+\seqnum{A338885} lists all $k$ such that some tilted lattice rectangle touches
+all $4$ sides of an $n\times k$ rectangle. Its comments conjecture that the
+largest such $k$ is \seqnum{A033638}$(n)=\lfloor n^2/4\rfloor+1$.
+
+\begin{corollary}[the conjecture in \seqnum{A338885}]\label{cor:oeisconj}
+Let $n\ge2$. If a tilted lattice rectangle has a bounding box of height $n$ and
+width $k$, then $k\le\lfloor n^2/4\rfloor+1$, and equality occurs. So row $n$ of
+\seqnum{A338885} has largest entry \seqnum{A033638}$(n)$.
+\end{corollary}
+
+\begin{proof}
+In~\eqref{eq:tilt-param} the bounding box has height $b+d=n$ and width $k=a+c$.
+As in Lemma~\ref{lem:span}, $k\le bd+1\le\lfloor n^2/4\rfloor+1$. For equality
+take $b=\lfloor n/2\rfloor$, $d=\lceil n/2\rceil$, and the sides $(1,-b)$ and
+$(bd,d)$, which are perpendicular.
+\end{proof}
+
+The \emph{diamond} $D(i,j)$ is the square with corners $(i,j+1)$, $(i+1,j)$,
+$(i+2,j+1)$, and $(i+1,j+2)$. The rectangles $\kA_i$, $\kB_i$, $\kC_i$, and
+$\kE_i$ have one corner in each of the columns $i$ to $i+3$, in the rows
+$3412$, $3142$, $2413$, and $2143$ from left to right (Figure~\ref{fig:tilted}).
+
+\begin{figure}[t]
+\centering
+\input{figs/tilted.tex}
+\caption{The tilted rectangles of the $4\times m$ grid, up to translation. Each is
+drawn in a $4\times4$ window, and its leftmost corner $\ell$ is yellow.}
+\label{fig:tilted}
+\end{figure}
+
+\begin{lemma}[tilted rectangles on $3$ and $4$ rows]\label{lem:tilted-narrow}
+The tilted rectangles of the $3\times m$ grid are the diamonds $D(i,1)$. Those of
+the $4\times m$ grid are $D(i,1)$, $D(i,2)$, $\kA_i$, $\kB_i$, $\kC_i$, and
+$\kE_i$.
+\end{lemma}
+
+\begin{proof}
+We use Lemma~\ref{lem:leftmost}. On $3$ rows, $b+d\le2$ forces $b=d=1$. Then
+$ac=1$, so $a=c=1$ and $\ell$ is in row $2$. On $4$ rows, $b=d=1$ again gives
+diamonds, with $\ell$ in row $2$ or $3$. Otherwise $\{b,d\}=\{1,2\}$. Then
+$ac=2$, so $\{a,c\}=\{1,2\}$, and $\ell$ is in row $1+b$. The $4$ choices of
+sides, $(2,-2),(1,1)$, $(1,-2),(2,1)$, $(2,-1),(1,2)$, and $(1,-1),(2,2)$,
+give $\kA_i$, $\kB_i$, $\kC_i$, and $\kE_i$.
+\end{proof}
+
+\subsection{Axis-aligned rectangles}
+
+A blackout $S$ is \emph{axis-valid} if distinct axis-aligned rectangles have
+distinct presentations. In the \emph{row-column graph} $G_S$, the vertices are
+the rows $r_1,\dots,r_h$ and the columns $c_1,\dots,c_m$, and $r_j$ is joined to
+$c_i$ for each black point $(i,j)$.
+
+\begin{lemma}[short cycles]\label{lem:girth}
+If $G_S$ has no $4$-cycle and no $6$-cycle, then $S$ is axis-valid. The converse
+holds for $m\ge3$.
+\end{lemma}
+
+\begin{proof}
+Let $m\ge3$. A $4$-cycle $r_j\,c_i\,r_{j'}\,c_{i'}$ gives the rectangles
+$\{i,w\}\times\{j,j'\}$ and $\{i',w\}\times\{j,j'\}$ for a third column $w$.
+Their corner sets differ in $4$ black points. A $6$-cycle
+$r_a\,c_x\,r_b\,c_y\,r_c\,c_z$ gives $\{x,y\}\times\{a,b\}$ and
+$\{y,z\}\times\{a,c\}$, whose corner sets differ in the $6$ black points of the
+cycle. In both cases Lemma~\ref{lem:diff} shows that $S$ is not axis-valid.
+
+Conversely, let axis-aligned rectangles $R_1\ne R_2$ have the same presentation,
+so that $C(R_1)\triangle C(R_2)\subseteq S$. They do not share opposite corners.
+Hence they share $0$, $1$, or $2$ corners, and $2$ shared corners lie in one row
+or in one column. We may assume that it is a row $a$. If they share no corner,
+then $R_1$ is hidden, which is a $4$-cycle. If they share $(x,a)$ and $(y,a)$,
+their other rows $b\ne c$ give the $4$-cycle $r_b\,c_x\,r_c\,c_y$. If they share
+just $(x,a)$, write $R_1=\{x,y\}\times\{a,b\}$ and $R_2=\{x,z\}\times\{a,c\}$
+with $y\ne z$ and $b\ne c$. The other $6$ corners are black and form the
+$6$-cycle $r_a\,c_y\,r_b\,c_x\,r_c\,c_z$.
+\end{proof}
+
+The next lemma tells when a set of at most $2$ points is the presentation of
+an axis-aligned rectangle.
+
+\begin{lemma}[axis-aligned rivals]\label{lem:rival}
+Let $S$ hide no axis-aligned rectangle, and let $P$ be a set of at most $2$
+white points. A \emph{rival} of $P$ is an axis-aligned rectangle with
+presentation $P$. The empty set has no rival. Otherwise $P$ has a rival exactly
+in the following cases.
+\begin{enumerate}[(a)]
+\item $P=\{(x,r)\}$, and some $s\in B_x$ has $\{r,s\}\in F$.
+\item $P=\{(x,r),(x,s)\}$ is a vertical pair, and $\{r,s\}\in F$.
+\item $P=\{(x,r),(z,r)\}$ is a horizontal pair, and $B_x\cap B_z\ne\emptyset$.
+\item $P=\{(x,r),(z,s)\}$ is an oblique pair with $x\ne z$ and $r\ne s$, and
+$(x,s)$ and $(z,r)$ are black.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+A rival of $P\ne\emptyset$ has rows $\{r,s\}$ and columns $\{x,z\}$, and each of
+its corners outside $P$ is black. Reading off these corners gives the $4$
+conditions. In (a) the black corners are $(x,s)$, $(z,r)$, and $(z,s)$, so
+$s\in B_x$ and column $z$ contains the pair $\{r,s\}$. Here $z\ne x$ holds
+automatically, since $(x,r)$ is white.
+\end{proof}
+
+\subsection{What we use from the companion paper}
+
+\begin{theorem}[{\cite{pemmasaniExtremal}}]\label{thm:imports}
+Let $m\ge3$.
+\begin{enumerate}[(a)]
+\item \textup{(Row bound.)} Every axis-valid blackout of the $h\times m$ grid has
+at most $m+q_h$ points. Hence $f(h,m)\le m+q_h$.
+\item \textup{(Equality.)} Let $h\ge4$. A blackout of the $h\times m$ grid with
+$m+q_h$ points is axis-valid if and only if every column is a singleton or a
+double, the $q_h$ doubles have distinct row pairs, and these pairs are the edges
+of a complete bipartite graph on the rows with parts of sizes $\lfloor h/2\rfloor$
+and $\lceil h/2\rceil$.
+\item \textup{(Values.)} We have $f(2,m)=m+1$ and $f(3,m)=m+2$. We have
+$f(4,4)=7$, $f(4,5)=8$, and $f(4,m)=m+4$ for $m\ge6$. We have $f(5,5)=10$,
+$f(5,6)=11$, $f(5,7)=12$, and $f(5,m)=m+6$ for $m\ge8$.
+\item \textup{(Large widths.)} For every $h\ge3$ there is a width $m_h$ such that
+$f(h,m)=m+q_h$ for all $m\ge m_h$.
+\end{enumerate}
+\end{theorem}
+
+In the companion paper the values $f(4,4)$, $f(4,5)$, $f(5,6)$, and $f(5,7)$
+rest on computer searches, and $f(5,m)=m+6$ rests on a finite check that is
+also verified in Lean. For (d) it gives the width $q_h+(q_h-1)W_h$ and shows that the least such
+width is $h^{2+o(1)}$. We use only that $m_h$ exists. We do not need (c) for $2$ and $3$ rows, since
+Theorem~\ref{thm:strip} and Corollary~\ref{cor:threevalue} prove these cases
+again. Table~\ref{tab:values} lists the known values for $h\le7$. The values of
+$f$ for $h=6$ and $h=7$ are also from the companion paper. The diagonal $f(n,n)$
+is \seqnum{A398321}.
+
+\begin{table}[!htb]
+\centering\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}r|rrrrrr@{}}
+\multicolumn{7}{c}{$f(h,m)$}\\
+\toprule
+$m\backslash h$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$\\
+\midrule
+$2$ & $4$ & $4$ & $5$ & $6$ & $7$ & $8$\\
+$3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$\\
+$4$ & $5$ & $6$ & $7$ & $8$ & $10$ & $11$\\
+$5$ & $6$ & $7$ & $8$ & $10$ & $11$ & $12$\\
+$6$ & $7$ & $8$ & $10$ & $11$ & $12$ & $13$\\
+$7$ & $8$ & $9$ & $11$ & $12$ & $13$ & $14$\\
+$8$ & $9$ & $10$ & $12$ & $14$ & $15$ & $16$\\
+$9$ & $10$ & $11$ & $13$ & $15$ & $16$ & \\
+$10$ & $11$ & $12$ & $14$ & $16$ & $17$ & \\
+$11$ & $12$ & $13$ & $15$ & $17$ & $18$ & \\
+$12$ & $13$ & $14$ & $16$ & $18$ & $20$ & \\
+$13$ & $14$ & $15$ & $17$ & $19$ & $21$ & \\
+\bottomrule
+\end{tabular}\hspace{1.2em}
+\begin{tabular}{@{}r|rrrrrr@{}}
+\multicolumn{7}{c}{$a_h(m)$}\\
+\toprule
+$m\backslash h$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$\\
+\midrule
+$2$ & $1$ & $12$ & $32$ & $80$ & $192$ & $448$\\
+$3$ & $12$ & $53$ & $224$ & $892$ & $3420$ & $12704$\\
+$4$ & $32$ & $224$ & $316$ & $1810$ & $26$ & $292$\\
+$5$ & $80$ & $892$ & $1810$ & $8$ & $76$ & $1184$\\
+$6$ & $192$ & $3420$ & $26$ & $76$ & $160$ & $2536$\\
+$7$ & $448$ & $12704$ & $292$ & $1184$ & $2536$ & $7300$\\
+$8$ & $1024$ & $45864$ & $2118$ & $4$ & $8$ & $\ge18$\\
+$9$ & $2304$ & $161992$ & $13332$ & $44$ & & \\
+$10$ & $5120$ & $562912$ & $75398$ & $350$ & & \\
+$11$ & $11264$ & $1930312$ & $402656$ & $3004$ & & \\
+$12$ & $24576$ & $6545496$ & $2037848$ & $24706$ & & \\
+$13$ & $53248$ & $21988784$ & $9894016$ & $193406$ & & \\
+\bottomrule
+\end{tabular}
+\caption{Known values of $f(h,m)$ (\seqnum{A397315}) and $a_h(m)$
+(\seqnum{A399580}). A blank entry is not known. The columns $h=2$, $3$, $4$ of
+the counts are \seqnum{A001787} from $m=3$, \seqnum{A401223}, and
+\seqnum{A401224}, and the column $h=5$ is \seqnum{A401225} from $m=8$. The
+counts with $\min(h,m)\ge4$ are computer-assisted.}
+\label{tab:values}
+\end{table}

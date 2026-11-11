@@ -1,0 +1,124 @@
+\section{Introduction}\label{sec:intro}
+
+Start with an $h\times m$ grid of points and black out some of them. A game master then
+chooses a rectangle with corners in the grid, possibly a tilted one, and tells us which of
+its corners are white. The blackout is \emph{valid} if this always determines the rectangle
+(Definition~\ref{def:valid}). Kagey~\cite{kageyG4G14,kagey001} asks for the largest size
+$f(h,m)$ of a valid blackout. Figure~\ref{fig:game} shows one round. The known values of
+$f(h,m)$ are sequence \seqnum{A397315} in the OEIS~\cite{oeis}.
+
+\begin{figure}[ht]
+\centering
+\resizebox{0.7\textwidth}{!}{\input{figs/game.tex}}
+\caption{One round on a largest valid blackout of the $3\times4$ grid. Points are
+(column, row). Gray crossed circles are black. Panel (c) shows the red rectangle, and (d)
+its white corners.}
+\label{fig:game}
+\end{figure}
+
+Throughout the paper we put $q_h=\lfloor h^2/4\rfloor$ and
+$W_h=1+\lfloor (h-1)^2/4\rfloor$. A tilted rectangle on $h$ rows meets at most $W_h+1$
+consecutive columns (Lemma~\ref{lem:span}).
+
+We first look at the axis-aligned rectangles alone. Record a blackout $S$ by its
+\emph{row-column graph} $G_S$, the bipartite graph that joins row $j$ to column $i$ when
+the point in column $i$ and row $j$ is black. For $m\ge3$, the blackout distinguishes all
+axis-aligned rectangles exactly when $G_S$ has no cycle of length $4$ or $6$
+(Lemma~\ref{lem:girth}). Hence $|S|$ is at most the largest number of edges of a bipartite
+graph of girth at least $8$ with parts of sizes $h$ and $m$. Neuwirth
+\cite[Theorem~1(ii) and Proposition~17]{neuwirth2001} proved that this number is at most
+$m+q_h$ when $m\ge q_h$, and that it is attained by the following graph. Take a complete
+bipartite graph on the $h$ rows with parts as equal as possible. Subdivide each of its
+$q_h$ edges by a column, and join every remaining column to one row. In the grid, this
+means that $q_h$ columns contain 2 black points, on $q_h$ different row pairs, and that
+every other column contains 1 black point. We call such columns \emph{doubles} and
+\emph{singletons}.
+
+The graph $G_S$ does not see the order of the columns, but the tilted rectangles do. Hence
+the problem for all rectangles is a problem about embeddings. We must order the columns of
+a subdivided triangle-free graph with pendant leaves, and choose the rows of the leaves, so
+that no 2 rectangles of the grid show the same white corners. Our first theorem says that
+this is possible at every height once the grid is wide enough.
+
+\begin{theorem}[large widths]\label{thm:general}
+Let $h\ge3$ and put $M_h=q_h+(q_h-1)W_h$. Then $f(h,m)=m+q_h$ for every $m\ge M_h$.
+\end{theorem}
+
+The upper bound holds for every $m\ge3$ (Theorem~\ref{thm:rowbound}). For the lower bound
+we place the doubles $W_h+1$ columns apart. The singletons are black in row $1$ or in
+row $h$, and they switch between these 2 rows at every double (Figure~\ref{fig:seas}).
+Note that $M_h=h^4/16+O(h^3)$.
+
+For $h\ge3$ let $m_h$ be the least integer $M\ge1$ such that $f(h,m)=m+q_h$ for every
+$m\ge M$. We do not know whether $f(h,m+1)\ge f(h,m)+1$ always holds. Hence equality at one
+width does not obviously give equality at the next width, and this is why we define $m_h$
+through all larger widths. Theorem~\ref{thm:general} gives $m_h\le M_h$. Our second theorem
+finds the order of $m_h$ up to a factor $h^{o(1)}$. Write $\tau(n)$ for the number of
+divisors of $n$, and put $\tmax(h)=\max\{\tau(n):1\le n\le h^2\}$.
+
+\begin{theorem}[the threshold]\label{thm:threshold}
+\leavevmode
+\begin{enumerate}[(a)]
+\item For every $h\ge4$ we have $m_h\ge q_h$.
+\item There is an absolute constant $C$ such that $m_h\le C\,h^2\,\tmax(h)^2$ for every
+$h\ge3$.
+\end{enumerate}
+In particular, for every $\varepsilon>0$ there is a constant $C_\varepsilon$ with
+$q_h\le m_h\le C_\varepsilon h^{2+\varepsilon}$ for every $h\ge4$.
+\end{theorem}
+
+Part (a) holds because equality needs $q_h$ doubles (Corollary~\ref{cor:small-m}). For
+part (b) we use the odd and the even rows as the 2 parts, and we let every singleton be
+black in one of 2 fixed rows. We then choose the columns of the doubles independently at
+random in a window of length about $q_h\,\tmax(h)^2$. A confusion between 2 rectangles
+needs a few black points in a special position, and for fixed rows the number of such
+positions is bounded by a divisor function. The local lemma gives a choice of columns with
+no confusion that involves 2 or more doubles. The confusions that involve at most 1 double
+are removed by fixing the singletons in a few columns near each double. The last statement
+of the theorem follows from the bound $\tau(n)\le K_\delta n^\delta$
+\cite[Theorem~315]{hardywright2008}.
+
+\begin{theorem}[small heights]\label{thm:small}
+The following hold. Parts \textup{(c)} to \textup{(e)} are computer-assisted, and so is
+part \textup{(b)} for $m\le12$.
+\begin{enumerate}[(a)]
+\item $f(2,m)=m+1$ and $f(3,m)=m+2$ for $m\ge3$.
+\item $f(4,4)=7$, $f(4,5)=8$, and $f(4,m)=m+4$ for $m\ge6$.
+\item $f(5,m)=m+5$ for $5\le m\le7$, and $f(5,m)=m+6$ for $m\ge8$.
+\item $f(6,m)=m+6$ for $m=6,7$, $f(6,m)=m+7$ for $8\le m\le11$, $f(6,m)=m+8$ for
+$12\le m\le14$, and $f(6,m)=m+9$ for $m\ge15$.
+\item $f(7,7)=14$, $f(7,8)=16$, and $f(7,m)=m+12$ for $m\ge24$.
+\end{enumerate}
+\end{theorem}
+
+Since $f(h,m)=f(m,h)$, $f(1,m)=m$, and $f(2,2)=4$, this determines $f(h,m)$ for every
+$h\le6$ and every $m$. The value $f(3,m)=m+2$ was first proved in Lean by the Omega
+Institute~\cite{trureturing2026}. Theorem~\ref{thm:small} gives $m_4=6$, $m_5=8$, $m_6=15$,
+and $m_7\le24$, while $q_h=4,6,9,12$ for these heights. For the infinite families in (c) to
+(e) we use the finite collar theorem (Theorem~\ref{thm:collar}), which reduces the validity
+of a blackout padded by any number of boundary columns to one finite check. The upper bounds
+below $m+q_h$ rest on SAT instances with checked LRAT certificates
+(Section~\ref{sec:verify}).
+
+On square grids the 2 bounds are far apart. The deletion method gives
+$f(n,n)\ge c\,n^{6/5}(\log n)^{-2/5}$, while Neuwirth's bound for girth $8$ gives
+$f(n,n)<n^{4/3}+\tfrac23n$ (Section~\ref{sec:square}).
+
+\paragraph{Related work.} Choosing white points that distinguish all rectangles is a test
+cover problem~\cite{debontridder2003,katona1966,moretshapiro1985}. If we only forbid fully
+black axis-aligned rectangles, we get the Zarankiewicz
+problem~\cite{furedi1996,kst1954,reiman1958}. F\"uredi and
+Simonovits~\cite{furedisimonovits2013} survey such degenerate extremal problems. Bipartite
+graphs without short even cycles and with parts of unequal sizes are studied by de Caen and
+Sz\'ekely~\cite{decaenszekely1992,decaenszekely1997}, Gy\H{o}ri~\cite{gyori1997},
+Hoory~\cite{hoory2002}, and Naor and Verstra\"ete~\cite{naorverstraete2005}. With $n$
+vertices on each side, the largest graphs of girth $8$ have $\Theta(n^{4/3})$ edges, and
+incidence graphs of generalized quadrangles attain this order~\cite{benson1966}. As said
+above, the bound $m+q_h$ for the graph and its sharpness are due to
+Neuwirth~\cite{neuwirth2001}. In this part our contribution is Lemma~\ref{lem:girth},
+which translates rectangles into cycles, and the description of all cases of equality
+(Theorem~\ref{thm:equality}). Everything about tilted rectangles is new. A related problem
+for tilted right angles in a grid is studied by Shkredov and
+Solymosi~\cite{shkredovsolymosi2021}, who consider colorings and dense subsets of a grid
+without tilted isosceles right triangles. A companion paper~\cite{companion} counts the maximum blackouts at fixed height. We do not
+use its results.

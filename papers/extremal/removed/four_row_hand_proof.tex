@@ -1,0 +1,61 @@
+% Hand proof of f(4,m) = m+4 for every m >= 6, removed from Section 6 for length.
+% It uses the macros \kA, \kB, \kC, \kE = \mathsf{A}, \mathsf{B}, \mathsf{C}, \mathsf{E}.
+
+On 4 rows, Lemma~\ref{lem:leftmost} gives $b+d\le3$. If $b=d=1$, then $a=c=1$, and the
+rectangle is a \emph{diamond} $D(i,j)$ with corners $(i,j+1)$, $(i+1,j)$, $(i+2,j+1)$, and
+$(i+1,j+2)$, where $j\in\{1,2\}$. Otherwise $\{b,d\}=\{a,c\}=\{1,2\}$. This gives 4
+rectangles $\kA_i$, $\kB_i$, $\kC_i$, and $\kE_i$ with one corner in each of the columns
+$i$ to $i+3$, in the rows $3412$, $3142$, $2413$, and $2143$ from left to right.
+
+\begin{proposition}\label{prop:four}
+For every $m\ge6$ we have $f(4,m)=m+4$.
+\end{proposition}
+
+\begin{proof}
+The upper bound is Theorem~\ref{thm:rowbound}. For the lower bound take
+\[
+S=\{(i,1):2\le i\le m-1\}\cup\{(m-1,2),(m,2),(1,3),(2,3),(1,4),(m,4)\}.
+\]
+Then $|S|=m+4$, and $G_S$ is the cycle $r_1\,c_2\,r_3\,c_1\,r_4\,c_m\,r_2\,c_{m-1}$ of
+length $8$ with the leaves $c_3,\dots,c_{m-2}$ at $r_1$. So $S$ is axis-valid by
+Lemma~\ref{lem:girth}, and no axis-aligned rectangle is fully black.
+
+A corner of a tilted rectangle in row $1$ or $4$ lies in a column from $2$ to $m-1$, so it
+is black in row $1$ and white in row $4$. Checking the other corners, we find that $D(i,2)$, $\kC_i$, and $\kE_i$ have at most 1 black corner, and that the tilted
+rectangles with 2 or more black corners are those in the following table. Here $s=1$ for
+$\kA_i$ and $s=2$ for $\kB_i$.
+\begin{center}\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+rectangle & which $i$ & white corners\\
+\midrule
+$D(1,1)$ & & $(1,2),(3,2)$\\
+$D(i,1)$ & $i\in\{m-3,m-2\}$ & $(i,2),(i+1,3)$\\
+$\kA_i$ or $\kB_i$ & $i\in\{1,2\}$, $i\notin\{m-4,m-3\}$ & $(i+s,4),(i+3,2)$\\
+$\kA_i$ or $\kB_i$ & $i\in\{m-4,m-3\}$, $i\notin\{1,2\}$ & $(i,3),(i+s,4)$\\
+$\kA_i$ or $\kB_i$ & $i=2$, $m=6$ & $(i+s,4)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The first 4 lines have different sets of rows. Within one line, the point in row $2$ or
+$3$ determines $i$, and the point in row $4$ determines $s$. So these rectangles have
+distinct presentations.
+
+It remains to show that no axis-aligned rectangle has one of these presentations. For
+$\{(1,2),(3,2)\}$ it would need a common black row of the columns $1$ and $3$, and there is
+none. In the next 3 lines the 2 white corners are opposite corners of one axis-aligned
+rectangle, and one of its other corners is white. This corner is $(i,3)$, $(i+s,2)$, or
+$(i,4)$, respectively, where we use $i\ge3$, $i+s\le4<m-1$, and $3\le i\le m-3$. In the
+last line, the white corner is $(z,4)$ with $z\in\{3,4\}$. Column $z$ is black only in row
+$1$, and no column is black in the rows $1$ and $4$. So no axis-aligned rectangle shows
+only $(z,4)$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:small}(b)]
+By Proposition~\ref{prop:four} it remains to treat the widths $4$ and $5$.
+Lemma~\ref{lem:cross} gives $f(4,4)\ge7$ and $f(4,5)\ge8$. By Theorems~\ref{thm:rowbound}
+and~\ref{thm:equality}, a valid blackout with $m+4$ points is one of $3\,(m)_4\,4^{m-4}$
+candidates, that is one of $72$ candidates for $m=4$ and of $1440$ for $m=5$. A computer
+search finds 2 rectangles with the same presentation in each candidate.
+\end{proof}
+

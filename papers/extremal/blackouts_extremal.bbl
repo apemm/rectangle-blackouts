@@ -1,0 +1,161 @@
+\begin{thebibliography}{10}
+
+\bibitem{alonspencer2016}
+N.~Alon and J.~H. Spencer.
+\newblock {\em The Probabilistic Method}.
+\newblock Wiley, 4th edition, 2016.
+
+\bibitem{benson1966}
+C.~T. Benson.
+\newblock Minimal regular graphs of girths eight and twelve.
+\newblock {\em Canad. J. Math.}, 18:1091--1094, 1966.
+
+\bibitem{biere2024}
+A.~Biere, T.~Faller, K.~Fazekas, M.~Fleury, N.~Froleyks, and F.~Pollitt.
+\newblock {CaDiCaL} 2.0.
+\newblock In {\em Computer Aided Verification, {CAV} 2024}, volume 14681 of
+  {\em Lecture Notes in Comput. Sci.}, pages 133--152. Springer, 2024.
+
+\bibitem{debontridder2003}
+K.~M. J.~De Bontridder, B.~V. Halld{\'o}rsson, M.~M. Halld{\'o}rsson, C.~A.~J.
+  Hurkens, J.~K. Lenstra, R.~Ravi, and L.~Stougie.
+\newblock Approximation algorithms for the test cover problem.
+\newblock {\em Math. Program.}, 98:477--491, 2003.
+
+\bibitem{cruzfilipe2017}
+L.~Cruz-Filipe, M.~J.~H. Heule, W.~A. Hunt, Jr., M.~Kaufmann, and
+  P.~Schneider-Kamp.
+\newblock Efficient certified {RAT} verification.
+\newblock In {\em Automated Deduction -- {CADE} 26}, volume 10395 of {\em
+  Lecture Notes in Comput. Sci.}, pages 220--236. Springer, 2017.
+
+\bibitem{decaenszekely1992}
+D.~de~Caen and L.~A. Sz{\'e}kely.
+\newblock The maximum size of 4- and 6-cycle free bipartite graphs on $m,n$
+  vertices.
+\newblock In {\em Sets, Graphs and Numbers (Budapest, 1991)}, volume~60 of {\em
+  Colloq. Math. Soc. J{\'a}nos Bolyai}, pages 135--142. North-Holland, 1992.
+
+\bibitem{decaenszekely1997}
+D.~de~Caen and L.~A. Sz{\'e}kely.
+\newblock On dense bipartite graphs of girth eight and upper bounds for certain
+  configurations in planar point-line systems.
+\newblock {\em J. Combin. Theory Ser. A}, 77:268--278, 1997.
+
+\bibitem{furedi1996}
+Z.~F{\"u}redi.
+\newblock On the number of edges of quadrilateral-free graphs.
+\newblock {\em J. Combin. Theory Ser. B}, 68:1--6, 1996.
+
+\bibitem{furedisimonovits2013}
+Z.~F{\"u}redi and M.~Simonovits.
+\newblock The history of degenerate (bipartite) extremal graph problems.
+\newblock In {\em Erd{\H{o}}s Centennial}, volume~25 of {\em Bolyai Soc. Math.
+  Stud.}, pages 169--264. Springer, 2013.
+
+\bibitem{gyori1997}
+E.~Gy{\H{o}}ri.
+\newblock {$C_6$}-free bipartite graphs and product representation of squares.
+\newblock {\em Discrete Math.}, 165/166:371--375, 1997.
+
+\bibitem{hardywright2008}
+G.~H. Hardy and E.~M. Wright.
+\newblock {\em An Introduction to the Theory of Numbers}.
+\newblock Oxford University Press, 6th edition, 2008.
+
+\bibitem{henriot2012}
+K.~Henriot.
+\newblock Nair--{T}enenbaum bounds uniform with respect to the discriminant.
+\newblock {\em Math. Proc. Cambridge Philos. Soc.}, 152:405--424, 2012.
+\newblock Erratum in vol.~157 (2014), 375--377.
+
+\bibitem{hoory2002}
+S.~Hoory.
+\newblock The size of bipartite graphs with a given girth.
+\newblock {\em J. Combin. Theory Ser. B}, 86:215--220, 2002.
+
+\bibitem{kagey001}
+P.~Kagey.
+\newblock Problem 001, {O}pen {P}roblem {C}ollection.
+\newblock \url{https://peterkagey.com/problems/001/}.
+\newblock Accessed October 2026.
+
+\bibitem{kageyG4G14}
+P.~Kagey.
+\newblock Open problem collection, {P}roblem 1.
+\newblock G4G14 gift exchange,
+  \url{https://www.gathering4gardner.org/g4g14gift/G4G14-PeterKagey-OpenishProblems.pdf},
+  2020.
+
+\bibitem{katona1966}
+G.~Katona.
+\newblock On separating systems of a finite set.
+\newblock {\em J. Combin. Theory}, 1:174--194, 1966.
+
+\bibitem{kst1954}
+T.~K{\H{o}}v{\'a}ri, V.~T. S{\'o}s, and P.~Tur{\'a}n.
+\newblock On a problem of {K}. {Z}arankiewicz.
+\newblock {\em Colloq. Math.}, 3:50--57, 1954.
+
+\bibitem{mantel1907}
+W.~Mantel.
+\newblock Problem 28.
+\newblock {\em Wiskundige Opgaven}, 10:60--61, 1907.
+
+\bibitem{moretshapiro1985}
+B.~M.~E. Moret and H.~D. Shapiro.
+\newblock On minimizing a set of tests.
+\newblock {\em SIAM J. Sci. Statist. Comput.}, 6:983--1003, 1985.
+
+\bibitem{naorverstraete2005}
+A.~Naor and J.~Verstra{\"e}te.
+\newblock A note on bipartite graphs without $2k$-cycles.
+\newblock {\em Combin. Probab. Comput.}, 14:845--849, 2005.
+
+\bibitem{neuwirth2001}
+S.~Neuwirth.
+\newblock The size of bipartite graphs with girth eight.
+\newblock preprint, \url{https://arxiv.org/abs/math/0102210}, 2001.
+
+\bibitem{oeis}
+{OEIS Foundation Inc.}
+\newblock The {O}n-{L}ine {E}ncyclopedia of {I}nteger {S}equences.
+\newblock \url{https://oeis.org}, 2026.
+
+\bibitem{companion}
+A.~Pemmasani.
+\newblock Counting the {M}aximum {B}lackouts {T}hat {K}eep {E}very {L}attice
+  {R}ectangle {I}dentifiable.
+\newblock in preparation, 2026.
+
+\bibitem{repo}
+A.~Pemmasani.
+\newblock rectangle-blackouts, code and data for this paper.
+\newblock \url{https://github.com/apemm/rectangle-blackouts}, 2026.
+
+\bibitem{reiman1958}
+I.~Reiman.
+\newblock {\"U}ber ein {P}roblem von {K}. {Z}arankiewicz.
+\newblock {\em Acta Math. Acad. Sci. Hungar.}, 9:269--273, 1958.
+
+\bibitem{shkredovsolymosi2021}
+I.~D. Shkredov and J.~Solymosi.
+\newblock Tilted corners in integer grids.
+\newblock {\em Integers}, 21A:Paper A20, 2021.
+
+\bibitem{trureturing2026}
+{The Omega Institute}.
+\newblock Prove the exact {T}hree-{R}ow blackout maximum.
+\newblock pull request 8084, merged on 15 September 2026 into the branch
+  \texttt{dev} as commit \texttt{ace272f},
+  \url{https://github.com/the-omega-institute/trureturing/pull/8084}, 2026.
+
+\bibitem{wetzler2014}
+N.~Wetzler, M.~J.~H. Heule, and W.~A. Hunt, Jr.
+\newblock {DRAT-trim}: efficient checking and trimming using expressive clausal
+  proofs.
+\newblock In {\em Theory and Applications of Satisfiability Testing -- {SAT}
+  2014}, volume 8561 of {\em Lecture Notes in Comput. Sci.}, pages 422--429.
+  Springer, 2014.
+
+\end{thebibliography}

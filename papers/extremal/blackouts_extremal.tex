@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage[amsmath]{e-jc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage[shortlabels]{enumitem}
+\setlength{\emergencystretch}{2em}
+
+\definecolor{kgray}{HTML}{AAAAAA}
+\definecolor{kyellow}{HTML}{FFF64C}
+\definecolor{kred}{HTML}{FF6666}
+\definecolor{kblue}{HTML}{4A86E8}
+\tikzset{
+  lab/.style={font=\scriptsize,text=black!55},
+  capt/.style={font=\small},
+}
+
+\newcommand{\seqnum}[1]{\href{https://oeis.org/#1}{\underline{#1}}}
+\newcommand{\kA}{\mathsf{A}}
+\newcommand{\kB}{\mathsf{B}}
+\newcommand{\kC}{\mathsf{C}}
+\newcommand{\kE}{\mathsf{E}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\strip}{\Sigma_h}
+\newcommand{\tmax}{{\tau^*}}
+
+\dateline{TBD}{TBD}{TBD}
+\MSC{05C35, 05D40, 52C05, 68V05}
+\Copyright{The author. Released under the CC BY license (International 4.0).}
+
+\title{The maximum size of a blackout that keeps\\ every lattice rectangle identifiable}
+
+\author{Arjun Pemmasani}
+\authortext{}{Department of Mathematics, Harvey Mudd College, Claremont, California, USA
+(\email{apemmasani@hmc.edu}).}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Black out some points of an $h\times m$ grid. The blackout is valid if every rectangle with
+corners in the grid, tilted or not, is determined by its white corners. Kagey asked for the
+largest size $f(h,m)$ of a valid blackout. For axis-aligned rectangles alone this is a
+Tur\'an problem for bipartite graphs without cycles of length $4$ and $6$, and a bound of
+Neuwirth gives $f(h,m)\le m+\lfloor h^2/4\rfloor$ for $m\ge3$. We prove that equality holds
+for every height $h\ge3$ and every width $m\ge h^4/16+O(h^3)$, by an explicit construction.
+Let $m_h$ be the least width from which equality always holds. We prove that
+$\lfloor h^2/4\rfloor\le m_h\le h^{2+o(1)}$. The upper bound places the columns that
+contain two black points at random and uses the local lemma. We also determine $f(h,m)$ for
+every $h\le6$ and every $m$, and for $h=7$ and $m\ge24$. Some of these small values rest on
+computer checks with verified certificates. On square grids the deletion method gives $f(n,n)\ge
+n^{6/5-o(1)}$, while the girth condition gives $f(n,n)\le(1+o(1))\,n^{4/3}$.
+\end{abstract}
+
+\input{sections/sec1_intro}
+\input{sections/sec2_prelim}
+\input{sections/sec3_rowbound}
+\input{sections/sec4_seas}
+\input{sections/sec5_threshold}
+\input{sections/sec6_small}
+\input{sections/sec7_verify}
+\input{sections/sec8_square}
+\input{sections/sec9_open}
+
+\subsection*{Acknowledgements}
+
+I thank Peter Kagey for posing the problem, and for discussing its early stages with me,
+including the first graph-theoretic approach to the narrow grids. The design of the
+figures follows the figure in his posting of Problem~001~\cite{kagey001}.
+
+\SquashBibFurther
+\bibliographystyle{plain}
+\bibliography{extremal}
+
+\end{document}

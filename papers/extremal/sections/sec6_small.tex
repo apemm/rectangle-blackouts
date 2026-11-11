@@ -1,0 +1,173 @@
+\section{Small heights}\label{sec:small}
+
+We now prove Theorem~\ref{thm:small}. We describe a blackout by listing the black rows of
+its columns from left to right. For example, $14,45,25,5$ has $B_1=\{1,4\}$ and
+$B_4=\{5\}$.
+
+\subsection{Two, three, and four rows}
+
+\begin{proof}[Proof of Theorem~\ref{thm:small}(a)]
+By Lemma~\ref{lem:leftmost}, a tilted rectangle meets at least 3 rows. So on 2 rows every
+rectangle is axis-aligned. Let $m\ge3$. A cycle in $G_S$ needs 2 columns that are black in
+both rows. Hence, by Lemma~\ref{lem:girth}, a blackout of the $2\times m$ grid is valid if
+and only if at most 1 column is black in both rows. This gives $f(2,m)=m+1$. For 3 rows,
+Theorem~\ref{thm:rowbound} gives $f(3,m)\le m+2$ and Lemma~\ref{lem:cross} gives
+$f(3,m)\ge m+2$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:small}(b)]
+The upper bound $f(4,m)\le m+4$ is Theorem~\ref{thm:rowbound}. For $m\ge13$ the lower
+bound is Theorem~\ref{thm:general}, since $M_4=13$. For $6\le m\le12$ take
+\[
+S=\{(i,1):2\le i\le m-1\}\cup\{(m-1,2),(m,2),(1,3),(2,3),(1,4),(m,4)\}.
+\]
+Then $|S|=m+4$, and a direct check shows that $S$ is valid for these 7 widths. For the
+widths $4$ and $5$, Lemma~\ref{lem:cross} gives $f(4,4)\ge7$ and $f(4,5)\ge8$. By
+Theorems~\ref{thm:rowbound} and~\ref{thm:equality}, a valid blackout with $m+4$ points is
+one of $3\,(m)_4\,4^{m-4}$ candidates, that is one of $72$ candidates for $m=4$ and of
+$1440$ for $m=5$. A computer search finds 2 rectangles with the same presentation in each
+candidate.
+\end{proof}
+
+\subsection{The finite collar theorem}
+
+We extend a finite blackout by columns that are black in one boundary row. For a blackout
+$S$ of the $h\times m$ grid and $\lambda,\mu\ge0$, let $S_{\lambda,\mu}$ be the blackout on
+the columns $1-\lambda,\dots,m+\mu$ that agrees with $S$ on the columns $1$ to $m$ and
+whose other columns are black exactly in a fixed \emph{padding row}, which is row $1$ or
+row $h$.
+
+\begin{theorem}[finite collar]\label{thm:collar}
+Let $h\ge3$ and let $S$ be a blackout of the $h\times m$ grid. Then
+$S_{\lambda,\mu}$ is valid for all $\lambda,\mu\ge0$ if and only if $S_{W_h,W_h}$ is
+valid. Moreover $S_{0,\mu}$ is valid for all $\mu\ge0$ if and only if $S_{0,W_h}$ is
+valid, and likewise for $S_{\lambda,0}$.
+\end{theorem}
+
+\begin{proof}
+We prove the first statement. The others are proved in the same way. Put
+$S^*=S_{W_h,W_h}$, suppose that $S^*$ is valid, and put $U=S_{\lambda,\mu}$. Call a tilted
+rectangle \emph{weak} if it has 2 or more black corners.
+By (F1), a weak tilted rectangle of $U$ has a black corner outside the padding row, hence
+in a column $e$ with $1\le e\le m$. Its span is at most $W_h$, so its columns lie between
+$1-W_h$ and $m+W_h$. Hence it is also a rectangle of the grid of $S^*$, with the same
+presentation there, since $U$ and $S^*$ agree on their common columns.
+
+Suppose that distinct rectangles $R_1,R_2$ have the same presentation $P$ in $U$. By
+Lemma~\ref{lem:threecorners}, $|P|\le2$.
+
+\emph{Both axis-aligned.} Every added column has degree 1 in $G_U$, so every cycle of
+$G_U$ lies in $G_{S^*}$. Since $S^*$ is valid and has 3 or more columns,
+Lemma~\ref{lem:girth} shows that $G_{S^*}$ has no cycle of length $4$ or $6$, and then that
+$U$ is axis-valid.
+
+\emph{Both tilted.} Both rectangles are weak, so both are rectangles of the grid of $S^*$
+with the presentation $P$, which contradicts the validity of $S^*$.
+
+\emph{One of each.} Let $R_1$ be tilted. It is weak, so it lies in the grid of $S^*$. A
+column of $R_2$ that contains a point of $P$ is a column of $R_1$. A column of $R_2$ that
+contains no point of $P$ has 2 black corners, so it is one of the columns $1$ to $m$. Thus
+$R_2$ also lies in the grid of $S^*$ and has the presentation $P$ there, again a
+contradiction.
+\end{proof}
+
+\subsection{Five rows}
+
+Let $S_8$ be the blackout $14,45,25,5,5,34,23,12$ of the $5\times8$ grid, and let $S_0$ be
+the blackout $45,34,123,1,15$ of the $5\times5$ grid.
+
+
+All validity claims below are finite checks from Definition~\ref{def:valid}, which we ran
+with several independent programs (Section~\ref{sec:verify}).
+
+\begin{proof}[Proof of Theorem~\ref{thm:small}(c)]
+Let $m\ge8$. The upper bound is Theorem~\ref{thm:rowbound}. Since $W_5=5$,
+Theorem~\ref{thm:collar} with padding row $1$ on the right reduces the lower bound to the
+validity of the test board $S_8,1,1,1,1,1$ on the $5\times13$ grid. This board has $954$ rectangles,
+and a direct check shows that their presentations are distinct.
+
+For $m=5$, Corollary~\ref{cor:small-m} gives $f(5,5)\le10$, and a direct check of its $130$
+rectangles shows that $S_0$ is valid. For $m=6$ and $m=7$ the blackouts
+$15,12,23,3,34,45$ and $1,12,23,3,34,45,15$ are valid with $m+5$ points, and checked SAT
+certificates exclude $m+6$ points (Section~\ref{sec:verify}).
+\end{proof}
+
+Thus $f(5,8)=14$ is the first value with $f(h,m)>h+m$ among the grids with $h\le m$, in the
+order of increasing area.
+
+\subsection{Six and seven rows}
+
+Let $S_{16}$ be the blackout
+$36,14,25,6,6,16,6,6,56,45,4,4,4,34,23,12$ of the $6\times16$ grid. Its 9 doubles carry the edges of the complete bipartite graph
+between $\{1,3,5\}$ and $\{2,4,6\}$. To exclude blackouts with 1 point less than the row
+bound, we first find their row graphs.
+
+\begin{lemma}\label{lem:sixbelow}
+Let $m\ge3$, and let $S$ be an axis-valid blackout of the $6\times m$ grid with $m+8$
+points. Then every column of $S$ is empty, a singleton, or a double, the doubles have
+distinct row pairs, and one of the following holds.
+\begin{enumerate}[(a)]
+\item No column is empty, and the pairs of the doubles are the edges of $K_{3,3}$ minus
+an edge.
+\item No column is empty, and the pairs of the doubles are the edges of $K_{2,4}$.
+\item Exactly 1 column is empty, and the pairs of the doubles are the edges of $K_{3,3}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+For every choice of the trees, Lemma~\ref{lem:H} gives $|S|=t+e(H)$ with $t\le m$, and
+$e(H)\le9$ by Lemma~\ref{lem:mantel}. So $(t,e(H))$ is $(m,8)$ or $(m-1,9)$. In the second
+case, the proof of Theorem~\ref{thm:equality} shows that $H$ is a $K_{3,3}$ and that no
+column has 3 black rows, which gives (c).
+
+In the first case $H$ is triangle-free with 8 edges. If it were not bipartite, its shortest
+odd cycle would be a cycle of length $5$ without chords. The sixth vertex is joined to at
+most 2 vertices of this cycle, so $e(H)\le7$, a contradiction. Hence $H$ is bipartite with
+parts of sizes $k$ and $6-k$, and $k(6-k)\ge8$ shows that $H$ is $K_{2,4}$ or $K_{3,3}$
+minus an edge. In both graphs, 2 vertices of the same part have 2 or more common
+neighbors. Suppose that $|B_i|\ge3$. Then $T_i$ has a vertex $v$ with 2 neighbors $u$ and
+$w$. These lie in one part, so they have a common neighbor $z\ne v$. Replacing $vw$ by $uw$
+in $T_i$ gives another tree on $B_i$ and the triangle $uwz$ in $H$, which contradicts
+Lemma~\ref{lem:H}. Thus every column is a singleton or a double, and the pairs of the
+doubles are the edges of $H$.
+\end{proof}
+
+There are $90$ labeled graphs in case (a), $15$ in case (b), and $10$ in case (c).
+
+\begin{proof}[Proof of Theorem~\ref{thm:small}(d)]
+\emph{Lower bounds.} The blackouts $14,1,12,2,23,3456$ of the $6\times6$ grid,
+$16,1,1,12,2,23,3456$ of the $6\times7$ grid, and $15,1,123,34,4,4,456,26$ of the
+$6\times8$ grid are valid with $12$, $13$, and $15$ points. The blackout
+$12,23,34,45,6,6,36,56,25$ of the $6\times9$ grid has $16$ points. Its test board with
+$W_6=7$ columns black only in row $1$ on each side is valid, so
+Theorem~\ref{thm:collar} gives $f(6,m)\ge m+7$ for every $m\ge9$. For $12\le m\le14$ the
+blackout $16,36,25,12,1^{m-8},23,34,45,56$ is valid with $m+8$ points, where $1^k$ stands
+for $k$ columns black only in row $1$. For $m=15$ the blackout
+$56,45,34,23,1,1,14,1,1,12,36,1,25,6,16$ is valid with $24$ points. For $m\ge16$ we apply
+Theorem~\ref{thm:collar} to $S_{16}$ with padding row $1$ on the right. Its test board on
+the $6\times23$ grid has $4627$ rectangles with distinct presentations.
+
+\emph{Upper bounds.} Theorem~\ref{thm:rowbound} gives $f(6,m)\le m+9$. For $m=6,7,8$,
+checked SAT certificates exclude $13$, $14$, and $16$ points. Let $9\le m\le14$. A valid
+blackout with $m+9$ points would have doubles on the edges of a $K_{3,3}$ by
+Theorem~\ref{thm:equality}. Checked SAT certificates exclude each of the $10$ choices of
+the $K_{3,3}$ (Section~\ref{sec:verify}). Hence $f(6,m)\le m+8$. Let $9\le m\le11$. By
+Lemma~\ref{lem:sixbelow}, a valid blackout with $m+8$ points has one of $115$ row graphs.
+Checked SAT certificates exclude each of them, so $f(6,m)\le m+7$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:small}(e)]
+The blackouts $17,1,12,2,23,3456,67$ of the $7\times7$ grid and
+$27,367,46,2,6,24,125,16$ of the $7\times8$ grid are valid with $14$ and $16$ points, and
+checked SAT certificates exclude $15$ and $17$ points. Let $m\ge24$. The row bound gives
+$f(7,m)\le m+12$. The file \nolinkurl{papers/extremal/data/seven_row_blackouts.txt} of the
+repository~\cite{repo} lists 5 blackouts of the widths $24$ to $28$ that are valid with
+$m+12$ points. For example, the one of width $24$ is
+\[
+56,45,34,23,1,1,14,1,12,1,6,16,7,1,47,6,67,7,7,6,25,7,36,27 .
+\]
+The one of width $28$ stays valid after adding $W_7=10$ columns black only in row $7$ on
+its left. Hence Theorem~\ref{thm:collar}, with padding row $7$ on the left, gives $m+12$
+points for every $m\ge28$.
+\end{proof}
+
