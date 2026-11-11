@@ -67,18 +67,11 @@ bounds the number of such positions. The local lemma gives columns with no confu
 involves 2 or more doubles. The other confusions are removed by fixing the singletons in a
 few columns near each double. The last statement of the theorem follows from
 $\tau(n)\le K_\delta n^\delta$ \cite[Theorem~315]{hardywright2008}. The same construction
-with fewer doubles gives a lower bound at every width.
+with fewer doubles gives $f(h,m)\ge m+\min(q_h,\lfloor m/(C'\tmax(h)^2)\rfloor)$ at every
+width $m$ (Corollary~\ref{cor:everywidth}).
 
-\begin{corollary}[every width]\label{cor:everywidth}
-There is an absolute constant $C'$ such that, for every $h\ge3$ and every $m\ge1$,
-\[
- f(h,m)\ \ge\ m+\min\Bigl(q_h,\Bigl\lfloor\frac{m}{C'\,\tmax(h)^2}\Bigr\rfloor\Bigr).
-\]
-\end{corollary}
-
-This improves on the bound $f(h,m)\ge m+h-1$ of Lemma~\ref{lem:cross} only for
-$m\ge C'h\,\tmax(h)^2$, and it adds nothing for $h\le8$. The constants are large
-(Remark~\ref{rem:constants}), so we also give an explicit construction.
+The constant $C$ of our proof is large (Remark~\ref{rem:constants}), so we also give an
+explicit construction.
 
 \begin{proposition}[explicit construction]\label{thm:general}
 Let $h\ge3$ and put $M_h=q_h+(q_h-1)W_h$. Then $f(h,m)=m+q_h$ for every $m\ge M_h$. Hence
@@ -105,7 +98,7 @@ $4$ & $3$ for $m=4,5$, and $4$ for $m\ge6$\\
 $5$ & $5$ for $5\le m\le7$, and $6$ for $m\ge8$\\
 $6$ & $6$ for $m=6,7$, $7$ for $8\le m\le11$, $8$ for $12\le m\le14$, and $9$ for
 $m\ge15$\\
-$7$ & $7$ for $m=7$, $8$ for $m=8$, and $12$ for $m\ge24$ (see Remark~\ref{rem:seven} for $m\ge21$)\\
+$7$ & $7$ for $m=7$, $8$ for $m=8$, and $12$ for $m\ge21$ (not known for $9\le m\le20$)\\
 \bottomrule
 \end{tabular}
 \caption{The values of Theorem~\ref{thm:small}. The last value in each row is $q_h$.}
@@ -113,7 +106,7 @@ $7$ & $7$ for $m=7$, $8$ for $m=8$, and $12$ for $m\ge24$ (see Remark~\ref{rem:s
 \end{table}
 
 Since $f(h,m)=f(m,h)$, $f(1,m)=m$, and $f(2,2)=4$, this determines $f(h,m)$ for every
-$h\le6$ and every $m$. It gives $m_4=6$, $m_5=8$, $m_6=15$, and $m_7\le24$, while
+$h\le6$ and every $m$. It gives $m_4=6$, $m_5=8$, $m_6=15$, and $m_7\le21$, while
 $q_h=4,6,9,12$ for these heights. The rows $h\le3$ and the values $f(4,m)=m+4$ for $m\ge6$
 are proved by hand. The value $f(3,m)=m+2$ was first proved in Lean by the Omega
 Institute~\cite{trureturing2026}. All other entries are computer-assisted. Their lower

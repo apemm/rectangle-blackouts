@@ -198,18 +198,16 @@ Checked SAT certificates exclude each of them, so $f(6,m)\le m+7$.
 \begin{proof}[Proof of Theorem~\ref{thm:small} for $h=7$]
 The blackouts $17,1,12,2,23,3456,67$ of the $7\times7$ grid and
 $27,367,46,2,6,24,125,16$ of the $7\times8$ grid are valid with $14$ and $16$ points, and
-checked SAT certificates exclude $15$ and $17$ points. Let $m\ge24$. The row bound gives
-$f(7,m)\le m+12$. The file \nolinkurl{papers/extremal/data/seven_row_blackouts.txt} of the
-repository~\cite{repo} lists 5 blackouts of the widths $24$ to $28$ that are valid with
+checked SAT certificates exclude $15$ and $17$ points. Let $m\ge21$. The row bound gives
+$f(7,m)\le m+12$. For $m=21$ the blackout
+\[
+16,36,5,25,2,2,14,7,12,27,2,7,67,7,47,7,7,56,45,34,23
+\]
+is valid with $33$ points. It stays valid when 1 or 2 columns black only in row $1$ are
+added on its right, which gives $m+12$ points for $m=22$ and $m=23$. For $m\ge24$ the file \nolinkurl{papers/extremal/data/seven_row_blackouts.txt} of the
+repository~\cite{repo} lists 5 other blackouts, of the widths $24$ to $28$, that are valid with
 $m+12$ points. The one of width $28$ stays valid after adding $W_7=10$ columns black only
 in row $7$ on its left. Hence Theorem~\ref{thm:collar}, with padding row $7$ on the left,
 gives $m+12$ points for every $m\ge28$.
 \end{proof}
 
-\begin{remark}\label{rem:seven}
-In fact $f(7,m)=m+12$ for every $m\ge21$, so that $m_7\le21$. The blackout
-$16,36,5,25,2,2,14,7,12,27,2,7,67,7,47,7,7,56,45,34,23$ of the $7\times21$ grid stays valid
-when it is extended by 3 columns black only in row $1$ and then by any number of columns
-black only in row $2$. Theorem~\ref{thm:collar} does not apply to row $2$. The supplement
-proves a variant for this tail, which reduces all widths to a check of the width $45$.
-\end{remark}

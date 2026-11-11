@@ -435,7 +435,19 @@ edges. The number $M$ in (c) need not be an integer, so this gives
 and both bounds are at most $C\,h^2\,\tmax(h)^2$ with $C=c_0$.
 \end{proof}
 
-\begin{proof}[Proof of Corollary~\ref{cor:everywidth}]
+The same constructions with fewer doubles give a lower bound at every width.
+
+\begin{corollary}[every width]\label{cor:everywidth}
+There is an absolute constant $C'$ such that, for every $h\ge3$ and every $m\ge1$,
+\[
+ f(h,m)\ \ge\ m+\min\Bigl(q_h,\Bigl\lfloor\frac{m}{C'\,\tmax(h)^2}\Bigr\rfloor\Bigr).
+\]
+\end{corollary}
+
+This improves on the bound $f(h,m)\ge m+h-1$ of Lemma~\ref{lem:cross} only for
+$m\ge C'h\,\tmax(h)^2$, and it adds nothing for $h\le8$.
+
+\begin{proof}
 We show the claim with $C'=2c_0$. Let $n$ be the minimum in the claim. If $n=0$, the claim
 is $f(h,m)\ge m$, which holds by Lemma~\ref{lem:cross}. Let $n\ge1$. Then
 $m\ge2c_0\,n\,\tmax(h)^2$. If $h\le8$, then $m\ge2c_0\ge211=M_8\ge M_h$, and
@@ -458,27 +470,33 @@ every case we get $f(h,m)\ge m+n$.
 
 \begin{remark}[constants and measured widths]\label{rem:constants}
 The proof gives $c_0=3\cdot2^{35}$, which is about $10^{11}$, and we did not try to make
-it smaller. With this constant the bound~\eqref{eq:explicitbound} is first below the bound $M_h$ of
-Proposition~\ref{thm:general} at $h=710132287759$. The comparison is not monotone, since
-$\tmax(h)$ jumps. For example~\eqref{eq:explicitbound} is again at least $M_h$ at
-$h=757474440275$. The construction itself is much better than its constant. We ran it with
-a greedy choice in place of the local lemma. The edges are taken in a random order, and
-each double gets the smallest column that is not bad together with the earlier ones, with
-(B1) to (B3) tested as defined. The best of 3 runs gave the widths below. Each blackout
-was then checked from Definition~\ref{def:valid}.
+it smaller. With this constant the bound~\eqref{eq:explicitbound} is first below the bound
+$M_h$ of Proposition~\ref{thm:general} at $h=710132287759$. The comparison is not
+monotone, since $\tmax(h)$ jumps. For example~\eqref{eq:explicitbound} is again at least
+$M_h$ at $h=757474440275$.
+
+The constant is large, but the method is competitive at heights where we can compute. We
+replaced the local lemma by a first-fit rule. The parity edges are taken in a random
+order, and each double goes to the leftmost column that is not bad together with the
+doubles placed before it, with (B1) to (B3) tested exactly as defined. The order of the
+edges is the only random choice. We ran 3 random orders at each height, and the table
+shows the smallest width, that is the column of the last double.
 \begin{center}
-\begin{tabular}{@{}lrrrr@{}}
+\begin{tabular}{@{}lrrrrrr@{}}
 \toprule
-$h$ & $12$ & $13$ & $14$ & $16$\\
+$h$ & $12$ & $13$ & $14$ & $16$ & $20$ & $24$\\
 \midrule
-width of the greedy blackout & $1180$ & $1872$ & $2154$ & $2919$\\
-$M_h$ & $1121$ & $1559$ & $2113$ & $3655$\\
+first-fit width & $1180$ & $1872$ & $2154$ & $2919$ & $7157$ & $12915$\\
+$M_h$ & $1121$ & $1559$ & $2113$ & $3655$ & $9109$ & $19163$\\
 \bottomrule
 \end{tabular}
 \end{center}
-For $h=13$ the width includes 2 gaps of $8W_h=296$ columns between the 3 blocks that
-occur. At $h=16$ the conditions (B2) and (B3) matter. In 5 runs with only (B1) tested,
-all 5 blackouts were not valid.
+For $h=12,13,14,16$ all blackouts were also checked from Definition~\ref{def:valid}. For
+$h=20$ and $h=24$ they were not, and their validity rests on Lemma~\ref{lem:block}. For
+$h=13$ the width includes 2 gaps of $8W_h=296$ columns between the 3 blocks that occur. In
+this table first-fit is wider than $M_h$ up to $h=14$ and narrower from $h=16$ on. We claim
+nothing beyond these heights. At $h=16$ the conditions (B2) and (B3) matter
+(Section~\ref{sec:verify}).
 \end{remark}
 
 \begin{remark}\label{rem:sharper}

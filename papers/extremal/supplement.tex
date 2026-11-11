@@ -20,7 +20,7 @@ identifiable''}
 
 This supplement describes the SAT encodings behind the upper bounds of the theorem on small
 heights, proves that they are faithful, and lists the instances, the certificates, and the
-formal proofs. It also proves the remark on 7 rows. We refer to results of the paper by their names. Paths are relative to the
+formal proofs. We refer to results of the paper by their names. Paths are relative to the
 root of the repository \url{https://github.com/apemm/rectangle-blackouts}.
 
 \section{The SAT encodings}
@@ -118,73 +118,11 @@ the scripts in \nolinkurl{jis/scripts} and by
 tilted rectangles through their leftmost corner, compares all presentations with at most 2
 points, and looks for an axis-aligned rectangle with the same presentation. It also checks
 the explicit construction with spacing $W_h+1$ for $3\le h\le8$, and blackouts built as in
-Section 5 for $4\le h\le14$ and $h=16$. In these, each double gets the smallest column that
+Section 5 for $4\le h\le14$ and $h=16$. In these, each double gets the leftmost column that
 is not bad, where the conditions (B1), (B2), and (B3) are tested as defined. At $h=16$, all 3
 blackouts built in this way are valid, and all 5 blackouts built with (B1) alone are not
-valid. The script runs in about 2 minutes.
-
-\section{Seven rows from width 21}
-
-This section proves the remark on 7 rows in Section 6 of the paper. Let $T$ be the blackout
-\[
-16,36,5,25,2,2,14,7,12,27,2,7,67,7,47,7,7,56,45,34,23,1,1,1,2^{21}
-\]
-of the $7\times45$ grid, written as the list of the black rows of its columns, where
-$2^{21}$ stands for $21$ columns black only in row $2$. Its 12 doubles lie in the first 21
-columns and carry the 12 pairs of an odd and an even row. For $m\ge21$ let $T_m$ be the
-blackout of the $7\times m$ grid that agrees with $T$ on the columns $1$ to $45$ and whose
-later columns are black only in row $2$. The script
-\nolinkurl{papers/extremal/scripts/check_constructions.py} checks that $T$ is valid. Since
-$f(7,m)\le m+12$ by the row bound, the next lemma gives $f(7,m)=m+12$ for every $m\ge21$.
-
-\begin{lemma}\label{lem:tail}
-If $T$ is valid, then $T_m$ is valid for every $m\ge21$.
-\end{lemma}
-
-\begin{proof}
-For $m\le45$ the blackout $T_m$ is the part of $T$ in its first $m$ columns, and every
-rectangle of the smaller grid has the same presentation in $T$. Let $m>45$, and suppose
-that distinct rectangles $R_1,R_2$ have the same presentation in $T_m$. Then the corners
-that belong to just one of them are black. We show that both rectangles lie in the columns
-$1$ to $45$, which contradicts the validity of $T$. A tilted rectangle on 7 rows meets at
-most $11$ consecutive columns (the span bound with $W_7=10$). The doubles have distinct
-pairs, which form a bipartite graph. So the row-column graph has no cycle of length $4$ or
-$6$. Hence $R_1,R_2$ are not both axis-aligned, and no axis-aligned rectangle is fully
-black. A tilted rectangle has at most 2 corners in one row. So a tilted rectangle with 3
-or more black corners has a corner in a column $x\le24$, and it lies in the columns $1$ to
-$34$.
-
-Suppose that $R_1,R_2$ have at most 1 common corner. Then both have 3 or more black
-corners. A tilted one lies in the columns $1$ to $34$. If $R_2$ is axis-aligned, then it
-is not fully black, so it has a common corner $p$ with the tilted rectangle $R_1$, and its
-other column contains 2 black points. This column is a double, so $R_2$ also lies in the
-columns $1$ to $34$.
-
-Suppose that $R_1,R_2$ have 2 common corners $p,q$, and that $pq$ is a side of both or a
-diagonal of both. By the lemma on such pairs in Section 2 of the paper, their other
-corners form a fully black rectangle $R_3$. It is tilted, so it lies in the columns $1$ to
-$34$. A tilted $R_i$ shares 2 corners with $R_3$, so it lies in the columns $1$ to $44$.
-If $R_i$ is axis-aligned, then the other rectangle is tilted and has no horizontal or
-vertical side. So $pq$ is a diagonal of $R_i$, and the columns of $R_i$ are those of its 2
-corners in $R_3$.
-
-In the remaining case $pq$ is a side of one rectangle, say $R_1$, and a diagonal of $R_2$.
-Let $AB$ be the side of $R_1$ opposite to $pq$, and let $CD$ be the other diagonal of
-$R_2$. The points $A,B,C,D$ are black. Suppose first that $AB$ is not vertical. Then both
-rectangles lie in $21$ consecutive columns. Indeed, if both are tilted, they share the
-corner $p$ and each meets at most $11$ consecutive columns. If one of them is
-axis-aligned, its columns are those of $p$ and $q$, which are columns of the other
-rectangle (compare Section 5.1 of the paper). If one of $A,B,C,D$
-lies in a column $x\le24$, then both rectangles lie in the columns $1$ to $44$. Otherwise
-$A,B,C,D$ lie in row $2$. Then $pq$ is parallel to $AB$ and horizontal, and the midpoint of
-$CD$, which is the midpoint of $pq$, lies in row $2$. So $p,q$ lie in row $2$ as well, and
-$R_1$ has no area, a contradiction. Suppose now that $AB$ is vertical. Then $A,B$ are the
-2 points of a double, $R_1$ is axis-aligned, and the rows of $p,q$ are an odd and an even
-row. The rectangle $R_2$ is tilted with the vertical diagonal $pq$ and the black diagonal
-$CD$. If $C$ or $D$ lies in a column $x\le24$, then $R_2$ and $R_1$ lie in the columns $1$
-to $34$. Otherwise $C$ and $D$ lie in row $2$. Then the rows of $p$ and $q$ are $1$ and
-$3$, a contradiction.
-\end{proof}
+valid. For $h=20$ and $h=24$ the script only computes the columns and prints the width. The
+script runs in about 4 minutes.
 
 \section{Formal proofs}
 
@@ -201,7 +139,7 @@ $m\ge8$, $f(6,m)=m+9$ for $m\ge15$, $f(5,5)\ge10$, and $f(6,8)\ge15$ in Lean.
 
 Not formalized are the spacing $W_h+1$, the threshold theorem and its corollary, the
 equality structure theorem, the lemma on 6 rows and $m+8$ points, the blackouts on 7 rows,
-and Lemmas~\ref{lem:enc} and~\ref{lem:tail}.
+and Lemma~\ref{lem:enc}.
 
 \begin{thebibliography}{9}
 \bibitem{bailleux} O. Bailleux and Y. Boufkhad. Efficient CNF encoding of Boolean
