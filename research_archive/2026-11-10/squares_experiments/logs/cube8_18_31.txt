@@ -1,0 +1,1 @@
+{'n': 8, 'k': 18, 'rectangles': 1192, 'clauses': 41811, 'solver': 'cadical195', 'window_bounds': False, 'extra_bounds': None, 'cube': {'index': 31, 'bits': 5, 'cells': [0, 7, 56, 63, 27]}, 'seconds': 2.13, 'status': 'UNSAT'}

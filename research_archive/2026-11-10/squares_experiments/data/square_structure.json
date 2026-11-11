@@ -1,0 +1,978 @@
+{
+ "n3_k5": {
+  "n": 3,
+  "size": 5,
+  "boards": 53,
+  "orbits": 10,
+  "orbit_sizes": {
+   "4": 5,
+   "8": 4,
+   "1": 1
+  },
+  "boundary_cells_in_grid_share": 0.8888888888888888,
+  "boundary_share_mean": 0.9056603773584906,
+  "boundary_count_distribution": {
+   "4": 25,
+   "5": 28
+  },
+  "corner_count_distribution": {
+   "0": 1,
+   "1": 4,
+   "2": 16,
+   "3": 32
+  },
+  "sorted_row_counts_distribution": {
+   "(2, 2, 1)": 38,
+   "(3, 1, 1)": 15
+  },
+  "row_counts_by_position_mean": [
+   1.7547169811320755,
+   1.490566037735849,
+   1.7547169811320755
+  ],
+  "col_counts_by_position_mean": [
+   1.7547169811320755,
+   1.490566037735849,
+   1.7547169811320755
+  ],
+  "max_line_count_distribution": {
+   "2": 28,
+   "3": 25
+  },
+  "girth_distribution": {
+   "None": 53
+  },
+  "components_distribution": {
+   "1": 53
+  },
+  "cyclomatic_distribution": {
+   "0": 53
+  },
+  "empty_lines_distribution": {
+   "0": 53
+  },
+  "right_angles_mean": {
+   "ra_axis_inside": 3.4716981132075473,
+   "ra_axis_outside": 0.0,
+   "ra_tilted_inside": 0.5283018867924528,
+   "ra_tilted_outside": 0.6037735849056604
+  },
+  "right_angles_inside_total_distribution": {
+   "3": 16,
+   "4": 32,
+   "7": 4,
+   "8": 1
+  },
+  "fully_black_rectangles_max": 4,
+  "representatives": [
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     3,
+     6
+    ],
+    "picture": [
+     "###",
+     "#..",
+     "#.."
+    ],
+    "orbit_size": 4
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     3,
+     8
+    ],
+    "picture": [
+     "###",
+     "#..",
+     "..#"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     4,
+     6
+    ],
+    "picture": [
+     "###",
+     ".#.",
+     "#.."
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     3,
+     5,
+     7
+    ],
+    "picture": [
+     "##.",
+     "#.#",
+     ".#."
+    ],
+    "orbit_size": 4
+   },
+   {
+    "cells": [
+     0,
+     1,
+     3,
+     5,
+     8
+    ],
+    "picture": [
+     "##.",
+     "#.#",
+     "..#"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     4,
+     5,
+     8
+    ],
+    "picture": [
+     "##.",
+     ".##",
+     "..#"
+    ],
+    "orbit_size": 4
+   },
+   {
+    "cells": [
+     0,
+     1,
+     4,
+     6,
+     8
+    ],
+    "picture": [
+     "##.",
+     ".#.",
+     "#.#"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     4,
+     7,
+     8
+    ],
+    "picture": [
+     "##.",
+     ".#.",
+     ".##"
+    ],
+    "orbit_size": 4
+   },
+   {
+    "cells": [
+     0,
+     1,
+     5,
+     6,
+     8
+    ],
+    "picture": [
+     "##.",
+     "..#",
+     "#.#"
+    ],
+    "orbit_size": 4
+   },
+   {
+    "cells": [
+     1,
+     3,
+     4,
+     5,
+     7
+    ],
+    "picture": [
+     ".#.",
+     "###",
+     ".#."
+    ],
+    "orbit_size": 1
+   }
+  ],
+  "all_verified": true,
+  "enumeration_complete": true
+ },
+ "n4_k7": {
+  "n": 4,
+  "size": 7,
+  "boards": 316,
+  "orbits": 43,
+  "orbit_sizes": {
+   "4": 7,
+   "8": 36
+  },
+  "boundary_cells_in_grid_share": 0.75,
+  "boundary_share_mean": 0.7450271247739603,
+  "boundary_count_distribution": {
+   "4": 72,
+   "5": 152,
+   "6": 44,
+   "7": 48
+  },
+  "corner_count_distribution": {
+   "2": 156,
+   "3": 160
+  },
+  "sorted_row_counts_distribution": {
+   "(3, 2, 1, 1)": 224,
+   "(2, 2, 2, 1)": 68,
+   "(4, 1, 1, 1)": 24
+  },
+  "row_counts_by_position_mean": [
+   1.9303797468354431,
+   1.5696202531645569,
+   1.5696202531645569,
+   1.9303797468354431
+  ],
+  "col_counts_by_position_mean": [
+   1.9303797468354431,
+   1.5696202531645569,
+   1.5696202531645569,
+   1.9303797468354431
+  ],
+  "max_line_count_distribution": {
+   "2": 24,
+   "3": 248,
+   "4": 44
+  },
+  "girth_distribution": {
+   "None": 316
+  },
+  "components_distribution": {
+   "1": 316
+  },
+  "cyclomatic_distribution": {
+   "0": 316
+  },
+  "empty_lines_distribution": {
+   "0": 316
+  },
+  "right_angles_mean": {
+   "ra_axis_inside": 6.7974683544303796,
+   "ra_axis_outside": 0.0,
+   "ra_tilted_inside": 0.6075949367088608,
+   "ra_tilted_outside": 1.5443037974683544
+  },
+  "right_angles_inside_total_distribution": {
+   "5": 24,
+   "6": 32,
+   "7": 120,
+   "8": 72,
+   "9": 68
+  },
+  "fully_black_rectangles_max": 0,
+  "representatives": [
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     8,
+     12
+    ],
+    "picture": [
+     "####",
+     "#...",
+     "#...",
+     "#..."
+    ],
+    "orbit_size": 4
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     8,
+     15
+    ],
+    "picture": [
+     "####",
+     "#...",
+     "#...",
+     "...#"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     3,
+     5,
+     8,
+     12
+    ],
+    "picture": [
+     "####",
+     ".#..",
+     "#...",
+     "#..."
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     3,
+     5,
+     11,
+     15
+    ],
+    "picture": [
+     "####",
+     ".#..",
+     "...#",
+     "...#"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     4,
+     7,
+     8,
+     15
+    ],
+    "picture": [
+     "###.",
+     "#..#",
+     "#...",
+     "...#"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     4,
+     7,
+     11,
+     15
+    ],
+    "picture": [
+     "###.",
+     "#..#",
+     "...#",
+     "...#"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     4,
+     8,
+     11,
+     15
+    ],
+    "picture": [
+     "###.",
+     "#...",
+     "#..#",
+     "...#"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     5,
+     7,
+     11,
+     15
+    ],
+    "picture": [
+     "###.",
+     ".#.#",
+     "...#",
+     "...#"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     5,
+     10,
+     11,
+     15
+    ],
+    "picture": [
+     "###.",
+     ".#..",
+     "..##",
+     "...#"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     5,
+     10,
+     12,
+     15
+    ],
+    "picture": [
+     "###.",
+     ".#..",
+     "..#.",
+     "#..#"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     5,
+     10,
+     14,
+     15
+    ],
+    "picture": [
+     "###.",
+     ".#..",
+     "..#.",
+     "..##"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     6,
+     7,
+     11,
+     15
+    ],
+    "picture": [
+     "###.",
+     "..##",
+     "...#",
+     "...#"
+    ],
+    "orbit_size": 4
+   }
+  ],
+  "all_verified": true,
+  "enumeration_complete": true
+ },
+ "n5_k10": {
+  "n": 5,
+  "size": 10,
+  "boards": 8,
+  "orbits": 1,
+  "orbit_sizes": {
+   "8": 1
+  },
+  "boundary_cells_in_grid_share": 0.64,
+  "boundary_share_mean": 0.6,
+  "boundary_count_distribution": {
+   "6": 8
+  },
+  "corner_count_distribution": {
+   "3": 8
+  },
+  "sorted_row_counts_distribution": {
+   "(3, 2, 2, 2, 1)": 8
+  },
+  "row_counts_by_position_mean": [
+   2.25,
+   1.5,
+   2.5,
+   1.5,
+   2.25
+  ],
+  "col_counts_by_position_mean": [
+   2.25,
+   1.5,
+   2.5,
+   1.5,
+   2.25
+  ],
+  "max_line_count_distribution": {
+   "3": 8
+  },
+  "girth_distribution": {
+   "8": 8
+  },
+  "components_distribution": {
+   "1": 8
+  },
+  "cyclomatic_distribution": {
+   "1": 8
+  },
+  "empty_lines_distribution": {
+   "0": 8
+  },
+  "right_angles_mean": {
+   "ra_axis_inside": 13.0,
+   "ra_axis_outside": 0.0,
+   "ra_tilted_inside": 0.0,
+   "ra_tilted_outside": 4.0
+  },
+  "right_angles_inside_total_distribution": {
+   "13": 8
+  },
+  "fully_black_rectangles_max": 0,
+  "representatives": [
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     7,
+     12,
+     13,
+     18,
+     19,
+     20,
+     24
+    ],
+    "picture": [
+     "###..",
+     "..#..",
+     "..##.",
+     "...##",
+     "#...#"
+    ],
+    "orbit_size": 8
+   }
+  ],
+  "all_verified": true,
+  "enumeration_complete": true
+ },
+ "n6_k12": {
+  "n": 6,
+  "size": 12,
+  "boards": 160,
+  "orbits": 20,
+  "orbit_sizes": {
+   "8": 20
+  },
+  "boundary_cells_in_grid_share": 0.5555555555555556,
+  "boundary_share_mean": 0.5833333333333334,
+  "boundary_count_distribution": {
+   "5": 8,
+   "6": 80,
+   "7": 24,
+   "8": 8,
+   "9": 32,
+   "10": 8
+  },
+  "corner_count_distribution": {
+   "2": 88,
+   "3": 72
+  },
+  "sorted_row_counts_distribution": {
+   "(4, 2, 2, 2, 1, 1)": 100,
+   "(3, 3, 2, 2, 1, 1)": 48,
+   "(3, 2, 2, 2, 2, 1)": 12
+  },
+  "row_counts_by_position_mean": [
+   2.3625,
+   1.725,
+   1.9125,
+   1.9125,
+   1.725,
+   2.3625
+  ],
+  "col_counts_by_position_mean": [
+   2.3625,
+   1.725,
+   1.9125,
+   1.9125,
+   1.725,
+   2.3625
+  ],
+  "max_line_count_distribution": {
+   "3": 24,
+   "4": 136
+  },
+  "girth_distribution": {
+   "8": 152,
+   "10": 8
+  },
+  "components_distribution": {
+   "1": 160
+  },
+  "cyclomatic_distribution": {
+   "1": 160
+  },
+  "empty_lines_distribution": {
+   "0": 160
+  },
+  "right_angles_mean": {
+   "ra_axis_inside": 16.9,
+   "ra_axis_outside": 0.0,
+   "ra_tilted_inside": 2.55,
+   "ra_tilted_outside": 6.35
+  },
+  "right_angles_inside_total_distribution": {
+   "15": 8,
+   "17": 16,
+   "18": 8,
+   "19": 56,
+   "20": 8,
+   "21": 56,
+   "22": 8
+  },
+  "fully_black_rectangles_max": 0,
+  "representatives": [
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     3,
+     8,
+     15,
+     21,
+     22,
+     28,
+     29,
+     31,
+     35
+    ],
+    "picture": [
+     "####..",
+     "..#...",
+     "...#..",
+     "...##.",
+     "....##",
+     ".#...#"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     3,
+     9,
+     10,
+     16,
+     17,
+     18,
+     23,
+     29,
+     35
+    ],
+    "picture": [
+     "####..",
+     "...##.",
+     "....##",
+     "#....#",
+     ".....#",
+     ".....#"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     3,
+     9,
+     10,
+     16,
+     22,
+     23,
+     29,
+     32,
+     35
+    ],
+    "picture": [
+     "####..",
+     "...##.",
+     "....#.",
+     "....##",
+     ".....#",
+     "..#..#"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     4,
+     8,
+     14,
+     20,
+     21,
+     27,
+     29,
+     30,
+     35
+    ],
+    "picture": [
+     "###.#.",
+     "..#...",
+     "..#...",
+     "..##..",
+     "...#.#",
+     "#....#"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     4,
+     11,
+     17,
+     20,
+     21,
+     27,
+     29,
+     31,
+     35
+    ],
+    "picture": [
+     "###.#.",
+     ".....#",
+     ".....#",
+     "..##..",
+     "...#.#",
+     ".#...#"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     8,
+     9,
+     15,
+     16,
+     22,
+     28,
+     31,
+     34,
+     35
+    ],
+    "picture": [
+     "###...",
+     "..##..",
+     "...##.",
+     "....#.",
+     "....#.",
+     ".#..##"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     8,
+     9,
+     15,
+     21,
+     22,
+     28,
+     29,
+     31,
+     35
+    ],
+    "picture": [
+     "###...",
+     "..##..",
+     "...#..",
+     "...##.",
+     "....##",
+     ".#...#"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     8,
+     9,
+     15,
+     21,
+     22,
+     28,
+     31,
+     34,
+     35
+    ],
+    "picture": [
+     "###...",
+     "..##..",
+     "...#..",
+     "...##.",
+     "....#.",
+     ".#..##"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     8,
+     9,
+     15,
+     21,
+     27,
+     28,
+     29,
+     31,
+     35
+    ],
+    "picture": [
+     "###...",
+     "..##..",
+     "...#..",
+     "...#..",
+     "...###",
+     ".#...#"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     8,
+     9,
+     15,
+     21,
+     27,
+     28,
+     31,
+     34,
+     35
+    ],
+    "picture": [
+     "###...",
+     "..##..",
+     "...#..",
+     "...#..",
+     "...##.",
+     ".#..##"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     2,
+     8,
+     14,
+     15,
+     21,
+     22,
+     23,
+     24,
+     29,
+     35
+    ],
+    "picture": [
+     "###...",
+     "..#...",
+     "..##..",
+     "...###",
+     "#....#",
+     ".....#"
+    ],
+    "orbit_size": 8
+   },
+   {
+    "cells": [
+     0,
+     1,
+     3,
+     4,
+     8,
+     9,
+     12,
+     18,
+     26,
+     29,
+     30,
+     35
+    ],
+    "picture": [
+     "##.##.",
+     "..##..",
+     "#.....",
+     "#.....",
+     "..#..#",
+     "#....#"
+    ],
+    "orbit_size": 8
+   }
+  ],
+  "all_verified": true,
+  "enumeration_complete": true
+ }
+}

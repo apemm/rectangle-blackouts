@@ -1,0 +1,1 @@
+{"n": 5, "k": 10, "rectangles": 130, "clauses": 4593, "solver": "cadical195", "cube": null, "seconds": 0.75, "status": "SAT", "cells": [3, 4, 7, 8, 10, 11, 12, 15, 20, 24], "size": 10, "verified": true}

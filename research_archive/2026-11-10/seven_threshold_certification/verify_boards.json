@@ -1,0 +1,291 @@
+{
+ "height": 7,
+ "boards_21": [
+  {
+   "word": "27,25,3,36,6,6,47,1,67,16,6,1,12,1,14,1,1,23,34,45,56",
+   "black_cells": 33,
+   "valid": true,
+   "presentations": 5785,
+   "partition": "rows 2,4,6 | 1,3,5,7"
+  },
+  {
+   "word": "23,34,45,56,7,7,47,7,67,7,2,27,12,7,14,2,2,25,5,36,16",
+   "black_cells": 33,
+   "valid": true,
+   "presentations": 5785,
+   "partition": "rows 2,4,6 | 1,3,5,7"
+  },
+  {
+   "word": "16,36,5,25,2,2,14,7,12,27,2,7,67,7,47,7,7,56,45,34,23",
+   "black_cells": 33,
+   "valid": true,
+   "presentations": 5785,
+   "partition": "rows 2,4,6 | 1,3,5,7"
+  },
+  {
+   "word": "56,45,34,23,1,1,14,1,12,1,6,16,67,1,47,6,6,36,3,25,27",
+   "black_cells": 33,
+   "valid": true,
+   "presentations": 5785,
+   "partition": "rows 2,4,6 | 1,3,5,7"
+  }
+ ],
+ "tail_prefixes": [
+  {
+   "m": 21,
+   "black_cells": 33,
+   "rectangles": 5785,
+   "valid": true
+  },
+  {
+   "m": 22,
+   "black_cells": 34,
+   "rectangles": 6311,
+   "valid": true
+  },
+  {
+   "m": 23,
+   "black_cells": 35,
+   "rectangles": 6858,
+   "valid": true
+  },
+  {
+   "m": 24,
+   "black_cells": 36,
+   "rectangles": 7426,
+   "valid": true
+  },
+  {
+   "m": 25,
+   "black_cells": 37,
+   "rectangles": 8015,
+   "valid": true
+  },
+  {
+   "m": 26,
+   "black_cells": 38,
+   "rectangles": 8625,
+   "valid": true
+  },
+  {
+   "m": 27,
+   "black_cells": 39,
+   "rectangles": 9256,
+   "valid": true
+  },
+  {
+   "m": 28,
+   "black_cells": 40,
+   "rectangles": 9908,
+   "valid": true
+  },
+  {
+   "m": 29,
+   "black_cells": 41,
+   "rectangles": 10581,
+   "valid": true
+  },
+  {
+   "m": 30,
+   "black_cells": 42,
+   "rectangles": 11275,
+   "valid": true
+  },
+  {
+   "m": 31,
+   "black_cells": 43,
+   "rectangles": 11990,
+   "valid": true
+  },
+  {
+   "m": 32,
+   "black_cells": 44,
+   "rectangles": 12726,
+   "valid": true
+  },
+  {
+   "m": 33,
+   "black_cells": 45,
+   "rectangles": 13483,
+   "valid": true
+  },
+  {
+   "m": 34,
+   "black_cells": 46,
+   "rectangles": 14261,
+   "valid": true
+  },
+  {
+   "m": 35,
+   "black_cells": 47,
+   "rectangles": 15060,
+   "valid": true
+  },
+  {
+   "m": 36,
+   "black_cells": 48,
+   "rectangles": 15880,
+   "valid": true
+  },
+  {
+   "m": 37,
+   "black_cells": 49,
+   "rectangles": 16721,
+   "valid": true
+  },
+  {
+   "m": 38,
+   "black_cells": 50,
+   "rectangles": 17583,
+   "valid": true
+  },
+  {
+   "m": 39,
+   "black_cells": 51,
+   "rectangles": 18466,
+   "valid": true
+  },
+  {
+   "m": 40,
+   "black_cells": 52,
+   "rectangles": 19370,
+   "valid": true
+  },
+  {
+   "m": 41,
+   "black_cells": 53,
+   "rectangles": 20295,
+   "valid": true
+  },
+  {
+   "m": 42,
+   "black_cells": 54,
+   "rectangles": 21241,
+   "valid": true
+  },
+  {
+   "m": 43,
+   "black_cells": 55,
+   "rectangles": 22208,
+   "valid": true
+  },
+  {
+   "m": 44,
+   "black_cells": 56,
+   "rectangles": 23196,
+   "valid": true
+  },
+  {
+   "m": 45,
+   "black_cells": 57,
+   "rectangles": 24205,
+   "valid": true
+  },
+  {
+   "m": 46,
+   "black_cells": 58,
+   "rectangles": 25235,
+   "valid": true
+  },
+  {
+   "m": 47,
+   "black_cells": 59,
+   "rectangles": 26286,
+   "valid": true
+  },
+  {
+   "m": 48,
+   "black_cells": 60,
+   "rectangles": 27358,
+   "valid": true
+  },
+  {
+   "m": 49,
+   "black_cells": 61,
+   "rectangles": 28451,
+   "valid": true
+  },
+  {
+   "m": 50,
+   "black_cells": 62,
+   "rectangles": 29565,
+   "valid": true
+  },
+  {
+   "m": 51,
+   "black_cells": 63,
+   "rectangles": 30700,
+   "valid": true
+  },
+  {
+   "m": 52,
+   "black_cells": 64,
+   "rectangles": 31856,
+   "valid": true
+  },
+  {
+   "m": 53,
+   "black_cells": 65,
+   "rectangles": 33033,
+   "valid": true
+  },
+  {
+   "m": 54,
+   "black_cells": 66,
+   "rectangles": 34231,
+   "valid": true
+  },
+  {
+   "m": 55,
+   "black_cells": 67,
+   "rectangles": 35450,
+   "valid": true
+  },
+  {
+   "m": 56,
+   "black_cells": 68,
+   "rectangles": 36690,
+   "valid": true
+  },
+  {
+   "m": 57,
+   "black_cells": 69,
+   "rectangles": 37951,
+   "valid": true
+  },
+  {
+   "m": 58,
+   "black_cells": 70,
+   "rectangles": 39233,
+   "valid": true
+  },
+  {
+   "m": 59,
+   "black_cells": 71,
+   "rectangles": 40536,
+   "valid": true
+  },
+  {
+   "m": 60,
+   "black_cells": 72,
+   "rectangles": 41860,
+   "valid": true
+  }
+ ],
+ "tail_inputs": {
+  "word_60": "16,36,5,25,2,2,14,7,12,27,2,7,67,7,47,7,7,56,45,34,23,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2",
+  "hidden_rectangles_in_width_60": 0,
+  "constant_row_2_columns": [
+   25,
+   60
+  ],
+  "max_tilted_column_span_height_7": 10
+ },
+ "board_20": {
+  "word": "36,5,25,2,2,14,7,12,27,2,7,67,7,47,7,7,56,45,34,23",
+  "black_cells": 31,
+  "valid": true
+ },
+ "status": "PASS",
+ "seconds": 2.5
+}

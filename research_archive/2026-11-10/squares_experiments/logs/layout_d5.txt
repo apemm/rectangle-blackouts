@@ -1,0 +1,9 @@
+d5 N 125 edges 625 girth 8
+ natural best/mean/worst E per cell 133.2064 249.07613333333333 521.2112 | random ordering 135.07946666666666 | random set 230.92560000000003
+ search from best natural : E 83254 -> 57546 moves 10187
+ search from random : E 86788 -> 58771 moves 10210
+ valid subset, best searched ordering : {'greedy_deletions': 372, 'size_after_greedy_deletion': 253, 'size_after_reinsertion': 256, 'random_insertion_sizes_max': 228, 'random_insertion_sizes_mean': 225.6, 'best_valid_size': 256, 'verified': True, 'rectangles': 191067630, 'presentations_compared': 245347}
+ valid subset, best natural ordering : {'greedy_deletions': 364, 'size_after_greedy_deletion': 261, 'size_after_reinsertion': 261, 'random_insertion_sizes_max': 228, 'random_insertion_sizes_mean': 222.8, 'best_valid_size': 261, 'verified': True, 'rectangles': 191067630, 'presentations_compared': 254399}
+ valid subset, random ordering : {'greedy_deletions': 375, 'size_after_greedy_deletion': 250, 'size_after_reinsertion': 252, 'random_insertion_sizes_max': 225, 'random_insertion_sizes_mean': 219.4, 'best_valid_size': 252, 'verified': True, 'rectangles': 191067630, 'presentations_compared': 236556}
+ valid subset, random set : {'greedy_deletions': 380, 'size_after_greedy_deletion': 245, 'size_after_reinsertion': 249, 'random_insertion_sizes_max': 217, 'random_insertion_sizes_mean': 213.6, 'best_valid_size': 249, 'verified': True, 'rectangles': 191067630, 'presentations_compared': 239868}
+done d5

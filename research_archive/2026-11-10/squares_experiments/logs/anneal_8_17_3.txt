@@ -1,0 +1,1 @@
+{'n': 8, 'k': 17, 'seed': 3, 'seconds': 600.1, 'restarts': 71, 'least_collisions_at_end_of_a_run': 0, 'valid_boards_found': 6}
