@@ -1,4 +1,4 @@
-# Notes on the extremal paper (state after revision round 4, 11 November 2026)
+# Notes on the extremal paper (state after revision round 5, 11 November 2026)
 
 Files: `blackouts_extremal.tex`, `sections/sec1_intro.tex` to `sec9_open.tex`, `extremal.bib`,
 `supplement.tex`, `e-jc.sty` (unchanged copy from combinatorics.org), `figs/`,
@@ -97,6 +97,35 @@ Cuts in round 4 to stay at 26 pages: the references Moret and Shapiro, Kovari, S
 Turan, and the OEIS entry (the sequence is still linked), the sentence on hidden rectangles
 in Section 2, and shorter remarks. Remark 35 names h = 757474440275 as one later height
 where the bound is again at least M_h. It makes no claim for all larger h.
+
+## Round 5 (supersedes the numbering table and the S2, S4 entries above)
+
+Numbering of the introduction: Theorem 1 `thm:threshold`, Proposition 2 `thm:general`,
+Theorem 3 `thm:small` (Table 1). In the body: Theorem 15 `thm:rowbound`, Theorem 18
+`thm:equality`, Proposition 33 `prop:partial`, Corollary 34 `cor:everywidth`, Remark 35
+`rem:constants`, Theorem 38 `thm:collar`.
+
+- Seven rows: the tail argument is gone from the paper and the supplement. Theorem 3 says
+  f(7,m) = m + 12 for m >= 21. The widths 21, 22, 23 are 3 finite boards (the 21-column
+  word printed in Section 6, then the same word followed by 1 and by 2 columns in row 1),
+  which the script checks from the definition with their sizes m + 12. The widths m >= 24
+  use the 5 boards of `data/seven_row_blackouts.txt` and the collar theorem, as before, and
+  do not depend on the 21-column word. The paper says m_7 <= 21 and never m_7 = 21.
+- Corollary on every width: stated in Section 5 after the proof of Theorem 1(b), with one
+  clause in the introduction.
+- Remark 35 describes the placement as first-fit: the edges in a random order, each double
+  in the leftmost column that is not bad with the doubles before it. The order of the edges
+  is the only random choice, 3 orders per height, smallest width reported. The script
+  reproduces the table with its fixed seed.
+
+  | h | 12 | 13 | 14 | 16 | 20 | 24 |
+  |---|---|---|---|---|---|---|
+  | first-fit width | 1180 | 1872 | 2154 | 2919 | 7157 | 12915 |
+  | M_h | 1121 | 1559 | 2113 | 3655 | 9109 | 19163 |
+  | validity | definition | definition | definition | definition | Lemma 32 | Lemma 32 |
+
+  For 20 and 24 the script only computes the columns. Their validity rests on the one-block
+  lemma and on the script testing (B1) to (B3) as defined.
 
 ## What was checked and how
 

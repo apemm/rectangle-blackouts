@@ -3,17 +3,18 @@
 The computer-assisted entries of Table~\ref{tab:values} need 2 kinds of finite checks. The
 repository~\cite{repo} contains the code and the evidence files. Its supplement
 \nolinkurl{papers/extremal/supplement.pdf} describes the SAT encodings, proves that they
-are faithful, and lists the instances, the certificates, and the formal proofs.
+are faithful, and lists the instances and the certificates.
 
 \paragraph{Lower bounds.} Every blackout and test board of Section~\ref{sec:small}
 was checked from Definition~\ref{def:valid} by at least 2 separately written
 programs, which list all rectangles and compare their presentations. One of them is the
 script \nolinkurl{papers/extremal/scripts/check_constructions.py}. It also checks the
-blackouts of Proposition~\ref{prop:seas} for $3\le h\le8$ and the greedy blackouts of
-Remark~\ref{rem:constants} for $4\le h\le14$ and $h=16$. For $h=5$ and $h=7$ the script uses 2 blocks with the sea rows $\{1,h-1\}$ and $\{2,h\}$.
+blackouts of Proposition~\ref{prop:seas} for $3\le h\le8$ and the first-fit blackouts of
+Remark~\ref{rem:constants} for $4\le h\le14$ and $h=16$, and it computes the first-fit
+widths for $h=20$ and $h=24$. For $h=5$ and $h=7$ the script uses 2 blocks with the sea rows $\{1,h-1\}$ and $\{2,h\}$.
 No proof in this paper covers this variant, since Proposition~\ref{prop:partial}(c) needs
 $h\ge9$. These 2 heights are extra tests. At $h=16$ all 3 blackouts built with (B1) to (B3) are valid, and all 5 blackouts
-built with (B1) alone are not valid. So the script tests the conditions on 2 or more doubles.
+built with (B1) alone are not valid.
 
 \paragraph{Upper bounds.} Each upper bound below the row bound is the unsatisfiability of
 SAT instances. CaDiCaL~\cite{biere2024} produced an LRAT proof for each of the $739$

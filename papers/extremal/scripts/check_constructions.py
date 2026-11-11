@@ -12,9 +12,10 @@ The script checks
      and h = 16: each double gets the smallest column that is not bad, with (B1), (B2), (B3)
      tested as defined, the prescribed singletons are set next to each double, and the
      blackout is checked from the definition. At h = 16 a control with only (B1) tested
-     gives blackouts that are not valid.
+     gives blackouts that are not valid. For h = 20 and h = 24 only the columns are
+     computed and the width is printed.
 
-It uses only the standard library and runs in about 2 minutes. Run: py check_constructions.py
+It uses only the standard library and runs in about 4 minutes. Run: py check_constructions.py
 """
 import itertools
 import math
@@ -115,7 +116,7 @@ def check_small_heights():
     with open(os.path.join(here, '..', 'data', 'seven_row_blackouts.txt')) as fh:
         seven = [line.strip() for line in fh if line.strip() and not line.startswith('#')]
     assert [len(w.split(',')) for w in seven] == [24, 25, 26, 27, 28]
-    tail = '16,36,5,25,2,2,14,7,12,27,2,7,67,7,47,7,7,56,45,34,23,1,1,1' + ',2' * 21
+    w21 = '16,36,5,25,2,2,14,7,12,27,2,7,67,7,47,7,7,56,45,34,23'
     s16 = '36,14,25,6,6,16,6,6,56,45,4,4,4,34,23,12'
     cases = [
         ('S_8', 5, '14,45,25,5,5,34,23,12', 6, None, None),
@@ -134,15 +135,15 @@ def check_small_heights():
         ('7x7', 7, '17,1,12,2,23,3456,67', 7, None, None),
         ('7x8', 7, '27,367,46,2,6,24,125,16', 8, None, None),
         ('7x38 test board', 7, seven[-1], 12, (10, 7), None),
-        ('T (7x45)', 7, tail, 12, None, None),
+        ('7x21', 7, w21, 12, None, None),
+        ('7x22', 7, w21 + ',1', 12, None, None),
+        ('7x23', 7, w21 + ',1,1', 12, None, None),
     ]
     for m in (12, 13, 14):
         word = '16,36,25,12,' + ','.join(['1'] * (m - 8)) + ',23,34,45,56'
         cases.append(('6x%d' % m, 6, word, 8, None, None))
     for word in seven:
         cases.append(('7x%d' % len(word.split(',')), 7, word, 12, None, None))
-    for m in range(21, 45):
-        cases.append(('T_%d' % m, 7, ','.join(tail.split(',')[:m]), 12, None, None))
     for name, h, word, excess, left, right in cases:
         m, black = board(word, left, right)
         assert len(black) - m == excess, name
@@ -446,6 +447,21 @@ def check_threshold_construction():
                 invalid += not is_valid(h, m, black)
             print('control at h = 16 with only (B1) enforced: %d of 5 blackouts are not valid'
                   % invalid)
+    for h in (20, 24):
+        tools = Tools(h)
+        edges = parity_edges(h)
+        block = Block(1, h, edges, tools)
+        best = None
+        for trial in range(3):
+            order = list(edges)
+            rng.shuffle(order)
+            width = max(block.first_fit(order).values())
+            if best is None or width < best:
+                best = width
+        q = h * h // 4
+        print('first-fit at h = %d (columns only, not checked from the definition): '
+              'smallest width %d, explicit construction %d'
+              % (h, best, q + (q - 1) * span_bound(h)))
 
 
 if __name__ == '__main__':
