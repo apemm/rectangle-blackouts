@@ -21,7 +21,7 @@ heights 15 and 19), so their ratios say nothing about the true size of m_0(h)/h^
 
 ## Notes on the rows
 
-- **Heights 4 to 6.** The values and boards are in `jis/pemmasani_jis.tex`. The boards at widths 6, 8
+- **Heights 4 to 6.** The values and boards are in `jis/pemmasani.tex`. The boards at widths 6, 8
   and 15 were checked again here (`verify_small.py`): the four-row family at widths 6 to 12, S_8 with 0
   to 5 extra row-1 columns, and the 6 x 15 board. As a second check, the exact encoder of this folder
   returns UNSAT for every balanced partition at widths 5, 7 and 14 and finds boards at 6, 8 and 15
