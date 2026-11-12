@@ -1,4 +1,4 @@
-"""Check of the threshold boards at heights 4, 5, 6 quoted from the paper (jis/pemmasani_jis.tex),
+"""Check of the threshold boards at heights 4, 5, 6 quoted from the paper (jis/pemmasani.tex),
 and of the earlier collar boards at heights 8 and 9 (2026-11-07/data)."""
 import json
 from boards import HERE, D07
