@@ -1,5 +1,5 @@
 \documentclass[10pt]{article}
-\usepackage[margin=0.95in]{geometry}
+\usepackage[margin=0.85in]{geometry}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage[colorlinks,urlcolor=blue]{hyperref}
 \newtheorem*{problem1}{Problem 1}
@@ -68,7 +68,7 @@ pairs are close to independent.
 
 A negative answer would suggest that my method cannot reach $m_h=O(h^2)$. With $S$ of order
 $\log s$ the degree stays bounded, and the method then aims at $h^2\log h$. I would also like
-to know whether $m_h/h^2$ is unbounded. For $h\ge12$ I have no lower bound for $m_h$ above $q_h$.
+to know whether $m_h/h^2$ is unbounded. For $h\ge13$ I have no lower bound for $m_h$ above $q_h$.
 
 \section*{Problem 2. All-double windows}
 
@@ -89,13 +89,15 @@ points is a window. Hence
  m_h\ge q_h+\left\lfloor\frac{q_h-1}{W(h)}\right\rfloor .
 \]
 So $W(h)\le h$ gives $m_h\ge q_h+h/4-O(1)$, and even $W(h)<q_h$ gives $m_h>q_h$. At present I
-cannot prove $m_h>q_h$ for $h\ge12$.
+cannot prove $m_h>q_h$ for $h\ge13$.
 
 What I know.
 \begin{itemize}
 \item $W(h)\ge h$ for every $h\ge4$. For even $h$ take the columns
 $\{1,2\},\{2,3\},\dots,\{h-1,h\},\{1,h\}$ with the parity partition.
-\item $W(h)=h$ for $4\le h\le11$, by exhaustive search. Two programs agree for $h\le10$.
+\item $W(h)=h$ for $4\le h\le12$, by computer search. Two programs agree for $h\le10$. The case $h=12$ rests on one SAT search with no proof certificate.
+\item A fractional argument cannot work. The weight $2/h$ on every cell meets every rectangle condition at every width. So a proof must use integrality.
+\item A window can have more columns than rows in use. For $h=12$ there is a window of width 9 on 6 rows.
 \item Suppose a window contains the graph of a walk $f$ with $|f(x+1)-f(x)|=1$ across all its
 columns. Then its width is at most $h$.
 \item Rectangles with sides of slope $\pm1$ are not enough. A point set on 2 adjacent lines of
@@ -114,6 +116,7 @@ points in the top and bottom rows.
 Notes, programs and certificates are at
 \url{https://github.com/apemm/rectangle-blackouts}. I would be glad to hear of any related
 result, in particular on point sets with no right angle and on colourings that avoid Pythagorean
-pairs along a space-filling curve.
+pairs along a space-filling curve. The closest work I know is that of Shkredov and Solymosi,
+\emph{Tilted corners in integer grids}, Integers 21A (2021), Paper A20.
 
 \end{document}
