@@ -1,0 +1,13 @@
+{
+  "side": 1024,
+  "offset": -2048,
+  "stride": 32,
+  "choices": 3,
+  "outer": 0,
+  "events": 2169330,
+  "norms": 2099,
+  "automata": 4234,
+  "sha256": "cb79f45c1930d8cd67dee8e1a05b68dc6cb6e05936de69489b30f9cd95413c51",
+  "digest_format": "little_endian_int32_triples",
+  "seconds": 14.593
+}

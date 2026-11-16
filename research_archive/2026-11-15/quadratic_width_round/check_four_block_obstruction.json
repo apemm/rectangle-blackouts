@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "S": 256,
+      "D": 2,
+      "I": 0,
+      "J": 32768,
+      "h": 131072,
+      "block_start": 1073741824,
+      "owner_rank": 3937053355,
+      "protected_row_range": [
+        1,
+        65540
+      ],
+      "margin": 0,
+      "witness_histogram": {
+        "1": 24
+      },
+      "joint_permutations_checked": 576
+    },
+    {
+      "S": 512,
+      "D": 2,
+      "I": 0,
+      "J": 131072,
+      "h": 524288,
+      "block_start": 17179869184,
+      "owner_rank": 62992853675,
+      "protected_row_range": [
+        1,
+        262148
+      ],
+      "margin": 0,
+      "witness_histogram": {
+        "1": 24
+      },
+      "joint_permutations_checked": 576
+    },
+    {
+      "S": 50176,
+      "D": 28,
+      "I": 4000,
+      "J": 89919392,
+      "h": 3758096384,
+      "block_start": 5542981724178432,
+      "owner_rank": 16628990940816043,
+      "protected_row_range": [
+        112001,
+        2517743032
+      ],
+      "margin": 100000,
+      "witness_histogram": {
+        "1": 24
+      },
+      "joint_permutations_checked": 576
+    },
+    {
+      "S": 100352,
+      "D": 28,
+      "I": 4000,
+      "J": 359665568,
+      "h": 15032385536,
+      "block_start": 88687707419215872,
+      "owner_rank": 266063855220695723,
+      "protected_row_range": [
+        112001,
+        10070635960
+      ],
+      "margin": 100000,
+      "witness_histogram": {
+        "1": 24
+      },
+      "joint_permutations_checked": 576
+    }
+  ],
+  "total_joint_permutations": 2304
+}

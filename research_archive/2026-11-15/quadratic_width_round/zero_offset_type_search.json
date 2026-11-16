@@ -1,0 +1,54 @@
+[
+  {
+    "side": 8,
+    "stride": 32,
+    "choices": 3,
+    "orientation": "id",
+    "offset_types_with_edges": 1545,
+    "types_with_at_least_three_rank_gaps": 23,
+    "grouped_arithmetic_events": 1749,
+    "max_edges_in_eligible_type": 29,
+    "max_degree_in_eligible_type": 3,
+    "clique4_witnesses": [],
+    "seconds": 0.0
+  },
+  {
+    "side": 8,
+    "stride": 32,
+    "choices": 3,
+    "orientation": "swap",
+    "offset_types_with_edges": 1550,
+    "types_with_at_least_three_rank_gaps": 16,
+    "grouped_arithmetic_events": 1752,
+    "max_edges_in_eligible_type": 28,
+    "max_degree_in_eligible_type": 3,
+    "clique4_witnesses": [],
+    "seconds": 0.01600000000325963
+  },
+  {
+    "side": 16,
+    "stride": 32,
+    "choices": 3,
+    "orientation": "id",
+    "offset_types_with_edges": 8132,
+    "types_with_at_least_three_rank_gaps": 587,
+    "grouped_arithmetic_events": 10695,
+    "max_edges_in_eligible_type": 136,
+    "max_degree_in_eligible_type": 5,
+    "clique4_witnesses": [],
+    "seconds": 0.046999999991385266
+  },
+  {
+    "side": 16,
+    "stride": 32,
+    "choices": 3,
+    "orientation": "swap",
+    "offset_types_with_edges": 8157,
+    "types_with_at_least_three_rank_gaps": 595,
+    "grouped_arithmetic_events": 10749,
+    "max_edges_in_eligible_type": 129,
+    "max_degree_in_eligible_type": 5,
+    "clique4_witnesses": [],
+    "seconds": 0.0470000000204891
+  }
+]

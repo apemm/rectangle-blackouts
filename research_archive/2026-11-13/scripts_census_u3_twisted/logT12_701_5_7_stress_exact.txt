@@ -1,0 +1,11 @@
+HDR h 701 B 17 l 757 p 53299 type (5,7) r0 1 T0 683 D0 18 k 0 T* 683 frows [659, 667, 675, 683] subclasses 11 kept 11 removed 231 heavy 0 edges 0
+VIOL sub 16 T -113 kind V5 family D10 comp Fe nL 1 labels [(165, 108)] nb False X0 2409511302 data (245066, 218, 245178, 659, 7)
+VIOL sub 16 T -113 kind V5 family D10 comp Fe nL 1 labels [(165, 108)] nb False X0 2409511302 data (245066, 218, 244954, 659, 7)
+VIOL sub 17 T -81 kind V5 family D10 comp Fe nL 1 labels [(165, 124)] nb False X0 328718342 data (245066, 250, 245234, 675, 16)
+VIOL sub 17 T -81 kind V5 family D10 comp Fe nL 1 labels [(165, 124)] nb False X0 328718342 data (245066, 250, 244898, 675, 16)
+VIOL sub 18 T -49 kind V5 family D10 comp Fe nL 1 labels [(165, 140)] nb False X0 830155334 data (245066, 282, 245198, 667, 11)
+VIOL sub 18 T -49 kind V5 family D10 comp Fe nL 1 labels [(165, 140)] nb False X0 830155334 data (245066, 282, 245246, 667, 20)
+SUMMARY type (5,7) stress exact subs 0..42 of 42 oob 0 pairs 0 triples 0 time 1.2
+   ('V5', 'D10', 1, 'deep') 6
+PARKED {'FFo': 110, 'FSo': 704} SLLPC observed 0 shape_ok 0 predicted 0 in_V3 0
+NEXT 42 42

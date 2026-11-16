@@ -1,0 +1,142 @@
+{
+  "status": "PASS: edge-stack accounting",
+  "vertices": 1048576,
+  "zero_edges": 1019611,
+  "nontrivial_components": 32263,
+  "blocks": 395075,
+  "bridges": 395044,
+  "cyclic_blocks": 31,
+  "noncycle_blocks": 1,
+  "largest_blocks": [
+    {
+      "vertices": 465390,
+      "edges": 624469,
+      "cycle_rank": 159080
+    },
+    {
+      "vertices": 6,
+      "edges": 6,
+      "cycle_rank": 1
+    },
+    {
+      "vertices": 4,
+      "edges": 4,
+      "cycle_rank": 1
+    },
+    {
+      "vertices": 4,
+      "edges": 4,
+      "cycle_rank": 1
+    },
+    {
+      "vertices": 4,
+      "edges": 4,
+      "cycle_rank": 1
+    },
+    {
+      "vertices": 4,
+      "edges": 4,
+      "cycle_rank": 1
+    },
+    {
+      "vertices": 4,
+      "edges": 4,
+      "cycle_rank": 1
+    },
+    {
+      "vertices": 3,
+      "edges": 3,
+      "cycle_rank": 1
+    },
+    {
+      "vertices": 3,
+      "edges": 3,
+      "cycle_rank": 1
+    },
+    {
+      "vertices": 3,
+      "edges": 3,
+      "cycle_rank": 1
+    },
+    {
+      "vertices": 3,
+      "edges": 3,
+      "cycle_rank": 1
+    },
+    {
+      "vertices": 3,
+      "edges": 3,
+      "cycle_rank": 1
+    },
+    {
+      "vertices": 3,
+      "edges": 3,
+      "cycle_rank": 1
+    },
+    {
+      "vertices": 3,
+      "edges": 3,
+      "cycle_rank": 1
+    },
+    {
+      "vertices": 3,
+      "edges": 3,
+      "cycle_rank": 1
+    },
+    {
+      "vertices": 3,
+      "edges": 3,
+      "cycle_rank": 1
+    },
+    {
+      "vertices": 3,
+      "edges": 3,
+      "cycle_rank": 1
+    },
+    {
+      "vertices": 3,
+      "edges": 3,
+      "cycle_rank": 1
+    },
+    {
+      "vertices": 3,
+      "edges": 3,
+      "cycle_rank": 1
+    },
+    {
+      "vertices": 3,
+      "edges": 3,
+      "cycle_rank": 1
+    }
+  ],
+  "largest_components": [
+    [
+      808525,
+      967633
+    ],
+    [
+      27,
+      26
+    ],
+    [
+      23,
+      22
+    ],
+    [
+      19,
+      18
+    ],
+    [
+      18,
+      17
+    ]
+  ],
+  "block_size_histogram": {
+    "2": 395044,
+    "3": 24,
+    "4": 5,
+    "6": 1,
+    "465390": 1
+  },
+  "seconds": 4.218
+}

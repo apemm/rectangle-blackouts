@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "scope": "finite exact comparison checks",
+  "cases": [
+    {
+      "side": 2,
+      "comparisons": 6,
+      "minimum_rank_margin": 1
+    },
+    {
+      "side": 4,
+      "comparisons": 120,
+      "minimum_rank_margin": 1
+    },
+    {
+      "side": 8,
+      "comparisons": 2016,
+      "minimum_rank_margin": 1
+    },
+    {
+      "side": 16,
+      "comparisons": 32640,
+      "minimum_rank_margin": 1
+    },
+    {
+      "side": 32,
+      "comparisons": 523776,
+      "minimum_rank_margin": 1
+    }
+  ],
+  "comparisons": 558558
+}

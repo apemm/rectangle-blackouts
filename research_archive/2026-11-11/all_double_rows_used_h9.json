@@ -1,0 +1,56 @@
+{
+  "height": 9,
+  "width": 9,
+  "rectangles": 2044,
+  "raw_supports": 1164701,
+  "minimal_supports": 185794,
+  "variables": 333,
+  "clauses": 186307,
+  "build_seconds": 10.35899999999674,
+  "solve_status": "SAT",
+  "seconds": 13.389999999999418,
+  "solver": "cadical195",
+  "pysat_version": "1.9.dev21",
+  "solver_time_limit_seconds": 60,
+  "min_row_degree": 1,
+  "formal_unsat_proof_saved": false,
+  "word": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      3,
+      9
+    ]
+  ],
+  "direct_presentation_check": "PASS"
+}

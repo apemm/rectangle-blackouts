@@ -1,0 +1,9 @@
+HDR h 1501 B 20 l 1567 p 60083 type (26, 6) mode exact nosplit False NOCOLOUR None RHOSHIFT None GRAPH 1 {'r0': 3, 'yP': 53, 'T0': 1445, 'D0': 56, 'k': 2, 'Ts': 1317, 'frows': [1293, 1301, 1309, 1317]} subclasses 740 kept 189 relocfile 0 sizes [(1, 187), (2, 1)] removal reasons {'R-b 320': 601, 'R-a row3': 23, 'R-b 444': 470, 'B
+violations 207 max oob 0
+   ('V5', 'D10', 'C', 1) 207
+violations in windows with >= 2 kept labels (kind, family, #labels): {('V5', 'D10', 1): 1}
+two-or-more-label violations: 0
+  depth T* - (deepest endpoint row) of D10 labels: min 323 max 1008
+B6 checked against R_IV: ok 0 bad 0
+FLAGS 0
+labels to relocate 111

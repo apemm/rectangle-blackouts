@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "height": 7,
+  "width": 4,
+  "columns": [
+    [
+      1,
+      7
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      4,
+      6
+    ]
+  ],
+  "rectangles": 152,
+  "distinct_presentations": 152,
+  "components": [
+    {
+      "vertices": 2,
+      "edges": 1
+    },
+    {
+      "vertices": 6,
+      "edges": 5
+    },
+    {
+      "vertices": 2,
+      "edges": 1
+    },
+    {
+      "vertices": 2,
+      "edges": 1
+    }
+  ],
+  "empty_diagonal_lines": 8,
+  "components_plus_empty": 12,
+  "boundary_junction": {
+    "vertex": [
+      3,
+      5
+    ],
+    "NE": [
+      4,
+      6
+    ],
+    "NW": [
+      1,
+      7
+    ],
+    "SE": [
+      4,
+      4
+    ],
+    "outside_completions": [
+      [
+        2,
+        8
+      ],
+      [
+        5,
+        5
+      ]
+    ]
+  }
+}

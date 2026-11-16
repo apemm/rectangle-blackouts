@@ -1,0 +1,16 @@
+build 0.2 A-sets 71
+A (1, 2, 3, 4, 5) K 11 windows 0
+A (1, 2, 3, 4, 6) K 11 windows 0
+A (1, 2, 3, 4, 7) K 11 windows 0
+A (1, 2, 3, 4, 8) K 11 windows 0
+A (1, 2, 3, 4, 9) K 11 windows 0
+A (1, 2, 3, 4, 10) K 11 windows 0
+A (1, 2, 3, 5, 7) K 11 windows 0
+A (1, 2, 3, 5, 8) K 11 windows 0
+A (1, 2, 3, 5, 9) K 11 windows 0
+A (1, 2, 3, 5, 10) K 11 windows 0
+A (1, 2, 3, 6, 7) K 11 windows 0
+A (1, 2, 3, 6, 8) K 11 windows 0
+A (1, 2, 3, 6, 9) K 11 windows 0
+A (1, 2, 3, 6, 10) K 11 windows 0
+total sec 46.6

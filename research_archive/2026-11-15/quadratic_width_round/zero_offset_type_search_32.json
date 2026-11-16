@@ -1,0 +1,28 @@
+[
+  {
+    "side": 32,
+    "stride": 32,
+    "choices": 3,
+    "orientation": "id",
+    "offset_types_with_edges": 38177,
+    "types_with_at_least_three_rank_gaps": 4612,
+    "grouped_arithmetic_events": 60487,
+    "max_edges_in_eligible_type": 548,
+    "max_degree_in_eligible_type": 6,
+    "clique4_witnesses": [],
+    "seconds": 1.5469999999913853
+  },
+  {
+    "side": 32,
+    "stride": 32,
+    "choices": 3,
+    "orientation": "swap",
+    "offset_types_with_edges": 38156,
+    "types_with_at_least_three_rank_gaps": 4584,
+    "grouped_arithmetic_events": 60556,
+    "max_edges_in_eligible_type": 514,
+    "max_degree_in_eligible_type": 6,
+    "clique4_witnesses": [],
+    "seconds": 2.1410000000032596
+  }
+]

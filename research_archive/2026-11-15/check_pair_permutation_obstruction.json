@@ -1,0 +1,292 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "S": 32,
+      "row_step": 2,
+      "anchor": 0,
+      "margin": 0,
+      "h": 2048,
+      "orientation": [
+        0,
+        0
+      ],
+      "block_rank": 262144,
+      "invariant_rows": [
+        3,
+        1026
+      ],
+      "common_rows": [
+        2,
+        1027
+      ],
+      "protected_row_range": [
+        2,
+        1028
+      ],
+      "owner_rank": 961195,
+      "swap_assignments_checked": 8
+    },
+    {
+      "S": 64,
+      "row_step": 2,
+      "anchor": 0,
+      "margin": 0,
+      "h": 8192,
+      "orientation": [
+        0,
+        0
+      ],
+      "block_rank": 4194304,
+      "invariant_rows": [
+        3,
+        4098
+      ],
+      "common_rows": [
+        2,
+        4099
+      ],
+      "protected_row_range": [
+        2,
+        4100
+      ],
+      "owner_rank": 15379115,
+      "swap_assignments_checked": 8
+    },
+    {
+      "S": 96,
+      "row_step": 2,
+      "anchor": 0,
+      "margin": 0,
+      "h": 16384,
+      "orientation": [
+        0,
+        0
+      ],
+      "block_rank": 17039360,
+      "invariant_rows": [
+        3,
+        9218
+      ],
+      "common_rows": [
+        2,
+        9219
+      ],
+      "protected_row_range": [
+        2,
+        9220
+      ],
+      "owner_rank": 61603843,
+      "swap_assignments_checked": 8
+    },
+    {
+      "S": 128,
+      "row_step": 2,
+      "anchor": 0,
+      "margin": 0,
+      "h": 32768,
+      "orientation": [
+        0,
+        0
+      ],
+      "block_rank": 67108864,
+      "invariant_rows": [
+        3,
+        16386
+      ],
+      "common_rows": [
+        2,
+        16387
+      ],
+      "protected_row_range": [
+        2,
+        16388
+      ],
+      "owner_rank": 246065835,
+      "swap_assignments_checked": 8
+    },
+    {
+      "S": 160,
+      "row_step": 2,
+      "anchor": 0,
+      "margin": 0,
+      "h": 32768,
+      "orientation": [
+        0,
+        0
+      ],
+      "block_rank": 84148224,
+      "invariant_rows": [
+        3,
+        25602
+      ],
+      "common_rows": [
+        2,
+        25603
+      ],
+      "protected_row_range": [
+        2,
+        25604
+      ],
+      "owner_rank": 252619435,
+      "swap_assignments_checked": 8
+    },
+    {
+      "S": 192,
+      "row_step": 2,
+      "anchor": 0,
+      "margin": 0,
+      "h": 65536,
+      "orientation": [
+        0,
+        0
+      ],
+      "block_rank": 272629760,
+      "invariant_rows": [
+        3,
+        36866
+      ],
+      "common_rows": [
+        2,
+        36867
+      ],
+      "protected_row_range": [
+        2,
+        36868
+      ],
+      "owner_rank": 985661443,
+      "swap_assignments_checked": 8
+    },
+    {
+      "S": 224,
+      "row_step": 2,
+      "anchor": 0,
+      "margin": 0,
+      "h": 65536,
+      "orientation": [
+        1,
+        1
+      ],
+      "block_rank": 336505344,
+      "invariant_rows": [
+        50206,
+        31
+      ],
+      "common_rows": [
+        30,
+        50207
+      ],
+      "protected_row_range": [
+        29,
+        50207
+      ],
+      "owner_rank": 1006895275,
+      "swap_assignments_checked": 8
+    },
+    {
+      "S": 256,
+      "row_step": 2,
+      "anchor": 0,
+      "margin": 0,
+      "h": 131072,
+      "orientation": [
+        0,
+        0
+      ],
+      "block_rank": 1073741824,
+      "invariant_rows": [
+        3,
+        65538
+      ],
+      "common_rows": [
+        2,
+        65539
+      ],
+      "protected_row_range": [
+        2,
+        65540
+      ],
+      "owner_rank": 3937053355,
+      "swap_assignments_checked": 8
+    },
+    {
+      "S": 288,
+      "row_step": 2,
+      "anchor": 0,
+      "margin": 0,
+      "h": 131072,
+      "orientation": [
+        0,
+        0
+      ],
+      "block_rank": 1319895168,
+      "invariant_rows": [
+        19,
+        82962
+      ],
+      "common_rows": [
+        18,
+        82963
+      ],
+      "protected_row_range": [
+        18,
+        82964
+      ],
+      "owner_rank": 3959685251,
+      "swap_assignments_checked": 8
+    },
+    {
+      "S": 25088,
+      "row_step": 28,
+      "anchor": 450,
+      "margin": 100000,
+      "h": 939524096,
+      "orientation": [
+        0,
+        0
+      ],
+      "block_rank": 346436368073344,
+      "invariant_rows": [
+        101053,
+        629508796
+      ],
+      "common_rows": [
+        101052,
+        629508797
+      ],
+      "protected_row_range": [
+        101052,
+        629508824
+      ],
+      "owner_rank": 1039311923488809,
+      "swap_assignments_checked": 8
+    },
+    {
+      "S": 50176,
+      "row_step": 28,
+      "anchor": 450,
+      "margin": 100000,
+      "h": 3758096384,
+      "orientation": [
+        0,
+        0
+      ],
+      "block_rank": 5542981724013184,
+      "invariant_rows": [
+        101053,
+        2517732028
+      ],
+      "common_rows": [
+        101052,
+        2517732029
+      ],
+      "protected_row_range": [
+        101052,
+        2517732056
+      ],
+      "owner_rank": 16628990940981289,
+      "swap_assignments_checked": 8
+    }
+  ],
+  "total_swap_assignments": 88
+}

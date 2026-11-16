@@ -1,0 +1,18 @@
+{
+  "side": 1024,
+  "offset": -2048,
+  "outer": 0,
+  "choices": 3,
+  "constraint_model": "certified_modular",
+  "events_file": "aligned_private_side1024_minus2048_events.npy",
+  "events": 2169330,
+  "core_vertices": 681379,
+  "core_events": 1619062,
+  "peeling_rounds": 15,
+  "solver": "g4",
+  "conflict_budget": 20000,
+  "event_sha256": "cb79f45c1930d8cd67dee8e1a05b68dc6cb6e05936de69489b30f9cd95413c51",
+  "status": "UNKNOWN_STOPPED_AT_USER_REQUEST",
+  "process_exit_code": 1,
+  "note": "The solver was interrupted at the requested stopping point. No SAT or UNSAT conclusion was obtained. The separately verified integer-choice solution does not answer this stronger modular problem."
+}

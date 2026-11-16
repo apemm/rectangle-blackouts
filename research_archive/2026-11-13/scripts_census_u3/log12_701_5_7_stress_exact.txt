@@ -1,0 +1,10 @@
+HDR h 701 B 17 l 733 p 53323 type (5,7) r0 1 T0 683 D0 18 k 0 T* 683 frows [659, 667, 675, 683] subclasses 11 kept 11 removed 231 heavy 0 edges 0
+VIOL sub 16 T -113 kind V5 family D10 comp Fe nL 1 labels [(165, 108)] nb False X0 1127005134 data (245066, 218, 245178, 659, 7)
+VIOL sub 16 T -113 kind V5 family D10 comp Fe nL 1 labels [(165, 108)] nb False X0 1127005134 data (245066, 218, 244954, 659, 7)
+VIOL sub 17 T -81 kind V5 family D10 comp Fe nL 1 labels [(165, 124)] nb False X0 898356110 data (245066, 250, 245234, 675, 16)
+VIOL sub 17 T -81 kind V5 family D10 comp Fe nL 1 labels [(165, 124)] nb False X0 898356110 data (245066, 250, 244898, 675, 16)
+VIOL sub 18 T -49 kind V5 family D10 comp Fe nL 1 labels [(165, 140)] nb False X0 669707086 data (245066, 282, 245198, 667, 11)
+VIOL sub 18 T -49 kind V5 family D10 comp Fe nL 1 labels [(165, 140)] nb False X0 669707086 data (245066, 282, 245246, 667, 20)
+SUMMARY type (5,7) stress exact subs 0..42 of 42 oob 0 pairs 0 triples 0 time 1.1
+   ('V5', 'D10', 1, 'deep') 6
+NEXT 42 42

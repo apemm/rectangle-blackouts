@@ -1,0 +1,7 @@
+HDR h 1501 B 20 l 1567 p 60083 type (28, 7) mode exact nosplit False NOCOLOUR None RHOSHIFT None GRAPH 1 {'r0': 3, 'yP': 57, 'T0': 1497, 'D0': 4, 'k': 0, 'Ts': 1497, 'frows': [1473, 1481, 1489, 1497]} subclasses 728 kept 298 relocfile 32 sizes [(1, 280), (2, 9)] removal reasons {'R-b 320': 415, 'B8 R_FF^+ (WD)': 261, 'R-e R_FF^o
+violations 0 max oob 0
+violations in windows with >= 2 kept labels (kind, family, #labels): {}
+two-or-more-label violations: 0
+B6 checked against R_IV: ok 0 bad 0
+FLAGS 0
+labels to relocate 0

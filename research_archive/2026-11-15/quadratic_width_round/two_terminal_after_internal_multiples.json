@@ -1,0 +1,552 @@
+[
+  {
+    "side": 32,
+    "orientation": "id",
+    "offset_types": 58579,
+    "modules_checked": 1698538,
+    "distinct_relations": 14,
+    "common_diagonal_bits": 0,
+    "drop_local_multiple": true,
+    "deleted_incident_labels": 600,
+    "central_anchor_exclusions": [
+      {
+        "offset": 100,
+        "anchors": [
+          412,
+          590
+        ],
+        "leaf": 484,
+        "relation": 495,
+        "edges": [
+          [
+            412,
+            484,
+            [
+              1
+            ]
+          ],
+          [
+            484,
+            590,
+            [
+              0,
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "offset": 100,
+        "anchors": [
+          484,
+          976
+        ],
+        "leaf": 590,
+        "relation": 495,
+        "edges": [
+          [
+            484,
+            590,
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            590,
+            976,
+            [
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "offset": -116,
+        "anchors": [
+          242,
+          702
+        ],
+        "leaf": 252,
+        "relation": 495,
+        "edges": [
+          [
+            242,
+            252,
+            [
+              -1
+            ]
+          ],
+          [
+            252,
+            702,
+            [
+              -1,
+              0
+            ]
+          ]
+        ]
+      },
+      {
+        "offset": -40,
+        "anchors": [
+          210,
+          597
+        ],
+        "leaf": 192,
+        "relation": 495,
+        "edges": [
+          [
+            192,
+            210,
+            [
+              -1,
+              1
+            ]
+          ],
+          [
+            192,
+            597,
+            [
+              0
+            ]
+          ]
+        ]
+      },
+      {
+        "offset": -40,
+        "anchors": [
+          218,
+          465
+        ],
+        "leaf": 200,
+        "relation": 495,
+        "edges": [
+          [
+            200,
+            218,
+            [
+              -1,
+              1
+            ]
+          ],
+          [
+            200,
+            465,
+            [
+              0
+            ]
+          ]
+        ]
+      },
+      {
+        "offset": -40,
+        "anchors": [
+          218,
+          605
+        ],
+        "leaf": 200,
+        "relation": 495,
+        "edges": [
+          [
+            200,
+            218,
+            [
+              -1,
+              1
+            ]
+          ],
+          [
+            200,
+            605,
+            [
+              0
+            ]
+          ]
+        ]
+      },
+      {
+        "offset": -40,
+        "anchors": [
+          184,
+          607
+        ],
+        "leaf": 202,
+        "relation": 495,
+        "edges": [
+          [
+            184,
+            202,
+            [
+              -1,
+              1
+            ]
+          ],
+          [
+            202,
+            607,
+            [
+              0
+            ]
+          ]
+        ]
+      },
+      {
+        "offset": -40,
+        "anchors": [
+          226,
+          613
+        ],
+        "leaf": 208,
+        "relation": 495,
+        "edges": [
+          [
+            208,
+            226,
+            [
+              -1,
+              1
+            ]
+          ],
+          [
+            208,
+            613,
+            [
+              0
+            ]
+          ]
+        ]
+      },
+      {
+        "offset": -40,
+        "anchors": [
+          192,
+          615
+        ],
+        "leaf": 210,
+        "relation": 495,
+        "edges": [
+          [
+            192,
+            210,
+            [
+              -1,
+              1
+            ]
+          ],
+          [
+            210,
+            615,
+            [
+              0
+            ]
+          ]
+        ]
+      },
+      {
+        "offset": -40,
+        "anchors": [
+          214,
+          461
+        ],
+        "leaf": 196,
+        "relation": 495,
+        "edges": [
+          [
+            196,
+            214,
+            [
+              -1,
+              1
+            ]
+          ],
+          [
+            196,
+            461,
+            [
+              0
+            ]
+          ]
+        ]
+      }
+    ],
+    "modules_excluding_all_equal_anchors": [],
+    "witnesses": [],
+    "seconds": 23.96899999998277
+  },
+  {
+    "side": 32,
+    "orientation": "swap",
+    "offset_types": 58391,
+    "modules_checked": 1699963,
+    "distinct_relations": 12,
+    "common_diagonal_bits": 0,
+    "drop_local_multiple": true,
+    "deleted_incident_labels": 665,
+    "central_anchor_exclusions": [
+      {
+        "offset": -40,
+        "anchors": [
+          460,
+          706
+        ],
+        "leaf": 688,
+        "relation": 495,
+        "edges": [
+          [
+            460,
+            688,
+            [
+              0
+            ]
+          ],
+          [
+            688,
+            706,
+            [
+              -1,
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "offset": -40,
+        "anchors": [
+          24,
+          713
+        ],
+        "leaf": 695,
+        "relation": 495,
+        "edges": [
+          [
+            24,
+            695,
+            [
+              0
+            ]
+          ],
+          [
+            695,
+            713,
+            [
+              -1,
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "offset": -40,
+        "anchors": [
+          51,
+          704
+        ],
+        "leaf": 722,
+        "relation": 495,
+        "edges": [
+          [
+            51,
+            722,
+            [
+              0
+            ]
+          ],
+          [
+            704,
+            722,
+            [
+              -1,
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "offset": -40,
+        "anchors": [
+          494,
+          704
+        ],
+        "leaf": 722,
+        "relation": 495,
+        "edges": [
+          [
+            494,
+            722,
+            [
+              0
+            ]
+          ],
+          [
+            704,
+            722,
+            [
+              -1,
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "offset": -40,
+        "anchors": [
+          16,
+          856
+        ],
+        "leaf": 874,
+        "relation": 495,
+        "edges": [
+          [
+            16,
+            874,
+            [
+              0
+            ]
+          ],
+          [
+            856,
+            874,
+            [
+              -1,
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "offset": -40,
+        "anchors": [
+          478,
+          688
+        ],
+        "leaf": 706,
+        "relation": 495,
+        "edges": [
+          [
+            478,
+            706,
+            [
+              0
+            ]
+          ],
+          [
+            688,
+            706,
+            [
+              -1,
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "offset": -40,
+        "anchors": [
+          720,
+          966
+        ],
+        "leaf": 738,
+        "relation": 495,
+        "edges": [
+          [
+            720,
+            738,
+            [
+              -1,
+              1
+            ]
+          ],
+          [
+            738,
+            966,
+            [
+              0
+            ]
+          ]
+        ]
+      },
+      {
+        "offset": -40,
+        "anchors": [
+          433,
+          866
+        ],
+        "leaf": 848,
+        "relation": 495,
+        "edges": [
+          [
+            433,
+            848,
+            [
+              0
+            ]
+          ],
+          [
+            848,
+            866,
+            [
+              -1,
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "offset": 39,
+        "anchors": [
+          158,
+          998
+        ],
+        "leaf": 1016,
+        "relation": 495,
+        "edges": [
+          [
+            158,
+            1016,
+            [
+              0
+            ]
+          ],
+          [
+            998,
+            1016,
+            [
+              -1,
+              1
+            ]
+          ]
+        ]
+      },
+      {
+        "offset": 40,
+        "anchors": [
+          589,
+          986
+        ],
+        "leaf": 571,
+        "relation": 495,
+        "edges": [
+          [
+            571,
+            589,
+            [
+              -1,
+              1
+            ]
+          ],
+          [
+            571,
+            986,
+            [
+              0
+            ]
+          ]
+        ]
+      }
+    ],
+    "modules_excluding_all_equal_anchors": [],
+    "witnesses": [],
+    "seconds": 23.078000000008615
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "h": 2048,
+  "S": 32,
+  "actual_edges": 94222,
+  "incident_labels": 157855,
+  "bipartite": true,
+  "odd_cycle_ranks": [],
+  "odd_cycle_coordinates": [],
+  "rank_thue_morse_counterexamples": [
+    [
+      16391,
+      16392
+    ],
+    [
+      16393,
+      16394
+    ],
+    [
+      16417,
+      16418
+    ],
+    [
+      16429,
+      16430
+    ]
+  ],
+  "coordinate_thue_morse_counterexamples": [
+    [
+      16387,
+      16388
+    ],
+    [
+      16391,
+      16392
+    ],
+    [
+      16427,
+      16428
+    ],
+    [
+      16466,
+      16471
+    ]
+  ]
+}

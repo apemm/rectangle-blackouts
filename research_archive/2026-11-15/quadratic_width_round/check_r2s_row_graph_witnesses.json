@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "triangle_rows": [
+    22251,
+    22271,
+    22307
+  ],
+  "star_source_row": 16576,
+  "outdegree_lower_bound": 6,
+  "directed_path_rows": [
+    168511,
+    168751,
+    168951,
+    168971,
+    169007
+  ],
+  "supports": 13,
+  "common_corner_colorings": 52,
+  "scope": "Individual realizable row-pair edges, not a simultaneous placement of all graph edges."
+}

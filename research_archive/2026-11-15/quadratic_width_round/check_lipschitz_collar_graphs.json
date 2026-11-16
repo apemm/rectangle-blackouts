@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "scope": "Finite graph-background checks only",
+  "cases": [
+    {
+      "width": 5,
+      "height": 5,
+      "rectangles": 130,
+      "graphs": 259,
+      "parked_one_white_presentations": 208,
+      "checkerboard_graphs": 42,
+      "adjacent_row_graphs": 125,
+      "ordinary_lipschitz_p_example": null
+    },
+    {
+      "width": 7,
+      "height": 6,
+      "rectangles": 443,
+      "graphs": 2658,
+      "parked_one_white_presentations": 4392,
+      "checkerboard_graphs": 188,
+      "adjacent_row_graphs": 636,
+      "ordinary_lipschitz_p_example": {
+        "rows": [
+          1,
+          1,
+          2,
+          2,
+          3,
+          4,
+          5
+        ],
+        "witness": [
+          2,
+          6,
+          1,
+          6
+        ]
+      }
+    },
+    {
+      "width": 9,
+      "height": 4,
+      "rectangles": 254,
+      "graphs": 8362,
+      "parked_one_white_presentations": 15572,
+      "checkerboard_graphs": 178,
+      "adjacent_row_graphs": 1534,
+      "ordinary_lipschitz_p_example": null
+    }
+  ]
+}

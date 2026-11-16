@@ -1,0 +1,4 @@
+HDR h 701 B 17 l 757 p 53299 type (10,0) r0 3 T0 645 D0 56 k 2 T* 517 frows [493, 501, 509, 517] subclasses 0 kept 0 removed 215 heavy 3 edges 0
+SUMMARY type (10,0) board exact subs 0..176 of 176 oob 0 pairs 0 triples 0 time 0.0
+PARKED {} SLLPC observed 0 shape_ok 0 predicted 0 in_V3 0
+NEXT 176 176

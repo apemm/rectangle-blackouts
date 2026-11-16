@@ -1,0 +1,207 @@
+{
+  "side": 1024,
+  "offset": -2048,
+  "vertices": 1048576,
+  "zero_edges": 1019611,
+  "components": 188075,
+  "nontrivial_components": 32263,
+  "isolated": 155812,
+  "cycle_rank": 159110,
+  "cyclic_components": 2,
+  "largest": [
+    {
+      "component": 127,
+      "vertices": 808525,
+      "edges": 967633,
+      "cycle_rank": 159109
+    },
+    {
+      "component": 908502,
+      "vertices": 27,
+      "edges": 26,
+      "cycle_rank": 0
+    },
+    {
+      "component": 433087,
+      "vertices": 23,
+      "edges": 22,
+      "cycle_rank": 0
+    },
+    {
+      "component": 622814,
+      "vertices": 19,
+      "edges": 18,
+      "cycle_rank": 0
+    },
+    {
+      "component": 783145,
+      "vertices": 18,
+      "edges": 17,
+      "cycle_rank": 0
+    },
+    {
+      "component": 45656,
+      "vertices": 18,
+      "edges": 17,
+      "cycle_rank": 0
+    },
+    {
+      "component": 431063,
+      "vertices": 17,
+      "edges": 17,
+      "cycle_rank": 1
+    },
+    {
+      "component": 1017405,
+      "vertices": 17,
+      "edges": 16,
+      "cycle_rank": 0
+    },
+    {
+      "component": 756728,
+      "vertices": 17,
+      "edges": 16,
+      "cycle_rank": 0
+    },
+    {
+      "component": 76041,
+      "vertices": 16,
+      "edges": 15,
+      "cycle_rank": 0
+    },
+    {
+      "component": 505796,
+      "vertices": 16,
+      "edges": 15,
+      "cycle_rank": 0
+    },
+    {
+      "component": 558196,
+      "vertices": 14,
+      "edges": 13,
+      "cycle_rank": 0
+    },
+    {
+      "component": 714290,
+      "vertices": 14,
+      "edges": 13,
+      "cycle_rank": 0
+    },
+    {
+      "component": 102062,
+      "vertices": 14,
+      "edges": 13,
+      "cycle_rank": 0
+    },
+    {
+      "component": 40331,
+      "vertices": 14,
+      "edges": 13,
+      "cycle_rank": 0
+    },
+    {
+      "component": 1020265,
+      "vertices": 14,
+      "edges": 13,
+      "cycle_rank": 0
+    },
+    {
+      "component": 170569,
+      "vertices": 14,
+      "edges": 13,
+      "cycle_rank": 0
+    },
+    {
+      "component": 431257,
+      "vertices": 13,
+      "edges": 12,
+      "cycle_rank": 0
+    },
+    {
+      "component": 442141,
+      "vertices": 13,
+      "edges": 12,
+      "cycle_rank": 0
+    },
+    {
+      "component": 565188,
+      "vertices": 13,
+      "edges": 12,
+      "cycle_rank": 0
+    },
+    {
+      "component": 957449,
+      "vertices": 13,
+      "edges": 12,
+      "cycle_rank": 0
+    },
+    {
+      "component": 537,
+      "vertices": 13,
+      "edges": 12,
+      "cycle_rank": 0
+    },
+    {
+      "component": 111413,
+      "vertices": 13,
+      "edges": 12,
+      "cycle_rank": 0
+    },
+    {
+      "component": 445669,
+      "vertices": 13,
+      "edges": 12,
+      "cycle_rank": 0
+    },
+    {
+      "component": 354861,
+      "vertices": 13,
+      "edges": 12,
+      "cycle_rank": 0
+    },
+    {
+      "component": 669755,
+      "vertices": 13,
+      "edges": 12,
+      "cycle_rank": 0
+    },
+    {
+      "component": 477630,
+      "vertices": 13,
+      "edges": 12,
+      "cycle_rank": 0
+    },
+    {
+      "component": 966742,
+      "vertices": 13,
+      "edges": 12,
+      "cycle_rank": 0
+    },
+    {
+      "component": 339343,
+      "vertices": 13,
+      "edges": 12,
+      "cycle_rank": 0
+    },
+    {
+      "component": 360473,
+      "vertices": 12,
+      "edges": 11,
+      "cycle_rank": 0
+    }
+  ],
+  "nonzero_events": 1149719,
+  "nonzero_within_zero_component": 691579,
+  "nonzero_between_zero_components": 458140,
+  "components_at_least_2": 32263,
+  "components_at_least_3": 10504,
+  "components_at_least_4": 4401,
+  "components_at_least_8": 364,
+  "components_at_least_16": 11,
+  "components_at_least_32": 1,
+  "components_at_least_64": 1,
+  "components_at_least_128": 1,
+  "components_at_least_256": 1,
+  "components_at_least_1024": 1,
+  "seconds": 1.625
+}

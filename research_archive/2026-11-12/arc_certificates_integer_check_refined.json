@@ -1,0 +1,20 @@
+{
+  "self_check_through": 128,
+  "results": [
+    {
+      "certificate": "C:\\Users\\arjun\\OneDrive\\Documents\\GitHub\\Kagey-Problems\\kagey-problems\\problem001\\research\\2026-11-12\\arc_certificate_h16384_refined.json",
+      "sha256": "35a7f116516c8050b3212f2d33a6dd1c8bcf047308913880bbf1c664a523caa0",
+      "h": 16384,
+      "status": "PASS",
+      "declared_classes": 36165,
+      "nonempty_classes": 36165,
+      "labels": 67108864,
+      "diagonals": 16383,
+      "distinct_absolute_gaps": 41271,
+      "smallest_arc_inequality_slack": 0,
+      "elapsed_seconds": 4.247,
+      "odd_hypotenuse_triangles": 11747,
+      "admissible_signed_gap_incidences": 41271
+    }
+  ]
+}

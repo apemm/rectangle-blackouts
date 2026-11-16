@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "n_min": 2,
+  "n_max": 32,
+  "addresses": [
+    "000",
+    "001",
+    "020",
+    "120"
+  ],
+  "point_identities_checked": 47864
+}

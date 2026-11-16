@@ -1,0 +1,8 @@
+build 0.8 A-sets 236
+A (1, 6, 8, 9, 10) K 12 windows 0
+A (1, 7, 8, 9, 10) K 12 windows 0
+A (2, 3, 4, 5, 6) K 12 windows 0
+A (2, 3, 4, 5, 7) K 12 windows 0
+A (2, 3, 4, 5, 8) K 12 windows 0
+A (2, 3, 4, 5, 9) K 12 windows 0
+total sec 49.7

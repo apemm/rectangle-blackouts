@@ -1,0 +1,6 @@
+build 0.5 A-sets 236
+A (2, 3, 4, 7, 9) K 12 windows 0
+A (2, 3, 4, 7, 10) K 12 windows 0
+A (2, 3, 4, 8, 9) K 12 windows 0
+A (2, 3, 4, 8, 10) K 12 windows 0
+A (2, 3, 4, 9, 10) K 12 windows 0

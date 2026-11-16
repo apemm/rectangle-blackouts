@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "stride": 32,
+  "odd_y_upper_exclusive": 4096,
+  "odd_y_tested": 2048,
+  "vectors": 1285,
+  "independent_enumerations_agree": true,
+  "pairs_in_q_span_at_most_four": [],
+  "triples_in_q_span_at_most_four": []
+}

@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "S": 4,
+      "s": 32,
+      "q": 1023,
+      "h": 1046592,
+      "assignments": 81,
+      "common_colorings": 972
+    },
+    {
+      "S": 8,
+      "s": 128,
+      "q": 16383,
+      "h": 268402944,
+      "assignments": 81,
+      "common_colorings": 972
+    },
+    {
+      "S": 32,
+      "s": 2048,
+      "q": 4194303,
+      "h": 17592177659904,
+      "assignments": 81,
+      "common_colorings": 972
+    },
+    {
+      "S": 128,
+      "s": 32768,
+      "q": 1073741823,
+      "h": 1152921502459428864,
+      "assignments": 81,
+      "common_colorings": 972
+    }
+  ],
+  "scope": "Arbitrary prescribed tile order, not Hilbert."
+}

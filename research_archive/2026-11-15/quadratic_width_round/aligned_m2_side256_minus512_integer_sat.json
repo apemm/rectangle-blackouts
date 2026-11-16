@@ -1,0 +1,22 @@
+{
+  "side": 256,
+  "events_file": "aligned_m2_side256_minus512_events.npy",
+  "choices": 2,
+  "events": 100178,
+  "core_vertices": 47495,
+  "core_events": 87968,
+  "peeling_rounds": 6,
+  "solver": "g4",
+  "conflict_budget": 10000,
+  "seconds_budget": 60.0,
+  "constraint_model": "actual_integer_differences",
+  "event_sha256": "b17243d7f964b9967d41b12d7fa57bc4e070f0c7c798c76263e2a8cb9ade846b",
+  "solver_stats": {
+    "restarts": 1,
+    "conflicts": 2,
+    "decisions": 2,
+    "propagations": 1
+  },
+  "status": "UNSAT_SOLVER_REPORT_NOT_INDEPENDENTLY_PROVED",
+  "seconds": 0.25
+}

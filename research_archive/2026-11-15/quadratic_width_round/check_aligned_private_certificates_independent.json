@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "side": 512,
+      "offset": -1024,
+      "outer": 0,
+      "model": "modular",
+      "status": "PASS: independently peeled, extended, and checked without search",
+      "events": 467224,
+      "core_vertices": 119664,
+      "core_events": 258580,
+      "peeled_vertices": 142480,
+      "core_modular_hits": 0,
+      "full_modular_hits": 0,
+      "producer_masks_match_independent_isqrt": true,
+      "integer_mask_histogram": {
+        "1": 120361,
+        "2": 120067,
+        "3": 226796
+      },
+      "events_sha256": "843b2baf0b0d7605b5c2fc19916256547fde689ffd65e62a7f8e007041895346",
+      "full_colors_sha256": "d3a0c2d8ef1f05c79ce212fd488522b6bcd15a20b5540fca4f17912c58c17542",
+      "full_certificate": "aligned_private_side512_minus1024_sat_independent_full.npz",
+      "seconds": 2.406
+    },
+    {
+      "side": 1024,
+      "offset": -2048,
+      "outer": 0,
+      "model": "integer",
+      "status": "PASS: independently peeled, extended, and checked without search",
+      "events": 2169330,
+      "core_vertices": 681379,
+      "core_events": 1619062,
+      "peeled_vertices": 367197,
+      "core_modular_hits": 119919,
+      "full_modular_hits": 148116,
+      "producer_masks_match_independent_isqrt": true,
+      "integer_mask_histogram": {
+        "1": 571251,
+        "2": 578468,
+        "3": 1019611
+      },
+      "events_sha256": "cb79f45c1930d8cd67dee8e1a05b68dc6cb6e05936de69489b30f9cd95413c51",
+      "full_colors_sha256": "06538b5d68fdf64d87fddcb398605e01c1dd60ab1f9c98ed6cf445aafe9e7ced",
+      "full_certificate": "aligned_private_side1024_minus2048_integer_sat_independent_full.npz",
+      "seconds": 17.031
+    }
+  ],
+  "scope": "Every supplied event is checked against exact norms. Completeness of the supplied event universe uses the separately audited complete rank-lag generator. No finite-strip owner claim."
+}

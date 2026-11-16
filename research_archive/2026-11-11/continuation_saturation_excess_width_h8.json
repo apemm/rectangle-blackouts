@@ -1,0 +1,21 @@
+{
+  "height": 8,
+  "width": 9,
+  "row_part": null,
+  "status": "UNSAT",
+  "corner_shape_mode": "all",
+  "complete_family": false,
+  "min_row_degree": 0,
+  "unrestricted_triangle_free_graph": true,
+  "solver": "cadical195",
+  "pysat_version": "1.9.dev21",
+  "process_limit_seconds": 20,
+  "limit_enforced": true,
+  "build_seconds": 0.0,
+  "elapsed_seconds": 0.20299999999406282,
+  "tilted_rectangle_count": 542,
+  "corner_supports": 2168,
+  "variables": 792,
+  "clauses": 4336,
+  "formal_unsat_proof_saved": false
+}

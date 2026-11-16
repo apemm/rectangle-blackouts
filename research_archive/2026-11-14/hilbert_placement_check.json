@@ -1,0 +1,527 @@
+{
+  "orders": [
+    {
+      "q": 1,
+      "pairs": 0,
+      "largest_observed_holder_ratio": 0.0
+    },
+    {
+      "q": 2,
+      "pairs": 6,
+      "largest_observed_holder_ratio": 1.0
+    },
+    {
+      "q": 4,
+      "pairs": 120,
+      "largest_observed_holder_ratio": 2.25
+    },
+    {
+      "q": 8,
+      "pairs": 2016,
+      "largest_observed_holder_ratio": 3.5714285714285716
+    },
+    {
+      "q": 16,
+      "pairs": 32640,
+      "largest_observed_holder_ratio": 4.481481481481482
+    },
+    {
+      "q": 32,
+      "pairs": 523776,
+      "largest_observed_holder_ratio": 5.232558139534884
+    }
+  ],
+  "local_choices": [
+    {
+      "q": 16,
+      "M": 1,
+      "row_step": 2,
+      "stride": 32,
+      "pairs": 32640,
+      "status": "PASS"
+    },
+    {
+      "q": 16,
+      "M": 1,
+      "row_step": 14,
+      "stride": 1568,
+      "pairs": 32640,
+      "status": "PASS"
+    },
+    {
+      "q": 16,
+      "M": 2,
+      "row_step": 2,
+      "stride": 32,
+      "pairs": 32640,
+      "status": "PASS"
+    },
+    {
+      "q": 16,
+      "M": 2,
+      "row_step": 14,
+      "stride": 1568,
+      "pairs": 32640,
+      "status": "PASS"
+    },
+    {
+      "q": 16,
+      "M": 7,
+      "row_step": 2,
+      "stride": 32,
+      "pairs": 32640,
+      "status": "PASS"
+    },
+    {
+      "q": 16,
+      "M": 7,
+      "row_step": 14,
+      "stride": 1568,
+      "pairs": 32640,
+      "status": "PASS"
+    }
+  ],
+  "rival_census": [
+    {
+      "h": 128,
+      "stride": 32,
+      "labels": 4096,
+      "opposite_parity_integral_distance_pairs": 0,
+      "mean_incidence": 0.0,
+      "maximum_incidence": 0,
+      "degree_histogram": {
+        "0": 4096
+      },
+      "witnesses": []
+    },
+    {
+      "h": 256,
+      "stride": 32,
+      "labels": 16384,
+      "opposite_parity_integral_distance_pairs": 0,
+      "mean_incidence": 0.0,
+      "maximum_incidence": 0,
+      "degree_histogram": {
+        "0": 16384
+      },
+      "witnesses": []
+    },
+    {
+      "h": 512,
+      "stride": 32,
+      "labels": 65536,
+      "opposite_parity_integral_distance_pairs": 5565,
+      "mean_incidence": 0.169830322265625,
+      "maximum_incidence": 2,
+      "degree_histogram": {
+        "0": 56191,
+        "1": 7560,
+        "2": 1785
+      },
+      "witnesses": [
+        {
+          "rank_pair": [
+            16386,
+            16387
+          ],
+          "X": 32,
+          "y": 255,
+          "L": 257,
+          "labels": [
+            [
+              1,
+              129
+            ],
+            [
+              1,
+              128
+            ]
+          ]
+        },
+        {
+          "rank_pair": [
+            16387,
+            16388
+          ],
+          "X": 32,
+          "y": 255,
+          "L": 257,
+          "labels": [
+            [
+              1,
+              128
+            ],
+            [
+              2,
+              128
+            ]
+          ]
+        },
+        {
+          "rank_pair": [
+            16426,
+            16427
+          ],
+          "X": 32,
+          "y": 255,
+          "L": 257,
+          "labels": [
+            [
+              7,
+              135
+            ],
+            [
+              7,
+              134
+            ]
+          ]
+        },
+        {
+          "rank_pair": [
+            16522,
+            16523
+          ],
+          "X": 32,
+          "y": 255,
+          "L": 257,
+          "labels": [
+            [
+              11,
+              139
+            ],
+            [
+              11,
+              138
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "h": 1024,
+      "stride": 32,
+      "labels": 262144,
+      "opposite_parity_integral_distance_pairs": 26501,
+      "mean_incidence": 0.20218658447265625,
+      "maximum_incidence": 4,
+      "degree_histogram": {
+        "0": 218300,
+        "1": 35650,
+        "2": 7429,
+        "3": 566,
+        "4": 199
+      },
+      "witnesses": [
+        {
+          "rank_pair": [
+            5460,
+            5461
+          ],
+          "X": 32,
+          "y": 255,
+          "L": 257,
+          "labels": [
+            [
+              0,
+              126
+            ],
+            [
+              0,
+              127
+            ]
+          ]
+        },
+        {
+          "rank_pair": [
+            5461,
+            5462
+          ],
+          "X": 32,
+          "y": 255,
+          "L": 257,
+          "labels": [
+            [
+              0,
+              127
+            ],
+            [
+              1,
+              127
+            ]
+          ]
+        },
+        {
+          "rank_pair": [
+            16384,
+            16385
+          ],
+          "X": 32,
+          "y": -255,
+          "L": 257,
+          "labels": [
+            [
+              128,
+              0
+            ],
+            [
+              129,
+              0
+            ]
+          ]
+        },
+        {
+          "rank_pair": [
+            16385,
+            16386
+          ],
+          "X": 32,
+          "y": -255,
+          "L": 257,
+          "labels": [
+            [
+              129,
+              0
+            ],
+            [
+              129,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "h": 2048,
+      "stride": 32,
+      "labels": 1048576,
+      "opposite_parity_integral_distance_pairs": 155479,
+      "mean_incidence": 0.2965526580810547,
+      "maximum_incidence": 5,
+      "degree_histogram": {
+        "0": 795363,
+        "1": 202582,
+        "2": 44343,
+        "3": 5491,
+        "4": 768,
+        "5": 29
+      },
+      "witnesses": [
+        {
+          "rank_pair": [
+            16386,
+            16387
+          ],
+          "X": 32,
+          "y": 255,
+          "L": 257,
+          "labels": [
+            [
+              1,
+              129
+            ],
+            [
+              1,
+              128
+            ]
+          ]
+        },
+        {
+          "rank_pair": [
+            16387,
+            16388
+          ],
+          "X": 32,
+          "y": 255,
+          "L": 257,
+          "labels": [
+            [
+              1,
+              128
+            ],
+            [
+              2,
+              128
+            ]
+          ]
+        },
+        {
+          "rank_pair": [
+            16426,
+            16427
+          ],
+          "X": 32,
+          "y": 255,
+          "L": 257,
+          "labels": [
+            [
+              7,
+              135
+            ],
+            [
+              7,
+              134
+            ]
+          ]
+        },
+        {
+          "rank_pair": [
+            16522,
+            16523
+          ],
+          "X": 32,
+          "y": 255,
+          "L": 257,
+          "labels": [
+            [
+              11,
+              139
+            ],
+            [
+              11,
+              138
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "h": 128,
+      "stride": 64,
+      "labels": 4096,
+      "opposite_parity_integral_distance_pairs": 0,
+      "mean_incidence": 0.0,
+      "maximum_incidence": 0,
+      "degree_histogram": {
+        "0": 4096
+      },
+      "witnesses": []
+    },
+    {
+      "h": 256,
+      "stride": 64,
+      "labels": 16384,
+      "opposite_parity_integral_distance_pairs": 0,
+      "mean_incidence": 0.0,
+      "maximum_incidence": 0,
+      "degree_histogram": {
+        "0": 16384
+      },
+      "witnesses": []
+    },
+    {
+      "h": 512,
+      "stride": 64,
+      "labels": 65536,
+      "opposite_parity_integral_distance_pairs": 0,
+      "mean_incidence": 0.0,
+      "maximum_incidence": 0,
+      "degree_histogram": {
+        "0": 65536
+      },
+      "witnesses": []
+    },
+    {
+      "h": 1024,
+      "stride": 64,
+      "labels": 262144,
+      "opposite_parity_integral_distance_pairs": 0,
+      "mean_incidence": 0.0,
+      "maximum_incidence": 0,
+      "degree_histogram": {
+        "0": 262144
+      },
+      "witnesses": []
+    },
+    {
+      "h": 2048,
+      "stride": 64,
+      "labels": 1048576,
+      "opposite_parity_integral_distance_pairs": 42780,
+      "mean_incidence": 0.08159637451171875,
+      "maximum_incidence": 2,
+      "degree_histogram": {
+        "0": 972573,
+        "1": 66446,
+        "2": 9557
+      },
+      "witnesses": [
+        {
+          "rank_pair": [
+            262146,
+            262147
+          ],
+          "X": 64,
+          "y": 1023,
+          "L": 1025,
+          "labels": [
+            [
+              1,
+              513
+            ],
+            [
+              1,
+              512
+            ]
+          ]
+        },
+        {
+          "rank_pair": [
+            262147,
+            262148
+          ],
+          "X": 64,
+          "y": 1023,
+          "L": 1025,
+          "labels": [
+            [
+              1,
+              512
+            ],
+            [
+              2,
+              512
+            ]
+          ]
+        },
+        {
+          "rank_pair": [
+            262186,
+            262187
+          ],
+          "X": 64,
+          "y": 1023,
+          "L": 1025,
+          "labels": [
+            [
+              7,
+              519
+            ],
+            [
+              7,
+              518
+            ]
+          ]
+        },
+        {
+          "rank_pair": [
+            262282,
+            262283
+          ],
+          "X": 64,
+          "y": 1023,
+          "L": 1025,
+          "labels": [
+            [
+              11,
+              523
+            ],
+            [
+              11,
+              522
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

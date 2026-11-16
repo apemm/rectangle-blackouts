@@ -1,0 +1,15 @@
+{
+  "side": 8,
+  "statistics": {
+    "offsets": 22339,
+    "maximum_contraction_rounds": 0,
+    "maximum_contracted_vertices": 0,
+    "weighted_two_degenerate_offsets": 22339,
+    "reduction_solved_offsets": 22339
+  },
+  "raw_core_size_histogram": {},
+  "final_core_size_histogram": {},
+  "small_raw_cores": [],
+  "small_final_cores": [],
+  "seconds": 0.297
+}

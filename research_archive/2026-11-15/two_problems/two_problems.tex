@@ -1,0 +1,119 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.95in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks,urlcolor=blue]{hyperref}
+\newtheorem*{problem1}{Problem 1}
+\newtheorem*{problem2}{Problem 2}
+\setlength{\parskip}{4pt}
+\title{Two problems on rectangle blackouts}
+\author{Arjun Pemmasani}
+\date{15 November 2026}
+\begin{document}
+\maketitle
+
+\section*{Setting}
+
+Take the $h\times m$ grid of lattice points. A \emph{blackout} is a set $S$ of grid points such
+that every rectangle with its 4 corners on grid points, tilted rectangles included, is determined
+by its corners outside $S$. Let $f(h,m)$ be the largest size of a blackout. This is Problem~001
+of Peter Kagey's Open Problem Collection (OEIS A397315).
+
+Put $q_h=\lfloor h^2/4\rfloor$. For $m\ge3$ we have $f(h,m)\le m+q_h$. Let $m_h$ be the least
+width such that $f(h,m)=m+q_h$ for every $m\ge m_h$. I can prove
+\[
+ q_h\le m_h\le C\,h^2\,\tau^*(h)^2,
+\]
+where $\tau^*(h)$ is the largest number of divisors of an integer up to $h^2$. I also have a draft
+proof of $m_h\le C_\varepsilon h^2(\log h)^{1.3108+\varepsilon}$. The values are $m_4=6$, $m_5=8$,
+$m_6=15$ and $m_7\le21$. Two questions remain. Is $m_h=O(h^2)$? Is $m_h>q_h$ for every $h$?
+
+\section*{Problem 1. Bounded choices on a Hilbert curve}
+
+My constructions place one pair of black points for each edge of a complete bipartite graph on
+the rows. The main obstruction is a pair of points in rows of opposite parity at an integer
+distance. The cleanest form of the question is the following.
+
+Let $s=2^k$ and let $r(i,j)\in\{0,\dots,s^2-1\}$ be the Hilbert rank of the cell $(i,j)$,
+$0\le i,j<s$. Fix integers $S\ge1$ and $M\ge1$. A \emph{choice} is a function
+$\xi$ from the cells to $\{0,\dots,M-1\}$. Put $c(i,j)=M\,r(i,j)+\xi(i,j)$. An ordered pair of distinct cells
+$u=(i_u,j_u)$ and $v=(i_v,j_v)$ \emph{collides} if
+\[
+ \bigl(S\,(c(v)-c(u))\bigr)^2+\bigl(2(j_v-i_u)-4s+1\bigr)^2
+\]
+is a perfect square.
+
+\begin{problem1}
+Are there constants $S$ and $M$ such that, for every $k$, some choice has no colliding ordered pair?
+\end{problem1}
+
+What I know.
+\begin{itemize}
+\item Collisions have a simple form. Write $Y=|2(j_v-i_u)-4s+1|$ and $q=|c(v)-c(u)|$. The pair
+collides if and only if $Y=gef$ and $q=g(f^2-e^2)/(2S)$ for odd integers $g,e,f$ with $e<f$
+coprime. For $S\ge4$ a power of 2 this needs $f\equiv\pm e\pmod S$.
+\item For $S=32$ and $M=3$ a choice with no collision exists for $s=1024$. I found it by
+computer and checked all $2{,}169{,}330$ candidate pairs. For $S=32$ and $M=2$ no choice exists
+for $s=256$, by an odd cycle of 51 pairs.
+\item The number of candidate partners of a cell grows. I sampled 2000 cells for each
+$s=2^9,\dots,2^{16}$. The mean is about $(21.5/S)\log_2 s$ plus a constant, for $S=32$ and
+$S=64$. Hence no argument through bounded degree can answer the problem.
+\item The arithmetic alone does not help. Every finite colouring of the odd positive integers has
+distinct $u,v$ of one colour with $u^2+4(v-u)^2$ a square. I proved this by adapting the work of
+Frantzikinakis, Klurman and Moreira on partition regularity of Pythagorean pairs. A positive
+answer must use the Hilbert order.
+\item If the pairs acted independently, a first-moment count would give no valid choice for
+$M=3$ beyond about $s=2^{16}$, and a larger $M$ would not help. I do not know whether the
+pairs are close to independent.
+\end{itemize}
+
+A negative answer would suggest that my method cannot reach $m_h=O(h^2)$. With $S$ of order
+$\log s$ the degree stays bounded, and the method then aims at $h^2\log h$. I would also like
+to know whether $m_h/h^2$ is unbounded. For $h\ge12$ I have no lower bound for $m_h$ above $q_h$.
+
+\section*{Problem 2. All-double windows}
+
+Let $h\ge4$ and let $(A,B)$ be a partition of the rows $\{1,\dots,h\}$ with
+$|A|=\lceil h/2\rceil$ and $|B|=\lfloor h/2\rfloor$. A \emph{window} of width $k$ is a set $P$ of
+$2k$ points of the $h\times k$ grid with 3 properties. First, every column has 2 points of $P$,
+one in a row of $A$ and one in a row of $B$. Second, the $k$ row pairs are distinct. Third, every
+tilted lattice rectangle with its 4 corners in the $h\times k$ grid has at most 2 corners in $P$.
+Let $W(h)$ be the largest width of a window, over all such partitions.
+
+\begin{problem2}
+Prove that $W(h)\le h$ for every $h\ge4$.
+\end{problem2}
+
+Why it matters. In a blackout of size $m+q_h$, every run of consecutive columns with 2 black
+points is a window. Hence
+\[
+ m_h\ge q_h+\left\lfloor\frac{q_h-1}{W(h)}\right\rfloor .
+\]
+So $W(h)\le h$ gives $m_h\ge q_h+h/4-O(1)$, and even $W(h)<q_h$ gives $m_h>q_h$. At present I
+cannot prove $m_h>q_h$ for $h\ge12$.
+
+What I know.
+\begin{itemize}
+\item $W(h)\ge h$ for every $h\ge4$. For even $h$ take the columns
+$\{1,2\},\{2,3\},\dots,\{h-1,h\},\{1,h\}$ with the parity partition.
+\item $W(h)=h$ for $4\le h\le11$, by exhaustive search. Two programs agree for $h\le10$.
+\item Suppose a window contains the graph of a walk $f$ with $|f(x+1)-f(x)|=1$ across all its
+columns. Then its width is at most $h$.
+\item Rectangles with sides of slope $\pm1$ are not enough. A point set on 2 adjacent lines of
+slope 1 has no tilted right angle, and sets that meet only the slope $\pm1$ condition can be
+wider than $h$ for $h=5,6,9$.
+\item A right angle whose 2 legs point to the same side has its fourth corner at most
+$\lfloor(h-1)/2\rfloor$ columns beyond the farther leg. So the problem reduces, with a loss of
+$h$ columns, to sets with no such right angle at all.
+\end{itemize}
+
+The windows of width $h$ for $h\le10$ are not all close to 2 adjacent lines. They have many
+points in the top and bottom rows.
+
+\section*{Files}
+
+Notes, programs and certificates are at
+\url{https://github.com/apemm/rectangle-blackouts}. I would be glad to hear of any related
+result, in particular on point sets with no right angle and on colourings that avoid Pythagorean
+pairs along a space-filling curve.
+
+\end{document}

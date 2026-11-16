@@ -1,0 +1,43 @@
+{
+  "height": 7,
+  "width": 7,
+  "rectangles": 640,
+  "raw_supports": 96942,
+  "minimal_supports": 23422,
+  "variables": 189,
+  "clauses": 23702,
+  "build_seconds": 0.5469999999913853,
+  "solve_status": "SAT",
+  "seconds": 0.6869999999908032,
+  "word": [
+    [
+      1,
+      7
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "direct_presentation_check": "PASS"
+}

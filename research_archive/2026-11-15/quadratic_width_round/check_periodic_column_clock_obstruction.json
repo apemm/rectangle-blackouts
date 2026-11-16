@@ -1,0 +1,1647 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "pattern": [
+        128
+      ],
+      "n": 16,
+      "horizontal_span": 32640,
+      "v2_span": 7,
+      "half_factor": 255,
+      "h": 8357880,
+      "A": 5223675,
+      "B": 6267900,
+      "padded_side": 536870912,
+      "offsets": [
+        201065409,
+        199759618
+      ],
+      "patterns": [
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            15,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            0,
+            15
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            15,
+            0
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            15,
+            0
+          ],
+          "exit": [
+            15,
+            15
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            15,
+            15
+          ],
+          "exit": [
+            15,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            15,
+            15
+          ],
+          "exit": [
+            0,
+            15
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            15
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            15
+          ],
+          "exit": [
+            15,
+            15
+          ],
+          "kind": "mixed"
+        }
+      ]
+    },
+    {
+      "pattern": [
+        128
+      ],
+      "n": 32,
+      "horizontal_span": 130944,
+      "v2_span": 7,
+      "half_factor": 1023,
+      "h": 33529848,
+      "A": 20956155,
+      "B": 25145340,
+      "padded_side": 2147483648,
+      "offsets": [
+        804258561,
+        799020034
+      ],
+      "patterns": [
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            31,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            0,
+            31
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            31,
+            0
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            31,
+            0
+          ],
+          "exit": [
+            31,
+            31
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            31,
+            31
+          ],
+          "exit": [
+            31,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            31,
+            31
+          ],
+          "exit": [
+            0,
+            31
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            31
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            31
+          ],
+          "exit": [
+            31,
+            31
+          ],
+          "kind": "mixed"
+        }
+      ]
+    },
+    {
+      "pattern": [
+        128
+      ],
+      "n": 64,
+      "horizontal_span": 524160,
+      "v2_span": 7,
+      "half_factor": 4095,
+      "h": 134217720,
+      "A": 83886075,
+      "B": 100655100,
+      "padded_side": 8589934592,
+      "offsets": [
+        3217031169,
+        3196061698
+      ],
+      "patterns": [
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            63,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            0,
+            63
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            63,
+            0
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            63,
+            0
+          ],
+          "exit": [
+            63,
+            63
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            63,
+            63
+          ],
+          "exit": [
+            63,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            63,
+            63
+          ],
+          "exit": [
+            0,
+            63
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            63
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            63
+          ],
+          "exit": [
+            63,
+            63
+          ],
+          "kind": "mixed"
+        }
+      ]
+    },
+    {
+      "pattern": [
+        128,
+        132
+      ],
+      "n": 16,
+      "horizontal_span": 33148,
+      "v2_span": 2,
+      "half_factor": 8287,
+      "h": 331480,
+      "A": 207175,
+      "B": 232036,
+      "padded_side": 33554432,
+      "offsets": [
+        12572554,
+        12524904
+      ],
+      "patterns": [
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            15,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            0,
+            15
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            15,
+            0
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            15,
+            0
+          ],
+          "exit": [
+            15,
+            15
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            15,
+            15
+          ],
+          "exit": [
+            15,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            15,
+            15
+          ],
+          "exit": [
+            0,
+            15
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            15
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            15
+          ],
+          "exit": [
+            15,
+            15
+          ],
+          "kind": "mixed"
+        }
+      ]
+    },
+    {
+      "pattern": [
+        128,
+        132
+      ],
+      "n": 32,
+      "horizontal_span": 132988,
+      "v2_span": 2,
+      "half_factor": 33247,
+      "h": 1329880,
+      "A": 831175,
+      "B": 930916,
+      "padded_side": 134217728,
+      "offsets": [
+        50290090,
+        50098920
+      ],
+      "patterns": [
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            31,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            0,
+            31
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            31,
+            0
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            31,
+            0
+          ],
+          "exit": [
+            31,
+            31
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            31,
+            31
+          ],
+          "exit": [
+            31,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            31,
+            31
+          ],
+          "exit": [
+            0,
+            31
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            31
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            31
+          ],
+          "exit": [
+            31,
+            31
+          ],
+          "kind": "mixed"
+        }
+      ]
+    },
+    {
+      "pattern": [
+        128,
+        132
+      ],
+      "n": 64,
+      "horizontal_span": 532348,
+      "v2_span": 2,
+      "half_factor": 133087,
+      "h": 5323480,
+      "A": 3327175,
+      "B": 3726436,
+      "padded_side": 536870912,
+      "offsets": [
+        201160234,
+        200394984
+      ],
+      "patterns": [
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            63,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            0,
+            63
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            63,
+            0
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            63,
+            0
+          ],
+          "exit": [
+            63,
+            63
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            63,
+            63
+          ],
+          "exit": [
+            63,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            63,
+            63
+          ],
+          "exit": [
+            0,
+            63
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            63
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            63
+          ],
+          "exit": [
+            63,
+            63
+          ],
+          "kind": "mixed"
+        }
+      ]
+    },
+    {
+      "pattern": [
+        128,
+        256
+      ],
+      "n": 16,
+      "horizontal_span": 48896,
+      "v2_span": 8,
+      "half_factor": 191,
+      "h": 25036280,
+      "A": 15647675,
+      "B": 18776828,
+      "padded_side": 2147483648,
+      "offsets": [
+        804523985,
+        800612162
+      ],
+      "patterns": [
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            15,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            0,
+            15
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            15,
+            0
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            15,
+            0
+          ],
+          "exit": [
+            15,
+            15
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            15,
+            15
+          ],
+          "exit": [
+            15,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            15,
+            15
+          ],
+          "exit": [
+            0,
+            15
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            15
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            15
+          ],
+          "exit": [
+            15,
+            15
+          ],
+          "kind": "mixed"
+        }
+      ]
+    },
+    {
+      "pattern": [
+        128,
+        256
+      ],
+      "n": 32,
+      "horizontal_span": 196352,
+      "v2_span": 8,
+      "half_factor": 767,
+      "h": 100538360,
+      "A": 62836475,
+      "B": 75402236,
+      "padded_side": 8589934592,
+      "offsets": [
+        3218083649,
+        3202374914
+      ],
+      "patterns": [
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            31,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            0,
+            31
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            31,
+            0
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            31,
+            0
+          ],
+          "exit": [
+            31,
+            31
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            31,
+            31
+          ],
+          "exit": [
+            31,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            31,
+            31
+          ],
+          "exit": [
+            0,
+            31
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            31
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            31
+          ],
+          "exit": [
+            31,
+            31
+          ],
+          "kind": "mixed"
+        }
+      ]
+    },
+    {
+      "pattern": [
+        128,
+        256
+      ],
+      "n": 64,
+      "horizontal_span": 786176,
+      "v2_span": 8,
+      "half_factor": 3071,
+      "h": 402546680,
+      "A": 251591675,
+      "B": 301903868,
+      "padded_side": 34359738368,
+      "offsets": [
+        12872322305,
+        12809425922
+      ],
+      "patterns": [
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            63,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            0,
+            63
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            63,
+            0
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            63,
+            0
+          ],
+          "exit": [
+            63,
+            63
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            63,
+            63
+          ],
+          "exit": [
+            63,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            63,
+            63
+          ],
+          "exit": [
+            0,
+            63
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            63
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            63
+          ],
+          "exit": [
+            63,
+            63
+          ],
+          "kind": "mixed"
+        }
+      ]
+    },
+    {
+      "pattern": [
+        128,
+        136,
+        140,
+        132
+      ],
+      "n": 16,
+      "horizontal_span": 34172,
+      "v2_span": 2,
+      "half_factor": 8543,
+      "h": 341720,
+      "A": 213575,
+      "B": 239204,
+      "padded_side": 33554432,
+      "offsets": [
+        12572234,
+        12523112
+      ],
+      "patterns": [
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            15,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            0,
+            15
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            15,
+            0
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            15,
+            0
+          ],
+          "exit": [
+            15,
+            15
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            15,
+            15
+          ],
+          "exit": [
+            15,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            15,
+            15
+          ],
+          "exit": [
+            0,
+            15
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            15
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            15
+          ],
+          "exit": [
+            15,
+            15
+          ],
+          "kind": "mixed"
+        }
+      ]
+    },
+    {
+      "pattern": [
+        128,
+        136,
+        140,
+        132
+      ],
+      "n": 32,
+      "horizontal_span": 137084,
+      "v2_span": 2,
+      "half_factor": 34271,
+      "h": 1370840,
+      "A": 856775,
+      "B": 959588,
+      "padded_side": 134217728,
+      "offsets": [
+        50288810,
+        50091752
+      ],
+      "patterns": [
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            31,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            0,
+            31
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            31,
+            0
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            31,
+            0
+          ],
+          "exit": [
+            31,
+            31
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            31,
+            31
+          ],
+          "exit": [
+            31,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            31,
+            31
+          ],
+          "exit": [
+            0,
+            31
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            31
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            31
+          ],
+          "exit": [
+            31,
+            31
+          ],
+          "kind": "mixed"
+        }
+      ]
+    },
+    {
+      "pattern": [
+        128,
+        136,
+        140,
+        132
+      ],
+      "n": 64,
+      "horizontal_span": 548732,
+      "v2_span": 2,
+      "half_factor": 137183,
+      "h": 5487320,
+      "A": 3429575,
+      "B": 3841124,
+      "padded_side": 536870912,
+      "offsets": [
+        201155114,
+        200366312
+      ],
+      "patterns": [
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            63,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            0,
+            63
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            63,
+            0
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            63,
+            0
+          ],
+          "exit": [
+            63,
+            63
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            63,
+            63
+          ],
+          "exit": [
+            63,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            63,
+            63
+          ],
+          "exit": [
+            0,
+            63
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            63
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            63
+          ],
+          "exit": [
+            63,
+            63
+          ],
+          "kind": "mixed"
+        }
+      ]
+    },
+    {
+      "pattern": [
+        128,
+        132,
+        136,
+        140,
+        144,
+        148,
+        152,
+        156
+      ],
+      "n": 16,
+      "horizontal_span": 36196,
+      "v2_span": 2,
+      "half_factor": 9049,
+      "h": 361960,
+      "A": 226227,
+      "B": 253374,
+      "padded_side": 33554432,
+      "offsets": [
+        12571601,
+        12519569
+      ],
+      "patterns": [
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            15,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            0,
+            15
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            15,
+            0
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            15,
+            0
+          ],
+          "exit": [
+            15,
+            15
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            15,
+            15
+          ],
+          "exit": [
+            15,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            15,
+            15
+          ],
+          "exit": [
+            0,
+            15
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            15
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            15
+          ],
+          "exit": [
+            15,
+            15
+          ],
+          "kind": "mixed"
+        }
+      ]
+    },
+    {
+      "pattern": [
+        128,
+        132,
+        136,
+        140,
+        144,
+        148,
+        152,
+        156
+      ],
+      "n": 32,
+      "horizontal_span": 145252,
+      "v2_span": 2,
+      "half_factor": 36313,
+      "h": 1452520,
+      "A": 907827,
+      "B": 1016766,
+      "padded_side": 134217728,
+      "offsets": [
+        50286257,
+        50077457
+      ],
+      "patterns": [
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            31,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            0,
+            31
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            31,
+            0
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            31,
+            0
+          ],
+          "exit": [
+            31,
+            31
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            31,
+            31
+          ],
+          "exit": [
+            31,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            31,
+            31
+          ],
+          "exit": [
+            0,
+            31
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            31
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            31
+          ],
+          "exit": [
+            31,
+            31
+          ],
+          "kind": "mixed"
+        }
+      ]
+    },
+    {
+      "pattern": [
+        128,
+        132,
+        136,
+        140,
+        144,
+        148,
+        152,
+        156
+      ],
+      "n": 64,
+      "horizontal_span": 581476,
+      "v2_span": 2,
+      "half_factor": 145369,
+      "h": 5814760,
+      "A": 3634227,
+      "B": 4070334,
+      "padded_side": 536870912,
+      "offsets": [
+        201144881,
+        200309009
+      ],
+      "patterns": [
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            63,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            0
+          ],
+          "exit": [
+            0,
+            63
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            63,
+            0
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            63,
+            0
+          ],
+          "exit": [
+            63,
+            63
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            63,
+            63
+          ],
+          "exit": [
+            63,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            63,
+            63
+          ],
+          "exit": [
+            0,
+            63
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            63
+          ],
+          "exit": [
+            0,
+            0
+          ],
+          "kind": "mixed"
+        },
+        {
+          "entry": [
+            0,
+            63
+          ],
+          "exit": [
+            63,
+            63
+          ],
+          "kind": "mixed"
+        }
+      ]
+    }
+  ],
+  "endpoint_patterns_checked": 120
+}

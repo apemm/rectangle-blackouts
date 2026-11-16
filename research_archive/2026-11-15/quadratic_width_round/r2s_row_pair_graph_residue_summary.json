@@ -1,0 +1,197 @@
+[
+  {
+    "residue": 0,
+    "edges": 3454,
+    "vertices": 6463,
+    "degeneracy": 1,
+    "triangles": [],
+    "max_directed_length": 4,
+    "path_n": [
+      188256,
+      188340,
+      188400,
+      188424,
+      188568
+    ],
+    "path_edges": [
+      [
+        5148,
+        5883,
+        2688,
+        -1725
+      ],
+      [
+        2412,
+        5475,
+        2064,
+        2715
+      ],
+      [
+        656,
+        7065,
+        640,
+        6393
+      ],
+      [
+        15648,
+        15702,
+        1728,
+        -13866
+      ]
+    ],
+    "positive_out_subgraph": {
+      "edges": 131,
+      "degeneracy": 1,
+      "odd_cycle": null,
+      "largest_component": 4
+    }
+  },
+  {
+    "residue": 1,
+    "edges": 2820,
+    "vertices": 5308,
+    "degeneracy": 1,
+    "triangles": [],
+    "max_directed_length": 3,
+    "path_n": [
+      252765,
+      253125,
+      253425,
+      253437
+    ],
+    "path_edges": [
+      [
+        92472,
+        92475,
+        984,
+        -91485
+      ],
+      [
+        46860,
+        46875,
+        1620,
+        -45225
+      ],
+      [
+        2500,
+        2725,
+        1116,
+        -1159
+      ]
+    ],
+    "positive_out_subgraph": {
+      "edges": 103,
+      "degeneracy": 1,
+      "odd_cycle": null,
+      "largest_component": 3
+    }
+  },
+  {
+    "residue": 2,
+    "edges": 6197,
+    "vertices": 10771,
+    "degeneracy": 2,
+    "triangles": [
+      [
+        22250,
+        22270,
+        22306
+      ],
+      [
+        35098,
+        35126,
+        35182
+      ],
+      [
+        83950,
+        83990,
+        84010
+      ],
+      [
+        106470,
+        106506,
+        106542
+      ]
+    ],
+    "max_directed_length": 4,
+    "path_n": [
+      168510,
+      168750,
+      168950,
+      168970,
+      169006
+    ],
+    "path_edges": [
+      [
+        61648,
+        61650,
+        656,
+        -60990
+      ],
+      [
+        31240,
+        31250,
+        1080,
+        -30150
+      ],
+      [
+        640,
+        5450,
+        620,
+        4790
+      ],
+      [
+        12460,
+        12465,
+        488,
+        -11967
+      ]
+    ],
+    "positive_out_subgraph": {
+      "edges": 514,
+      "degeneracy": 2,
+      "odd_cycle": null,
+      "largest_component": 5
+    }
+  },
+  {
+    "residue": 3,
+    "edges": 2703,
+    "vertices": 5065,
+    "degeneracy": 1,
+    "triangles": [],
+    "max_directed_length": 3,
+    "path_n": [
+      239875,
+      239951,
+      240179,
+      240319
+    ],
+    "path_edges": [
+      [
+        8876,
+        9025,
+        2020,
+        -6707
+      ],
+      [
+        26308,
+        26353,
+        2076,
+        -24187
+      ],
+      [
+        12460,
+        12641,
+        2660,
+        -9619
+      ]
+    ],
+    "positive_out_subgraph": {
+      "edges": 104,
+      "degeneracy": 1,
+      "odd_cycle": null,
+      "largest_component": 3
+    }
+  }
+]

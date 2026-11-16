@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "forward_triples": [
+    [
+      624,
+      715,
+      949
+    ],
+    [
+      1428,
+      715,
+      1597
+    ],
+    [
+      2052,
+      715,
+      2173
+    ]
+  ],
+  "triangle_integer_roots": [],
+  "mixed_integer_roots": [],
+  "cases": [
+    {
+      "t": 33,
+      "height": 132000
+    },
+    {
+      "t": 37,
+      "height": 148000
+    },
+    {
+      "t": 65,
+      "height": 260000
+    },
+    {
+      "t": 101,
+      "height": 404000
+    },
+    {
+      "t": 1001,
+      "height": 4004000
+    }
+  ],
+  "scope": "six protected points; no Hilbert embedding or full private-block higher-support audit"
+}

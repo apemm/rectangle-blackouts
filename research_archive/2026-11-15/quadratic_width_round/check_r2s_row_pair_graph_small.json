@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "method": "Independent positive U divisors, all delta up to H-n, both norm-root signs.",
+  "checks": [
+    {
+      "n_bound": 64,
+      "edges": 5,
+      "supports": 5
+    },
+    {
+      "n_bound": 128,
+      "edges": 11,
+      "supports": 11
+    },
+    {
+      "n_bound": 256,
+      "edges": 24,
+      "supports": 24
+    },
+    {
+      "n_bound": 512,
+      "edges": 47,
+      "supports": 47
+    }
+  ]
+}

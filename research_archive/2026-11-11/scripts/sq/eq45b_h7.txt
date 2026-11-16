@@ -1,0 +1,2 @@
+diag+sym h=7 m=14: TIMEOUT after 1014s (hard limit)
+diag+sym h=7 m=13: TIMEOUT after 600s (hard limit)

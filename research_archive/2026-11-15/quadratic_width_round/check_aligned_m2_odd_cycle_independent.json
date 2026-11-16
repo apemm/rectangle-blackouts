@@ -1,0 +1,12 @@
+{
+  "status": "PASS: exact binary candidate-system contradiction",
+  "side": 256,
+  "offset": -512,
+  "choices": 2,
+  "outer": 0,
+  "distinct_vertices": 51,
+  "cycle_edges": 51,
+  "equal_choice_norm_tests": 102,
+  "source_sha256": "5fdfe384692471c851fb1c16b75704fd9a3e40a86e5954d90810ec44b6ed1809",
+  "scope": "Candidate private P norm system only. No in-strip common-corner or full-board owner assertion."
+}

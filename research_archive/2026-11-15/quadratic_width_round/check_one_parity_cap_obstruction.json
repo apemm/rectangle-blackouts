@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "side": 4,
+      "checked_bad_coordinates": 1
+    },
+    {
+      "side": 8,
+      "checked_bad_coordinates": 3
+    },
+    {
+      "side": 16,
+      "checked_bad_coordinates": 7
+    },
+    {
+      "side": 32,
+      "checked_bad_coordinates": 15
+    },
+    {
+      "side": 64,
+      "checked_bad_coordinates": 31
+    },
+    {
+      "side": 128,
+      "checked_bad_coordinates": 63
+    },
+    {
+      "side": 256,
+      "checked_bad_coordinates": 127
+    },
+    {
+      "side": 512,
+      "checked_bad_coordinates": 255
+    },
+    {
+      "side": 1024,
+      "checked_bad_coordinates": 511
+    }
+  ],
+  "scope": "first eligible odd-axis ancestor rule only"
+}

@@ -1,0 +1,59 @@
+{
+  "source": "all_double_rows_used_h8.json",
+  "source_sha256": "8396d6f9748a78b86e5e4be4dd549ef4caa03c2e81ab0bad519328ba06cf6234",
+  "status": "PASS",
+  "height": 8,
+  "width": 8,
+  "word": [
+    [
+      3,
+      8
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      5,
+      8
+    ]
+  ],
+  "rectangle_count": 1192,
+  "shape_count": 51,
+  "row_degrees": [
+    4,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    4
+  ],
+  "white_count_histogram": {
+    "1": 37,
+    "2": 242,
+    "3": 546,
+    "4": 367
+  }
+}

@@ -1,0 +1,124 @@
+"""Label-centric census of one region type of the TWISTED board L***(3) (lstar12t.py).
+usage: py census12t.py h iota sigma cmode rmode [start] [seed]
+Same windows, anchors, kernel and classifier as census12.py (scripts_census_u3), unchanged.
+Extra: every parked W found by the census is analysed.  Parked rectangles whose black corners are
+{S, o, o} with both o in label columns are tested against the intra-class SLL-Pc shape of
+audit_stride_transfer_core issue 1: G = V + (12t, 2t), E = V + (u_V/3, -2u_V), u_V = (y_V - r0)/2,
+and counted against the prediction (pairs in one class with Delta i = t >= 32, 3 | u_V, r0 + 2t <= h).
+Log: logT12_<h>_<iota>_<sigma>_<cmode>_<rmode>.txt"""
+import sys, os, time
+from collections import Counter
+from lstar12 import params
+from lstar12t import build_type12t, slot
+from classify import WinBoard, family_rect, family_mixed, family_rival, comp
+from checker import census
+
+h, iota, sigma = map(int, sys.argv[1:4]); cmode, rmode = sys.argv[4], sys.argv[5]
+st = int(sys.argv[6]) if len(sys.argv) > 6 else 0
+seed = int(sys.argv[7]) if len(sys.argv) > 7 else 1
+reloc = None
+if os.environ.get('RELOC'):
+    reloc = set(tuple(map(int, ln.split())) for ln in open(os.environ['RELOC']) if ln.strip())
+R = build_type12t(h, iota, sigma, cmode, rmode, seed=seed, reloc=reloc)
+P, p, tp, subs = R['P'], R['p'], R['tp'], R['subs']; W = P['W']
+logf = 'logT12_%d_%d_%d_%s_%s%s.txt' % (h, iota, sigma, cmode, rmode, '_reloc' if reloc else '')
+log = open(logf, 'a' if st else 'w')
+nlab = sum(len(s['labels']) for s in subs)
+hdr = ('HDR h %d B %d l %d p %d type (%d,%d) r0 %d T0 %d D0 %d k %d T* %d frows %s subclasses %d kept %d removed %d heavy %d edges %d'
+       % (h, P['B'], R['l'], p, iota, sigma, tp['r0'], tp['T0'], tp['D0'], tp['k'], tp['Ts'], tp['frows'],
+          sum(1 for s in subs if s['labels']), nlab, sum(len(s['removed']) for s in subs), len(R['heavy']), R['nedges']))
+if st == 0:
+    print(hdr, file=log); print(hdr)
+
+
+def run_full(bd, anc, wan):
+    res = census(bd, anc, wan)
+    out = []
+    for key, Q in res['V1'].items():
+        f, d = family_rect(bd, Q, None, 'V1'); out.append(('V1', f, d, Q))
+    for key, (Q, Wp) in res['V2'].items():
+        f, d = family_rect(bd, Q, Wp, 'V2'); out.append(('V2', f, d, (Q, Wp)))
+    for Wp, S in res['V3'].items():
+        cs = '|'.join(sorted(comp([bd.tag(*z) for z in Rr if z != Wp]) for Rr in S))   # as classify.run
+        if all(x == 'SLL' or (x.count('S') == 1 and sum(x.count(y) for y in 'oe') == 2) for x in cs.split('|')):
+            f = 'B3 (V3 of SLL)'
+        elif 'g' in cs:
+            f = 'E1(seam)'
+        elif all(sum(x.count(y) for y in 'oe') == 0 for x in cs.split('|')):
+            f = 'C2(pure)'
+        else:
+            f = 'D8/D22 (V3 with label+filler)'
+        out.append(('V3', f, cs, (Wp, sorted(sorted(Rr) for Rr in S))))
+    for key, (A, B, C, D, pp, q) in res['V4'].items():
+        f, d = family_mixed(bd, A, B, C, D, pp, q); out.append(('V4', f, d, (A, B, C, D, pp, q)))
+    for key, rv in res['V5'].items():
+        f, d = family_rival(bd, (rv[0], rv[1]), (rv[2], rv[3])); out.append(('V5', f, d, rv))
+    return out, res['oob'], res['parked'], res['V3']
+
+
+t0 = time.time(); fam = Counter(); i = st; npairs = 0; ntrip = 0; oobt = 0
+parked_comp = Counter(); sllpc_obs = 0; sllpc_shape_ok = 0; sllpc_pred = 0; sllpc_multi = 0
+while i < len(subs) and time.time() - t0 < 32:
+    sc = subs[i]
+    if sc['labels']:
+        labs = {slot(a, sc['t'], p): (a, b) for (a, b) in sc['labels']}
+        k = len(labs); npairs += k * (k - 1) // 2; ntrip += k * (k - 1) * (k - 2) // 6
+        rho0 = next(iter(labs)) % 4
+        n_lo = min(labs); n_hi = max(labs)
+        X0 = 4 * n_lo - 2 * W - 64; Wd = 4 * (n_hi - n_lo) + 4 * W + 129
+        bd = WinBoard(h, X0, Wd, tp, rho0, labels=labs)
+        anc = []; wan = []
+        for n, (a, b) in labs.items():
+            x = 4 * n - X0
+            anc += [(x, 2 * a + 1), (x, 2 * b + 2)]
+            wan += [(x, y) for y in range(1, h + 1) if y not in (2 * a + 1, 2 * b + 2)]
+        out, oob, parked, V3 = run_full(bd, anc, wan)
+        oobt += oob
+        # parked analysis
+        for Wp, keys in parked.items():
+            for key in keys:
+                Q = list(key)
+                blk = [z for z in Q if z != Wp]
+                c = comp([bd.tag(*z) for z in blk])
+                parked_comp[c] += 1
+                if c == 'Soo':
+                    sllpc_obs += 1
+                    if Wp in V3:
+                        sllpc_multi += 1
+                    Ls = sorted([z for z in blk if bd.islabelcol(z[0])], key=lambda z: z[1])
+                    Ep = [z for z in blk if not bd.islabelcol(z[0])][0]
+                    V, G = Ls
+                    tt = (G[1] - V[1]) // 2
+                    uV = (V[1] - tp['r0']) // 2
+                    ok = (G[0] - V[0] == 12 * tt and tt % 32 == 0 and tt > 0 and uV % 3 == 0
+                          and (Ep[0] - V[0], Ep[1] - V[1]) == (uV // 3, -2 * uV)
+                          and Wp == (G[0] + Ep[0] - V[0], G[1] + Ep[1] - V[1]))
+                    sllpc_shape_ok += ok
+        il = sorted(a for (a, b) in sc['labels'])
+        for x1 in il:
+            for x2 in il:
+                tt = x2 - x1
+                uV = (2 * x1 + 1 - tp['r0']) // 2
+                if tt > 0 and uV % 3 == 0 and tp['r0'] + 2 * tt <= h:
+                    sllpc_pred += 1
+        for (kind, f, det, data) in out:
+            if kind == 'V1': pts = list(data)
+            elif kind == 'V2': pts = list(data[0])
+            elif kind == 'V3': pts = [z for Rr in data[1] for z in Rr] + [data[0]]
+            elif kind == 'V4': pts = list(data[:4])
+            else: pts = [(data[0], data[1]), (data[2], data[3])]
+            L = sorted(set(bd.label_of(z[0]) for z in pts if bd.islabelcol(z[0])))
+            nb = all(max(2 * a + 1, 2 * b + 2) >= tp['Ts'] - 320 or 2 * a + 1 <= 300 for a, b in L)
+            fam[(kind, f, len(L), 'nearband' if nb else 'deep')] += 1
+            print('VIOL sub', i, 'T', sc['T'], 'kind', kind, 'family', f, 'comp', det, 'nL', len(L), 'labels', L,
+                  'nb', nb, 'X0', X0, 'data', data if kind != 'V3' else (data[0], len(data[1])), file=log)
+    i += 1
+summ = 'SUMMARY type (%d,%d) %s %s subs %d..%d of %d oob %d pairs %d triples %d time %.1f' % (
+    iota, sigma, cmode, rmode, st, i, len(subs), oobt, npairs, ntrip, time.time() - t0)
+print(summ, file=log); print(summ)
+for key, v in sorted(fam.items()):
+    print('  ', key, v, file=log); print('  ', key, v)
+pk = 'PARKED %s SLLPC observed %d shape_ok %d predicted %d in_V3 %d' % (
+    dict(sorted(parked_comp.items())), sllpc_obs, sllpc_shape_ok, sllpc_pred, sllpc_multi)
+print(pk, file=log); print(pk)
+print('NEXT', i, len(subs)); print('NEXT', i, len(subs), file=log)

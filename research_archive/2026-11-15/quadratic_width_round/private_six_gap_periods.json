@@ -1,0 +1,571 @@
+[
+  {
+    "period": 1,
+    "status": "UNSAT self-edge",
+    "nodes": 0
+  },
+  {
+    "period": 2,
+    "status": "UNSAT self-edge",
+    "nodes": 0
+  },
+  {
+    "period": 3,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 4,
+    "status": "UNSAT self-edge",
+    "nodes": 0
+  },
+  {
+    "period": 5,
+    "status": "UNSAT self-edge",
+    "nodes": 0
+  },
+  {
+    "period": 6,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 7,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 8,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 9,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 10,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 11,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 12,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 13,
+    "status": "UNSAT",
+    "nodes": 3,
+    "assignment": null
+  },
+  {
+    "period": 14,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 15,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 16,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 17,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 18,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 19,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 20,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 21,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 22,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 23,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 24,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 25,
+    "status": "UNSAT self-edge",
+    "nodes": 0
+  },
+  {
+    "period": 26,
+    "status": "UNSAT",
+    "nodes": 3,
+    "assignment": null
+  },
+  {
+    "period": 27,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 28,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 29,
+    "status": "UNSAT self-edge",
+    "nodes": 0
+  },
+  {
+    "period": 30,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 31,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 32,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 33,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 34,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 35,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 36,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 37,
+    "status": "UNSAT",
+    "nodes": 3,
+    "assignment": null
+  },
+  {
+    "period": 38,
+    "status": "UNSAT",
+    "nodes": 3,
+    "assignment": null
+  },
+  {
+    "period": 39,
+    "status": "UNSAT",
+    "nodes": 3,
+    "assignment": null
+  },
+  {
+    "period": 40,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 41,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 42,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 43,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 44,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 45,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 46,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 47,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 48,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 49,
+    "status": "UNSAT",
+    "nodes": 3,
+    "assignment": null
+  },
+  {
+    "period": 50,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 51,
+    "status": "UNSAT",
+    "nodes": 5,
+    "assignment": null
+  },
+  {
+    "period": 52,
+    "status": "UNSAT",
+    "nodes": 3,
+    "assignment": null
+  },
+  {
+    "period": 53,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 54,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 55,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 56,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 57,
+    "status": "UNSAT",
+    "nodes": 5,
+    "assignment": null
+  },
+  {
+    "period": 58,
+    "status": "UNSAT self-edge",
+    "nodes": 0
+  },
+  {
+    "period": 59,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 60,
+    "status": "UNSAT",
+    "nodes": 3,
+    "assignment": null
+  },
+  {
+    "period": 61,
+    "status": "UNSAT",
+    "nodes": 3,
+    "assignment": null
+  },
+  {
+    "period": 62,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 63,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 64,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 65,
+    "status": "UNSAT",
+    "nodes": 3,
+    "assignment": null
+  },
+  {
+    "period": 66,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 67,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 68,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 69,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 70,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 71,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 72,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 73,
+    "status": "UNSAT",
+    "nodes": 3,
+    "assignment": null
+  },
+  {
+    "period": 74,
+    "status": "UNSAT",
+    "nodes": 3,
+    "assignment": null
+  },
+  {
+    "period": 75,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 76,
+    "status": "UNSAT",
+    "nodes": 5,
+    "assignment": null
+  },
+  {
+    "period": 77,
+    "status": "UNSAT",
+    "nodes": 9,
+    "assignment": null
+  },
+  {
+    "period": 78,
+    "status": "UNSAT",
+    "nodes": 3,
+    "assignment": null
+  },
+  {
+    "period": 79,
+    "status": "UNSAT",
+    "nodes": 5,
+    "assignment": null
+  },
+  {
+    "period": 80,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 81,
+    "status": "UNSAT",
+    "nodes": 3,
+    "assignment": null
+  },
+  {
+    "period": 82,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 83,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 84,
+    "status": "UNSAT",
+    "nodes": 3,
+    "assignment": null
+  },
+  {
+    "period": 85,
+    "status": "UNSAT",
+    "nodes": 3,
+    "assignment": null
+  },
+  {
+    "period": 86,
+    "status": "UNSAT",
+    "nodes": 3,
+    "assignment": null
+  },
+  {
+    "period": 87,
+    "status": "UNSAT",
+    "nodes": 3,
+    "assignment": null
+  },
+  {
+    "period": 88,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 89,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 90,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 91,
+    "status": "UNSAT",
+    "nodes": 5,
+    "assignment": null
+  },
+  {
+    "period": 92,
+    "status": "UNSAT",
+    "nodes": 9,
+    "assignment": null
+  },
+  {
+    "period": 93,
+    "status": "UNSAT",
+    "nodes": 9,
+    "assignment": null
+  },
+  {
+    "period": 94,
+    "status": "UNSAT",
+    "nodes": 5,
+    "assignment": null
+  },
+  {
+    "period": 95,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  },
+  {
+    "period": 96,
+    "status": "UNSAT",
+    "nodes": 1,
+    "assignment": null
+  }
+]

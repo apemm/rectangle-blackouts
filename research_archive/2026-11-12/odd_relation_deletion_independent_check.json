@@ -1,0 +1,65 @@
+{
+  "brute_force_dp_cases": 486,
+  "brute_force_gap_heights": [
+    4,
+    80
+  ],
+  "independent_signed_dp_results": [
+    {
+      "h": 128,
+      "certificate": "odd_relation_deletion_h128.json",
+      "checked_diagonals": 127,
+      "deleted": 36,
+      "status": "PASS"
+    },
+    {
+      "h": 256,
+      "certificate": "odd_relation_deletion_h256.json",
+      "checked_diagonals": 255,
+      "deleted": 99,
+      "status": "PASS"
+    },
+    {
+      "h": 512,
+      "certificate": "odd_relation_deletion_h512.json",
+      "checked_diagonals": 511,
+      "deleted": 254,
+      "status": "PASS"
+    },
+    {
+      "h": 1024,
+      "certificate": "odd_relation_deletion_h1024.json",
+      "checked_diagonals": 1023,
+      "deleted": 589,
+      "status": "PASS"
+    },
+    {
+      "h": 2048,
+      "certificate": "odd_relation_deletion_h2048.json",
+      "checked_diagonals": 2047,
+      "deleted": 1417,
+      "status": "PASS"
+    },
+    {
+      "h": 4096,
+      "certificate": "odd_relation_deletion_large_h4096.json",
+      "checked_diagonals": 4095,
+      "deleted": 3264,
+      "status": "PASS"
+    },
+    {
+      "h": 8192,
+      "certificate": "odd_relation_deletion_large_h8192.json",
+      "checked_diagonals": 8191,
+      "deleted": 7376,
+      "status": "PASS"
+    },
+    {
+      "h": 16384,
+      "certificate": "odd_relation_deletion_large_h16384.json",
+      "checked_diagonals": 16383,
+      "deleted": 16532,
+      "status": "PASS"
+    }
+  ]
+}

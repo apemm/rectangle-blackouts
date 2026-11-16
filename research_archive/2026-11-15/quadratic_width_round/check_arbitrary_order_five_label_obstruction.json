@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "S": 4,
+      "s": 2048,
+      "d": 599185,
+      "h": 359022668320,
+      "assignments": 1024,
+      "common_colorings": 16384,
+      "distinct_owners": 9
+    },
+    {
+      "S": 8,
+      "s": 8192,
+      "d": 9586979,
+      "h": 91910166362824,
+      "assignments": 1024,
+      "common_colorings": 16384,
+      "distinct_owners": 9
+    },
+    {
+      "S": 32,
+      "s": 131072,
+      "d": 2454267025,
+      "h": 6023426630002612768,
+      "assignments": 1024,
+      "common_colorings": 16384,
+      "distinct_owners": 9
+    }
+  ],
+  "scope": "Arbitrary prescribed tile order, not Hilbert."
+}

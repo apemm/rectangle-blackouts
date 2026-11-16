@@ -1,0 +1,66 @@
+FULL h=4 q=4 M0=18 M0/q=4.500
+   m=18 valid
+   m=19 valid
+   m=20 valid
+   m=22 valid
+   (0.0s)
+FULL h=5 q=6 M0=29 M0/q=4.833
+   m=29 valid
+   m=30 valid
+   m=31 valid
+   m=34 valid
+   (0.1s)
+FULL h=6 q=9 M0=49 M0/q=5.444
+   m=49 valid
+   m=50 valid
+   m=51 valid
+   m=55 valid
+   (0.3s)
+FULL h=7 q=12 M0=71 M0/q=5.917
+   m=71 valid
+   m=72 valid
+   m=73 valid
+   m=78 valid
+   (1.0s)
+FULL h=8 q=16 M0=94 M0/q=5.875
+   m=94 valid
+   m=95 valid
+   m=96 valid
+   m=102 valid
+   (2.0s)
+FULL h=9 q=20 M0=124 M0/q=6.200
+   m=124 valid
+   m=125 valid
+   m=126 valid
+   m=133 valid
+   (5.2s)
+FULL h=10 q=25 M0=149 M0/q=5.960
+   m=149 valid
+   m=150 valid
+   m=151 valid
+   m=159 valid
+   (9.8s)
+FULL h=11 q=30 M0=177 M0/q=5.900
+   m=177 valid
+   m=178 valid
+   m=179 valid
+   m=188 valid
+   (17.0s)
+FULL h=12 q=36 M0=207 M0/q=5.750
+   m=207 valid
+   m=208 valid
+   m=209 valid
+   m=219 valid
+   (32.3s)
+FULL h=13 q=42 M0=254 M0/q=6.048
+   m=254 valid
+   m=255 valid
+   m=256 valid
+   m=267 valid
+   (47.9s)
+FULL h=14 q=49 M0=285 M0/q=5.816
+   m=285 valid
+   m=286 valid
+   m=287 valid
+   m=299 valid
+   (69.6s)

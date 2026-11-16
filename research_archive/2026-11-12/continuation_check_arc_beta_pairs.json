@@ -1,0 +1,50 @@
+{
+  "scope": "integer sanity checks; proof is in the audit note",
+  "results": [
+    {
+      "h": 1000,
+      "base_hypotenuse_cap": 10,
+      "triangles": 1,
+      "edges": 1,
+      "offsets": 1,
+      "maximum_degree": 1,
+      "status": "PASS"
+    },
+    {
+      "h": 5000,
+      "base_hypotenuse_cap": 50,
+      "triangles": 12,
+      "edges": 12,
+      "offsets": 11,
+      "maximum_degree": 1,
+      "status": "PASS"
+    },
+    {
+      "h": 20000,
+      "base_hypotenuse_cap": 200,
+      "triangles": 75,
+      "edges": 75,
+      "offsets": 54,
+      "maximum_degree": 1,
+      "status": "PASS"
+    },
+    {
+      "h": 100000,
+      "base_hypotenuse_cap": 1000,
+      "triangles": 495,
+      "edges": 495,
+      "offsets": 302,
+      "maximum_degree": 1,
+      "status": "PASS"
+    },
+    {
+      "h": 1000000,
+      "base_hypotenuse_cap": 10000,
+      "triangles": 6790,
+      "edges": 6790,
+      "offsets": 3345,
+      "maximum_degree": 1,
+      "status": "PASS"
+    }
+  ]
+}

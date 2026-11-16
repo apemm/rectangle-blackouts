@@ -1,0 +1,97 @@
+{
+  "status": "PASS",
+  "height": 65536,
+  "row_class_size": 32768,
+  "padded_side": 131072,
+  "stride": 96,
+  "offsets": [
+    15840,
+    17120
+  ],
+  "bad_indices": [
+    16976,
+    15695
+  ],
+  "bad_physical_rows": [
+    33953,
+    31392
+  ],
+  "crossing": [
+    32816,
+    32815
+  ],
+  "crossing_rank": 2147486549,
+  "first_good_ancestors": [
+    {
+      "start": 2147486549,
+      "length": 1,
+      "role": 0,
+      "value": 16976,
+      "good": false,
+      "endpoints": [
+        [
+          32816,
+          32815
+        ],
+        [
+          32816,
+          32815
+        ]
+      ]
+    },
+    {
+      "start": 2147486548,
+      "length": 4,
+      "role": 0,
+      "value": 16977,
+      "good": true,
+      "endpoints": [
+        [
+          32817,
+          32815
+        ],
+        [
+          32817,
+          32814
+        ]
+      ]
+    }
+  ],
+  "selected_cap": [
+    2147486548,
+    4,
+    0,
+    16977
+  ],
+  "block_start": 2147485696,
+  "source_rank": 2147485888,
+  "target_rank": 2147486293,
+  "source_options": {
+    "0": 16967
+  },
+  "target_options": {
+    "1": 15711
+  },
+  "source_row": 33935,
+  "target_row": 31424,
+  "norm": [
+    38880,
+    2511,
+    38961
+  ],
+  "common_rows": [
+    13199,
+    52160
+  ],
+  "owner_indices": [
+    6599,
+    26079
+  ],
+  "owner_raw": [
+    22439,
+    43199
+  ],
+  "owner_rank": 3721733056,
+  "common_occupancy_cases": 4,
+  "scope": "Two arbitrary bad rows and fixed admissible offsets; not the actual R2s bad set, all offsets, or block permutations."
+}

@@ -1,0 +1,730 @@
+{
+  "sources": [
+    {
+      "file": "continuation_monotone_queue_probe.json",
+      "sha256": "fc007299e24e9798b1f4a03a317dda43c1eaf38e2d8755cb20b5b82d6490bf57"
+    },
+    {
+      "file": "continuation_monotone_queue_probe_extended.json",
+      "sha256": "1d7d58c1a4a2f7cff116c842be2cf0e8d8b1f10cc4649c691705dd97808c5c11"
+    },
+    {
+      "file": "continuation_monotone_queue_reserve.json",
+      "sha256": "44b265b7934aaba9c34825fcb353916d023cd96e47d51e602683522ea17b1df3"
+    },
+    {
+      "file": "continuation_monotone_queue_larger.json",
+      "sha256": "27330af7a44e56c67ee3856a8653dd61192d6a06f90fdbcfb509e6966c93a8a2"
+    }
+  ],
+  "records": [
+    {
+      "h": 32,
+      "capacity": 2,
+      "trials": 12,
+      "successes": 0,
+      "best_failed_column": 4,
+      "policy_successes": {}
+    },
+    {
+      "h": 32,
+      "capacity": 3,
+      "trials": 12,
+      "successes": 4,
+      "best_failed_column": 9,
+      "policy_successes": {
+        "oldest": 4
+      }
+    },
+    {
+      "h": 32,
+      "capacity": 4,
+      "trials": 12,
+      "successes": 12,
+      "best_failed_column": -1,
+      "policy_successes": {
+        "oldest": 4,
+        "youngest": 4,
+        "random": 4
+      }
+    },
+    {
+      "h": 64,
+      "capacity": 2,
+      "trials": 12,
+      "successes": 0,
+      "best_failed_column": 4,
+      "policy_successes": {}
+    },
+    {
+      "h": 64,
+      "capacity": 3,
+      "trials": 12,
+      "successes": 0,
+      "best_failed_column": 9,
+      "policy_successes": {}
+    },
+    {
+      "h": 64,
+      "capacity": 4,
+      "trials": 12,
+      "successes": 4,
+      "best_failed_column": 16,
+      "policy_successes": {
+        "oldest": 4
+      }
+    },
+    {
+      "h": 96,
+      "capacity": 2,
+      "trials": 12,
+      "successes": 0,
+      "best_failed_column": 4,
+      "policy_successes": {}
+    },
+    {
+      "h": 96,
+      "capacity": 3,
+      "trials": 12,
+      "successes": 0,
+      "best_failed_column": 10,
+      "policy_successes": {}
+    },
+    {
+      "h": 96,
+      "capacity": 4,
+      "trials": 12,
+      "successes": 0,
+      "best_failed_column": 17,
+      "policy_successes": {}
+    },
+    {
+      "h": 128,
+      "capacity": 2,
+      "trials": 12,
+      "successes": 0,
+      "best_failed_column": 4,
+      "policy_successes": {}
+    },
+    {
+      "h": 128,
+      "capacity": 3,
+      "trials": 12,
+      "successes": 0,
+      "best_failed_column": 10,
+      "policy_successes": {}
+    },
+    {
+      "h": 128,
+      "capacity": 4,
+      "trials": 12,
+      "successes": 0,
+      "best_failed_column": 17,
+      "policy_successes": {}
+    },
+    {
+      "h": 192,
+      "capacity": 2,
+      "trials": 12,
+      "successes": 0,
+      "best_failed_column": 4,
+      "policy_successes": {}
+    },
+    {
+      "h": 192,
+      "capacity": 3,
+      "trials": 12,
+      "successes": 0,
+      "best_failed_column": 9,
+      "policy_successes": {}
+    },
+    {
+      "h": 192,
+      "capacity": 4,
+      "trials": 12,
+      "successes": 0,
+      "best_failed_column": 17,
+      "policy_successes": {}
+    },
+    {
+      "h": 256,
+      "capacity": 2,
+      "trials": 12,
+      "successes": 0,
+      "best_failed_column": 4,
+      "policy_successes": {}
+    },
+    {
+      "h": 256,
+      "capacity": 3,
+      "trials": 12,
+      "successes": 0,
+      "best_failed_column": 8,
+      "policy_successes": {}
+    },
+    {
+      "h": 256,
+      "capacity": 4,
+      "trials": 12,
+      "successes": 0,
+      "best_failed_column": 19,
+      "policy_successes": {}
+    },
+    {
+      "h": 32,
+      "capacity": 3,
+      "trials": 150,
+      "successes": 55,
+      "best_failed_column": 11,
+      "policy_successes": {
+        "oldest": 50,
+        "random": 5
+      }
+    },
+    {
+      "h": 32,
+      "capacity": 4,
+      "trials": 150,
+      "successes": 150,
+      "best_failed_column": -1,
+      "policy_successes": {
+        "oldest": 50,
+        "youngest": 50,
+        "random": 50
+      }
+    },
+    {
+      "h": 32,
+      "capacity": 5,
+      "trials": 150,
+      "successes": 150,
+      "best_failed_column": -1,
+      "policy_successes": {
+        "oldest": 50,
+        "youngest": 50,
+        "random": 50
+      }
+    },
+    {
+      "h": 32,
+      "capacity": 6,
+      "trials": 150,
+      "successes": 150,
+      "best_failed_column": -1,
+      "policy_successes": {
+        "oldest": 50,
+        "youngest": 50,
+        "random": 50
+      }
+    },
+    {
+      "h": 32,
+      "capacity": 8,
+      "trials": 150,
+      "successes": 150,
+      "best_failed_column": -1,
+      "policy_successes": {
+        "oldest": 50,
+        "youngest": 50,
+        "random": 50
+      }
+    },
+    {
+      "h": 64,
+      "capacity": 3,
+      "trials": 150,
+      "successes": 0,
+      "best_failed_column": 10,
+      "policy_successes": {}
+    },
+    {
+      "h": 64,
+      "capacity": 4,
+      "trials": 150,
+      "successes": 51,
+      "best_failed_column": 28,
+      "policy_successes": {
+        "oldest": 50,
+        "random": 1
+      }
+    },
+    {
+      "h": 64,
+      "capacity": 5,
+      "trials": 150,
+      "successes": 137,
+      "best_failed_column": 30,
+      "policy_successes": {
+        "oldest": 50,
+        "youngest": 50,
+        "random": 37
+      }
+    },
+    {
+      "h": 64,
+      "capacity": 6,
+      "trials": 150,
+      "successes": 150,
+      "best_failed_column": -1,
+      "policy_successes": {
+        "oldest": 50,
+        "youngest": 50,
+        "random": 50
+      }
+    },
+    {
+      "h": 64,
+      "capacity": 8,
+      "trials": 150,
+      "successes": 150,
+      "best_failed_column": -1,
+      "policy_successes": {
+        "oldest": 50,
+        "youngest": 50,
+        "random": 50
+      }
+    },
+    {
+      "h": 96,
+      "capacity": 3,
+      "trials": 150,
+      "successes": 0,
+      "best_failed_column": 11,
+      "policy_successes": {}
+    },
+    {
+      "h": 96,
+      "capacity": 4,
+      "trials": 150,
+      "successes": 0,
+      "best_failed_column": 22,
+      "policy_successes": {}
+    },
+    {
+      "h": 96,
+      "capacity": 5,
+      "trials": 150,
+      "successes": 8,
+      "best_failed_column": 43,
+      "policy_successes": {
+        "random": 8
+      }
+    },
+    {
+      "h": 96,
+      "capacity": 6,
+      "trials": 150,
+      "successes": 148,
+      "best_failed_column": 32,
+      "policy_successes": {
+        "oldest": 50,
+        "youngest": 50,
+        "random": 48
+      }
+    },
+    {
+      "h": 96,
+      "capacity": 8,
+      "trials": 150,
+      "successes": 150,
+      "best_failed_column": -1,
+      "policy_successes": {
+        "oldest": 50,
+        "youngest": 50,
+        "random": 50
+      }
+    },
+    {
+      "h": 128,
+      "capacity": 3,
+      "trials": 150,
+      "successes": 0,
+      "best_failed_column": 10,
+      "policy_successes": {}
+    },
+    {
+      "h": 128,
+      "capacity": 4,
+      "trials": 150,
+      "successes": 0,
+      "best_failed_column": 21,
+      "policy_successes": {}
+    },
+    {
+      "h": 128,
+      "capacity": 5,
+      "trials": 150,
+      "successes": 0,
+      "best_failed_column": 62,
+      "policy_successes": {}
+    },
+    {
+      "h": 128,
+      "capacity": 6,
+      "trials": 150,
+      "successes": 139,
+      "best_failed_column": 60,
+      "policy_successes": {
+        "oldest": 50,
+        "youngest": 50,
+        "random": 39
+      }
+    },
+    {
+      "h": 128,
+      "capacity": 8,
+      "trials": 150,
+      "successes": 150,
+      "best_failed_column": -1,
+      "policy_successes": {
+        "oldest": 50,
+        "youngest": 50,
+        "random": 50
+      }
+    },
+    {
+      "h": 192,
+      "capacity": 3,
+      "trials": 150,
+      "successes": 0,
+      "best_failed_column": 10,
+      "policy_successes": {}
+    },
+    {
+      "h": 192,
+      "capacity": 4,
+      "trials": 150,
+      "successes": 0,
+      "best_failed_column": 19,
+      "policy_successes": {}
+    },
+    {
+      "h": 192,
+      "capacity": 5,
+      "trials": 150,
+      "successes": 0,
+      "best_failed_column": 45,
+      "policy_successes": {}
+    },
+    {
+      "h": 192,
+      "capacity": 6,
+      "trials": 5,
+      "successes": 2,
+      "best_failed_column": 67,
+      "policy_successes": {
+        "youngest": 2
+      }
+    },
+    {
+      "h": 32,
+      "capacity": 2,
+      "trials": 80,
+      "successes": 0,
+      "best_failed_column": 5,
+      "policy_successes": {}
+    },
+    {
+      "h": 32,
+      "capacity": 3,
+      "trials": 80,
+      "successes": 31,
+      "best_failed_column": 12,
+      "policy_successes": {
+        "reserve": 31
+      }
+    },
+    {
+      "h": 32,
+      "capacity": 4,
+      "trials": 80,
+      "successes": 80,
+      "best_failed_column": -1,
+      "policy_successes": {
+        "reserve": 80
+      }
+    },
+    {
+      "h": 48,
+      "capacity": 2,
+      "trials": 80,
+      "successes": 0,
+      "best_failed_column": 6,
+      "policy_successes": {}
+    },
+    {
+      "h": 48,
+      "capacity": 3,
+      "trials": 80,
+      "successes": 0,
+      "best_failed_column": 13,
+      "policy_successes": {}
+    },
+    {
+      "h": 48,
+      "capacity": 4,
+      "trials": 80,
+      "successes": 66,
+      "best_failed_column": 22,
+      "policy_successes": {
+        "reserve": 66
+      }
+    },
+    {
+      "h": 64,
+      "capacity": 2,
+      "trials": 80,
+      "successes": 0,
+      "best_failed_column": 5,
+      "policy_successes": {}
+    },
+    {
+      "h": 64,
+      "capacity": 3,
+      "trials": 80,
+      "successes": 0,
+      "best_failed_column": 12,
+      "policy_successes": {}
+    },
+    {
+      "h": 64,
+      "capacity": 4,
+      "trials": 80,
+      "successes": 1,
+      "best_failed_column": 30,
+      "policy_successes": {
+        "reserve": 1
+      }
+    },
+    {
+      "h": 96,
+      "capacity": 2,
+      "trials": 80,
+      "successes": 0,
+      "best_failed_column": 5,
+      "policy_successes": {}
+    },
+    {
+      "h": 96,
+      "capacity": 3,
+      "trials": 80,
+      "successes": 0,
+      "best_failed_column": 13,
+      "policy_successes": {}
+    },
+    {
+      "h": 96,
+      "capacity": 4,
+      "trials": 80,
+      "successes": 0,
+      "best_failed_column": 23,
+      "policy_successes": {}
+    },
+    {
+      "h": 128,
+      "capacity": 2,
+      "trials": 80,
+      "successes": 0,
+      "best_failed_column": 5,
+      "policy_successes": {}
+    },
+    {
+      "h": 128,
+      "capacity": 3,
+      "trials": 80,
+      "successes": 0,
+      "best_failed_column": 11,
+      "policy_successes": {}
+    },
+    {
+      "h": 128,
+      "capacity": 4,
+      "trials": 80,
+      "successes": 0,
+      "best_failed_column": 20,
+      "policy_successes": {}
+    },
+    {
+      "h": 192,
+      "capacity": 2,
+      "trials": 80,
+      "successes": 0,
+      "best_failed_column": 6,
+      "policy_successes": {}
+    },
+    {
+      "h": 192,
+      "capacity": 3,
+      "trials": 80,
+      "successes": 0,
+      "best_failed_column": 12,
+      "policy_successes": {}
+    },
+    {
+      "h": 192,
+      "capacity": 4,
+      "trials": 80,
+      "successes": 0,
+      "best_failed_column": 26,
+      "policy_successes": {}
+    },
+    {
+      "h": 256,
+      "capacity": 6,
+      "trials": 1,
+      "successes": 0,
+      "best_failed_column": 108,
+      "policy_successes": {}
+    },
+    {
+      "h": 256,
+      "capacity": 8,
+      "trials": 1,
+      "successes": 1,
+      "best_failed_column": -1,
+      "policy_successes": {
+        "youngest": 1
+      }
+    },
+    {
+      "h": 256,
+      "capacity": 10,
+      "trials": 1,
+      "successes": 1,
+      "best_failed_column": -1,
+      "policy_successes": {
+        "youngest": 1
+      }
+    },
+    {
+      "h": 384,
+      "capacity": 6,
+      "trials": 1,
+      "successes": 0,
+      "best_failed_column": 145,
+      "policy_successes": {}
+    },
+    {
+      "h": 384,
+      "capacity": 8,
+      "trials": 1,
+      "successes": 1,
+      "best_failed_column": -1,
+      "policy_successes": {
+        "youngest": 1
+      }
+    },
+    {
+      "h": 384,
+      "capacity": 10,
+      "trials": 1,
+      "successes": 1,
+      "best_failed_column": -1,
+      "policy_successes": {
+        "youngest": 1
+      }
+    },
+    {
+      "h": 512,
+      "capacity": 6,
+      "trials": 1,
+      "successes": 0,
+      "best_failed_column": 130,
+      "policy_successes": {}
+    },
+    {
+      "h": 512,
+      "capacity": 8,
+      "trials": 1,
+      "successes": 1,
+      "best_failed_column": -1,
+      "policy_successes": {
+        "youngest": 1
+      }
+    },
+    {
+      "h": 512,
+      "capacity": 10,
+      "trials": 1,
+      "successes": 1,
+      "best_failed_column": -1,
+      "policy_successes": {
+        "youngest": 1
+      }
+    }
+  ],
+  "best_certificates": [
+    {
+      "h": 32,
+      "capacity": 3,
+      "seed": 0,
+      "policy": "oldest",
+      "colors": 61,
+      "longest": 6
+    },
+    {
+      "h": 48,
+      "capacity": 4,
+      "seed": 0,
+      "policy": "reserve",
+      "colors": 116,
+      "longest": 12
+    },
+    {
+      "h": 64,
+      "capacity": 5,
+      "seed": 1,
+      "policy": "youngest",
+      "colors": 149,
+      "longest": 26
+    },
+    {
+      "h": 96,
+      "capacity": 6,
+      "seed": 1,
+      "policy": "youngest",
+      "colors": 252,
+      "longest": 38
+    },
+    {
+      "h": 128,
+      "capacity": 6,
+      "seed": 1,
+      "policy": "youngest",
+      "colors": 347,
+      "longest": 51
+    },
+    {
+      "h": 192,
+      "capacity": 6,
+      "seed": 1,
+      "policy": "youngest",
+      "colors": 559,
+      "longest": 77
+    },
+    {
+      "h": 256,
+      "capacity": 8,
+      "seed": 0,
+      "policy": "youngest",
+      "colors": 774,
+      "longest": 102
+    },
+    {
+      "h": 384,
+      "capacity": 8,
+      "seed": 0,
+      "policy": "youngest",
+      "colors": 1244,
+      "longest": 152
+    },
+    {
+      "h": 512,
+      "capacity": 10,
+      "seed": 0,
+      "policy": "youngest",
+      "colors": 1725,
+      "longest": 205
+    }
+  ]
+}

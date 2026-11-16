@@ -1,0 +1,3 @@
+HDR h 1501 B 20 l 1567 p 60083 type (29, 7) mode exact nosplit False NOCOLOUR None RHOSHIFT None GRAPH 1 {'r0': 1, 'yP': 59, 'T0': 1499, 'D0': 2, 'k': 0, 'Ts': 1499, 'frows': [1475, 1483, 1491, 1499]} subclasses 729 kept 321 relocfile 36 sizes [(1, 295), (2, 13)] removal reasons {'R-b 320': 415, 'R-e R_FF^oo': 118, 'B8 R_FF^+ (WD)': 249, 'census-relocated': 36, 'R-e R_FF^ee': 27, 'R-c': 188} heavy [] divtable 1.2s
+SUMMARY type (29, 7) subclasses 0 to 729 of 729 windows 308 fastboard-checked 3 {} time 13.3
+NEXT 729 729

@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "a": 3,
+      "b": 6,
+      "radius": 20,
+      "rectangles_with_two_black": 2970,
+      "parked_white_cells": 2,
+      "colliding_presentations": 0,
+      "status": "PASS"
+    },
+    {
+      "a": 7,
+      "b": 6,
+      "radius": 20,
+      "rectangles_with_two_black": 3480,
+      "parked_white_cells": 2,
+      "colliding_presentations": 0,
+      "status": "PASS"
+    },
+    {
+      "a": 11,
+      "b": 6,
+      "radius": 20,
+      "rectangles_with_two_black": 5628,
+      "parked_white_cells": 2,
+      "colliding_presentations": 0,
+      "status": "PASS"
+    },
+    {
+      "a": 3,
+      "b": 14,
+      "radius": 20,
+      "rectangles_with_two_black": 7268,
+      "parked_white_cells": 4,
+      "colliding_presentations": 2,
+      "status": "PASS"
+    },
+    {
+      "a": 11,
+      "b": 14,
+      "radius": 20,
+      "rectangles_with_two_black": 7242,
+      "parked_white_cells": 4,
+      "colliding_presentations": 2,
+      "status": "PASS"
+    },
+    {
+      "a": 19,
+      "b": 22,
+      "radius": 50,
+      "rectangles_with_two_black": 70404,
+      "parked_white_cells": 4,
+      "colliding_presentations": 2,
+      "status": "PASS"
+    }
+  ]
+}

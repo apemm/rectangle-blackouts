@@ -1,0 +1,22 @@
+{
+  "height": 5,
+  "width": 6,
+  "row_part": [
+    1,
+    3,
+    5
+  ],
+  "status": "UNSAT",
+  "corner_shape_mode": "45",
+  "solver": "cadical195",
+  "pysat_version": "1.9.dev21",
+  "process_limit_seconds": 10,
+  "limit_enforced": true,
+  "build_seconds": 0.0,
+  "elapsed_seconds": 0.17200000000593718,
+  "tilted_rectangle_count": 30,
+  "corner_supports": 120,
+  "variables": 108,
+  "clauses": 366,
+  "formal_unsat_proof_saved": false
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "status": "PASS",
+    "side": 32,
+    "offset_interval": [
+      -10000,
+      10000
+    ],
+    "checked_offsets": 20001,
+    "checked_constraints": 10101475,
+    "checked_core_assignments": 80,
+    "constraint_sha256": "3f837835c9b45be8637bd39acfdd598293ed892b28ad25a13e90fcad37315ed7",
+    "seconds": 72.875
+  },
+  {
+    "status": "PASS",
+    "side": 64,
+    "offset_interval": [
+      1600,
+      1800
+    ],
+    "checked_offsets": 201,
+    "checked_constraints": 886096,
+    "checked_core_assignments": 27,
+    "constraint_sha256": "7895d158ffedcd5e98ab50240957cab635e42135f218c891ea64d03c2b4283ac",
+    "seconds": 5.718
+  }
+]

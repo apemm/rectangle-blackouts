@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "results": [
+    {
+      "a": 1,
+      "b": 1,
+      "initial_nodes": 39,
+      "invariant_nodes": 131,
+      "canonical_edges": 166,
+      "forbidden_lifts_checked": 3144
+    },
+    {
+      "a": 5,
+      "b": 1,
+      "initial_nodes": 12,
+      "invariant_nodes": 22,
+      "canonical_edges": 16,
+      "forbidden_lifts_checked": 528
+    },
+    {
+      "a": 1,
+      "b": 5,
+      "initial_nodes": 12,
+      "invariant_nodes": 30,
+      "canonical_edges": 24,
+      "forbidden_lifts_checked": 720
+    }
+  ]
+}

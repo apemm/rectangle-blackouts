@@ -1,0 +1,22 @@
+{
+  "side": 1024,
+  "events_file": "aligned_private_side1024_minus2048_events.npy",
+  "events": 2169330,
+  "core_vertices": 681379,
+  "core_events": 1619062,
+  "peeling_rounds": 15,
+  "solver": "g4",
+  "conflict_budget": 10000,
+  "seconds_budget": 90.0,
+  "constraint_model": "actual_integer_differences",
+  "event_sha256": "cb79f45c1930d8cd67dee8e1a05b68dc6cb6e05936de69489b30f9cd95413c51",
+  "solver_stats": {
+    "restarts": 1,
+    "conflicts": 179,
+    "decisions": 929995,
+    "propagations": 5481398
+  },
+  "status": "SAT_DIRECTLY_CHECKED_CORE",
+  "certificate": "aligned_private_side1024_minus2048_integer_sat.npz",
+  "seconds": 9.156
+}

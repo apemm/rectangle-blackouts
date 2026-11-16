@@ -1,0 +1,303 @@
+{
+  "status": "PASS",
+  "M": 64,
+  "local_side": 128,
+  "offset_difference": 12669,
+  "height": 202704,
+  "padded_side": 524288,
+  "block_origin": [
+    196608,
+    196608
+  ],
+  "block_start": 42949672960,
+  "offsets": [
+    196608,
+    158603
+  ],
+  "genuine_sizes": [
+    25338,
+    50672
+  ],
+  "nodes": [
+    {
+      "local_fine_rank": 218304,
+      "coarse_rank": 3411,
+      "private_offset": 0,
+      "local_cell": [
+        31,
+        34
+      ],
+      "global_coarse_rank": 42949676371,
+      "global_fine_rank": 2748779287744,
+      "odd": 101479,
+      "even": 152166
+    },
+    {
+      "local_fine_rank": 235197,
+      "coarse_rank": 3674,
+      "private_offset": 61,
+      "local_cell": [
+        12,
+        32
+      ],
+      "global_coarse_rank": 42949676634,
+      "global_fine_rank": 2748779304637,
+      "odd": 101403,
+      "even": 152158
+    },
+    {
+      "local_fine_rank": 252142,
+      "coarse_rank": 3939,
+      "private_offset": 46,
+      "local_cell": [
+        13,
+        52
+      ],
+      "global_coarse_rank": 42949676899,
+      "global_fine_rank": 2748779321582,
+      "odd": 101407,
+      "even": 152238
+    },
+    {
+      "local_fine_rank": 269119,
+      "coarse_rank": 4204,
+      "private_offset": 63,
+      "local_cell": [
+        7,
+        77
+      ],
+      "global_coarse_rank": 42949677164,
+      "global_fine_rank": 2748779338559,
+      "odd": 101383,
+      "even": 152338
+    },
+    {
+      "local_fine_rank": 286092,
+      "coarse_rank": 4470,
+      "private_offset": 12,
+      "local_cell": [
+        26,
+        68
+      ],
+      "global_coarse_rank": 42949677430,
+      "global_fine_rank": 2748779355532,
+      "odd": 101459,
+      "even": 152302
+    },
+    {
+      "local_fine_rank": 303065,
+      "coarse_rank": 4735,
+      "private_offset": 25,
+      "local_cell": [
+        24,
+        87
+      ],
+      "global_coarse_rank": 42949677695,
+      "global_fine_rank": 2748779372505,
+      "odd": 101451,
+      "even": 152378
+    },
+    {
+      "local_fine_rank": 320038,
+      "coarse_rank": 5000,
+      "private_offset": 38,
+      "local_cell": [
+        5,
+        85
+      ],
+      "global_coarse_rank": 42949677960,
+      "global_fine_rank": 2748779389478,
+      "odd": 101375,
+      "even": 152370
+    },
+    {
+      "local_fine_rank": 337063,
+      "coarse_rank": 5266,
+      "private_offset": 39,
+      "local_cell": [
+        13,
+        105
+      ],
+      "global_coarse_rank": 42949678226,
+      "global_fine_rank": 2748779406503,
+      "odd": 101407,
+      "even": 152450
+    },
+    {
+      "local_fine_rank": 354104,
+      "coarse_rank": 5532,
+      "private_offset": 56,
+      "local_cell": [
+        11,
+        125
+      ],
+      "global_coarse_rank": 42949678492,
+      "global_fine_rank": 2748779423544,
+      "odd": 101399,
+      "even": 152530
+    },
+    {
+      "local_fine_rank": 371149,
+      "coarse_rank": 5799,
+      "private_offset": 13,
+      "local_cell": [
+        29,
+        126
+      ],
+      "global_coarse_rank": 42949678759,
+      "global_fine_rank": 2748779440589,
+      "odd": 101471,
+      "even": 152534
+    },
+    {
+      "local_fine_rank": 388130,
+      "coarse_rank": 6064,
+      "private_offset": 34,
+      "local_cell": [
+        20,
+        96
+      ],
+      "global_coarse_rank": 42949679024,
+      "global_fine_rank": 2748779457570,
+      "odd": 101435,
+      "even": 152414
+    },
+    {
+      "local_fine_rank": 405139,
+      "coarse_rank": 6330,
+      "private_offset": 19,
+      "local_cell": [
+        40,
+        108
+      ],
+      "global_coarse_rank": 42949679290,
+      "global_fine_rank": 2748779474579,
+      "odd": 101515,
+      "even": 152462
+    }
+  ],
+  "edges": [
+    {
+      "gap": 16893,
+      "vertical": 50679,
+      "hypotenuse": 84465,
+      "half_factor": 16893,
+      "white_rows": [
+        84586,
+        169051
+      ],
+      "white_column": 10995117184762
+    },
+    {
+      "gap": 16945,
+      "vertical": 50835,
+      "hypotenuse": 84725,
+      "half_factor": 16945,
+      "white_rows": [
+        84458,
+        169183
+      ],
+      "white_column": 10995117252438
+    },
+    {
+      "gap": 16977,
+      "vertical": 50931,
+      "hypotenuse": 84885,
+      "half_factor": 16977,
+      "white_rows": [
+        84430,
+        169315
+      ],
+      "white_column": 10995117320282
+    },
+    {
+      "gap": 16973,
+      "vertical": 50919,
+      "hypotenuse": 84865,
+      "half_factor": 16973,
+      "white_rows": [
+        84410,
+        169275
+      ],
+      "white_column": 10995117388182
+    },
+    {
+      "gap": 16973,
+      "vertical": 50919,
+      "hypotenuse": 84865,
+      "half_factor": 16973,
+      "white_rows": [
+        84486,
+        169351
+      ],
+      "white_column": 10995117456074
+    },
+    {
+      "gap": 16973,
+      "vertical": 50919,
+      "hypotenuse": 84865,
+      "half_factor": 16973,
+      "white_rows": [
+        84478,
+        169343
+      ],
+      "white_column": 10995117523966
+    },
+    {
+      "gap": 17025,
+      "vertical": 51075,
+      "hypotenuse": 85125,
+      "half_factor": 17025,
+      "white_rows": [
+        84350,
+        169475
+      ],
+      "white_column": 10995117591962
+    },
+    {
+      "gap": 17041,
+      "vertical": 51123,
+      "hypotenuse": 85205,
+      "half_factor": 17041,
+      "white_rows": [
+        84366,
+        169571
+      ],
+      "white_column": 10995117660094
+    },
+    {
+      "gap": 17045,
+      "vertical": 51135,
+      "hypotenuse": 85225,
+      "half_factor": 17045,
+      "white_rows": [
+        84354,
+        169579
+      ],
+      "white_column": 10995117728266
+    },
+    {
+      "gap": 16981,
+      "vertical": 50943,
+      "hypotenuse": 84905,
+      "half_factor": 16981,
+      "white_rows": [
+        84490,
+        169395
+      ],
+      "white_column": 10995117796318
+    },
+    {
+      "gap": 17009,
+      "vertical": 51027,
+      "hypotenuse": 85045,
+      "half_factor": 17009,
+      "white_rows": [
+        84426,
+        169471
+      ],
+      "white_column": 10995117864298
+    }
+  ],
+  "scope": "actual raw folded-profile embedding; good-row filters and Hall failure not certified"
+}

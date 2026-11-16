@@ -1,0 +1,50 @@
+{
+  "self_check_through": 128,
+  "results": [
+    {
+      "certificate": "C:\\Users\\arjun\\OneDrive\\Documents\\GitHub\\Kagey-Problems\\kagey-problems\\problem001\\research\\2026-11-12\\arc_certificate_h16384.json",
+      "sha256": "b3b0936ffa84c322331726f33138fb9f6d98e861a11d96c68631b31cf1890782",
+      "h": 16384,
+      "status": "PASS",
+      "declared_classes": 36169,
+      "nonempty_classes": 36169,
+      "labels": 67108864,
+      "diagonals": 16383,
+      "distinct_absolute_gaps": 41271,
+      "smallest_arc_inequality_slack": 0,
+      "elapsed_seconds": 3.297,
+      "odd_hypotenuse_triangles": 11747,
+      "admissible_signed_gap_incidences": 41271
+    },
+    {
+      "certificate": "C:\\Users\\arjun\\OneDrive\\Documents\\GitHub\\Kagey-Problems\\kagey-problems\\problem001\\research\\2026-11-12\\arc_certificate_h4096.json",
+      "sha256": "053e7f9e801d3388c53a32e6bd7c6c40632ffc1137e537fa6f945c180537b3fe",
+      "h": 4096,
+      "status": "PASS",
+      "declared_classes": 8718,
+      "nonempty_classes": 8718,
+      "labels": 4194304,
+      "diagonals": 4095,
+      "distinct_absolute_gaps": 8707,
+      "smallest_arc_inequality_slack": 0,
+      "elapsed_seconds": 0.317,
+      "odd_hypotenuse_triangles": 2491,
+      "admissible_signed_gap_incidences": 8707
+    },
+    {
+      "certificate": "C:\\Users\\arjun\\OneDrive\\Documents\\GitHub\\Kagey-Problems\\kagey-problems\\problem001\\research\\2026-11-12\\arc_certificate_h8192.json",
+      "sha256": "eee2f32705acabc17e5c218b02e3aed1b8c66463d6535c4fec20ac9ae37a5a0d",
+      "h": 8192,
+      "status": "PASS",
+      "declared_classes": 17777,
+      "nonempty_classes": 17777,
+      "labels": 16777216,
+      "diagonals": 8191,
+      "distinct_absolute_gaps": 19055,
+      "smallest_arc_inequality_slack": 0,
+      "elapsed_seconds": 1.264,
+      "odd_hypotenuse_triangles": 5441,
+      "admissible_signed_gap_incidences": 19055
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+HDR h 2501 B 22 l 2617 p 100043 type (22, 13) mode exact nosplit False NOCOLOUR None RHOSHIFT None GRAPH 1 {'r0': 3, 'yP': 45, 'T0': 2445, 'D0': 56, 'k': 2, 'Ts': 2317, 'frows': [2293, 2301, 2309, 2317]} subclasses 1725 kept 534 relocfile 512 sizes [(1, 459), (2, 36), (3, 1)] removal reasons {'R-b 320': 1089, 'R-b 444': 780, 'B8
+violations 0 max oob 0
+violations in windows with >= 2 kept labels (kind, family, #labels): {}
+two-or-more-label violations: 0
+B6 checked against R_IV: ok 0 bad 0
+FLAGS 0
+labels to relocate 0

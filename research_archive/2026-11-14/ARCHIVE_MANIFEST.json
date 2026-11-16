@@ -1,0 +1,251 @@
+{
+  "date": "2026-11-14",
+  "status": "New uncommitted research files",
+  "files": [
+    {
+      "name": "audit_hilbert_extensions.md",
+      "bytes": 5728,
+      "sha256": "5d559d2070e7274a862f9ed6cace8b5bcba348316ebbad9e5c6f0f56d9e4dca5"
+    },
+    {
+      "name": "check_hilbert_p_triangle.py",
+      "bytes": 2315,
+      "sha256": "b3ffbf136a62e48433211b6f2d31a1ecb460ab24ba25306cf7ae1eead3a6cb51"
+    },
+    {
+      "name": "check_hilbert_placement.py",
+      "bytes": 5284,
+      "sha256": "3cec2d67d37ccf1376d68ae2d9c2150a97250f5a79785cb5fc32f0985c5a287d"
+    },
+    {
+      "name": "check_hilbert_recursive_mixed.py",
+      "bytes": 7731,
+      "sha256": "7e89e8054c03c5a49ba741cf575e562a80f8144a8bb77d3b4695528b111742fa"
+    },
+    {
+      "name": "check_hilbert_residue_obstruction.json",
+      "bytes": 35005,
+      "sha256": "4eeb88978192d5a357f761d3e86f133d5171c8ed4e8acf6b2f6317fe00601a85"
+    },
+    {
+      "name": "check_hilbert_residue_obstruction.py",
+      "bytes": 2739,
+      "sha256": "0dd049f07bd21f9c8f89c364f25666e960b45312d7095bb13a3de44865383382"
+    },
+    {
+      "name": "check_hilbert_two_choice_obstruction.py",
+      "bytes": 3764,
+      "sha256": "c4c296a21a489ea3f020ef8dc221b3f64ae8dd1ee67f2b3f5a3c59090560de18"
+    },
+    {
+      "name": "check_holder_mixed_counterexample.py",
+      "bytes": 2407,
+      "sha256": "e5fc7390f912be01c99994d315e23f46cd7b67897855ec4aae018b97e5f91f7c"
+    },
+    {
+      "name": "continuation_cayley_coloring_payoff.md",
+      "bytes": 7964,
+      "sha256": "b6d9bb6ca6e3b3937c334cedf2db6bc1efce10d829a20416d633bf0b9c520591"
+    },
+    {
+      "name": "continuation_cayley_window_barrier.md",
+      "bytes": 4962,
+      "sha256": "63645b15b08a45e664860b4ac94837c558841ba837b336ac17c05bf6cca94a5c"
+    },
+    {
+      "name": "continuation_chi_assembly_requirements.md",
+      "bytes": 6281,
+      "sha256": "b30907f55f942cf0ba022fb4115bc68da4a2548687c1b816f95e57646babff26"
+    },
+    {
+      "name": "continuation_hilbert_choice_evidence.md",
+      "bytes": 7191,
+      "sha256": "7d4034a88a2bdc7a5b7dacea62ccbbab8eacffc39ec6c475379860aa5d0c8da1"
+    },
+    {
+      "name": "continuation_hilbert_dyadic_residue_obstruction.md",
+      "bytes": 4214,
+      "sha256": "6cd029f10dc5ee4e91157a372f87da454f783e8d7d943e0c3759fe49955c494b"
+    },
+    {
+      "name": "continuation_hilbert_factor_choices_audit.md",
+      "bytes": 7257,
+      "sha256": "4e9d03712fe23238800408049942bfe5082dd7c35611f79cb82d74f8daa78a70"
+    },
+    {
+      "name": "continuation_hilbert_factor_one_choices.md",
+      "bytes": 13994,
+      "sha256": "33092b255887ffd570de703d9d4ac0d926684aedaf673a1e375f41b05a016735"
+    },
+    {
+      "name": "continuation_hilbert_independent_audit.md",
+      "bytes": 2886,
+      "sha256": "4d91333fc6a6553750a55171a679f7624544faeb099e599643f71f2ccfd1e07b"
+    },
+    {
+      "name": "continuation_hilbert_local_factor_budget.md",
+      "bytes": 7835,
+      "sha256": "bca449f909d62de7316fe0c28a38ed5f3af3b878b5a0d36a65be74bac62dbb3c"
+    },
+    {
+      "name": "continuation_hilbert_mixed_supports.md",
+      "bytes": 6075,
+      "sha256": "cdad9e168f957eae5b40e57428b0f4d7fea59cdb7c002d31b4634fcfcb1f32eb"
+    },
+    {
+      "name": "continuation_hilbert_orientation_obstruction.md",
+      "bytes": 5179,
+      "sha256": "5290b63275a55dbdcc2aff4b52901c88766308e6fd092eb46578aab8b9682ac8"
+    },
+    {
+      "name": "continuation_hilbert_placement.md",
+      "bytes": 12995,
+      "sha256": "87c15c7562649a96f54932557dfbb10f8743cfbb7a88fcad6dddb28d892cf8a5"
+    },
+    {
+      "name": "continuation_hilbert_recursive_obstruction.md",
+      "bytes": 3897,
+      "sha256": "8165c726bf4c717e152f013bb5bb3f50c326c6adc1e031c91c845b8d08f7419e"
+    },
+    {
+      "name": "continuation_hilbert_residue_obstruction.md",
+      "bytes": 5622,
+      "sha256": "5616c1b8f67bdc6c8d18b838c35cf405066dae7265e1b404470e0d8d0da867a5"
+    },
+    {
+      "name": "continuation_hilbert_two_choice_obstruction.md",
+      "bytes": 5977,
+      "sha256": "9eb6a03a6afc27b878142330df6de27525fb85591bb11fb6d9c740fa03a6ca92"
+    },
+    {
+      "name": "continuation_holder_mixed_counterexample.md",
+      "bytes": 2555,
+      "sha256": "e21ea3f8c04c7a94b2fc5ab13936a305405dc3d6ca67de7ea29ab403aa667125"
+    },
+    {
+      "name": "CONTINUATION_REPORT.md",
+      "bytes": 13876,
+      "sha256": "d6e68b26c129e49fbe71d6d09c6b3bbc007fa7387cc627633b3e5621ac84bd8c"
+    },
+    {
+      "name": "continuation_synthesis_audit.md",
+      "bytes": 4870,
+      "sha256": "86a0af467264d5cd88e2a11740c7e25a84a50a9a0be95dd0a52e5a2df0214dda"
+    },
+    {
+      "name": "continuation_window_boundary_overshoot.md",
+      "bytes": 3333,
+      "sha256": "5d0171c14592995ff5d3368196f6f063a07181464c68b2ccc01cc763161e5ce7"
+    },
+    {
+      "name": "continuation_window_unit_walks.md",
+      "bytes": 3617,
+      "sha256": "449854163bc5ed908757dd988f761fb937a7497f16c6b03b85b0f7713280a216"
+    },
+    {
+      "name": "hilbert_choice_independent_verification.json",
+      "bytes": 943,
+      "sha256": "5577973f62abc3b83b86efa61d1d631b2b62a05c05310ceb28e9acb7fda55dc1"
+    },
+    {
+      "name": "hilbert_choice3_h2048.json",
+      "bytes": 1484556,
+      "sha256": "259fa37c5809db80f4324746cf72170bcf6ef21ff57887fb9e0bebb172521505"
+    },
+    {
+      "name": "hilbert_choice3_h4096.json",
+      "bytes": 7990161,
+      "sha256": "4d341f8c9843cfaea7f8d01e6257b5674d0faaa97039f68dee473a084aee5d66"
+    },
+    {
+      "name": "hilbert_choice4_h2048.json",
+      "bytes": 1790502,
+      "sha256": "38a5495231fba84ae0ffaa16e9543738a9abb720e153b3d915b75fd06e5c3ad3"
+    },
+    {
+      "name": "hilbert_finite_choice_search.py",
+      "bytes": 5832,
+      "sha256": "aab737ed677f576984481b0886869020112ab36054d515ea6d71688f1e3b0b33"
+    },
+    {
+      "name": "hilbert_fixed_graph_coloring.py",
+      "bytes": 3681,
+      "sha256": "78a8ad0e2d71d492a6752f577ed40c0831ab6ee2fe41101eb225909749208fb6"
+    },
+    {
+      "name": "hilbert_fixed_graph_h2048.json",
+      "bytes": 599,
+      "sha256": "8612b16e72c793e6c35abb5bd782aa72e6b0cde2870980c2a479a651740f643c"
+    },
+    {
+      "name": "hilbert_fixed_graph_h4096.json",
+      "bytes": 766,
+      "sha256": "17b15159e64430492a27914b001dc44e8d19e89830b1088a97532e8df609d58a"
+    },
+    {
+      "name": "hilbert_patch16_choice3.json",
+      "bytes": 22548,
+      "sha256": "349ce0d71f9b785fdcee415f4b2a97f603f5a3f22aeb4be9fe076b336200fb14"
+    },
+    {
+      "name": "hilbert_patch32_choice3_solutions.json",
+      "bytes": 1352,
+      "sha256": "e745fb24ff90eebb34b429ce461f2e4ac780513c9fd0c78bd1a4a6cd2e5c8e11"
+    },
+    {
+      "name": "hilbert_patch32_choice3.json",
+      "bytes": 7140,
+      "sha256": "c588cf14330aa93d8f47fc1baa4232748c6e67f1f498ce6d97d5b2fcd433cfc4"
+    },
+    {
+      "name": "hilbert_placement_check.json",
+      "bytes": 10006,
+      "sha256": "643fdb0d668da18dc4b44a2e6b221ed5608ef597c9ecd4d38ed791fb432cf9b9"
+    },
+    {
+      "name": "hilbert_recursive_mixed_check.json",
+      "bytes": 14054,
+      "sha256": "96099df9693164d71a1fe4d56b6585675b99f2bee9290fa89255daae592f29ae"
+    },
+    {
+      "name": "hilbert_translated_patch_search.py",
+      "bytes": 3489,
+      "sha256": "692fa7b96f4e660a74957d7bda653c473ecd93bfe7135c528274fd822e82e071"
+    },
+    {
+      "name": "hilbert_two_choice_rivals_check.json",
+      "bytes": 510974,
+      "sha256": "c1b3f374bd7e6b6901946bcf10de0ec8f46f73122a9f7003eaf4aa530be1d304"
+    },
+    {
+      "name": "hilbert_two_choice_rivals_in_strip.json",
+      "bytes": 297713,
+      "sha256": "69f368919ef8b5534a883d8835c89d69bacdd2e3f2af8df2b4cf55fa1490fdb1"
+    },
+    {
+      "name": "hilbert_two_choice_rivals.py",
+      "bytes": 5439,
+      "sha256": "b66e8ad96f34d0667a2b863ab1154817ca2f1e7435f4956baf40dbbf97381508"
+    },
+    {
+      "name": "holder_mixed_counterexample_check.json",
+      "bytes": 17847,
+      "sha256": "b82a77d632196813c2bdbc796a27848d1e622da3ab6f8da2050cae90057ab1b5"
+    },
+    {
+      "name": "probe_hilbert_orientation_angles.py",
+      "bytes": 2752,
+      "sha256": "2e9fee2f883733de6e3e24af39469698e67bf5178d570765ee2ae2c1db45d497"
+    },
+    {
+      "name": "solve_hilbert_patch_cores.py",
+      "bytes": 2496,
+      "sha256": "9f16e470115a0d63dcbc39b8a985060fd3a8caadb3ec501d0d3da1e76437349b"
+    },
+    {
+      "name": "verify_hilbert_choice_certificate.py",
+      "bytes": 3839,
+      "sha256": "a16c636f5ae60c3072f070d0cc42b314b771499e73fe56dc3a71aaa9b5b07156"
+    }
+  ]
+}

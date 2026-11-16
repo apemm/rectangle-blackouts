@@ -1,0 +1,7 @@
+j 24 (2, 9) windows 0 2.4
+j 25 (4, 9) windows 0 2.7
+j 26 (6, 9) windows 0 2.9
+j 27 (8, 9) windows 0 3.4
+j 28 (9, 10) windows 0 4.3
+j 29 (9, 12) windows 0 6.5
+sum 0

@@ -1,0 +1,43 @@
+{
+  "base_modulus": 16,
+  "base_ratios": [
+    1,
+    3,
+    5,
+    11,
+    13,
+    15
+  ],
+  "lifting": [
+    {
+      "a": 1,
+      "b": 1,
+      "status": "PASS",
+      "initial_two_digit_states": 39,
+      "invariant_nodes": 131,
+      "canonical_edges": 166,
+      "forbidden_lift_tests": 3144,
+      "maximum_node_size": 12
+    },
+    {
+      "a": 5,
+      "b": 1,
+      "status": "PASS",
+      "initial_two_digit_states": 12,
+      "invariant_nodes": 22,
+      "canonical_edges": 16,
+      "forbidden_lift_tests": 528,
+      "maximum_node_size": 12
+    },
+    {
+      "a": 1,
+      "b": 5,
+      "status": "PASS",
+      "initial_two_digit_states": 12,
+      "invariant_nodes": 30,
+      "canonical_edges": 24,
+      "forbidden_lift_tests": 720,
+      "maximum_node_size": 12
+    }
+  ]
+}

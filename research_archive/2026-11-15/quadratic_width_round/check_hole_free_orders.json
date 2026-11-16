@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "rectangle_cases": 172,
+  "rectangle_pair_checks": 1036260,
+  "rectangle_max_observed_ratio": "16",
+  "triangle_cases": 32,
+  "triangle_pair_checks": 973896,
+  "triangle_max_observed_ratio": "900/101",
+  "large_random_pair_checks": 40000,
+  "scope": "Finite checks supplement the uniform analytical proof."
+}

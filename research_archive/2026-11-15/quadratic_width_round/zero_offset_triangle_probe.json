@@ -1,0 +1,140 @@
+[
+  {
+    "side": 16,
+    "orientation": "id",
+    "triangle_count": 4,
+    "triangle_types": 3,
+    "nonprogression_witnesses": []
+  },
+  {
+    "side": 16,
+    "orientation": "swap",
+    "triangle_count": 5,
+    "triangle_types": 3,
+    "nonprogression_witnesses": []
+  },
+  {
+    "side": 32,
+    "orientation": "id",
+    "triangle_count": 19,
+    "triangle_types": 13,
+    "nonprogression_witnesses": [
+      [
+        19,
+        755,
+        805,
+        950
+      ],
+      [
+        155,
+        210,
+        435,
+        448
+      ],
+      [
+        -103,
+        322,
+        380,
+        581
+      ],
+      [
+        -103,
+        324,
+        382,
+        583
+      ],
+      [
+        93,
+        307,
+        417,
+        606
+      ],
+      [
+        249,
+        336,
+        543,
+        931
+      ],
+      [
+        359,
+        12,
+        182,
+        271
+      ],
+      [
+        359,
+        30,
+        200,
+        289
+      ]
+    ]
+  },
+  {
+    "side": 32,
+    "orientation": "swap",
+    "triangle_count": 31,
+    "triangle_types": 19,
+    "nonprogression_witnesses": [
+      [
+        -155,
+        374,
+        563,
+        801
+      ],
+      [
+        -26,
+        662,
+        777,
+        951
+      ],
+      [
+        41,
+        4,
+        166,
+        906
+      ],
+      [
+        103,
+        51,
+        93,
+        450
+      ],
+      [
+        103,
+        321,
+        379,
+        580
+      ],
+      [
+        103,
+        323,
+        381,
+        582
+      ],
+      [
+        103,
+        132,
+        489,
+        531
+      ],
+      [
+        94,
+        357,
+        546,
+        656
+      ],
+      [
+        -249,
+        481,
+        596,
+        869
+      ],
+      [
+        -514,
+        13,
+        56,
+        265
+      ]
+    ]
+  }
+]

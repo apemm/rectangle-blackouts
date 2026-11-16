@@ -1,0 +1,3 @@
+HDR h 1501 B 20 l 1567 p 60083 type (29, 7) mode exact nosplit False {'r0': 1, 'yP': 59, 'T0': 1499, 'D0': 2, 'k': 0, 'Ts': 1499, 'frows': [1475, 1483, 1491, 1499]} subclasses 729 kept 462 relocfile 56 sizes [(1, 277), (2, 64), (3, 13), (4, 2), (5, 2)] heavy [] divtable 1.2s
+SUMMARY type (29, 7) subclasses 0 to 729 of 729 windows 358 fastboard-checked 3 {} time 19.9
+NEXT 729 729

@@ -1,0 +1,20 @@
+{
+  "height": 8,
+  "width": 8,
+  "rectangles": 1192,
+  "raw_supports": 368090,
+  "minimal_supports": 72016,
+  "variables": 352,
+  "clauses": 72560,
+  "build_seconds": 2.327999999994063,
+  "solve_status": "UNSAT",
+  "seconds": 5.952999999994063,
+  "solver": "cadical195",
+  "pysat_version": "1.9.dev21",
+  "solver_time_limit_seconds": 20,
+  "min_row_degree": 2,
+  "formal_unsat_proof_saved": false,
+  "solver_time_limit_enforced": false,
+  "solver_limit_method": "Python timer calling unsupported CaDiCaL interrupt",
+  "runtime_note": "The solver completed normally. Its timer method was unsupported; the actual elapsed time is authoritative. The runner has since been changed to a process-level cap."
+}

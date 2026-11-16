@@ -1,0 +1,72 @@
+===== 2957
+ebesgue measure, atomic measures supported on ﬁnite in variant sets, and
+(non-ergodic) convex combinations of these.
+2020 Mathematics Subject Classiﬁcation. Primary: 37A17, 37A35; Secondary: 37A44.
+Key words and phrases. Entropy, invariant measures, invariant σ -algebras, measurable factors,
+joinings, toral automorphisms, solenoid automorphism.
+M.E. acknolewdges the support by SNF (grant no. 200020-1789 58) E.L. supported by ERC
+2020 grant HomDyn (grant no. 833423). Both authors thank the Hausdorﬀ Research Institute for
+Mathematics at the Universit¨ at Bonn for its hospitality during the trimester program “Dynamics:
+Topology and Numbers”.
+12 MANFRED EINSIEDLER AND ELON LINDENSTRAUSS
+In the following a solenoidX is a compact, connected, abelian group whose Pon-
+tryagin dual ˆX can be embedded into a ﬁnite-dimensional vector space over Q. The
+simplest example is a ﬁnite-dimensional torus. A Zd-action α by automorphisms
+of a solenoid X is called irreducible if there is no proper inﬁnite closed subgroup
+which is invariant underα, and totally irreducible if there is no ﬁnite index subgroup
+Λ ⊆ Zd and no proper inﬁnite closed subgroup Y ⊆X which is invariant under the
+induced action αΛ . A Zd-action is virtually cyclic if there exists n ∈ Zd such that
+for every element m ∈ Λ of a ﬁnite index subgroup Λ ⊆ Zd there exists some k ∈ Z
+with αm =αkn.
+We brieﬂy summarize the history of this problem. The topological gen eralization
+of Furstenberg’s result to higher dimensions was given by Berend [1, 2]: An action on
+a torus or solenoid has no proper, inﬁnite, closed, and invariant sub sets if and only
+if it is totally irreducible, not virtually-cyclic, and contains a hyperbolic element.
+The ﬁrst partial result for the measure problem on T was given by Lyons [31]
+under a strong additional assumption. Rudolph [34] weakened this a ssumption
+considerably, and proved the following theorem.
+Theorem 1.1. [34, Thm. 4.9] Letp,q ≥ 2 be relatively prime positive integers, and
+let µ be a Tp, Tq-invariant and ergodic measure on T. Then either µ =mT is the
+Lebesgue measure on T, or the entropy of Tp and Tq is zero.
+Johnson [17] lifted the relative primality assumption, showing it is enou gh to
+assume that p and q are multiplicatively independent. Feldman [13], Parry [33],
+and Host [15] have found diﬀerent proofs of this theorem, but pos itive entropy
+remains a crucial assumption.
+Anato
+===== 6323
+general positive entropy measure rigidity theorem. Without to-
+tal irreducibility the Haar measure of the group is no longer the only m easure with
+positive entropy. Thus our main theorem below is (necessarily) longe r in its for-
+mulation than Theorem 1.2. It strengthens e.g. [19, Thm. 3.1] which h as a similar
+conclusion but stronger assumptions.
+Theorem 1.3 (Positive entropy rigidity theorem) . Let α be a Zd-action (d ≥ 2)
+by automorphisms of a solenoid X. Suppose α has no virtually cyclic factors, and
+let µ be an α-invariant and ergodic probability measure on X. Then there exists a
+subgroup Λ ⊆ Zd of ﬁnite index and a decomposition µ = 1
+J (µ1 +... +µJ) of µ into
+mutually singular measures with the following properties f or every j = 1,...,J .RIGIDITY PROPERTIES FOR COMMUTING AUTOMORPHISMS 3
+(1) The measure µj is αΛ -ergodic, where αΛ is the restriction of α to Λ .
+(2) There exists an αΛ -invariant closed subgroup Gj such that µj is invariant
+under translation with elements in Gj, i.e. µj(B) = µj(B +g) for all g ∈Gj
+and every measurable set B ⊆X.
+(3) For n ∈ Zd αn
+∗µj =µk for some k ∈ {1,...,J } and αn(Gj) = Gk.
+(4) The measureµj induces a measure on the factor X/Gj with hµj (αn
+X/Gj
+) = 0
+for any n ∈ Λ . (Here αX/Gj denotes the action induced on X/Gj).
+We remark that in the topological category there is a big gap betwee n our un-
+derstanding of the totally irreducible case and the general case of Zd-actions by
+automorphisms on a solenoid. In the totally irreducible case Berend [2 ] gave an if-
+and-only-if condition for a Zd-action to have the property that every orbit is either
+ﬁnite or dense, and the same methods could be pushed further to g ive a complete
+classiﬁcation of closed invariant subsets for a totally irreducible Zd-action on the
+solenoid; for Zd-action on tori this is due to Z. Wang [36, Thm 1.10] and his proof
+certainly works also for solenoids though this does not seem to have been written
+(a special case, with a very nice application, can be found in Manner’s paper [32]).
+In the non-irreducible case, orbit closures, and closed invariant se ts are much less
+understood. We refer to [30] by Z. Wang and the second named aut hor for some
+results in this direction and more details.
+The proofs of Theorem 1.2 and Theorem 1.3 follow the outline of Rudolp h’s
+proof of Theorem 1.1. One of the main ingredients there was the obs ervation
+that hµ(Tp)/ 

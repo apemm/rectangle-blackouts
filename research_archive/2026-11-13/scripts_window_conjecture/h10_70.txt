@@ -1,0 +1,4 @@
+h=10: 126 edge sets, 71 reflection orbits
+partners [(121, 121)]
+h=10 idx=121 A=(1, 6, 7, 8, 9) maxwidth=10 witness=13 14 810 46 27 28 12 910 610 110 counts=[1, 25, 600, 11568, 94468, 317664, 307580, 118852, 12020, 484, 4, 0]
+time 7.8s

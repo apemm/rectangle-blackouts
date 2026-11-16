@@ -1,0 +1,44 @@
+P1P2 h=4 q=4 M0=9 M0/q=2.250
+   m=9 valid
+   m=13 valid
+   (0.0s)
+P1P2 h=5 q=6 M0=20 M0/q=3.333
+   m=20 valid
+   m=25 valid
+   (0.0s)
+P1P2 h=6 q=9 M0=24 M0/q=2.667
+   m=24 valid
+   m=30 valid
+   (0.0s)
+P1P2 h=7 q=12 M0=31 M0/q=2.583
+   m=31 valid
+   m=38 valid
+   (0.1s)
+P1P2 h=8 q=16 M0=41 M0/q=2.562
+   m=41 valid
+   m=49 valid
+   (0.2s)
+P1P2 h=9 q=20 M0=50 M0/q=2.500
+   m=50 valid
+   m=59 valid
+   (0.5s)
+P1P2 h=10 q=25 M0=73 M0/q=2.920
+   m=73 valid
+   m=83 valid
+   (1.3s)
+P1P2 h=11 q=30 M0=79 M0/q=2.633
+   m=79 valid
+   m=90 valid
+   (1.9s)
+P1P2 h=12 q=36 M0=93 M0/q=2.583
+   m=93 valid
+   m=105 valid
+   (3.3s)
+P1P2 h=13 q=42 M0=113 M0/q=2.690
+   m=113 valid
+   m=126 valid
+   (5.6s)
+P1P2 h=14 q=49 M0=132 M0/q=2.694
+   m=132 valid
+   m=146 valid
+   (8.4s)

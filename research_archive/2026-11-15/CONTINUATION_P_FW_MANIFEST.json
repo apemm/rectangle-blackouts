@@ -1,0 +1,109 @@
+{
+  "date": "2026-11-15",
+  "report": "CONTINUATION_P_FW_REPORT.md",
+  "scope": "New continuation notes and exact checkers for P solvability and FW repair. No full quadratic-width theorem claimed.",
+  "existing_files_modified": false,
+  "commits_created": 0,
+  "checks": {
+    "three_label_systems": 4096,
+    "three_leg_vectors": 1285,
+    "three_leg_enumerations_agree": true,
+    "ordinary_pair_swap_assignments": 72,
+    "h7_pair_swap_assignments": 16,
+    "abstract_K4_assignments": 81,
+    "abstract_K23_assignments": 243,
+    "archive_relative_links": "PASS"
+  },
+  "files": [
+    {
+      "path": "check_pair_permutation_obstruction.json",
+      "bytes": 5293,
+      "sha256": "199376f5ea6b3d7ceb84dfe32e36ccdb9c033a16152907712bebcd8a58d4e2fe"
+    },
+    {
+      "path": "check_pair_permutation_obstruction.py",
+      "bytes": 5130,
+      "sha256": "b797fe693a365080035d5bcd7f4b617deef3c50a14941f4be4e677fe9f969007"
+    },
+    {
+      "path": "check_simple_constraint_obstructions.py",
+      "bytes": 724,
+      "sha256": "bc051d556974b23463219ed27735a09213b79254682c2e17fdb2ad8ecc14da40"
+    },
+    {
+      "path": "check_three_label_integer_lemma.py",
+      "bytes": 462,
+      "sha256": "1e03f63ed4bd929dcca029eaa53fea4e2b963136b7a189c9af8b607ee33a3540"
+    },
+    {
+      "path": "check_three_leg_spacing.json",
+      "bytes": 245,
+      "sha256": "6070c02c5a0939929ab6541d20be4f9fd32a8ece42162db9cfde483534b8f20c"
+    },
+    {
+      "path": "check_three_leg_spacing.py",
+      "bytes": 2246,
+      "sha256": "c1f434dc4c38a4d613db3f5df1f38e985b35ec01471713b41468fc62d7f115f5"
+    },
+    {
+      "path": "continuation_adjacent_sea_and_p_relocation_audit.md",
+      "bytes": 5947,
+      "sha256": "0faf8fb90e75f9cb950fedd1a6d7f56cb334630305754eba946cec069bd56d9b"
+    },
+    {
+      "path": "continuation_adjacent_sea_repair_obstruction.md",
+      "bytes": 4345,
+      "sha256": "8877f212926c1f6819ef3fe5ecbbd116561c86741e99ca7ee3b0450992a2d222"
+    },
+    {
+      "path": "continuation_dec_cut_audit.md",
+      "bytes": 15180,
+      "sha256": "4b52b42a350a2975b757ef2559d14c98f61e758b82842573f32fd0fc20c7b3ce"
+    },
+    {
+      "path": "continuation_full_occupancy_permutations.md",
+      "bytes": 7363,
+      "sha256": "022bcf842c6cb82149940138d5bc0300f328457968e691a9af1a39fd0d531d4d"
+    },
+    {
+      "path": "continuation_fw_local_module_barrier.md",
+      "bytes": 12861,
+      "sha256": "85b6d3f65e6f0c81266cfcc032611b5757927bf73dddb66f55996d9de8bd74bd"
+    },
+    {
+      "path": "CONTINUATION_P_FW_REPORT.md",
+      "bytes": 12733,
+      "sha256": "245a4924e5c1094301b3367108b463ae938538c0c0ff580e6f4be77af53ff30d"
+    },
+    {
+      "path": "continuation_p_simple_constraint_obstructions.md",
+      "bytes": 3097,
+      "sha256": "e4b40c1a9c70d8ce25810cc736b9865be26a1e23c9724d14e247743eabf51f49"
+    },
+    {
+      "path": "continuation_p_sparse_multiple_legs.md",
+      "bytes": 5714,
+      "sha256": "64de97a347af5b1bc33983d1c0477c79a310b3d270ba6386b8f11ff1abde1f8d"
+    },
+    {
+      "path": "continuation_p_type_reachability.md",
+      "bytes": 3644,
+      "sha256": "9e590cde538241590dea3aad0bfa3e8a517dd2b5eed7e9858d024a0856bf8392"
+    },
+    {
+      "path": "continuation_pair_permutation_obstruction.md",
+      "bytes": 10401,
+      "sha256": "748b1b6f0a8d07774fe395ac6cf79f817faaecb25c314bd7a7d2690fd2154fd4"
+    },
+    {
+      "path": "continuation_three_label_integer_lemma.md",
+      "bytes": 3146,
+      "sha256": "2d9f6d9985f9e6789779a7df933aabb9595c42ddc2b288abe55ce095d47dd247"
+    },
+    {
+      "path": "continuation_three_leg_spacing.md",
+      "bytes": 6187,
+      "sha256": "d83e6846548185ab22f17a89191adbce3e168e9f8d14cbb1f930e9e3c6112160"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "side": 32,
+    "orientation": "id",
+    "offset_types": 58579,
+    "modules_checked": 1700441,
+    "distinct_relations": 17,
+    "common_diagonal_bits": 0,
+    "modules_excluding_all_equal_anchors": [],
+    "witnesses": [],
+    "seconds": 23.780999999988126
+  },
+  {
+    "side": 32,
+    "orientation": "swap",
+    "offset_types": 58391,
+    "modules_checked": 1701655,
+    "distinct_relations": 17,
+    "common_diagonal_bits": 0,
+    "modules_excluding_all_equal_anchors": [],
+    "witnesses": [],
+    "seconds": 20.71899999998277
+  }
+]

@@ -1,0 +1,357 @@
+{
+  "results": [
+    {
+      "e": 2,
+      "norm_cases": 0,
+      "integer_cases": 0,
+      "witnesses": [],
+      "complete": true
+    },
+    {
+      "e": 3,
+      "norm_cases": 36,
+      "integer_cases": 0,
+      "witnesses": [],
+      "complete": true
+    },
+    {
+      "e": 4,
+      "norm_cases": 264,
+      "integer_cases": 20,
+      "witnesses": [],
+      "complete": true
+    },
+    {
+      "e": 5,
+      "norm_cases": 1132,
+      "integer_cases": 116,
+      "witnesses": [],
+      "complete": true
+    },
+    {
+      "e": 6,
+      "norm_cases": 3552,
+      "integer_cases": 388,
+      "witnesses": [],
+      "complete": true
+    },
+    {
+      "e": 7,
+      "norm_cases": 9648,
+      "integer_cases": 1010,
+      "witnesses": [],
+      "complete": true
+    },
+    {
+      "e": 8,
+      "norm_cases": 22640,
+      "integer_cases": 2242,
+      "witnesses": [],
+      "complete": true
+    }
+  ],
+  "allow_nonpositive": {
+    "e": 6,
+    "norm_cases": 1010,
+    "integer_cases": 134,
+    "witnesses": [
+      {
+        "e": 6,
+        "rows": [
+          1,
+          16,
+          1,
+          4
+        ],
+        "u": 3,
+        "v": 15,
+        "t": 24,
+        "side": [
+          [
+            13,
+            1
+          ],
+          [
+            16,
+            16
+          ],
+          [
+            46,
+            10
+          ],
+          [
+            43,
+            -5
+          ]
+        ],
+        "diag": [
+          [
+            37,
+            1
+          ],
+          [
+            43,
+            -5
+          ],
+          [
+            52,
+            4
+          ],
+          [
+            46,
+            10
+          ]
+        ],
+        "common": [
+          [
+            43,
+            -5
+          ],
+          [
+            46,
+            10
+          ]
+        ],
+        "min_white_row": -5
+      },
+      {
+        "e": 6,
+        "rows": [
+          1,
+          16,
+          1,
+          4
+        ],
+        "u": 3,
+        "v": 15,
+        "t": 24,
+        "side": [
+          [
+            45,
+            1
+          ],
+          [
+            48,
+            16
+          ],
+          [
+            78,
+            10
+          ],
+          [
+            75,
+            -5
+          ]
+        ],
+        "diag": [
+          [
+            69,
+            1
+          ],
+          [
+            75,
+            -5
+          ],
+          [
+            84,
+            4
+          ],
+          [
+            78,
+            10
+          ]
+        ],
+        "common": [
+          [
+            75,
+            -5
+          ],
+          [
+            78,
+            10
+          ]
+        ],
+        "min_white_row": -5
+      },
+      {
+        "e": 6,
+        "rows": [
+          1,
+          16,
+          4,
+          1
+        ],
+        "u": 15,
+        "v": 21,
+        "t": 3,
+        "side": [
+          [
+            1,
+            1
+          ],
+          [
+            16,
+            16
+          ],
+          [
+            22,
+            10
+          ],
+          [
+            7,
+            -5
+          ]
+        ],
+        "diag": [
+          [
+            4,
+            4
+          ],
+          [
+            7,
+            -5
+          ],
+          [
+            25,
+            1
+          ],
+          [
+            22,
+            10
+          ]
+        ],
+        "common": [
+          [
+            7,
+            -5
+          ],
+          [
+            22,
+            10
+          ]
+        ],
+        "min_white_row": -5
+      },
+      {
+        "e": 6,
+        "rows": [
+          1,
+          16,
+          4,
+          1
+        ],
+        "u": 15,
+        "v": 21,
+        "t": 3,
+        "side": [
+          [
+            33,
+            1
+          ],
+          [
+            48,
+            16
+          ],
+          [
+            54,
+            10
+          ],
+          [
+            39,
+            -5
+          ]
+        ],
+        "diag": [
+          [
+            36,
+            4
+          ],
+          [
+            39,
+            -5
+          ],
+          [
+            57,
+            1
+          ],
+          [
+            54,
+            10
+          ]
+        ],
+        "common": [
+          [
+            39,
+            -5
+          ],
+          [
+            54,
+            10
+          ]
+        ],
+        "min_white_row": -5
+      },
+      {
+        "e": 6,
+        "rows": [
+          2,
+          32,
+          2,
+          8
+        ],
+        "u": 6,
+        "v": 30,
+        "t": 48,
+        "side": [
+          [
+            26,
+            2
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            92,
+            20
+          ],
+          [
+            86,
+            -10
+          ]
+        ],
+        "diag": [
+          [
+            74,
+            2
+          ],
+          [
+            86,
+            -10
+          ],
+          [
+            104,
+            8
+          ],
+          [
+            92,
+            20
+          ]
+        ],
+        "common": [
+          [
+            86,
+            -10
+          ],
+          [
+            92,
+            20
+          ]
+        ],
+        "min_white_row": -10
+      }
+    ],
+    "complete": false
+  },
+  "scope": "N!=0 mixed supports in the unshifted power-of-two sea; no label or full-board theorem."
+}

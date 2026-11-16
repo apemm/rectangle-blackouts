@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "offsets": 215640,
+  "explicit_cores": 6,
+  "explicit_core_colors": 198,
+  "checked_constraints": 4290580,
+  "constraint_sha256": "ea53acccd3a47d41dbad63f8f1daf76b515404b1d2eee651aa1a51097d377566",
+  "seconds": 72.39
+}

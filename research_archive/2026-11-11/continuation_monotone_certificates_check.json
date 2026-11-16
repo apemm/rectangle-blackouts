@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "source_sha256": "1deff314000cca19f7c999864f1991c92bf2bd6a35ddf9370c1f58e6d3e28143",
+  "scope": "finite monotone, Lipschitz-one, strong-P certificates only",
+  "certificates": [
+    {
+      "height": 32,
+      "classes": 61,
+      "labels": 256,
+      "checked_pairs": 489,
+      "status": "PASS"
+    },
+    {
+      "height": 48,
+      "classes": 116,
+      "labels": 576,
+      "checked_pairs": 1443,
+      "status": "PASS"
+    },
+    {
+      "height": 64,
+      "classes": 149,
+      "labels": 1024,
+      "checked_pairs": 4983,
+      "status": "PASS"
+    },
+    {
+      "height": 96,
+      "classes": 252,
+      "labels": 2304,
+      "checked_pairs": 16052,
+      "status": "PASS"
+    },
+    {
+      "height": 128,
+      "classes": 347,
+      "labels": 4096,
+      "checked_pairs": 37643,
+      "status": "PASS"
+    },
+    {
+      "height": 192,
+      "classes": 559,
+      "labels": 9216,
+      "checked_pairs": 128258,
+      "status": "PASS"
+    },
+    {
+      "height": 256,
+      "classes": 774,
+      "labels": 16384,
+      "checked_pairs": 288069,
+      "status": "PASS"
+    },
+    {
+      "height": 384,
+      "classes": 1244,
+      "labels": 36864,
+      "checked_pairs": 949403,
+      "status": "PASS"
+    },
+    {
+      "height": 512,
+      "classes": 1725,
+      "labels": 65536,
+      "checked_pairs": 2247332,
+      "status": "PASS"
+    }
+  ]
+}

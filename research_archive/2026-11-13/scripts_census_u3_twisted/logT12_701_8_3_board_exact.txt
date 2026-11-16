@@ -1,0 +1,7 @@
+HDR h 701 B 17 l 757 p 53299 type (8,3) r0 3 T0 689 D0 12 k 0 T* 689 frows [665, 673, 681, 689] subclasses 10 kept 10 removed 213 heavy 2 edges 0
+VIOL sub 38 T -249 kind V5 family D10 comp Fe nL 1 labels [(168, 43)] nb False X0 9316208954 data (245066, 88, 245150, 673, 3)
+VIOL sub 38 T -249 kind V5 family D10 comp Fe nL 1 labels [(168, 43)] nb False X0 9316208954 data (245066, 88, 244846, 673, 20)
+SUMMARY type (8,3) board exact subs 0..186 of 186 oob 0 pairs 0 triples 0 time 1.1
+   ('V5', 'D10', 1, 'deep') 2
+PARKED {'FFo': 100, 'FSo': 160} SLLPC observed 0 shape_ok 0 predicted 0 in_V3 0
+NEXT 186 186

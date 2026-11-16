@@ -1,0 +1,46 @@
+{
+  "results": [
+    {
+      "status": "PASS",
+      "side": 4,
+      "stride": 32,
+      "choices": 3,
+      "nonempty_offsets": 2003,
+      "constant_zero_offsets": 1006,
+      "certified_assignments": 997,
+      "checked_constraints": 7420,
+      "maximum_events": 17,
+      "constraint_sha256": "e0d8a34d92283f0eecbb072f57c44341316540adb7fb98ee51603377ca5a14b6",
+      "certificate_file_sha256": "c15440dd508042434ce1efe57771857b8bbb44932f07db21ea42b7dbc238c2fb",
+      "seconds": 0.047
+    },
+    {
+      "status": "PASS",
+      "side": 8,
+      "stride": 32,
+      "choices": 3,
+      "nonempty_offsets": 22339,
+      "constant_zero_offsets": 9682,
+      "certified_assignments": 12657,
+      "checked_constraints": 187296,
+      "maximum_events": 90,
+      "constraint_sha256": "01c2b53c84744cfa06a583ecb277e4c2064ae89c93f16786954874370a67a59b",
+      "certificate_file_sha256": "8e40b0bffcc3ade7a5b78b692d4c84e104158d67d1e4b7ce1485e45a3eed5143",
+      "seconds": 0.906
+    },
+    {
+      "status": "PASS",
+      "side": 16,
+      "stride": 32,
+      "choices": 3,
+      "nonempty_offsets": 215640,
+      "constant_zero_offsets": 82170,
+      "certified_assignments": 133470,
+      "checked_constraints": 4290580,
+      "maximum_events": 386,
+      "constraint_sha256": "ea53acccd3a47d41dbad63f8f1daf76b515404b1d2eee651aa1a51097d377566",
+      "certificate_file_sha256": "5c372a069505f27112743243514234d24fdcecfd4496aacbe925f4fce5398422",
+      "seconds": 24.578
+    }
+  ]
+}

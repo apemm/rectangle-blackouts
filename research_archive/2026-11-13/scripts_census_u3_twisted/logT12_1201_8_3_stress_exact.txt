@@ -1,0 +1,21 @@
+HDR h 1201 B 19 l 1277 p 91303 type (8,3) r0 3 T0 1201 D0 0 k 0 T* 1201 frows [1177, 1185, 1193, 1201] subclasses 40 kept 222 removed 425 heavy 4 edges 0
+VIOL sub 16 T -633 kind V5 family D10 comp Fe nL 1 labels [(424, 107)] nb False X0 4708692610 data (721218, 216, 721110, 1185, 3)
+VIOL sub 18 T -569 kind V5 family D10 comp Fe nL 1 labels [(392, 107)] nb False X0 6187070402 data (721218, 216, 721110, 1185, 3)
+VIOL sub 20 T -505 kind V5 family D10 comp Fe nL 1 labels [(360, 107)] nb False X0 203436610 data (721218, 216, 721110, 1185, 3)
+VIOL sub 23 T -377 kind V5 family D10 comp Fe nL 1 labels [(296, 107)] nb False X0 3160192194 data (721218, 216, 721110, 1185, 3)
+VIOL sub 25 T -313 kind V5 family D10 comp Fe nL 1 labels [(264, 107)] nb False X0 4638569986 data (721218, 216, 721110, 1185, 3)
+VIOL sub 27 T -249 kind V5 family D10 comp Fe nL 1 labels [(232, 107)] nb False X0 6116948162 data (720834, 216, 720726, 1185, 3)
+VIOL sub 27 T -249 kind V5 family D10 comp Fe nL 1 labels [(424, 299)] nb False X0 6116948162 data (723138, 600, 723222, 1185, 3)
+VIOL sub 29 T -185 kind V5 family D10 comp Fe nL 1 labels [(200, 107)] nb False X0 133314754 data (720450, 216, 720342, 1185, 3)
+VIOL sub 29 T -185 kind V5 family D10 comp Fe nL 1 labels [(392, 299)] nb False X0 133314754 data (722754, 600, 722838, 1185, 3)
+VIOL sub 31 T -121 kind V5 family D10 comp Fe nL 1 labels [(168, 107)] nb False X0 1611692930 data (720066, 216, 719958, 1185, 3)
+VIOL sub 31 T -121 kind V5 family D10 comp Fe nL 1 labels [(360, 299)] nb False X0 1611692930 data (722370, 600, 722454, 1185, 3)
+VIOL sub 33 T -57 kind V5 family D10 comp Fe nL 1 labels [(328, 299)] nb False X0 3090071106 data (721986, 600, 722070, 1185, 3)
+VIOL sub 36 T 71 kind V5 family D10 comp Fe nL 1 labels [(264, 299)] nb False X0 6046827458 data (721218, 600, 721302, 1185, 3)
+VIOL sub 38 T 135 kind V5 family D10 comp Fe nL 1 labels [(232, 299)] nb False X0 63194050 data (720834, 600, 720918, 1185, 3)
+VIOL sub 40 T 199 kind V5 family D10 comp Fe nL 1 labels [(200, 299)] nb False X0 1541572226 data (720450, 600, 720534, 1185, 3)
+VIOL sub 41 T 263 kind V5 family D10 comp Fe nL 1 labels [(168, 299)] nb False X0 3019950402 data (720066, 600, 720150, 1185, 3)
+SUMMARY type (8,3) stress exact subs 0..69 of 69 oob 0 pairs 665 triples 1299 time 36.4
+   ('V5', 'D10', 1, 'deep') 16
+PARKED {'FFo': 3709, 'FSo': 9744, 'Soo': 169} SLLPC observed 169 shape_ok 169 predicted 169 in_V3 0
+NEXT 69 69

@@ -1,0 +1,12 @@
+{
+  "side": 256,
+  "offset": -256,
+  "stride": 32,
+  "choices": 3,
+  "outer": 0,
+  "events": 83265,
+  "norms": 218,
+  "automata": 600,
+  "sha256": "aba558b0b4955feafceb5cd7a60057ddbdf704af2c1946286ce033d99a9c4366",
+  "seconds": 0.344
+}

@@ -1,0 +1,9 @@
+{
+  "h": 64,
+  "capacity": 3,
+  "result": {
+    "success": false,
+    "reason": "beam_exhausted",
+    "column": 20
+  }
+}

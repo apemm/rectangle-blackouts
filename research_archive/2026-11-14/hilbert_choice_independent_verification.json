@@ -1,0 +1,35 @@
+[
+  {
+    "certificate": "hilbert_choice3_h2048.json",
+    "sha256": "259fa37c5809db80f4324746cf72170bcf6ef21ff57887fb9e0bebb172521505",
+    "h": 2048,
+    "S": 32,
+    "M": 3,
+    "status": "PASS",
+    "euclid_triples": 56,
+    "tested_opposite_parity_pairs": 44039730,
+    "maximum_rank_gap": 21
+  },
+  {
+    "certificate": "hilbert_choice4_h2048.json",
+    "sha256": "38a5495231fba84ae0ffaa16e9543738a9abb720e153b3d915b75fd06e5c3ad3",
+    "h": 2048,
+    "S": 32,
+    "M": 4,
+    "status": "PASS",
+    "euclid_triples": 56,
+    "tested_opposite_parity_pairs": 33554160,
+    "maximum_rank_gap": 16
+  },
+  {
+    "certificate": "hilbert_choice3_h4096.json",
+    "sha256": "4d341f8c9843cfaea7f8d01e6257b5674d0faaa97039f68dee473a084aee5d66",
+    "h": 4096,
+    "S": 32,
+    "M": 3,
+    "status": "PASS",
+    "euclid_triples": 138,
+    "tested_opposite_parity_pairs": 360708252,
+    "maximum_rank_gap": 43
+  }
+]
