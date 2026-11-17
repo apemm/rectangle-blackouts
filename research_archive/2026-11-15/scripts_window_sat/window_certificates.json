@@ -1,23 +1,315 @@
 {
  "date": "2026-11-16",
- "statement": "No window of width h+1 exists at height h, for h = 11 and h = 12, with the balanced partition left free.",
+ "statement": "No window of width h+1 exists at height h, for 4 <= h <= 12, with the balanced partition left free.",
  "generator": "export_cnf.py, which writes the clauses of win.build(h, k) as DIMACS",
  "solver": "CaDiCaL 2.1.2, run as cadical --lrat --binary=false CNF PROOF",
- "checkers": ["lrat-check (drat-trim)", "Lean 4.33.1 Std.Tactic.BVDecide.LRAT.check, built from jis/unsat/lean"],
- "instances": [
-  {"cnf": "window_h11_k12.cnf", "h": 11, "k": 12, "vars": 635, "clauses": 16046, "rectangles": 2528,
-   "cnf_sha256": "c24636d3af5a211e1c0c4cc651be7e47b5ce45f34b6eeafd89667dacd1dc1030",
-   "result": "UNSATISFIABLE", "solve_seconds": 25,
-   "proof_bytes": 200756480, "proof_sha256": "1c0aae85926f166158d1dd8cb0147c9c48577e2d728e0e0b3bc4d5c2bf5bcbdc",
-   "lrat_check": "verified, 5 s", "lean_check": "s VERIFIED, 17 s, parsed formula equal to the input"},
-  {"cnf": "window_h12_k13.cnf", "h": 12, "k": 13, "vars": 760, "clauses": 23328, "rectangles": 3820,
-   "cnf_sha256": "166415382bb4311b76b8d4ff16f0f56d65acea6aa35be741338d2603387b2930",
-   "result": "UNSATISFIABLE", "solve_seconds": 264,
-   "proof_bytes": 1459539176, "proof_sha256": "1cd88c679602afd14d01f6bd4c3dd3180b8848f3037c58458d09ec6020da687b",
-   "lrat_check": "verified, 57 s", "lean_check": "s VERIFIED, 117 s, parsed formula equal to the input"}
+ "checkers": [
+  "lrat-check (drat-trim)",
+  "Lean 4.33.1 Std.Tactic.BVDecide.LRAT.check, built from jis/unsat/lean"
  ],
- "witness_h11_k11": {"columns": [[1,8],[1,2],[2,4],[7,10],[4,9],[9,11],[2,3],[8,11],[1,9],[1,10],[10,11]], "A": [1,3,4,6,7,11],
-  "note": "A window of width 11 at height 11, found by win.py. Not rechecked by a second program."},
+ "instances": [
+  {
+   "cnf": "window_h4_k5.cnf",
+   "h": 4,
+   "k": 5,
+   "vars": 72,
+   "clauses": 272,
+   "rectangles": 14,
+   "cnf_sha256": "7cff1cf0c876fb3330bf03cd95c9dbde9ca02964777de3767395ab908eea594c",
+   "result": "UNSATISFIABLE",
+   "proof_bytes": 4749,
+   "proof_sha256": "d5847a355ae4bf0865726d2f9760883fcfe0ec1bcf0115a5cc85a886971864d5",
+   "lrat_check": "verified",
+   "lean_check": "s VERIFIED, parsed formula equal to the input"
+  },
+  {
+   "cnf": "window_h5_k6.cnf",
+   "h": 5,
+   "k": 6,
+   "vars": 119,
+   "clauses": 630,
+   "rectangles": 48,
+   "cnf_sha256": "a577c015bebdeb7c87783433dfdded6e4f4e0405b932cfe6e112c7f392681f8b",
+   "result": "UNSATISFIABLE",
+   "proof_bytes": 13310,
+   "proof_sha256": "eb1d8c3645a21df031ce07910a5503287c89b1ff8ce51c2d11236ac2678a273f",
+   "lrat_check": "verified",
+   "lean_check": "s VERIFIED, parsed formula equal to the input"
+  },
+  {
+   "cnf": "window_h6_k7.cnf",
+   "h": 6,
+   "k": 7,
+   "vars": 178,
+   "clauses": 1297,
+   "rectangles": 128,
+   "cnf_sha256": "372016c20c37c03494ad850785958aa62753c3070653797de60027124febb975",
+   "result": "UNSATISFIABLE",
+   "proof_bytes": 67982,
+   "proof_sha256": "e31972fddd48d8c9c4a1a5f0a17f327dd49e6f35a22594fd3edf5c9237afda30",
+   "lrat_check": "verified",
+   "lean_check": "s VERIFIED, parsed formula equal to the input"
+  },
+  {
+   "cnf": "window_h7_k8.cnf",
+   "h": 7,
+   "k": 8,
+   "vars": 247,
+   "clauses": 2404,
+   "rectangles": 278,
+   "cnf_sha256": "d490652d94379779aa85575dfb539ec08555c80c0545d366c30a305a41c31ab3",
+   "result": "UNSATISFIABLE",
+   "proof_bytes": 577662,
+   "proof_sha256": "75b4b132acb1a76f609c0d7d981abe2facce36500ce057ff40c88636d42e36af",
+   "lrat_check": "verified",
+   "lean_check": "s VERIFIED, parsed formula equal to the input"
+  },
+  {
+   "cnf": "window_h8_k9.cnf",
+   "h": 8,
+   "k": 9,
+   "vars": 328,
+   "clauses": 4176,
+   "rectangles": 542,
+   "cnf_sha256": "51c761e9e51bf62ae7cbb4b2420d008d37e86a5f91a23c1fb692e39e893cdbc8",
+   "result": "UNSATISFIABLE",
+   "proof_bytes": 1694243,
+   "proof_sha256": "bf2a1e62c189e8f970824c55545a82efe57c1586ec4652ee9d9d3a5300c5d7f2",
+   "lrat_check": "verified",
+   "lean_check": "s VERIFIED, parsed formula equal to the input"
+  },
+  {
+   "cnf": "window_h9_k10.cnf",
+   "h": 9,
+   "k": 10,
+   "vars": 419,
+   "clauses": 6844,
+   "rectangles": 966,
+   "cnf_sha256": "a31f7d974905ffec79bbb58f2f905f1c1e3d2e865dc2d4dd85e5e66c1c1cb6d1",
+   "result": "UNSATISFIABLE",
+   "proof_bytes": 6850443,
+   "proof_sha256": "6305b1cbeccade1f697924ccc4e5aab181fc742b7e57cecc1f229306fb0cdcc0",
+   "lrat_check": "verified",
+   "lean_check": "s VERIFIED, parsed formula equal to the input"
+  },
+  {
+   "cnf": "window_h10_k11.cnf",
+   "h": 10,
+   "k": 11,
+   "vars": 522,
+   "clauses": 10693,
+   "rectangles": 1606,
+   "cnf_sha256": "719fca582e1ebc28894ee7f9962540432d9446a2af51ad53e5ac6c81f0aaa376",
+   "result": "UNSATISFIABLE",
+   "proof_bytes": 38589978,
+   "proof_sha256": "17afa9bcb628447f0ea7585554a90200ef08a08fe1e749901229965870d5cc4c",
+   "lrat_check": "verified",
+   "lean_check": "s VERIFIED, parsed formula equal to the input"
+  },
+  {
+   "cnf": "window_h11_k12.cnf",
+   "h": 11,
+   "k": 12,
+   "vars": 635,
+   "clauses": 16046,
+   "rectangles": 2528,
+   "cnf_sha256": "c24636d3af5a211e1c0c4cc651be7e47b5ce45f34b6eeafd89667dacd1dc1030",
+   "result": "UNSATISFIABLE",
+   "solve_seconds": 25,
+   "proof_bytes": 200756480,
+   "proof_sha256": "1c0aae85926f166158d1dd8cb0147c9c48577e2d728e0e0b3bc4d5c2bf5bcbdc",
+   "lrat_check": "verified, 5 s",
+   "lean_check": "s VERIFIED, 17 s, parsed formula equal to the input"
+  },
+  {
+   "cnf": "window_h12_k13.cnf",
+   "h": 12,
+   "k": 13,
+   "vars": 760,
+   "clauses": 23328,
+   "rectangles": 3820,
+   "cnf_sha256": "166415382bb4311b76b8d4ff16f0f56d65acea6aa35be741338d2603387b2930",
+   "result": "UNSATISFIABLE",
+   "solve_seconds": 264,
+   "proof_bytes": 1459539176,
+   "proof_sha256": "1cd88c679602afd14d01f6bd4c3dd3180b8848f3037c58458d09ec6020da687b",
+   "lrat_check": "verified, 57 s",
+   "lean_check": "s VERIFIED, 117 s, parsed formula equal to the input"
+  }
+ ],
  "not_covered": "The proofs certify the CNF files. That the CNF says what the definition of a window says rests on reading win.py. A second, separately written generator has not been compared.",
- "proofs": "The proof files are not stored here (200 MB and 1.46 GB as text LRAT). A rerun gives a proof that checks in the same way."
+ "proofs": "The proof files are not stored here (200 MB and 1.46 GB as text LRAT). A rerun gives a proof that checks in the same way.",
+ "witnesses_odd_height": {
+  "note": "Windows of width h at odd height h, found by win.py. Not rechecked by a second program. For even h the staircase is a window of width h.",
+  "h5": {
+   "columns": [
+    [
+     1,
+     5
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     2,
+     5
+    ]
+   ],
+   "A": [
+    1,
+    2,
+    4
+   ]
+  },
+  "h7": {
+   "columns": [
+    [
+     1,
+     7
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     5,
+     6
+    ],
+    [
+     1,
+     6
+    ]
+   ],
+   "A": [
+    2,
+    4,
+    6,
+    7
+   ]
+  },
+  "h9": {
+   "columns": [
+    [
+     2,
+     9
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     5,
+     6
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     7,
+     8
+    ],
+    [
+     8,
+     9
+    ],
+    [
+     1,
+     9
+    ]
+   ],
+   "A": [
+    1,
+    2,
+    4,
+    6,
+    8
+   ]
+  },
+  "h11": {
+   "columns": [
+    [
+     1,
+     8
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     7,
+     10
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     9,
+     11
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     8,
+     11
+    ],
+    [
+     1,
+     9
+    ],
+    [
+     1,
+     10
+    ],
+    [
+     10,
+     11
+    ]
+   ],
+   "A": [
+    1,
+    3,
+    4,
+    6,
+    7,
+    11
+   ]
+  }
+ }
 }
