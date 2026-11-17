@@ -1,6 +1,6 @@
 # Classification of full row-class boxes with arbitrary column phases
 
-9 November 2026. A vertical-rival dichotomy removes the column-period assumption. The complete proof and the width-nine strengthening passed [independent review](full_box_local_classification_audit.md). This classifies the boxes that avoid singleton-axis and vertical-pair axis rivals. It does not assert that all assignments in these boxes are valid seas; four- and six-cell collisions remain.
+9 November 2026. A vertical-rival dichotomy removes the column-period assumption. The complete proof and the width-nine strengthening passed independent review. This classifies the boxes that avoid singleton-axis and vertical-pair axis rivals. It does not assert that all assignments in these boxes are valid seas; four- and six-cell collisions remain.
 
 Let \(h\ge8\), let \(c:[1,h]\to\mathbb F_2\) define a balanced row partition, and let \(t:\mathbb Z\to\mathbb F_2\) be arbitrary. At column x, allow every row in
 \[

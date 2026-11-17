@@ -1,6 +1,6 @@
 # A parity-localized partition-regularity argument for the odd P graph
 
-15 November 2026. New proof adaptation, independently reviewed. This is not a direct quotation of a published theorem and is not a refereed result. Two separate source-level reviews checked the adaptation. The detailed [independent audit](continuation_odd_p_partition_regularity_independent_audit.md) records the published hypotheses, the CRT and concentration steps, the spectral kernel, and the limit order.
+15 November 2026. New proof adaptation, independently reviewed. This is not a direct quotation of a published theorem and is not a refereed result. Two separate source-level reviews checked the adaptation. The detailed independent audit records the published hypotheses, the CRT and concentration steps, the spectral kernel, and the limit order.
 
 Let
 \[

@@ -166,5 +166,5 @@ For a fixed protected law, an arbitrary phase profile whose error count is at mo
 
 It does not yet control domains with different protected base laws. Applying the cutoff near a wall requires a distance truncation and a separate summation of the resulting near-wall error activity. Nor does it prove that every phase profile can be represented by such domains.
 
-The complete proof passed [independent review](adaptive_local_sparsity_independent_audit.md).
+The complete proof passed independent review.
 

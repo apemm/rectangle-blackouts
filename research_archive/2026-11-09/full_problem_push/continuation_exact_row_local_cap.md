@@ -163,5 +163,5 @@ The result allows a fixed positive local phase-error cap and arbitrary clusterin
 
 It does not handle an arbitrary concatenation of different matched phases under an exact reference comparison. The absolute guard argument resolves those concatenations only up to the span-tail remainder. Eliminating that remainder, or proving canonical escape for the remaining high-entropy components, is still necessary for exact quadratic optimality.
 
-The complete comparison passed [independent review](continuation_exact_row_pressure_independent_audit.md).
+The complete comparison passed independent review.
 

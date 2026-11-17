@@ -8,7 +8,7 @@ remaining higher-arity events, or the occupied region's ends.
 
 The lemma, its primary-source input, and the one-phase application
 have passed independent review in
-[permutation_occupation_independent_audit.md](permutation_occupation_independent_audit.md).
+permutation_occupation_independent_audit.md.
 
 ## 1. A permutation lemma
 

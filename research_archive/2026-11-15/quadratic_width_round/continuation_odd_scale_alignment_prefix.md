@@ -545,7 +545,7 @@ symmetries cover the other masks in class \(\mathcal A\); class
 
 I checked this eight-bit certificate a second time with a separate
 implementation; see
-[the review](continuation_diagonal_t6_alignment_independent_audit.md). The same
+the review. The same
 bounded-register approach does not yet extend uniformly: at larger
 quotient parameters, projected suffixes can accept even after twelve
 norm bits are imposed. Such acceptance is only a failure of this

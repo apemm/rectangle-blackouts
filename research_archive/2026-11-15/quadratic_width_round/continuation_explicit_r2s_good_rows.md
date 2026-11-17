@@ -116,6 +116,6 @@ local distribution argument. No such argument is supplied here.
 Review status: the full proof passed an independent written derivation,
 including the use of n in the geometric bound, the bounded-offset cases,
 and every prime congruence. See
-[the saved audit](continuation_inert_prime_good_rows_audit.md).
+the saved audit.
 The separate [multiplicative refinement](continuation_multiplicative_r2s_good_rows.md)
 now supplies a larger explicit family without the large-prime condition.

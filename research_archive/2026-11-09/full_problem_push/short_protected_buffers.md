@@ -15,7 +15,7 @@ Thus \(|P_x|=h/2+O(1)\). For a sufficiently large absolute C, set \(B=\lceil Ch\
  a^\infty\;P^{B}\;O^{m}\;P^{B}\;a^\infty.
 \tag{1}
 \]
-The fraction depends on h but not on m. The claim passed [independent review](short_buffer_independent_audit.md).
+The fraction depends on h but not on m. The claim passed independent review.
 
 The statement concerns the number of variable buffer columns. It does not claim that every core extends, or that the constant/periodic anchor state can be reached after fewer than L fixed anchor letters.
 

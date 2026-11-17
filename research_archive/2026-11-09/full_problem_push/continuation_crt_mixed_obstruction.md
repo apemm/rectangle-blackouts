@@ -172,8 +172,8 @@ vertical-rival selection among these four labels.
 
 The exact output is saved in
 [the certificate file](verify_continuation_crt_mixed.json).
-Both certificates passed [independent arithmetic and geometric
-review](continuation_crt_mixed_independent_audit.md).
+Both certificates passed independent arithmetic and geometric
+review.
 
 No quadratic-width impossibility follows. A different prime selection,
 a refinement which separates these four-label supports, or a different

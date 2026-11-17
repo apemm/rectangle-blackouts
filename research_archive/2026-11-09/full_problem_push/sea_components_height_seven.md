@@ -25,7 +25,7 @@ collisions. Its residual automaton stores inclusion-minimal unmatched future
 requirements. It does not enumerate full history words.
 
 The native transition and SCC implementation is independently reviewed in
-[native_sea_and_fiber_independent_audit.md](native_sea_and_fiber_independent_audit.md).
+native_sea_and_fiber_independent_audit.md.
 The packed representation interns 256-bit residual blocks and compares full
 keys after every hash match. Hash collisions cannot merge states. Packed
 checkpoints also authenticate the complete exported transition table by SHA256.

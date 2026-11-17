@@ -34,7 +34,7 @@ whenever
  \sigma\le b\,\frac{P_h(r)}{\log(e/P_h(r))}.
 \tag{2}
 \]
-Errors may cluster arbitrarily. Exact separated domains therefore have residual row distance \(O(\log^2h)\). The full joint-family proof passed [independent review](separated_domain_pressure_independent_audit.md).
+Errors may cluster arbitrarily. Exact separated domains therefore have residual row distance \(O(\log^2h)\). The full joint-family proof passed independent review.
 
 ## 2. Row roots inside each domain
 

@@ -73,7 +73,7 @@ existing one-label filler argument applies. Remaining multi-label
 supports and the hypotheses needed for gluing still have to be checked.
 
 Proof: [Hilbert placement](continuation_hilbert_placement.md).
-Independent review: [placement audit](continuation_hilbert_independent_audit.md).
+Independent review: placement audit.
 
 ## 2. Two choices solve one full arithmetic family
 
@@ -154,7 +154,7 @@ the period-seven profiles. The general theorem there needs \(S\ge4d\),
 which holds for \(d=14,S=1568\).
 
 Proofs: [factor-choice theorems](continuation_hilbert_factor_one_choices.md).
-Independent review: [factor-choice audit](continuation_hilbert_factor_choices_audit.md).
+Independent review: factor-choice audit.
 
 The restriction to a finite set is real. An explicit five-label
 configuration using only factors \(1\) and \(245\) has no assignment
@@ -337,7 +337,7 @@ choice verifier use NumPy; the sparse obstruction checkers use the
 standard library. A side-64 translated-patch census was stopped at its memory
 cap and has no claimed result. Earlier exploratory candidate files
 are not the certificates used for the final claims.
-The [synthesis audit](continuation_synthesis_audit.md) records the
+The synthesis audit records the
 window checks and the scope corrections made during final review.
 
 Only new files were prepared for this continuation. Existing archive

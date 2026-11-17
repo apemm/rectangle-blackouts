@@ -234,6 +234,6 @@ its leading expansion. It requires no convergence rate for the
 arithmetic coefficient \(d_{\rm Q}\).
 
 The complete argument passed
-[independent review](polylog_span_tail_independent_audit.md), including
+independent review, including
 the exact-reference remainder bound.
 

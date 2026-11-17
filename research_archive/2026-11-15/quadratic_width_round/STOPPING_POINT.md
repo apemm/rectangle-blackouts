@@ -94,12 +94,12 @@ mathematically or by a separate computation, not that it was refereed.
   received independent review. None of these exclusions proves general
   private-choice solvability.
 - **A faster exact generator.** The
-  [Hilbert rank-lag automaton](continuation_rank_lag_generator_audit.md)
+  Hilbert rank-lag automaton
   has at most 64 states per digit. Independent generation agrees on
   30 complete systems. This removes the need to scan every rank pair
   when building the finite P systems.
 - **Three actual choices work in a large aligned example.** The
-  [independent certificate audit](continuation_aligned_private_certificate_audit.md)
+  independent certificate audit
   verifies all 1,048,576 choices for side 1024, offset -2048, canonical
   orientation, stride 32. All 2,169,330 candidate events pass the
   actual integer norm check. The assignment violates 148,116 stronger
@@ -108,7 +108,7 @@ mathematically or by a separate computation, not that it was refereed.
   as `UNKNOWN_STOPPED_AT_USER_REQUEST`. A side-512 system also has a
   verified modular certificate. These are finite P-only results.
 - **Two choices do fail in one aligned candidate system.** A
-  [51-edge odd cycle](continuation_aligned_m2_odd_cycle_audit.md)
+  51-edge odd cycle
   gives an independently checked contradiction at side 256, offset
   -512, with two choices. The contradiction does not rely on a solver.
   It is not a full-board or unrestricted threshold obstruction.

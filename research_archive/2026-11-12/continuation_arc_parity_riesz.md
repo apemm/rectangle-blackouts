@@ -10,7 +10,7 @@ The Riesz argument does not need full bounded-coefficient dissociation.
 It only needs the absence of bounded zero relations whose coefficient sum
 is odd. This weaker hypothesis tolerates the reflection quartets responsible
 for the obstruction in
-[the dissociated-deletion audit](continuation_arc_riesz_beta_audit.md).
+the dissociated-deletion audit.
 
 The strengthened lemma is valid, but its linear-deletion target also fails.
 The companion [odd-deletion obstruction](continuation_arc_odd_deletion_obstruction.md)

@@ -2,7 +2,7 @@
 
 Research note, 8 November 2026. This note proves a general family of recurrent seas and gives two exact obstructions to proposed constant-padding arguments. The second obstruction survives the partial analytical exclusions in Section 3. This does not prove general component dominance.
 
-The prime-Sidon construction in [entropy_audit.md](../dominance_bridge/entropy_audit.md) already gives
+The prime-Sidon construction in entropy_audit.md already gives
 \[
  \lambda_*(h)\ge c h^{1/3}
 \]

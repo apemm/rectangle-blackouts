@@ -4,7 +4,7 @@
 
 This note uses the audited
 [polylogarithmic packet estimate](polylogarithmic_packet_separation.md).
-The combined argument passed [independent review](polylog_packet_independent_audit.md) and a [second audit](polylog_packets_independent_audit.md).
+The combined argument passed independent review and a second audit.
 
 ## 1. The language and the two conclusions
 

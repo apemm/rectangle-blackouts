@@ -1,7 +1,7 @@
 # Assembly of the constant-sea quadratic scaffold
 
 15 November 2026. The complete integration passed a separate
-[dependency review](continuation_constant_sea_assembly_independent_audit.md).
+dependency review.
 The cited local proofs have independent reviews. The simultaneous choice
 of the four residual families remains open. This is not a proof of
 `m_h=O(h^2)`.

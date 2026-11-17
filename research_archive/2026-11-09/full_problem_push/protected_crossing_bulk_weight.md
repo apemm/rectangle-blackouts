@@ -11,7 +11,7 @@ Let X be any protected row/column pair whose column alphabets have size \(h/2+O(
  \le C h\Lambda^2.
 \tag{1}
 \]
-The sum ranges over translated events in the infinite protected product space. The primitive norm averages, all span weights, and the exact partition-function consequences passed [independent review](crossing_bulk_independent_audit.md).
+The sum ranges over translated events in the infinite protected product space. The primitive norm averages, all span weights, and the exact partition-function consequences passed independent review.
 
 ## 1. Rectangle degree and its first span moment
 

@@ -17,7 +17,7 @@ four-system candidate decomposition to the new ordering.
 Use the corrected H7 profile reduction and its cited relocation and gluing
 inputs. The relevant sources are
 [`hilbert_sea_design_h7.md`](../../2026-11-14/hilbert_sea_design_h7.md),
-[`audit_hilbert_sea_design_h7.md`](../../2026-11-14/audit_hilbert_sea_design_h7.md),
+`audit_hilbert_sea_design_h7.md`,
 and the square filters in
 [`filled_mod7_profile_cover.md`](../../2026-11-09/full_problem_push/filled_mod7_profile_cover.md),
 Section 5. The new ordering and bounded-gap lemma are proved in

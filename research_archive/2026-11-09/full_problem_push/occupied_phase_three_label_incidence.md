@@ -17,7 +17,7 @@ for correlated orders.
 
 The angle count, deleted-row estimate, and actual canonical-event load
 have passed independent review in
-[occupied_phase_three_label_independent_audit.md](occupied_phase_three_label_independent_audit.md).
+occupied_phase_three_label_independent_audit.md.
 
 ## 1. A constant-density eligible universe
 

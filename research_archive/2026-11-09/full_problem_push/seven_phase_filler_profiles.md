@@ -12,7 +12,7 @@ triangles in mixed-residue blocks.
 These are construction lemmas. They do not yet provide a placement
 of all labels avoiding the other multi-label collisions.
 The repaired proof has passed independent review; see
-[seven_phase_fillers_independent_audit.md](seven_phase_fillers_independent_audit.md).
+seven_phase_fillers_independent_audit.md.
 
 ## 1. The refined sea
 

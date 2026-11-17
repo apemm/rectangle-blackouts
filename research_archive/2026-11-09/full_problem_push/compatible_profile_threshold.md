@@ -6,8 +6,8 @@ logarithmic exponent arbitrarily close to four.
 The [profile theorem](filled_mod7_profile_cover.md) and the arithmetic,
 placement, and finite-end arguments below have passed separate
 independent reviews:
-[profile audit](filled_mod7_independent_audit.md) and
-[placement audit](compatible_profile_threshold_independent_audit.md).
+profile audit and
+placement audit.
 
 Write \(Q=\lfloor h^2/4\rfloor\),
 \(\Lambda=1+\log h\), and \(\ell=1+\log\log(3h)\).

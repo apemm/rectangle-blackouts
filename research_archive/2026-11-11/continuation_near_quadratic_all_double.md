@@ -2,7 +2,7 @@
 
 Research note, 11 November 2026. This extends
 [the regular-square local-lemma construction](continuation_regular_square_local_lemma.md).
-No source manuscript or earlier theorem is changed. The proof received an [independent audit](continuation_growing_clone_independent_audit.md).
+No source manuscript or earlier theorem is changed. The proof received an independent audit.
 
 **Theorem.** There are absolute constants \(c>0\) and \(h_0\) such that, for every \(h\ge h_0\), every integer
 \[

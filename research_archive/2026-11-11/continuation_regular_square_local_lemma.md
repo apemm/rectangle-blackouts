@@ -1,6 +1,6 @@
 # Valid regular squares from two random permutations
 
-Research note, 11 November 2026. This continuation answers the proposed minimum-row-degree obstruction for arbitrary all-double boards. It does not settle saturated equality boards. The proof and counting refinements received an [independent audit](continuation_regular_square_independent_audit.md).
+Research note, 11 November 2026. This continuation answers the proposed minimum-row-degree obstruction for arbitrary all-double boards. It does not settle saturated equality boards. The proof and counting refinements received an independent audit.
 
 **Theorem.** For every sufficiently large integer \(n\), there is a valid \(n\times n\) blackout with exactly two black cells in every row and every column.
 

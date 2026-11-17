@@ -1,6 +1,6 @@
 # Exact relative pressure for sufficiently separated parity defects
 
-9 November 2026. A conditional local-lemma argument compares sparse-defect words directly with the exact protected partition function. It removes the extensive error in the earlier absolute Suen estimates. The complete argument, including the local-density extension, passed [independent review](protected_phase_pressure_independent_audit.md).
+9 November 2026. A conditional local-lemma argument compares sparse-defect words directly with the exact protected partition function. It removes the extensive error in the earlier absolute Suen estimates. The complete argument, including the local-density extension, passed independent review.
 
 Let \(L=2W_h=O(h^2)\), and use the normalized support-language convention throughout this note. Let \(Z_{\mathrm O}(m)\) be the exact number of length-m all-odd protected words avoiding its complete minimal four/six support family. Let \(N_S(m)\) count valid ordinary-parity sea words with even-row letters exactly in a prescribed set S of columns and odd-row letters elsewhere.
 

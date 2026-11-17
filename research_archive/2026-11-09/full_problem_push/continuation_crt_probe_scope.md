@@ -69,7 +69,7 @@ The outputs are
 The step-2 record occurs first at normalized t=375, becoming physical
 offset 18375 after scaling. The actual in-strip \(K_4\), at height 62182,
 has a separate [exact checker](verify_crt_cayley_k4.py) and
-[independent audit](crt_chain_cayley_independent_audit.md).
+independent audit.
 
 Subsequent coloring certificates go beyond the clique searches.
 At normalized t=375 the graph on vertices zero through 149 has 1,289
@@ -78,7 +78,7 @@ passes independent reverse unit propagation. The complete graph is
 realized inside the strip at height 80,998.
 Thus the actual P-chain requires at least six colors, although its
 largest clique in the preceding search has size four.
-The [certificate audit](crt_chain_chromatic_independent_audit.md)
+The certificate audit
 records the exact embedding and proof checks. Bounded colorability
 of the infinite graph remains open.
 

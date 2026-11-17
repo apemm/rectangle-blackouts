@@ -51,7 +51,7 @@ The audit of equation (5) in the original entropy note found its count correct. 
 there is no missing horizontal-translation factor. Prescribing a black row to be 1 removes
 the vertical-translation factor, which is useful in the boundary estimates.
 
-Full proof and audit: [entropy_audit.md](entropy_audit.md).
+Full proof and audit: entropy_audit.md.
 An independent review of the boundary estimates, arithmetic input, and loop argument is recorded
 in [prime_bridge_independent_review.md](prime_bridge_independent_review.md).
 The independent arithmetic check in [check_prime_boundary.py](check_prime_boundary.py)
@@ -151,7 +151,7 @@ same edge. Thus the obstruction remains fatal. A seven-row example verifies this
 possible singleton choice in the shared column. The exact compiler and the count 384 are unaffected.
 
 Proofs, coordinates, and reproduction instructions:
-[construction_audit.md](construction_audit.md).
+construction_audit.md.
 
 ## 4. Direction for the threshold construction
 

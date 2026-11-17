@@ -5,7 +5,7 @@ Any \(R\) prescribed factors can be removed with \(4R+1\) choices at a
 fixed stride, including within the period-seven profile placement.
 The full P family and the other rectangle supports remain unresolved.
 All stated results have passed
-[independent audit](continuation_hilbert_factor_choices_audit.md).
+independent audit.
 
 Use the Hilbert ranks from
 [the placement note](continuation_hilbert_placement.md). For each retained

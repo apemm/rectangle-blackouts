@@ -1,6 +1,6 @@
 # Exact pressure cost of changing rows in a protected partition
 
-9 November 2026. This note compares a protected phase with the same column phase after changing a small set of row colors. The comparison is against the exact protected partition function. All ten sections have passed [independent review](changed_row_pressure_independent_audit.md).
+9 November 2026. This note compares a protected phase with the same column phase after changing a small set of row colors. The comparison is against the exact protected partition function. All ten sections have passed independent review.
 
 Let \((c_0,t)\) be a protected row/column pair at a height where the row partition is balanced. Thus
 \[

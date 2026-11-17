@@ -11,7 +11,7 @@ m_0(h)\ll_\varepsilon h^2(1+\log h)^{2+\varepsilon}.
 \]
 The proof has passed independent review, including the complete pair
 role list and the restored six-cell events. See
-[safe_triangle_first_moment_independent_audit.md](safe_triangle_first_moment_independent_audit.md).
+safe_triangle_first_moment_independent_audit.md.
 The earlier fourth-logarithm theorem remains a separate established
 result.
 

@@ -204,5 +204,5 @@ For a periodic irreducible finite-state component, this statement applies to eve
 
 This narrows the exact comparison problem. A nonquadratic competitor must use enough genuinely nonuniform phase behavior to pay a positive transition frequency. The present upper bound still allows the exact interface factor \(e^{Ch\Lambda^2}\) per witness. Determining its sign relative to the rooted wall deficit, or constructing a finite returning gate in every competitive component, remains open.
 
-The complete comparison passed [independent review](continuation_exact_row_pressure_independent_audit.md).
+The complete comparison passed independent review.
 

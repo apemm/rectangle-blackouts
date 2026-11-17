@@ -1,6 +1,6 @@
 # Linear stability for reflection closure on an interval
 
-9 November 2026. The argument below gives an absolute, nonnumerical linear stability constant for every balanced row block at height at least eight. It uses arithmetic removal and the asymmetric integer \(3k-4\) theorem. The elementary near-parity estimate is explicit. The complete argument and both primary theorem inputs passed [independent review](reflection_interval_independent_audit.md).
+9 November 2026. The argument below gives an absolute, nonnumerical linear stability constant for every balanced row block at height at least eight. It uses arithmetic removal and the asymmetric integer \(3k-4\) theorem. The elementary near-parity estimate is explicit. The complete argument and both primary theorem inputs passed independent review.
 
 Let \(A\subseteq[1,h]\) have size \(\lfloor h/2\rfloor\) or \(\lceil h/2\rceil\). Write
 \[

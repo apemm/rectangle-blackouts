@@ -1,6 +1,6 @@
 # Repairing overlap-consistent matrices by component permutations
 
-9 November 2026. This note supplies an elementary induced-three-corner removal argument and a finite-component repair lemma. Together with [the periodic Fourier amplification](constant_phase_periodic_amplification.md), they prove the aggregate inverse theorem for a constant column phase. The proof has passed [independent review](component_permutation_independent_audit.md).
+9 November 2026. This note supplies an elementary induced-three-corner removal argument and a finite-component repair lemma. Together with [the periodic Fourier amplification](constant_phase_periodic_amplification.md), they prove the aggregate inverse theorem for a constant column phase. The proof has passed independent review.
 
 Let \(A_h\subseteq[1,h]\) be balanced. Consider the full box consisting of the selected rows \(A_h\) in every column, and let \(N_3(A_h)\) count its tilted rectangles with exactly three selected corners.
 

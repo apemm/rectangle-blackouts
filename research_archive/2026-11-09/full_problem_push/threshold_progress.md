@@ -123,7 +123,7 @@ Prescribe at every column of \(A_e\) the value from the isolated-double pattern
  \quad 1\text{ at negative offsets},\quad
  h\text{ at positive offsets}.                \tag{10}
 \]
-This simultaneously breaks every listed support. The isolated-double pattern is valid for every row pair: a complete geometric proof appears in [the independent insertion audit](../../2026-11-08/dominance_bridge/construction_audit.md), Section 4. The particular facts needed here are that it has no three-black tilted rectangle and no mixed collision. They can also be read directly from the geometry: black-diagonal white pairs straddle zero; black-side white pairs lie wholly on one side; midpoint and length make each type unique.
+This simultaneously breaks every listed support. The isolated-double pattern is valid for every row pair: a complete geometric proof appears in the independent insertion audit, Section 4. The particular facts needed here are that it has no three-black tilted rectangle and no mixed collision. They can also be read directly from the geometry: black-diagonal white pairs straddle zero; black-side white pairs lie wholly on one side; midpoint and length make each type unique.
 
 The choice (10) is applied only on the finite set \(A_e\), not on a whole interval surrounding the double.
 

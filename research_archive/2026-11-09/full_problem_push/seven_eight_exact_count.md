@@ -24,7 +24,7 @@ Some early completed shards used the same forbidden-support encoding with fewer 
 
 The resulting board set agrees with the eighteen boards in the older enumeration. The [verification record](seven_eight_independent_check.json) contains every board, all coverage sources, and source hashes.
 
-The enumeration, projected blocking, analytical mask exclusions, and complete reflection coverage also passed a separate [source audit](seven_eight_count_independent_audit.md).
+The enumeration, projected blocking, analytical mask exclusions, and complete reflection coverage also passed a separate source audit.
 
 This is an exhaustive computational count supported by two encodings and independent geometric verification. The solver exhaustion records do not include separate DRAT certificates.
 

@@ -21,7 +21,7 @@ Let a phase word consist of \(J\) consecutive domains, with laws \(X_1,\ldots,X_
        \prod_{i=1}^J Z_{X_i}(n_i).
 \tag{1}
 \]
-The constants are uniform over the protected row law and the domain laws. The complete proof has passed [independent review](domain_wall_independent_audit.md).
+The constants are uniform over the protected row law and the domain laws. The complete proof has passed independent review.
 
 ## 1. Three-black supports crossing one wall
 

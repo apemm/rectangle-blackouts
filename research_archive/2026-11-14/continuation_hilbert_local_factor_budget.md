@@ -5,7 +5,7 @@ average-degree criteria. It also gives a conservative unconditional
 choice bound for the full P family. That bound is not competitive with
 the existing full-board threshold.
 All stated results have passed
-[independent audit](continuation_hilbert_factor_choices_audit.md).
+independent audit.
 
 Keep the Hilbert placement
 \[

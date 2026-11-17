@@ -1,6 +1,6 @@
 # Entropy concentration of column phases in a protected row partition
 
-9 November 2026. This note derives an entropy consequence of the independently reviewed [aggregate inverse theorem](protected_row_aggregate_inverse.md). The counting argument has also passed [independent review](rectangle_inverse_independent_audit.md).
+9 November 2026. This note derives an entropy consequence of the independently reviewed [aggregate inverse theorem](protected_row_aggregate_inverse.md). The counting argument has also passed independent review.
 
 Fix a height at which the row partition
 \[

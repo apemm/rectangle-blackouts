@@ -23,7 +23,7 @@ The bound ignores any additional modular or coloring restrictions, so it applies
 The previous divisor-only bound for this role was \(O(h\tau(a)\log h)\) per endpoint, with total \(O(h^2\log^2h)\).
 
 The square filter and summation passed
-[independent review](same_sea_square_filter_independent_audit.md).
+independent review.
 
 ## 1. Primitive side and connector coordinates
 

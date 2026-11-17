@@ -1,6 +1,6 @@
 # Polynomially spaced defects preserve the protected pressure
 
-9 November 2026. A refined diagonal-completion bound removes the large separation requirement in [dilute_parity_defects.md](dilute_parity_defects.md). The result allows an unlimited number of defects and unlimited connected-cluster size. Both the fixed-power theorem and the single subpolynomial-spacing theorem in Section 5 passed [independent review](protected_phase_pressure_independent_audit.md).
+9 November 2026. A refined diagonal-completion bound removes the large separation requirement in [dilute_parity_defects.md](dilute_parity_defects.md). The result allows an unlimited number of defects and unlimited connected-cluster size. Both the fixed-power theorem and the single subpolynomial-spacing theorem in Section 5 passed independent review.
 
 Let \(r_{\alpha}(h)\) be the entropy of valid ordinary-parity seas in which any two even-row letters have column distance at least \(\lceil h^\alpha\rceil\). For every fixed \(\alpha>0\), there is \(c_\alpha>0\) such that, for each fixed \(\varepsilon>0\),
 \[

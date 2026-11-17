@@ -26,7 +26,7 @@ Equivalently, any sequence of balanced partitions satisfying
  \rho_{c_h}(h)=h/2-o(h)
 \tag{2}
 \]
-is \(o(h)\)-close to one of the ordinary or quadratic row laws. The complete theorem and the phase-concentration corollary in Section 7 have passed [independent review](dense_antiperiod_independent_audit.md).
+is \(o(h)\)-close to one of the ordinary or quadratic row laws. The complete theorem and the phase-concentration corollary in Section 7 have passed independent review.
 
 The theorem does not assert that the maximizing finite-height partition is itself protected. It also does not prove that the boundary component is the unique dominant component.
 

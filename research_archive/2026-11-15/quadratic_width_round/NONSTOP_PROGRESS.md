@@ -167,7 +167,7 @@ prove its simultaneous choice criterion.
 
 The current combined result is
 [the constant-sea assembly](continuation_constant_sea_assembly.md), with
-[independent dependency review](continuation_constant_sea_assembly_independent_audit.md).
+independent dependency review.
 At most eight row pools cover all but `O(h)` parity labels. They use one
 constant odd sea row and dense spacing-four cores. Folded padding supplies
 prescribed prime-gap endpoint anchors; separated interpolation retains
@@ -237,7 +237,7 @@ remain open.
   sharpens the prior exceptional-row count by retaining the divisor sum
   before averaging. The [small-U refinement](continuation_r2s_small_u_refinement.md)
   gives the independently reviewed exponent `5/6`.
-* [The H7 dependency audit](continuation_cap_h7_dependency_audit.md)
+* The H7 dependency audit
   checks the point-level classification for occupied singleton/double cores.
   It justifies the reduction to P, Lambda3, Lambda4, and 6PT under the
   stated external relocation and collar inputs.
@@ -257,7 +257,7 @@ blackout validity.
 ## Other positive results from this round
 
 * [Equal-height P two-cycles](continuation_equal_height_p_two_cycles.md),
-  with [separate review](continuation_equal_height_p_two_cycles_independent_audit.md),
+  with separate review,
   involve at most `h^(3/2+o(1))` genuine endpoints for suitable offsets.
   Unequal hypotenuses and the remaining singleton choices are not covered.
 * [The partner-first six-point reduction](continuation_partner_first_six_reduction.md)
@@ -267,7 +267,7 @@ blackout validity.
   isolated-jump mesh. That deterministic statement gives no extra random
   offset probability.
 * [The Hilbert carry automaton](continuation_hilbert_affine_carry_automaton.md),
-  with [independent review](continuation_hilbert_affine_carry_independent_audit.md),
+  with independent review,
   gives exact sublinear row-intersection bounds for several slopes.
   Slope five has a linear-sized exceptional row, but an averaged exponent
   `log_2(56)/3 < 2`. The joint progression/energy estimate remains open.
@@ -333,7 +333,7 @@ blackout validity.
   prime-gap and Lipschitz backgrounds with separate overlap checks.
 
 * [Odd-P partition regularity](continuation_odd_p_localized_partition_regularity.md),
-  with [independent source audit](continuation_odd_p_partition_regularity_independent_audit.md):
+  with independent source audit:
   every finite coloring of the positive odd integers has monochromatic
   `u < v` with `u^2 + 4(v-u)^2` a square. Thus the full odd P graph has
   unbounded chromatic number. This is a new parity-localized adaptation
@@ -399,7 +399,7 @@ every pause length if the guard repeats only its endpoint row options.
 Simultaneous interior changes or additional guard rows are still open.
 
 The original private-choice problem has two further positive results.
-[Complete offset verification](continuation_all_offset_private_tiles_audit.md)
+Complete offset verification
 proves internal certified three-choice solvability for Hilbert tiles of
 sides 4, 8, and 16 at stride 32, for every integer row offset. The
 independent side-16 check covers 215,640 nonempty offsets and 4,290,580
@@ -453,17 +453,17 @@ orientation. The remaining common quadratic family has even step
 valuation at least 6 and odd scale factor congruent to 1, 3, or 7
 modulo 8. General non-clique obstructions remain open.
 
-The [rank-lag digit automaton](continuation_rank_lag_generator_audit.md)
+The rank-lag digit automaton
 enumerates exact Hilbert rank pairs with at most 64 states per digit.
 Its independent audit agrees on 30 complete systems. This enabled
-[search-free checks of two larger private-choice certificates](continuation_aligned_private_certificate_audit.md):
+search-free checks of two larger private-choice certificates:
 side 512 at offset -1024 is certified modular-three-solvable; side 1024
 at offset -2048 is integer-three-solvable, with every one of 2,169,330
 candidate events checked after extending to all 1,048,576 labels.
 The latter assignment violates 148,116 modular constraints, demonstrating
 the extra restriction in that sufficient model. The modular side-1024
 solver run was stopped without a conclusion. An independently checked
-[51-edge odd cycle](continuation_aligned_m2_odd_cycle_audit.md) excludes
+51-edge odd cycle excludes
 two integer choices in one smaller aligned candidate system. These are
 finite P-only statements, not complete-board results.
 

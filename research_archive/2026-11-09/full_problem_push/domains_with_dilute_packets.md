@@ -27,7 +27,7 @@ Consequently it is strictly subdominant to the best protected reference whenever
 \[
  K(1+\log h)^2\le r\le\delta_0h
 \]
-for a sufficiently large absolute K. The complete proof passed [independent review](domains_packets_independent_audit.md).
+for a sufficiently large absolute K. The complete proof passed independent review.
 
 ## 1. Guard packets and active packets
 

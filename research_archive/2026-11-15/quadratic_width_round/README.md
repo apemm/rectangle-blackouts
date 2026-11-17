@@ -15,7 +15,7 @@ here is in the paper.
   palettes.
 - [continuation_p_degree_growth_law.md](continuation_p_degree_growth_law.md):
   the measured growth of the P degree, about `(21.5/S) log2(side)`.
-- [continuation_diagonal_t6_alignment_independent_audit.md](continuation_diagonal_t6_alignment_independent_audit.md):
+- continuation_diagonal_t6_alignment_independent_audit.md:
   my second check of the valuation-six diagonal certificate.
 
 In these notes, "independent review" and "independent check" mean that I

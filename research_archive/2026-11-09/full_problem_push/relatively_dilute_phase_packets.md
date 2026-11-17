@@ -34,7 +34,7 @@ to be pairwise disjoint. Choose arbitrary \(S_i\subseteq I_i\), and set \(S=\big
  \exp\left[-c\sum_i|S_i|\log^2(h/\ell_i)\right].
 \tag{4}
 \]
-The error patterns within packets may be arbitrary. The complete proof passed [independent review](isolated_packets_independent_audit.md).
+The error patterns within packets may be arbitrary. The complete proof passed independent review.
 
 The event neighborhoods may overlap: the condition in (3) is much weaker than full-memory isolation. Since \(g_h=h^{o(1)}\), its required gap is a subpolynomial multiple of packet width.
 

@@ -155,7 +155,7 @@ constraints remain outside the conclusion.
 ## Review status
 
 The proof passed an independent written audit, recorded in
-[continuation_equal_height_p_two_cycles_independent_audit.md](continuation_equal_height_p_two_cycles_independent_audit.md).
+continuation_equal_height_p_two_cycles_independent_audit.md.
 In particular,
 the target-form union uses one selected cap coordinate per object. A
 different interpolation with two independently capped coordinates would

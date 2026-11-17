@@ -127,7 +127,7 @@ board**, and gives **no new upper bound on the equality threshold**.
 Adding one singleton to each empty column is a separate unsolved step.
 
 The proof is in [quadratic_arithmetic.md](quadratic_arithmetic.md), with
-an independent review in [arithmetic_audit.md](arithmetic_audit.md).
+an independent review in arithmetic_audit.md.
 Coordinate checks through height 25 found no right-angle, P, or mixed
 certificate, consistently with the all-height proof.
 
@@ -201,7 +201,7 @@ component: longer bridges may still connect these periodic seas to the
 canonical component.
 
 Proofs and exact certificates: [dominance_bridge.md](dominance_bridge.md)
-and [modular_bridge_audit.md](modular_bridge_audit.md).
+and modular_bridge_audit.md.
 
 ## 6. Consequences for the two main questions
 

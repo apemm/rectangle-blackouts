@@ -82,11 +82,11 @@ of each final exhaustion.
 
 The encoding, completeness reduction, projection, and symmetry accounting
 also passed a separate
-[independent audit](seven_optimum_count20_independent_audit.md).
+independent audit.
 Its fresh verifier execution reproduced the same complete count.
 
 The result is consistent with the sharp change at the equality
 threshold: the preceding width has 3,364 optima of size 31, while
-[width twenty-one](seven_equality_count21_independent_audit.md)
+width twenty-one
 has exactly four optima of size 33.
 

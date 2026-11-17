@@ -74,7 +74,7 @@ parts (a) to (e).
   (G4G14 problem list, Katona, Furedi 1996, Reiman, de Caen and Szekely 1992, Benson in the
   introduction only), and shorter remarks.
 
-## Round 4 (fixes from `papers/AUDIT_round3.md`)
+## Round 4 (fixes from my round 3 review)
 
 1. Corollary proof: the step for h <= 8 now reads m >= 2 c_0 >= 211 = M_8 >= M_h.
 2. Proof of Theorem 1(b): m_h <= M_8 = 211 for h <= 8, and the displayed bound

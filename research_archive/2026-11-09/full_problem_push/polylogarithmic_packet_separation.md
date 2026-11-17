@@ -26,7 +26,7 @@ Then its entropy is at most
  \rho_X(h)\bigl(1+\exp[-c_{B_0}\log^2h]\bigr).
 \tag{3}
 \]
-The complete proof passed [independent review](polylog_packet_independent_audit.md) and a [second audit](polylog_packets_independent_audit.md).
+The complete proof passed independent review and a second audit.
 
 ## 1. Average the diagonal kernel over a distance interval
 

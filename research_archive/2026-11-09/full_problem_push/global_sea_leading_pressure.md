@@ -248,5 +248,5 @@ The theorem gives the global leading sea-entropy coefficient and a vanishing log
 
 Those exact finite-height questions remain separate from the asymptotic coefficient in (2).
 
-The complete proof passed [independent adversarial review](global_sea_pressure_independent_audit.md), including the global optimization and maximum-blackout counting consequences.
+The complete proof passed independent adversarial review, including the global optimization and maximum-blackout counting consequences.
 

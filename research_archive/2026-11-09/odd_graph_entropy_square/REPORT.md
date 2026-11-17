@@ -66,8 +66,8 @@ Taking odd parts is not a graph homomorphism.
 
 Proofs and audits:
 [odd_graph_progress.md](odd_graph_progress.md),
-[odd_graph_independent_audit.md](odd_graph_independent_audit.md), and
-[odd_graph_pell_audit.md](odd_graph_pell_audit.md).
+odd_graph_independent_audit.md, and
+odd_graph_pell_audit.md.
 
 ## 2. The sea entropy has linear order
 
@@ -139,7 +139,7 @@ mixed-pattern count. Its proof is preserved as an appendix, although
 the all-odd construction gives the stronger entropy bound.
 
 Full proof: [sea_entropy_progress.md](sea_entropy_progress.md).
-Independent review: [geometry_independent_audit.md](geometry_independent_audit.md).
+Independent review: geometry_independent_audit.md.
 
 ## 3. Squares: a logarithmic improvement and a method limitation
 
@@ -184,7 +184,7 @@ The established interval is therefore
 
 Proofs, the primary hypergraph theorem, and scope:
 [square_progress.md](square_progress.md).
-Independent review: [geometry_independent_audit.md](geometry_independent_audit.md).
+Independent review: geometry_independent_audit.md.
 
 ## 4. Verification and remaining work
 

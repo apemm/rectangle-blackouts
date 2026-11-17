@@ -4,7 +4,7 @@
 
 This result treats one mixed-pair family. It does not settle complete occupation, the other pair families, or higher-arity placement.
 
-Both the unrestricted bound and the stronger oriented-profile bound have passed independent review in [mixed_power_savings_independent_audit.md](mixed_power_savings_independent_audit.md).
+Both the unrestricted bound and the stronger oriented-profile bound have passed independent review in mixed_power_savings_independent_audit.md.
 
 ## 1. Geometric normalization
 

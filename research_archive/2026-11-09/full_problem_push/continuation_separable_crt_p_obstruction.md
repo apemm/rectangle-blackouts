@@ -120,7 +120,7 @@ Therefore the separable canonical CRT family with \(N=O(h)\) is not a viable com
 
 The right-angle and filler lemmas remain valid partial statements. They no longer support treating this particular canonical family as a candidate for a full quadratic-width board.
 
-Independent review passed. See [separable_crt_spacing_independent_audit.md](separable_crt_spacing_independent_audit.md).
+Independent review passed. See separable_crt_spacing_independent_audit.md.
 
 
 

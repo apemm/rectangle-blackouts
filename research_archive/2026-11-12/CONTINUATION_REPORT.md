@@ -40,7 +40,7 @@ two. Two disjoint retained pairs give a relation with coefficients
 primitive triangles and odd dilations.
 
 The full proof, including all finite-diagonal bounds, is in
-[the dissociation audit](continuation_arc_riesz_beta_audit.md).
+the dissociation audit.
 
 ## 2. A stronger Riesz lemma also has a deletion obstruction
 
@@ -131,7 +131,7 @@ chromatic numbers or minima for arbitrary finite arc colorings. Each
 infeasibility certificate is a chain of open rational intervals covering
 all candidate rotations.
 
-See [the certificate audit](continuation_arc_integer_certificate_audit.md),
+See the certificate audit,
 [the integer checker](check_arc_certificates_integer.py), and
 [the refined certificate](arc_certificate_h16384_refined.json).
 

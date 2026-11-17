@@ -170,7 +170,7 @@ Every local violation has column span at most \(D_*-1\), including a
 repeated completion and its completion column. The full final parity-pair
 graph represents any remote axis owner; that owner's column is not included
 in this local span. This is the same locality input used in
-[the H7 dependency audit](continuation_cap_h7_dependency_audit.md), Section 7.
+the H7 dependency audit, Section 7.
 
 Assume a finite low constant-odd-sea core has the prescribed high even
 anchor \(B\) at its two endpoint inserted columns. In its right extension,

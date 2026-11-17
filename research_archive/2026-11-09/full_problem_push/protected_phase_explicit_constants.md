@@ -1,6 +1,6 @@
 # Explicit leading constants for protected phases
 
-9 November 2026. The leading obstruction pressures and growth constants are explicit for the ordinary constant-parity phase O, ordinary checkerboard phase C, and matched quadratic phase Q. The synthesis, including its global normalization, passed [independent review](protected_ordering_independent_audit.md). This theorem concerns their protected languages, not unrestricted recurrent components.
+9 November 2026. The leading obstruction pressures and growth constants are explicit for the ordinary constant-parity phase O, ordinary checkerboard phase C, and matched quadratic phase Q. The synthesis, including its global normalization, passed independent review. This theorem concerns their protected languages, not unrestricted recurrent components.
 
 Define
 \[
@@ -66,9 +66,9 @@ For each primitive parity type \(T\in\{\mathrm{OO},\mathrm{OE},\mathrm{EO}\}\), 
  \sim\frac{4\mathcal P}{3\pi^4}(\log h)^4.
 \tag{5}
 \]
-Here \(A_N\) is the leading coefficient of the scale sum \(\sum_{k\le K}r_2(k^2N)\). The proof and normalization passed [independent review](primitive_parity_weight_independent_audit.md).
+Here \(A_N\) is the leading coefficient of the scale sum \(\sum_{k\le K}r_2(k^2N)\). The proof and normalization passed independent review.
 
-The nearly horizontal and balanced direction ranges are lower order. The [averaged angle theorem](averaged_circle_angles.md) and its [audit](averaged_circle_angles_independent_audit.md) supply the nontrivial horizontal estimate. In the vertical range, the geometric span is independent of the chosen circle representation at leading order.
+The nearly horizontal and balanced direction ranges are lower order. The [averaged angle theorem](averaged_circle_angles.md) and its audit supply the nontrivial horizontal estimate. In the vertical range, the geometric span is independent of the chosen circle representation at leading order.
 
 ## 2. Global normalization of the mixed count
 
@@ -93,7 +93,7 @@ The weighted scale integral then supplies
 \tag{6}
 \]
 as its leading geometric weight. The scale-linear term is only
-\(O(h^3\log^3h(1+\log\log h))\) after summation. This passage has a separate [normalization audit](mixed_scale_weight_independent_audit.md).
+\(O(h^3\log^3h(1+\log\log h))\) after summation. This passage has a separate normalization audit.
 
 There are two signs of the vertical component of the oriented side vector, giving a factor two. Restricting a generic circle representation to positive horizontal diagonal component gives a factor one half. These factors cancel. Both connector signs have already been included in (6). Therefore the formal leading geometry, before integrality and protected color conditions, is
 \[
@@ -110,7 +110,7 @@ The [exact phase table](phase_local_densities.md), averaged using the proved sca
  \mathrm Q:\frac{13}{96}.
 \tag{8}
 \]
-These include the integrality loss for odd scales of opposite-parity primitive directions. The residue averaging has an [independent audit](mixed_residue_average_independent_audit.md); [short-scale truncation](mixed_short_scale_truncation.md) removes the restriction to polynomially long scale ranges.
+These include the integrality loss for odd scales of opposite-parity primitive directions. The residue averaging has an independent audit; [short-scale truncation](mixed_short_scale_truncation.md) removes the restriction to polynomially long scale ranges.
 
 Each admissible four-cell support has probability
 \((2/h)^4(1+O(1/h))\). Multiplying (7) by (8) and by this probability gives
@@ -131,7 +131,7 @@ The independently checked [six-cell coefficients](six_support_leading_pressure.m
 for O, C, and Q. Hidden four-cell supports have mean
 \(O(\log^2h/h)\), so they do not contribute to the coefficient in (2). Adding the six-cell and mixed coefficients gives the displayed \(d_X\).
 
-The [avoidance expansion](crossed_codegree_and_avoidance.md), with its [independent review](protected_phase_pressure_independent_audit.md), states
+The [avoidance expansion](crossed_codegree_and_avoidance.md), with its independent review, states
 \[
  \log r_X(h)=\bar\ell_X(h)-\mu_X(h)
                        +O_\varepsilon(h^{-2+\varepsilon}),

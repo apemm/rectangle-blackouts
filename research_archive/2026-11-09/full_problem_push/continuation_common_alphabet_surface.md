@@ -215,5 +215,5 @@ A route to full exact optimality should bound the *positive* change of an interf
 
 The remaining terms are concrete. Restoring changed black letters changes the local product space. A wall between different matched phases also has pre-existing singleton and vertical constraints whose conditional interaction with the new row roots is not covered by the protected bulk lemma. Equation (4) proves neither of those comparisons.
 
-The complete crossing-probability comparison passed [independent review](common_alphabet_surface_independent_audit.md).
+The complete crossing-probability comparison passed independent review.
 

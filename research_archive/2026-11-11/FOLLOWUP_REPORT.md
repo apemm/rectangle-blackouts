@@ -76,7 +76,7 @@ Each cycle can be removed by deleting a black edge of a three-black rectangle. D
 
 This remains a necessary condition. Neither the repaired identity nor the cycle-rank bound forces a positive cycle rank for every saturated placement. Thus \(m_h\ge q_h+1\) is still unproved.
 
-See [the forest and cycle-budget note](saturated_diagonal_forest.md) and [its independent audit](diagonal_forest_independent_audit.md).
+See [the forest and cycle-budget note](saturated_diagonal_forest.md) and its independent audit.
 
 ## 4. The constant-offset gap formula needed correction
 
@@ -90,7 +90,7 @@ The copied divisibility-by-7 formula came from a different row step. Here the 3-
 
 The architecture consisting of one separate block for every consecutive, fully occupied constant-offset run still needs \(\Omega(h\log h)\) blocks. The proof uses a central interval where all scaled 3-4-5 white endpoints fit, so it does not depend on the incorrect minimum-gap formula. It does not rule out reusing separated pieces in one block.
 
-See [the audited gap calculation](constant_offset_gap_audit.md).
+See the audited gap calculation.
 
 ## 5. What is still needed
 

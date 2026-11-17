@@ -48,7 +48,7 @@ only the finite tile table.
 
 The [structural checker](probe_private_tile_gain_cores.py) reconstructs
 the systems with the independent Euclid generator from the
-[complete-offset audit](continuation_all_offset_private_tiles_audit.md).
+complete-offset audit.
 It performs weighted peeling and records the exact surviving vertices
 and gains in [the core data](private_tile_gain_cores_side16.json).
 The smaller-size results are saved separately for

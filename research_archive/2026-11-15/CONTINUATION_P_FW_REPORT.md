@@ -12,7 +12,7 @@ Nothing here establishes a new full-board threshold bound.
 
 ## 1. The four-system reduction passes its audit
 
-[The cut audit](continuation_dec_cut_audit.md) confirms the isolated
+The cut audit confirms the isolated
 corner cuts and the reduction to the four canonical systems at each scale:
 Gamma with either orientation, and Omega with either orientation.
 This is the original full-grid private-choice system at S=32, M>=3,
@@ -89,7 +89,7 @@ derived in the note. The new results have not been formally verified.
 
 The theorem extends to each fixed H7 profile by replacing the band centres
 with (plus or minus Y minus c)/28, where c is the profile's fixed row
-offset. [The relocation audit](continuation_adjacent_sea_and_p_relocation_audit.md)
+offset. The relocation audit
 records this extension. Under the archive's existing hypothesis (Rel),
 moving these labels costs
 

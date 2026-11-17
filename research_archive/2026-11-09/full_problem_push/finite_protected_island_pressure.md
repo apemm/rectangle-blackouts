@@ -127,5 +127,5 @@ If arbitrary short islands are also included but all islands are separated by fu
 \tag{8}
 \]
 
-This does not determine the free energy of a semi-infinite wall or an island longer than the stated cutoff. It also does not cover arbitrary internal phase patterns in the long islands. The complete argument passed [independent review](finite_island_pressure_independent_audit.md).
+This does not determine the free energy of a semi-infinite wall or an island longer than the stated cutoff. It also does not cover arbitrary internal phase patterns in the long islands. The complete argument passed independent review.
 

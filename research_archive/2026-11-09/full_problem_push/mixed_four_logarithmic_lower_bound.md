@@ -1,6 +1,6 @@
 # Mixed four-cell pressure has exactly four logarithms
 
-9 November 2026. The mixed side/diagonal family cannot be discarded as a lower-order term in the protected-phase entropy comparison. This note determines its order up to constant factors, not its asymptotic constant or the ordering of the phases. Both bounds and their entropy consequences passed [independent review](protected_phase_pressure_independent_audit.md).
+9 November 2026. The mixed side/diagonal family cannot be discarded as a lower-order term in the protected-phase entropy comparison. This note determines its order up to constant factors, not its asymptotic constant or the ordering of the phases. Both bounds and their entropy consequences passed independent review.
 
 Let \(\mu_{4,\mathrm{mix},X}(h)\) be the mean per column of distinct mixed four-cell positive supports in protected phase \(X\in\{\mathrm O,\mathrm C,\mathrm Q\}\), under independent uniform choices from the allowed row class. Then there are absolute \(c,C>0\) such that, for all sufficiently large \(h\),
 \[

@@ -17,7 +17,7 @@ The first and last domains may be shorter. Packets have widths at most \(h/(U_h\
  \log\rho_0(h)+o(\Lambda^4/h).
 \tag{1}
 \]
-The same conclusion holds with no packets. The statement concerns this specified language, not the full sea shift or an arbitrary recurrent component. The complete proof passed [independent review](domains_packets_independent_audit.md).
+The same conclusion holds with no packets. The statement concerns this specified language, not the full sea shift or an arbitrary recurrent component. The complete proof passed independent review.
 
 ## 1. Bulk events of shorter span retain the leading mean
 

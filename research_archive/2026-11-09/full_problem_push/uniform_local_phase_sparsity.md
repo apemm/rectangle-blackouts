@@ -162,5 +162,5 @@ This theorem controls arbitrary clustering inside each h-window, subject only to
 
 It does not show that every competitive phase profile satisfies (1), or that every profile decomposes into domains with this property. The existing qualitative entropy concentration does not provide the rate in (4). A multiscale treatment of intervals of intermediate error density is still needed for unrestricted dominance.
 
-The complete argument passed [independent review](local_phase_sparsity_independent_audit.md). The domain extension, including domains of length h divided by any fixed logarithmic power, is developed in [locally sparse errors in protected domains](locally_sparse_errors_in_protected_domains.md).
+The complete argument passed independent review. The domain extension, including domains of length h divided by any fixed logarithmic power, is developed in [locally sparse errors in protected domains](locally_sparse_errors_in_protected_domains.md).
 

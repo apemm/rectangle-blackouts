@@ -19,7 +19,7 @@ Let \((c_0,X)\) be a protected row/column pair, with row alphabets of size \(h/2
  \exp\left[-a\frac rh\log^2\frac hr\,n\right].
 \tag{1}
 \]
-At the exact partition-function level, before replacing \(Z_{c_0,X}(n)\) by its growth rate, the finite-end loss of the new rooted family is \(O(\sqrt{rh})\). The complete proof passed [independent review](adaptive_row_root_independent_audit.md).
+At the exact partition-function level, before replacing \(Z_{c_0,X}(n)\) by its growth rate, the finite-end loss of the new rooted family is \(O(\sqrt{rh})\). The complete proof passed independent review.
 
 ## 1. The truncated family
 

@@ -59,7 +59,7 @@ As with the parity graph, normalized supports describe the recurrent sea
 language exactly, while finite endpoint constants require the end-aware
 model.
 
-The [independent compiler audit](nonparity_sea_compiler_independent_audit.md)
+The independent compiler audit
 regenerates the full nonparity residual input identically and checks every
 period of lengths one through four against a separate equal-diagonal
 rectangle generator and explicit presentation tests. All 2,800 periods

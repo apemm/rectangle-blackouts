@@ -26,7 +26,7 @@ Any subset of the displayed doubles can be retained.
 
 For definiteness one may take \(p=4\lceil(h+1)/4\rceil\).
 The exact proof is below. It passed the
-[independent audit](wide_linear_star_independent_audit.md).
+independent audit.
 Independent side/diagonal completion checks passed at every height from
 four through thirty, including constant collars and the full final
 parity pair set; see wide_linear_star_check.json.

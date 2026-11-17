@@ -108,14 +108,14 @@ after selecting any set of \((U,V)\) pairs independently of those
 two residues. See
 [uniform_connector_base_residues.md](uniform_connector_base_residues.md).
 Both results passed
-[independent review](mixed_residue_average_independent_audit.md).
+independent review.
 
 The short-scale qualification is removed by
 [mixed_short_scale_truncation.md](mixed_short_scale_truncation.md).
 The nearly horizontal range is now proved to be
 \(o(h^3\log^4h)\) in
 [averaged_circle_angles.md](averaged_circle_angles.md), with
-[independent review](averaged_circle_angles_independent_audit.md).
+independent review.
 That argument uses fixed angular Fourier modes averaged over the scale,
 so it does not assume equidistribution on individual circles.
 

@@ -175,5 +175,5 @@ The theorem covers arbitrary clustering and arbitrary total numbers of locally s
 
 Intervals of intermediate error density, and mixtures of those intervals across scales, remain the obstruction to unrestricted comparison.
 
-The complete proof passed [independent review](local_phase_sparsity_independent_audit.md).
+The complete proof passed independent review.
 

@@ -5,7 +5,7 @@
 The fixed-collar construction below repairs the missing passage from
 crossing means to exact interface counts. The ordinary and quadratic
 cases, including the canonical rate consequence, have
-[independent review](same_slope_resolution_independent_audit.md).
+independent review.
 
 Throughout, \(\Lambda=1+\log h\), \(L=O(h^2)\) is the complete support
 memory, and all partition functions use the normalized sea language
@@ -148,7 +148,7 @@ of full six-support partition functions. The controlled sums above
 supply the asymptotic proof.
 
 The full weighted exclusion argument is in
-[the crossing-mass audit](exact_dominance_crossing_mass_independent_audit.md).
+the crossing-mass audit.
 Repeated columns and repeated six-support descriptions cost \(O(h)\).
 Six-supports containing smaller old or new forbidden supports are also
 lower order. In particular, the two-original-triangle descriptions
@@ -350,8 +350,8 @@ at both ends, keeping the first and last walls more than \(2L\)
 from those tails. The same joint local lemma gives a positive
 fraction of extendible cores independent of core length.
 The two-sided pinned counts and the canonical capture are checked in
-[the collar audit](central_low_collar_independent_audit.md) and
-[the final rate audit](same_slope_resolution_independent_audit.md).
+the collar audit and
+the final rate audit.
 
 This proves
 \[

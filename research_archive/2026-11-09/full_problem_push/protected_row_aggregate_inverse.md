@@ -1,6 +1,6 @@
 # The aggregate rectangle inverse test for a protected row partition
 
-9 November 2026. This note proves the phase part of the container inverse test when the row partition is already ordinary or quadratic parity. The column phase is arbitrary. The proof has passed two independent reviews, including the saved [independent audit](rectangle_inverse_independent_audit.md).
+9 November 2026. This note proves the phase part of the container inverse test when the row partition is already ordinary or quadratic parity. The column phase is arbitrary. The proof has passed two independent reviews, including the saved independent audit.
 
 Let
 \[

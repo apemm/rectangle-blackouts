@@ -1,6 +1,6 @@
 # Low rectangle counts force low profile complexity
 
-9 November 2026. This note gives a general consequence of a small aggregate three-corner count without identifying the row or column laws. It applies to arbitrary binary row and column words. The complete proof, including both container consequences and the quantitative modulus below, has passed [independent review](profile_complexity_independent_audit.md).
+9 November 2026. This note gives a general consequence of a small aggregate three-corner count without identifying the row or column laws. It applies to arbitrary binary row and column words. The complete proof, including both container consequences and the quantitative modulus below, has passed independent review.
 
 For binary words \(c,t:[1,h]\to\mathbb F_2\), put
 \[

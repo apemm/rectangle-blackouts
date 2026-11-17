@@ -50,7 +50,7 @@ one fixed affine phase is light except with probability
 This uses the established same-phase anchor bounds.
 It does not transfer to an arbitrary
 competing component's Perron measure.
-See [the codegree and load audit](exact_dominance_codegree_tail_audit.md).
+See the codegree and load audit.
 
 The corrected six-cell crossing survival ratios at a complement wall
 are \(15/17\) for constant parity, \(1/7\) for checkerboard parity,
@@ -86,8 +86,8 @@ for sufficiently large h. The excess above the pure quadratic phase
 is therefore real. The proof does not identify optimal wall spacing,
 the exact maximizing partition, or every recurrent component.
 See [the wall proof](same_slope_wall_resolution.md),
-[the crossing-mass audit](exact_dominance_crossing_mass_independent_audit.md),
-and [the final collar and capture audit](same_slope_resolution_independent_audit.md).
+the crossing-mass audit,
+and the final collar and capture audit.
 
 The remaining dominance step is to capture every competing component
 with root at least \(\lambda_*\). A light window suffices, but no
@@ -106,7 +106,7 @@ The level slopes are any fixed finite set excluding -1. Each label
 can receive its own list of \(C h\) physical block slots, and the
 coloring uses those slots without relabeling them.
 [The proof](global_P_linear_list_coloring.md) and
-[independent audit](slot_filler_routes_independent_audit.md)
+independent audit
 complete this combinatorial interface.
 
 However, fixed slot lists cannot themselves supply right-angle
@@ -119,7 +119,7 @@ of linear-level rules. The result survives deletion of o(h^2) labels.
 For sufficiently large lists, the prescription for those four labels extends
 to a full proper P-and-level coloring.
 See [the geometric list obstruction](linear_slot_filter_obstruction.md)
-and [its audit](linear_slot_filter_independent_audit.md).
+and its audit.
 Coordinated or adaptive choices remain outside this obstruction.
 
 An inserted right angle can be retained by a filler, but only under
@@ -182,7 +182,7 @@ in each aligned h-column block about one matched quadratic law, its
 rate is at most \(r_{\rm ref}\exp[-aP_h(r)]\). This includes r=1 and
 compares with the complete reference bulk, with no extensive
 span-truncation remainder. See [the local-cap theorem](continuation_exact_row_local_cap.md)
-and [independent audit](continuation_exact_row_pressure_independent_audit.md).
+and independent audit.
 
 A nonquadratic competing Perron component must consequently use bad
 blocks or changes of its nearest quadratic phase at frequency at least
@@ -203,10 +203,10 @@ interface log-weight by \(\Theta(rh)\), uniformly for
 \(O(r\log^2h)\) Lipschitz bound. It supports a one-sided bound on possible
 interface improvement instead.
 [The proof](continuation_common_alphabet_surface.md) and
-[independent audit](common_alphabet_surface_independent_audit.md)
+independent audit
 first concern the common alphabet. The subsequent
 [changed-letter restoration theorem](continuation_changed_black_letter_suppression.md),
-with its [independent audit](changed_black_letter_suppression_independent_audit.md),
+with its independent audit,
 bounds arbitrary clusters of restored changed letters by
 \[
  O\!\left(\frac rh e^{-c(1+\log h)^{3/2}}\right)
@@ -234,7 +234,7 @@ yet a tilted rectangle and an axis rectangle have the same white
 presentation.
 [The mixed obstruction](continuation_crt_mixed_obstruction.md),
 [exact checker](verify_continuation_crt_mixed.py), and
-[independent audit](continuation_crt_mixed_independent_audit.md)
+independent audit
 show why angle exclusion and P coloring alone do not finish this scaffold.
 
 There is also an exact axis-only staircase. Put
@@ -272,7 +272,7 @@ denominator. A 150-vertex in-strip graph requires at least six colors.
 Its five-color unsatisfiability certificate passes an independent
 integer-arithmetic proof check, and every one of its 1,289 edges has
 an actual in-strip vertical-rival realization at height 80,998.
-See [the coloring certificate audit](crt_chain_chromatic_independent_audit.md).
+See the coloring certificate audit.
 Every coloring through a finite additive quotient fails; a proper
 coloring also cannot be locally constant at any vertex in either the
 real or 2-adic topology.
@@ -308,16 +308,16 @@ construction is unaffected.
 | Protected-phase entropy expansion | \(\log r_X=\overline{\log k_X}-\mu_X+O_\epsilon(h^{-2+\epsilon})\), with \(\mu_X\) the exact mean of minimal forbidden supports | [Crossed codegrees and avoidance](crossed_codegree_and_avoidance.md) |
 | Protected-phase ordering | At sufficiently large height, \(r_{\mathrm Q}>r_{\mathrm O}>r_{\mathrm C}\), with both additive gaps of order \((\log h)^4\); the mixed-support ratios are \(13/16\) and \(5/4\) | [Weighted ratios and entropy](protected_mixed_ratios_and_ordering.md) |
 | Explicit protected-phase coefficients | \(r_X=h/2-(d_X/2)(\log h)^4+o((\log h)^4)\), with \((d_O,d_C,d_Q)=\pi^{-4}(45+32\mathcal P/9,324/5+40\mathcal P/9,144/5+26\mathcal P/9)\) and an explicit positive Euler product \(\mathcal P\) | [Complete constants](protected_phase_explicit_constants.md) |
-| Full ordinary and quadratic row shifts | Arbitrary column phases preserve the best protected leading coefficient: \(\rho_{\rm parity}=h/2-(d_O/2)\log^4h+o(\log^4h)\), while \(\rho_{\rm quadratic}=h/2-(d_Q/2)\log^4h+o(\log^4h)\); the quadratic full shift eventually wins | [Full protected-row pressure](full_protected_row_leading_pressure.md), [independent audit](full_protected_row_pressure_independent_audit.md) |
-| Global sea and counting coefficient | \(R_h=h/2-(d_Q/2)\log^4h+o(\log^4h)\), with \(d_Q/2\approx0.1595753\); both maximum-blackout exponential liminf/limsup have the same expansion. | [Global leading pressure](global_sea_leading_pressure.md), [independent audit](global_sea_pressure_independent_audit.md) |
-| Quantitative optimizer neighborhood | Every maximizing partition is \(O((1+\log\log h)^2)\) rows from quadratic, and \(0\le R_h-r_Q(h)\le C\log^2h(1+\log\log h)^2\) for the exact protected rate \(r_Q\). | [Explicit span tail](polylogarithmic_span_tail.md), [independent audit](polylog_span_tail_independent_audit.md) |
-| Positive same-slope wall gain | Corrected crossing ratios are \(15/17,1/7,13/16\) for O, C, Q; a fixed low collar proves the exact positive relative interface gains | [Wall proof](same_slope_wall_resolution.md), [final audit](same_slope_resolution_independent_audit.md) |
+| Full ordinary and quadratic row shifts | Arbitrary column phases preserve the best protected leading coefficient: \(\rho_{\rm parity}=h/2-(d_O/2)\log^4h+o(\log^4h)\), while \(\rho_{\rm quadratic}=h/2-(d_Q/2)\log^4h+o(\log^4h)\); the quadratic full shift eventually wins | [Full protected-row pressure](full_protected_row_leading_pressure.md), independent audit |
+| Global sea and counting coefficient | \(R_h=h/2-(d_Q/2)\log^4h+o(\log^4h)\), with \(d_Q/2\approx0.1595753\); both maximum-blackout exponential liminf/limsup have the same expansion. | [Global leading pressure](global_sea_leading_pressure.md), independent audit |
+| Quantitative optimizer neighborhood | Every maximizing partition is \(O((1+\log\log h)^2)\) rows from quadratic, and \(0\le R_h-r_Q(h)\le C\log^2h(1+\log\log h)^2\) for the exact protected rate \(r_Q\). | [Explicit span tail](polylogarithmic_span_tail.md), independent audit |
+| Positive same-slope wall gain | Corrected crossing ratios are \(15/17,1/7,13/16\) for O, C, Q; a fixed low collar proves the exact positive relative interface gains | [Wall proof](same_slope_wall_resolution.md), final audit |
 | Canonical excess over a pure quadratic phase | \(\lambda_{*,Q}(h)\ge r_Q(h)+c\log^2h\) for sufficiently large h; exact dominance remains open | [Captured wall lattice](same_slope_wall_resolution.md) |
-| Fixed-phase light windows | For the parity partition and a fixed affine phase, the deleted-letter and multi-free-load tails hold under the normalized allowed-window measure without the extra codegree hypothesis | [Moment and codegree audit](exact_dominance_codegree_tail_audit.md) |
+| Fixed-phase light windows | For the parity partition and a fixed affine phase, the deleted-letter and multi-free-load tails hold under the normalized allowed-window measure without the extra codegree hypothesis | Moment and codegree audit |
 | Height-seven canonical dominance | The parity sea has one recurrent component, with 16,886,304 states and \(3.776799\le\rho_7\le3.776801\). The quadratic partition has smaller entropy. | [Height-seven components](sea_components_height_seven.md) |
 | Height-eight canonical lower certificate | \(\lambda_*(8)\ge2.928738\), from the exact frozen model on 55,967,492 states. Its unique cyclic component has 18,590,384 states and Perron root in \([2.928738,2.928739]\); the full graph remains unresolved. | [Frozen-state certificate](height_eight_frozen_certificate.md) |
 | Full seven-row counting asymptotic | \(a_7(m)\sim C_7m^{12}R_7^m\), with \(C_7>0\), \(3.780928\le R_7\le3.780929\), and exactly two reflected maximizing partitions | [Complete partition comparison](sea_components_height_seven.md) |
-| Finite optimum counts | \(a_7(8)=18,\ a_7(13)=8,\ a_7(14)=80,\ a_7(20)=3364,\ a_7(21)=4\), with every board independently verified by actual rectangle presentations | [Eight](seven_eight_exact_count.md), [thirteen](seven_thirteen_exact_count.md), [fourteen](seven_optimum_count14_independent_audit.md), [twenty](seven_optimum_count20.md), [twenty-one](seven_equality_count21_independent_audit.md) |
+| Finite optimum counts | \(a_7(8)=18,\ a_7(13)=8,\ a_7(14)=80,\ a_7(20)=3364,\ a_7(21)=4\), with every board independently verified by actual rectangle presentations | [Eight](seven_eight_exact_count.md), [thirteen](seven_thirteen_exact_count.md), fourteen, [twenty](seven_optimum_count20.md), twenty-one |
 | Exact seven-row threshold | \(m_0(7)=21\), equality holds at every width at least 21, and \(f(7,20)=31\) | [Threshold proof](seven_row_equality_width_exclusions.md) |
 | Parity-partition dominance | False at height seven: \(\rho_{\{1,3,6\}}\ge3.780928>3.776801\ge\rho_{\rm parity}\) | [Counterexample](parity_partition_dominance_counterexample.md) |
 | Compact fifteen-row equality | A verified width-441 board extends to every greater width | [Fifteen-row construction](height_fifteen_spacing_eight_completion.md) |
@@ -389,7 +389,7 @@ The [inserted mixed-support reduction](inserted_mixed_higher_arity_bounds.md)
 also gives \(D_3=O_\varepsilon(h^{3+\varepsilon})\) and
 \(D_4=O_\varepsilon(h^{5+\varepsilon})\), below the quadratic
 permutation scales for three- and four-label mixed events. Its
-[audit](inserted_mixed_higher_arity_independent_audit.md) includes the
+audit includes the
 previously missing same-column crossed-pair case. Vertical black sides
 stay in the separate vertical-rival family.
 
@@ -401,7 +401,7 @@ complete parity graph. The resulting canonical-event load is
 \(\Omega(\log^2h)\), so the permutation local-lemma criterion
 proved here does not apply to the full event family. The
 [incidence proof](occupied_phase_three_label_incidence.md) and its
-[independent audit](occupied_phase_three_label_independent_audit.md)
+independent audit
 identify a structured-placement problem, not a width lower bound.
 
 The private-prescription requirement in the earlier proof has its own
@@ -414,26 +414,26 @@ width has the same lower bound. Thus an absolute quadratic construction
 needs compatible overlap, a joint sea assignment, finite-end effects,
 or another background.
 [The stronger obstruction](private_blocking_set_lower_bound.md) and its
-[independent audit](private_blocking_independent_audit.md) concern this
+independent audit concern this
 construction requirement, not the true threshold.
 
 The complete underlying proof and its independent audit are in:
 
 * [Filled period-seven profiles](filled_mod7_profile_cover.md)
-* [Profile audit](filled_mod7_independent_audit.md)
+* Profile audit
 * [Two-logarithm placement proof](safe_triangle_pair_first_moment.md)
-* [Independent geometry and first-moment audit](safe_triangle_first_moment_independent_audit.md)
-* [Third audit of the complete bound](safe_triangle_pair_third_audit.md)
+* Independent geometry and first-moment audit
+* Third audit of the complete bound
 * [Fixed two-moment refinement](two_moment_threshold_refinement.md)
-* [Independent two-moment audit](two_moment_threshold_independent_audit.md)
+* Independent two-moment audit
 * [Fourth-logarithm placement proof](compatible_profile_threshold.md)
-* [Placement audit](compatible_profile_threshold_independent_audit.md)
+* Placement audit
 * [Intermediate fractional-moment bound](fractional_moment_threshold.md)
 * [Original near-quadratic construction](near_quadratic_threshold.md)
-* [Independent geometry and boundary audit](near_quadratic_independent_audit.md)
+* Independent geometry and boundary audit
 * [Averaged-divisor refinement](polylogarithmic_threshold.md)
 * [Sharper divisor moments](sharper_polylogarithmic_threshold.md)
-* [Independent sharper-moment audit](sharper_polylogarithmic_threshold_independent_audit.md)
+* Independent sharper-moment audit
 * [Construction checks](near_quadratic_threshold_check.json)
 
 The original construction checks enumerate actual rectangle presentations for sampled boards. The new profile checker independently exhausts its modular cases and verifies all row and square filters at 28 consecutive large heights. The analytical proof covers all heights; the finite checks do not replace it. No practical value for the final asymptotic constant is claimed.
@@ -461,7 +461,7 @@ column and place the doubles \(\{1,2i+2\}\) at columns \(pi\), where
 every collision, including virtual rivals from the full final parity
 pair set. The entire star occupies \(O(h^2)\) columns and has constant
 tails. [The proof](boundary_star_quadratic_gadget.md) and
-[independent audit](wide_linear_star_independent_audit.md) include checks
+independent audit include checks
 through height thirty. This handles a boundary-edge family, not all
 parity edges. A sharper analysis gives a uniformly valid spacing
 \(p=O(h^{2/3})\). Choosing the spacing arithmetically improves this further
@@ -483,7 +483,7 @@ Consequently the finite odd graphs require arbitrarily many colors. This rules o
 The proof adapts the multiplicative-correlation and concentration estimates of Frantzikinakis, Klurman, and Moreira to an odd multiplicative Følner sequence. The odd restriction is proved explicitly; it is not inferred from their unrestricted partition-regularity theorem.
 
 * [Full adaptation](odd_graph_odd_folner_adaptation.md)
-* [Primary-source audit](odd_graph_primary_source_audit.md)
+* Primary-source audit
 * [Independent review and sign correction](odd_folner_independent_review.md)
 
 For a finite certificate, [odd_graph_five_chromatic.json](odd_graph_five_chromatic.json) records a five-chromatic graph on 199 positive odd vertices, with largest vertex 2607 and 825 edges. Every edge has an integer-square certificate. A proper five-coloring is included. An independent exhaustive solver proves that four colors do not suffice in [verify_odd_graph_five_chromatic.json](verify_odd_graph_five_chromatic.json). The infinite theorem is nonquantitative.
@@ -561,7 +561,7 @@ many singleton steps, so the marker histories create no new
 exponential base. Summing the partitions and adding the finitely many
 pre-threshold corrections gives an eventual integer recurrence for
 \(a_h(m)\). The [formula](sea_resolvent_counting_formula.md) and
-[independent audit](sea_resolvent_independent_audit.md) retain exact
+independent audit retain exact
 finite-end conditions and allow adjacent doubles.
 
 The competing partitions deserve separate attention. The balanced row partition
@@ -600,18 +600,18 @@ long scale intervals. Connector and vertical-base residues have
 uniform leading weights with error \(O(h^3\log^3h)\).
 The [scale average](uniform_circle_scale_valuation.md),
 [connector average](uniform_connector_base_residues.md), and
-[combined audit](mixed_residue_average_independent_audit.md)
+combined audit
 remove those hypotheses from the comparison on their stated ranges.
 The [short-scale bound](mixed_short_scale_truncation.md) extends the
 scale weights to the complete leading vertical contribution.
 The [averaged angular estimate](averaged_circle_angles.md), which
-also passed [independent review](averaged_circle_angles_independent_audit.md),
+also passed independent review,
 proves that nearly horizontal mixed supports are lower order.
 It averages fixed Fourier modes over scale and does not require
 angular equidistribution on individual circles.
 The [primitive parity weights](primitive_parity_weight_equidistribution.md)
 are now also proved equal at leading order, with an
-[independent audit](primitive_parity_weight_independent_audit.md).
+independent audit.
 The complete [mixed-ratio synthesis](protected_mixed_ratios_and_ordering.md)
 therefore proves \(Q/O\to13/16\) and \(C/O\to5/4\).
 Combining these with the six-cell constants and avoidance expansion gives
@@ -640,21 +640,21 @@ The [explicit-constants theorem](protected_phase_explicit_constants.md)
 includes the global orientation normalization and audit links.
 It determines the leading loss within each protected language.
 
-The new [full protected-row theorem](full_protected_row_leading_pressure.md), with its [independent adversarial audit](full_protected_row_pressure_independent_audit.md), proves
+The new [full protected-row theorem](full_protected_row_leading_pressure.md), with its independent adversarial audit, proves
 \[
  \log\rho(c_0,h)=\max_{X\in\mathcal X(c_0)}\log r_{c_0,X}(h)
                     +o(\log^4h/h)
 \]
 for every balanced protected row law \(c_0\), allowing arbitrary column phases. Bad height-sized phase blocks and transitions between good blocks supply local counting deficits. One-sided adaptive rectangle families control all remaining errors, including those adjacent to independently counted guards. Thus the full ordinary and quadratic row shifts have additive coefficients \(d_O/2\) and \(d_Q/2\), respectively. The quadratic full shift eventually has larger entropy by \(\Theta(\log^4h)\).
 
-The [global extension](global_sea_leading_pressure.md), also [independently audited](global_sea_pressure_independent_audit.md), retains a row-defect penalty while allowing all column phases. For \(r=o(h)\) changed rows and \(r\to\infty\), it gives
+The [global extension](global_sea_leading_pressure.md), also independently audited, retains a row-defect penalty while allowing all column phases. For \(r=o(h)\) changed rows and \(r\to\infty\), it gives
 \[
  \log\rho_c\le\max_X\log r_{c_0,X}
  -a(r/h)\log^2(h/r)+o(\log^4h/h).
 \]
 Combining this with partition rigidity determines \(R_h=\max_\pi\rho_\pi\) with the quadratic coefficient \(d_Q/2\), and places every maximizing partition within \(o(\log^2h)\) rows of a quadratic law. The marked-resolvent upper bound and quadratic canonical-insertion lower bound give the same expansion for both \(\liminf_m a_h(m)^{1/m}\) and \(\limsup_m a_h(m)^{1/m}\). This does not determine their exact fixed-height equality, the polynomial factor in m, the exact maximizing partition, or its dominant recurrent component.
 
-The [explicit span-tail refinement](polylogarithmic_span_tail.md), with its [independent audit](polylog_span_tail_independent_audit.md), strengthens the optimizer neighborhood to \(O((1+\log\log h)^2)\) rows and proves
+The [explicit span-tail refinement](polylogarithmic_span_tail.md), with its independent audit, strengthens the optimizer neighborhood to \(O((1+\log\log h)^2)\) rows and proves
 \[
  0\le R_h-r_Q(h)\le C\log^2h(1+\log\log h)^2.
 \]
@@ -695,7 +695,7 @@ range. The absolute constant is not evaluated numerically. In particular,
 at most \(2M\) violations at every reflection distance imply \(O(M)\)
 exceptional rows, without a periodicity or domain-wall hypothesis.
 See [the proof](reflection_interval_stability.md) and
-[independent source audit](reflection_interval_independent_audit.md).
+independent source audit.
 
 The [near-full Cartesian theorem](near_full_variable_box_stability.md)
 now permits a different alphabet in every column, with at most \(M\)
@@ -703,7 +703,7 @@ omissions from its selected balanced row class. For \(h\ge C(M+1)\) and
 width at least \(4h+20\), the row coloring differs from an ordinary or
 quadratic parity law on at most \(KM\) rows. The column phase follows the
 matching law exactly. Both the main proof and its finite-width limitation
-passed [independent audit](near_full_variable_box_independent_audit.md).
+passed independent audit.
 
 This does not yet classify arbitrary high-entropy components. The
 [container reduction](container_stability_reduction.md) proves that an
@@ -765,7 +765,7 @@ The adaptive primitive-direction cutoff gives the row penalty without
 a fixed power-saving restriction on r. Its \(O(\sqrt{rh})\) endpoint
 loss is absorbed by the actual wall roots, so no interface prefactor
 is needed. See [the proof](separated_domain_partition_comparison.md)
-and [independent audit](separated_domain_pressure_independent_audit.md).
+and independent audit.
 The general stability theorem does not yet supply this quantitative
 domain-and-error representation, so the conclusion remains restricted.
 
@@ -795,7 +795,7 @@ Consequently the quadratic protected phase has larger entropy than
 the entire ordinary-parity class covered by this theorem, for large h.
 See [the combined proof](polylog_packets_in_protected_domains.md),
 [the kernel and packet estimate](polylogarithmic_packet_separation.md),
-and [independent audit](polylog_packet_independent_audit.md).
+and independent audit.
 Unrestricted dense phase errors and the full ordinary-parity sea shift
 remain outside this comparison.
 
@@ -813,7 +813,7 @@ Hamming distance from those patterns have a fixed entropy gap, counting
 all such words together. High-entropy stationary sea measures therefore
 concentrate locally near the protected phases. See
 [entropy concentration](protected_partition_entropy_stability.md) and
-[the independent audit](rectangle_inverse_independent_audit.md).
+the independent audit.
 This is local phase concentration, not general component connectivity.
 
 The complementary constant-phase case now allows an arbitrary balanced
@@ -851,7 +851,7 @@ already anchored protected sources, but cannot connect every admissible
 core to the same fixed entrance. An explicit quadratic-phase family
 forces a mixed collision at distance \(\Theta(h^{3/2})\) from that
 entrance, defeating every prescribed \(Ch\) buffer. The
-[short-buffer audit](short_buffer_independent_audit.md) and
+short-buffer audit and
 [fixed-entrance obstruction](short_buffer_fixed_anchor_obstruction.md)
 leave adaptive entrances and longer general bridges open.
 
@@ -892,7 +892,7 @@ search covers 2,683 row cores modulo reflection, including the nineteen
 full \(K_{3,4}\) cores with two empty columns. Twenty-two projected
 models expand to eighty distinct labeled boards. An independent
 equal-diagonal generator verifies all 2,691 rectangle presentations
-for each board. See [the count audit](seven_optimum_count14_independent_audit.md).
+for each board. See the count audit.
 
 Equality-board windows retain more structure than arbitrary valid boards. They have only singleton and double columns, and retain the final balanced pair set for virtual axis rivals. This gives stronger cropping constraints than unrestricted optimum values alone.
 
@@ -913,7 +913,7 @@ classes. Only the ordinary-parity core has models. Two stored models and
 their horizontal reflections give the four distinct boards, each with
 33 black cells. An independent equal-diagonal generator checks all 5,785
 rectangle presentations for each board. The complete coverage and
-symmetry audit is [recorded separately](seven_equality_count21_independent_audit.md).
+symmetry audit is recorded separately.
 
 At the preceding width, there are exactly \(a_7(20)=3364\) optimal
 boards, each with 31 black cells. All 229 deficit-one row cores have

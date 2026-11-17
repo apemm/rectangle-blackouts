@@ -7,7 +7,7 @@
 \]
 This improves the earlier global first-moment bound, but it still concerns the same-sea crossed role and does not supply a full label placement.
 
-The square-root split and exceptional-row transfer have passed independent review in [mixed_power_savings_independent_audit.md](mixed_power_savings_independent_audit.md).
+The square-root split and exceptional-row transfer have passed independent review in mixed_power_savings_independent_audit.md.
 
 ## 1. Positive connector scales
 

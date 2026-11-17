@@ -150,4 +150,4 @@ Nor does it prohibit two labels from sharing a compatible blocking
 prescription at one physical column.
 
 The collision, divisor summation, and scope have passed
-[independent review](private_blocking_independent_audit.md).
+independent review.

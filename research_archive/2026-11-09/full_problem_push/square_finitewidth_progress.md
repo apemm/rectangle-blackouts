@@ -327,13 +327,13 @@ A width at most 103 therefore forces \(t=4\). Thus \(k=q=2\) and
 \(kp+lq=2(p+l)\ge104\), a contradiction. The displayed rectangle attains
 104. This proves both claimed values without relying on the search.
 
-[minimum_width_audit.py](minimum_width_audit.py) independently scans every
+minimum_width_audit.py independently scans every
 height from 2 through 655 and finds no earlier counterexample. It computes
 the unrestricted minimum from positive integers \(a,b,c,d\) satisfying
 \(ac=bd\), \(b+d=n\), with width \(a+c\). The AM--GM pruning test
 \(4b(n-b)>(a+c)^2\) is rigorous. A separate exhaustive \((x,y)\) scan
 checks the value of A228286 at 655. The saved results are in
-[minimum_width_audit.json](minimum_width_audit.json).
+minimum_width_audit.json.
 
 These dimensions are coordinate spans. The rectangle would occupy a grid
 with 656 rows and 105 columns if both boundary endpoints are counted as

@@ -249,5 +249,5 @@ The proof compares all column phases for a fixed balanced protected row partitio
 
 The theorem does not address row partitions differing from protected ones, except through earlier separate perturbation results. It also leaves exact recurrent-component dominance and insertion into every maximal component open. Those questions require more than the leading-pressure identity (1).
 
-The full argument passed [independent adversarial review](full_protected_row_pressure_independent_audit.md).
+The full argument passed independent adversarial review.
 

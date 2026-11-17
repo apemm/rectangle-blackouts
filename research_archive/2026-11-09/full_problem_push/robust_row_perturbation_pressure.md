@@ -24,7 +24,7 @@ More precisely, their exponential growth rate is at most
  \rho_{c_0,t}(h)e^{-a' r/h}.
 \tag{3}
 \]
-Phase-error columns may be arbitrarily clustered. The balanced-reference theorem and its phase-error extension passed [independent review](robust_row_pressure_independent_audit.md). Section 5 records the additional, slightly unbalanced quadratic reference.
+Phase-error columns may be arbitrarily clustered. The balanced-reference theorem and its phase-error extension passed independent review. Section 5 records the additional, slightly unbalanced quadratic reference.
 
 The stronger logarithmic penalty in [changed_row_relative_pressure.md](changed_row_relative_pressure.md) remains available in its earlier range. This note replaces that penalty by \(r/h\) in order to remove the fixed power-saving restriction on r.
 

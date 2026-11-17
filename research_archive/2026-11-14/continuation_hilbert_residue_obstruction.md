@@ -160,7 +160,7 @@ nonlocal feature of the Hilbert path.
 
 The recursive rank formula, the orientation, and the collision arithmetic
 were independently checked in
-[the Hilbert extensions audit](audit_hilbert_extensions.md). The script
+the Hilbert extensions audit. The script
 [check_hilbert_residue_obstruction.py](check_hilbert_residue_obstruction.py)
 checks 30 cases with \(S\in\{32,64,128\}\) and \(1\le k\le10\).
 It uses exact integer arithmetic and sparse recursive rank lookups, so it

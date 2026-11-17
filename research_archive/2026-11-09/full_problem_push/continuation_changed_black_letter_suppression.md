@@ -360,5 +360,5 @@ survives arbitrary changed-letter clusters inside polynomial-width collars. In p
 
 This is still a same-phase statement. A genuine wall changes the completion phase of crossing rectangles, so its constraint family is different. Nor does finite-collar restoration establish localization under arbitrary exterior conditioning. Exact component dominance and exact quadratic optimality remain open.
 
-Independent review passed. See [changed_black_letter_suppression_independent_audit.md](changed_black_letter_suppression_independent_audit.md).
+Independent review passed. See changed_black_letter_suppression_independent_audit.md.
 

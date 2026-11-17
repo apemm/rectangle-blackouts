@@ -135,7 +135,7 @@ The useful target is now local and exact: create a constant-history gate inside 
 No uniqueness or canonical-dominance claim is made in this note.
 
 The elementary gate statements and marker example passed
-[independent review](canonical_gate_elementary_audit.md). That review
+independent review. That review
 does not claim a second verification of the external theorem statements;
 the source-hypothesis checks in Sections 3--4 are recorded separately
 from the proved geometric results.

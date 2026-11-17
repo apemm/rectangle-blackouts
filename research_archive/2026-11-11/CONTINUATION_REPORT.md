@@ -40,7 +40,7 @@ Together these give a local event load bounded by
 
 The first term is small in the stated range. The other two tend to zero. The copies of each row do not introduce an extra degree factor in this calculation.
 
-See [the full proof](continuation_near_quadratic_all_double.md) and [the independent audit](continuation_growing_clone_independent_audit.md).
+See [the full proof](continuation_near_quadratic_all_double.md) and the independent audit.
 
 This is an existence proof, not an explicit arithmetic placement. It covers both parities of h. It permits tilted singleton presentations when they have no competing axis owner.
 

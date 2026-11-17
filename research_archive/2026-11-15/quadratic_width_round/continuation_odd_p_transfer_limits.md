@@ -104,7 +104,7 @@ because of some other event is counted separately by (6).
 ## 3. Exact transfer to the older one-prime blocks
 
 Section 1 of the
-[9 November odd-graph audit](../../2026-11-09/odd_graph_entropy_square/odd_graph_independent_audit.md)
+9 November odd-graph audit
 has the correct embedding. Here is its uniform central version.
 
 Fix \(0<\eta<1/2\), an even row

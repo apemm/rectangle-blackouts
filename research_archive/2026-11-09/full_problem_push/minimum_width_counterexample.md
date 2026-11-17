@@ -141,7 +141,7 @@ minimum is 104.
 
 ## 5. Certification that this is the first counterexample
 
-The independent checker [minimum_width_audit.py](minimum_width_audit.py)
+The independent checker minimum_width_audit.py
 examines all heights \(2\le n\le655\). It computes (2) through a complete
 finite search, and separately checks the value at 655 by direct enumeration
 of positive \(x,y\).

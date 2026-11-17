@@ -16,7 +16,7 @@ For an interval I of length \(\ell\), and any \(S\subseteq I\), let \(Z_{X,S}(m)
        \exp[-c|S|\log^2(h/\ell)].
 \tag{1}
 \]
-The constant c can be chosen absolute; the height threshold depends on delta. The theorem is also valid for slightly unbalanced protected references. The complete proof passed [independent review](isolated_packets_independent_audit.md).
+The constant c can be chosen absolute; the height threshold depends on delta. The theorem is also valid for slightly unbalanced protected references. The complete proof passed independent review.
 
 ## 1. Move all prescribed black cells away from the packet
 

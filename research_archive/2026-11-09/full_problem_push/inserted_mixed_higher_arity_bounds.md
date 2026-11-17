@@ -17,7 +17,7 @@ full construction theorem.
 
 The same-column completion calculation and all label multiplicities
 have passed independent review in
-[inserted_mixed_higher_arity_independent_audit.md](inserted_mixed_higher_arity_independent_audit.md).
+inserted_mixed_higher_arity_independent_audit.md.
 
 ## 1. A crossed pair in one column
 
