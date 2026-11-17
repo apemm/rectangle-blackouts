@@ -1,0 +1,23 @@
+{
+ "date": "2026-11-16",
+ "statement": "No window of width h+1 exists at height h, for h = 11 and h = 12, with the balanced partition left free.",
+ "generator": "export_cnf.py, which writes the clauses of win.build(h, k) as DIMACS",
+ "solver": "CaDiCaL 2.1.2, run as cadical --lrat --binary=false CNF PROOF",
+ "checkers": ["lrat-check (drat-trim)", "Lean 4.33.1 Std.Tactic.BVDecide.LRAT.check, built from jis/unsat/lean"],
+ "instances": [
+  {"cnf": "window_h11_k12.cnf", "h": 11, "k": 12, "vars": 635, "clauses": 16046, "rectangles": 2528,
+   "cnf_sha256": "c24636d3af5a211e1c0c4cc651be7e47b5ce45f34b6eeafd89667dacd1dc1030",
+   "result": "UNSATISFIABLE", "solve_seconds": 25,
+   "proof_bytes": 200756480, "proof_sha256": "1c0aae85926f166158d1dd8cb0147c9c48577e2d728e0e0b3bc4d5c2bf5bcbdc",
+   "lrat_check": "verified, 5 s", "lean_check": "s VERIFIED, 17 s, parsed formula equal to the input"},
+  {"cnf": "window_h12_k13.cnf", "h": 12, "k": 13, "vars": 760, "clauses": 23328, "rectangles": 3820,
+   "cnf_sha256": "166415382bb4311b76b8d4ff16f0f56d65acea6aa35be741338d2603387b2930",
+   "result": "UNSATISFIABLE", "solve_seconds": 264,
+   "proof_bytes": 1459539176, "proof_sha256": "1cd88c679602afd14d01f6bd4c3dd3180b8848f3037c58458d09ec6020da687b",
+   "lrat_check": "verified, 57 s", "lean_check": "s VERIFIED, 117 s, parsed formula equal to the input"}
+ ],
+ "witness_h11_k11": {"columns": [[1,8],[1,2],[2,4],[7,10],[4,9],[9,11],[2,3],[8,11],[1,9],[1,10],[10,11]], "A": [1,3,4,6,7,11],
+  "note": "A window of width 11 at height 11, found by win.py. Not rechecked by a second program."},
+ "not_covered": "The proofs certify the CNF files. That the CNF says what the definition of a window says rests on reading win.py. A second, separately written generator has not been compared.",
+ "proofs": "The proof files are not stored here (200 MB and 1.46 GB as text LRAT). A rerun gives a proof that checks in the same way."
+}
