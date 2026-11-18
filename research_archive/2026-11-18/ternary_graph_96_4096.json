@@ -1,0 +1,9 @@
+{
+  "side": 4096,
+  "stride": 96,
+  "edges": 16117764,
+  "three_core": 0,
+  "independent_edges": 16117764,
+  "monochromatic": 0,
+  "sha256": "6f7263d8010d9a79e2f802851de1bcf60b5ae401f8412054ef1794e3d9416860"
+}

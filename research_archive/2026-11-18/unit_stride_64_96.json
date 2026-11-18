@@ -1,0 +1,13 @@
+{
+  "side": 64,
+  "Q": 96,
+  "zero_edges": 1872,
+  "four_core_vertices": 0,
+  "assignment_sha256": "0a14c94da5c3939893d6f509cf406d79c211cddeee2c365e7069963cd864b01f",
+  "histogram": [
+    2962,
+    1015,
+    118,
+    1
+  ]
+}

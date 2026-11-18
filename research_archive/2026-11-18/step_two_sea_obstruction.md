@@ -1,0 +1,10 @@
+# A periodic sea with row step two obstructs an interior double
+
+Take an odd prime \(p\ne5\), and \(p\) consecutive even rows \(J=\{b_0,b_0+2,\ldots,b_0+2p-2\}\) of the strip. In every column \(x\) put the unique row \(b(x)\in J\) satisfying \(b(x)\equiv 2x+c\pmod p\). In the special case where 5 is a quadratic nonresidue modulo \(p\), this sea alone has no tilted triangle, nonhorizontal integral chord or nonvertical mixed quadruple, by the one-role modular proof in [the tile theorem](separated_row_tiles.md).
+
+Suppose the final row-pair graph contains all ordinary parity edges. Any extra odd black point \(A=(t,a)\), \(3\le a\le h-2\), in this full sea makes a rectangle collision. The conclusion is local apart from the owner of a single parity edge. It holds on a finite interval containing columns from \(t-2h-1\) through \(t+2h+1\). Mirroring columns gives the result for the descending sea, and exchanging the two parities gives its row-parity counterpart.
+
+Indeed there is a unique row \(b\in J\) such that \(5b\equiv 2t+4a+c\bmod p\). Put \(s=t+2(a-b)\). Then \(2s+c\equiv b\), so \(B=(s,b)\) is black. Choose a sign \(\eta\in\{-1,1\}\) so \(b+2\eta\in J\). Then \(C=(s+\eta,b+2\eta)\) is black as well. The vectors \(A-B=(2(b-a),a-b)\) and \(C-B=(\eta,2\eta)\) are perpendicular and both are tilted. Their fourth corner \(W=(t+\eta,a+2\eta)\) is in the strip. Its column contains the even sea row. If \(W\) is white, the axis rectangle formed with the owner of that even row and the odd row of \(W\) has the same singleton presentation. That owner cannot be in \(W\)'s column. If \(W\) is black, the tilted rectangle is hidden, which is incompatible with validity for both grid dimensions at least four by the [hidden rectangle argument](windows.md).
+
+For \(\pm2\)-step seas this rules out using every member of an entire row-parity alphabet as an affine periodic filler and adding isolated interior labels while keeping that sea. The proof permits an arbitrary assignment of additional black cells. It depends on the final ownership of the parity edge, or on hidden-rectangle impossibility if the fourth point is black.
+

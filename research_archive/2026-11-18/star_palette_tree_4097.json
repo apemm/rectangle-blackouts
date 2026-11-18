@@ -1,0 +1,18 @@
+{
+  "height": 4097,
+  "mode": "tree",
+  "stars": 2049,
+  "palette_histogram": [
+    0,
+    0,
+    0,
+    0,
+    1813,
+    236
+  ],
+  "max_colors": 5,
+  "mean_colors": 4.115178135675939,
+  "oriented_norm_events": 5103673,
+  "width_upper_bound": 2747547648,
+  "color_sha256": "0f27ccea8e5c25c394c13b5aa5f4415b652d6da4164b81b712a1f853eb279b07"
+}

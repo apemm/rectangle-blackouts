@@ -1,0 +1,49 @@
+{
+  "height": 14,
+  "ambient_double_run": 24,
+  "central_tested_columns": 13,
+  "central_left_zero_based": 5,
+  "reduction": "row reflection and part complementation",
+  "balanced_partition_representatives": 890,
+  "base_clauses": 95552,
+  "independent_replay": "replay_saturated_run_diagonals.py",
+  "pysat_solver": "cadical195",
+  "shards": [
+    {
+      "all_unsat": true,
+      "shard": 0,
+      "count": 149,
+      "mask_sequence_sha256": "b0b7c88ec409135d9bdfa5c26b2b4d4656aedd093646f68f9bf790442cacbad0"
+    },
+    {
+      "all_unsat": true,
+      "shard": 1,
+      "count": 149,
+      "mask_sequence_sha256": "b4f489ca15da17c1e194040e1f4f11d52e5d3dfc16aa0dc04aab7a02c4a68ff7"
+    },
+    {
+      "all_unsat": true,
+      "shard": 2,
+      "count": 148,
+      "mask_sequence_sha256": "a39dd32d1ce9a725631b08efd8d3c4c762893fd32b782a24aadb2f6ab365fa7d"
+    },
+    {
+      "all_unsat": true,
+      "shard": 3,
+      "count": 148,
+      "mask_sequence_sha256": "7ec9e36667451133967b71b10d9bd8f9a87650ab4cadfd40e4d9b7a42549ff11"
+    },
+    {
+      "all_unsat": true,
+      "shard": 4,
+      "count": 148,
+      "mask_sequence_sha256": "41ff7f79103533c7595c529dd905aa901afb78a6b2d96ec1aba55c3be33e403a"
+    },
+    {
+      "all_unsat": true,
+      "shard": 5,
+      "count": 148,
+      "mask_sequence_sha256": "ba832d31e2d117a127e134276a49ea3e02e1b2a4594511833a74c68dde96a6df"
+    }
+  ]
+}

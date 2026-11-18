@@ -1,0 +1,85 @@
+{
+  "height": 13,
+  "run_width": 20,
+  "slice_width": 12,
+  "split_bits": 3,
+  "split": "Part j assigns its low three bits to the side indicators of physical rows 1, 2, 3 respectively.",
+  "generator": "certify_saturation_parts.py, saturated_slice.py",
+  "solver": "CaDiCaL 2.1.2, --lrat --binary=false",
+  "proof_format": "ASCII LRAT",
+  "total_lrat_bytes": 15921092009,
+  "parts": [
+    {
+      "part": 0,
+      "cnf_sha256": "2ac8e55c97d69a4a8feb0a444a55bdc34e61bb27d67315664061bdf1c2a45b38",
+      "lrat_sha256": "1ef89fe6fb4d01ec83a2ec56715f0957d5225ceff2a948dcac8825f20e6dfdb4",
+      "lrat_bytes": 1536303064,
+      "seconds": 383.65,
+      "checker": "lrat-check",
+      "verified": true
+    },
+    {
+      "part": 1,
+      "cnf_sha256": "61bfee74f260884f0b4bdbdd1fe96e4ff1e429b78f0513ec7e0fa59016f5e240",
+      "lrat_sha256": "f18b82e305919cb4733829eda87ae21014b28b92b5559a8a25810ae7c8b800cb",
+      "lrat_bytes": 2200886227,
+      "seconds": 565.19,
+      "checker": "lrat-check",
+      "verified": true
+    },
+    {
+      "part": 2,
+      "cnf_sha256": "b8653e95cf00e9b0495d615307b331d18281ded5d3156e921618de093123674b",
+      "lrat_sha256": "8a6e9029c8e2fdd11717eb113866f9d845fa34a4cbcda23bc097293a12f61896",
+      "lrat_bytes": 2301854878,
+      "seconds": 553.02,
+      "checker": "lrat-check",
+      "verified": true
+    },
+    {
+      "part": 3,
+      "cnf_sha256": "cf93668c2c78cfd33690ebd65b304d01b3c5f7992c27497f863cdafd0875dd48",
+      "lrat_sha256": "87fab3fa37b7f8d1430857afe59516f059ee2d9c1f3f51f2833c499db222a8e0",
+      "lrat_bytes": 1939149094,
+      "seconds": 440.41,
+      "checker": "lrat-check",
+      "verified": true
+    },
+    {
+      "part": 4,
+      "cnf_sha256": "abe465a25a8c7e5444b64946c29e02bbde115be43a3cec5ca892c1725117bcaa",
+      "lrat_sha256": "e333d4c57f4f7c3e60f3016b81d42c3cf4f3b10d0b710bc57fa2793784dbbfe4",
+      "lrat_bytes": 1939816278,
+      "seconds": 430.66,
+      "checker": "lrat-check",
+      "verified": true
+    },
+    {
+      "part": 5,
+      "cnf_sha256": "2b684f786e2a4816e66115efaf34e6a41035c2e2a2eb50c285f2c5551125d47e",
+      "lrat_sha256": "c8f3d8669a539ecf37ce933ccf1472454ca1d8bb502b2cfd638dfe478aeca38e",
+      "lrat_bytes": 2322586934,
+      "seconds": 540.09,
+      "checker": "lrat-check",
+      "verified": true
+    },
+    {
+      "part": 6,
+      "cnf_sha256": "6385951393a12a59ce06059498dcbafb98278a0fcd363395f23f290430f693b1",
+      "lrat_sha256": "a899708e20225e53000dea81dfd9c3c55f1265ebf15678bebfab00eda7418f1b",
+      "lrat_bytes": 2167465520,
+      "seconds": 466.43,
+      "checker": "lrat-check",
+      "verified": true
+    },
+    {
+      "part": 7,
+      "cnf_sha256": "734e4799ba2fa7a28f34f8905d5fbfeb40b4246aedf4f8dec6eda391348417bd",
+      "lrat_sha256": "53f2e0691fe5d325deceb59abc7b02c4b950be292f6f2e97be2c91fc55efc08a",
+      "lrat_bytes": 1513030014,
+      "seconds": 328.86,
+      "checker": "lrat-check",
+      "verified": true
+    }
+  ]
+}

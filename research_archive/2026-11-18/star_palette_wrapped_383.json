@@ -1,0 +1,17 @@
+{
+  "height": 383,
+  "mode": "wrapped",
+  "stars": 192,
+  "palette_histogram": [
+    0,
+    0,
+    1,
+    190,
+    1
+  ],
+  "max_colors": 4,
+  "mean_colors": 3.0,
+  "oriented_norm_events": 20417,
+  "width_upper_bound": 12584960,
+  "color_sha256": "2e2719f9e2b04bef99401df483e87a0d94805ab55e6858f061d7035e0dda31f3"
+}

@@ -1,0 +1,8 @@
+{
+  "side": 128,
+  "pairs": 21510,
+  "modular_events": 21510,
+  "core_vertices": 0,
+  "core_pairs": 0,
+  "checked_full_greedy_coloring": true
+}

@@ -1,0 +1,288 @@
+[
+  {
+    "height": 127,
+    "group": [
+      27,
+      0,
+      1
+    ],
+    "levels": [
+      1,
+      126
+    ],
+    "base": 829711,
+    "width": 15979,
+    "doubles": 13,
+    "halo": 7941,
+    "high_sha256": "669a621530de6bea0549a157c7c8c9e0f5074fe0f40532bdf66a4be6e639a87c",
+    "high_zlib_base64": "eNrtUTEOwjAM5AeMvJMHQB7AwAM68ACegKBPYKiqDpXigREVD5WoVCsxadPQlBYxIYGUWyKfL+ezzBwQ8McAv0C/UG8aMORtWXV65WjhqbsfV3bSgbcPbbTk1ZVh+sHDDjp/8hJR5adUz+SkrC+CMTyi6cZ8YiQGYaxiLmxeiKDe00bjCm4XuvN2l0CaZzKFRGbRXBYcLUtxNu5ZnZcMEtsplVo3E42HsHkP5HZsc1D7NtrY7fmF603x+pXA8Vc9pnBqgp4i8XMY7u/+k1jMAgIaPADYWqzM",
+    "columns": [
+      837652,
+      837660,
+      837668,
+      837676,
+      837684,
+      837692,
+      837700,
+      837708,
+      837716,
+      837724,
+      837732,
+      837740,
+      837748
+    ]
+  },
+  {
+    "height": 127,
+    "group": [
+      27,
+      0,
+      1
+    ],
+    "levels": [
+      1,
+      122
+    ],
+    "base": 829715,
+    "width": 15979,
+    "doubles": 13,
+    "halo": 7941,
+    "high_sha256": "9cc58c54d4163e50ff09d4d80ae6404a77d2a47f3f50f087830c2b8bcdb34c0f",
+    "high_zlib_base64": "eNrtU0sKwjAUFESK1Gu49BwuXXmD3qEriYvewWXBi6QHEHoAkXcBMSBChPDyTGLVflJxIeIisymZDvMmk4QoIOBLEM0l/H4kEe9qdJdSfVayRebk3ZP2p1F9KdF9sKZgTs4froYXULmj+SnqI6TTc7ynBFQmKlNGnZrlifbWYENKSkAtjoLkbrwo+TnZRskgWxfFKIujYTSJZ7CcT4nDNedaXsoDMmnHrFxtYGdoJM2qdLxVDiqbUrltgHp2gb6a8XUaNRvWLDvtvSXY06P00/6LxrwsfmYL//i+okFAwBvcALe+h9E=",
+    "columns": [
+      837656,
+      837664,
+      837672,
+      837680,
+      837688,
+      837696,
+      837704,
+      837712,
+      837720,
+      837728,
+      837736,
+      837744,
+      837752
+    ]
+  },
+  {
+    "height": 127,
+    "group": [
+      27,
+      1,
+      2
+    ],
+    "levels": [
+      1,
+      122
+    ],
+    "base": 830139,
+    "width": 15987,
+    "doubles": 14,
+    "halo": 7941,
+    "high_sha256": "86bd0bff99229809333ff7b82ad6cabba42071f0b84331ffcf29d4389112778a",
+    "high_zlib_base64": "eNrtUjsOwjAM5SY9EgsSIxfgDuxsHIByBMYOCGVk7MgnFI8MDBmtyo1NQpK2EwNigr5Iie1n+dlWRAYM+HOQiA0Wfl6Elb+tqOAadyIhKeJ5FbQ4BRwg2qYrBuhdm9hAuhi5EBOETGYk2bJdKpdTM2ksBJvZuJHLXT9KknlZ3PT6fLrCZFUdNWibmT1MYQeSS1kfMHdtVEJAdgPQilsvtYjKiK8XOLViWitMBt1w0Xa5XPQb743RbiMKfQ3qx/+o9QvMRgMGvMETOyOXjw==",
+    "columns": [
+      838080,
+      838088,
+      838096,
+      838104,
+      838112,
+      838120,
+      838128,
+      838136,
+      838144,
+      838152,
+      838160,
+      838168,
+      838176,
+      838184
+    ]
+  },
+  {
+    "height": 127,
+    "group": [
+      27,
+      1,
+      2
+    ],
+    "levels": [
+      1,
+      122
+    ],
+    "base": 830143,
+    "width": 15979,
+    "doubles": 13,
+    "halo": 7941,
+    "high_sha256": "5b86082dcfe8c15ea5351cb2b0dc7a7463683a01f3d07ee647aad8dc5d8a384f",
+    "high_zlib_base64": "eNrtU7EKwjAQ1c9z8Rc6OvgJRfMBDo7i4uok/QIJUktxqI4dRG50EMwiZEjTMzGtbQItgi5CHzQ0l3vv3l1axA4dPoVQD9MvxOzzKozlkQatKLnNRjfVSXcoLq0VlqZsOIAGss4Xr7aAVYagUmKONthBsKsJrcHrBc71zng5RCiiJlXwulH5ngaXZgqyUFDrneINNugLnLCyOgi8Un4Bn61TmHqwCJJTdEhmUTLYh8ddPB4sH7iKt/PRkBIMc6UDnlIlmSKn2nRuKgtjRda7A+UxMLvMmR2hRU/SCvOWu5JffIXwJ38L+bliv9ehQzOe3tORcQ==",
+    "columns": [
+      838084,
+      838092,
+      838100,
+      838108,
+      838116,
+      838124,
+      838132,
+      838140,
+      838148,
+      838156,
+      838164,
+      838172,
+      838180
+    ]
+  },
+  {
+    "height": 127,
+    "group": [
+      27,
+      2,
+      3
+    ],
+    "levels": [
+      1,
+      122
+    ],
+    "base": 830571,
+    "width": 15987,
+    "doubles": 14,
+    "halo": 7941,
+    "high_sha256": "e32341dedb59a3ce4e0e9f75fca9f7f5566f117b50fafb9e35fb6f97ff77f051",
+    "high_zlib_base64": "eNrtkbEKwjAQhn0TH9FRHKRPoG9Q+ggOIk4SujiIbSfpIOUGR6sZRIKkyZm0SaxSLI5CvpBwufuTcH8QPZ4uzpKg1AHXi+xQcBu4IvmzHhdqBnUkmgSzTcDPd0nS3GM8oGrU5Fag91S/czeWUeMi2KIRKg0wtwV3WuW4UJ/CoSldkT10fa41vLoBXxEcZbREPF1INiG0LPfHZLtLDmlc5HGcRGF4Xo9nQYZFhMspo0AIl+q4YFD/p2h3BM4SBKhshqZv9gSv5tpmbD7tgd6Ep5fhwOP5whP4apZc",
+    "columns": [
+      838512,
+      838520,
+      838528,
+      838536,
+      838544,
+      838552,
+      838560,
+      838568,
+      838576,
+      838584,
+      838592,
+      838600,
+      838608,
+      838616
+    ]
+  },
+  {
+    "height": 127,
+    "group": [
+      27,
+      2,
+      3
+    ],
+    "levels": [
+      1,
+      122
+    ],
+    "base": 830575,
+    "width": 15979,
+    "doubles": 13,
+    "halo": 7941,
+    "high_sha256": "084f527ef26094c30bada251fa0810f0e047e38ceb83608f2ba3be9282261c59",
+    "high_zlib_base64": "eNr7/38UjIKBA/eHrtP/EaXqPVbR/UQGQT0WFggcBhG/EYbV/78LYkX////9/9/7T//fBhr7x3H3vf/z58+fc356vIzM9VkiotkOX6YW3Pt5bk9d2O35c9/t/Q7Utb/eHujI/UDfvP3/fzfIOf/ARtejO+U3Dm/tR/EMWKoe2Z/vcXjtO6q5ZCWE/cSG+G9yDHtPbvy/x27zP7zOJgYwMoyCUYAbAADGNZHS",
+    "columns": [
+      838516,
+      838524,
+      838532,
+      838540,
+      838548,
+      838556,
+      838564,
+      838572,
+      838580,
+      838588,
+      838596,
+      838604,
+      838612
+    ]
+  },
+  {
+    "height": 127,
+    "group": [
+      81,
+      0,
+      1
+    ],
+    "levels": [
+      2,
+      127
+    ],
+    "base": 845155,
+    "width": 56499,
+    "doubles": 23,
+    "halo": 7941,
+    "high_sha256": "9f59ccd1f9ca441fd163960e446e5e370454b38936dc1f52921f0288e3a8089b",
+    "high_zlib_base64": "eNrtmLFOwzAQhtkYeIQ+AiM7HRADSxfEUqQy8AA8AbXEwsaEVAmGvEm9UEFZMrCAEL2RIYLbsISxj8QJTUibJkREVOI+KVJi++5+38VxZCLmP4H5BlM24Gf9qL89wteNrC4NS6OaQh+wWGioQuW7ZkxUHON9Ggjnu9SZ0eUTjG2tyXvQiYQjNwCS9Jmn2OVrMl0gn+iYUGqwYXtogMqSwKjToKcJ0b8joybycfPN61+RfQh6Zxe767ejzsnN+bh72hqv7XcG2xuHO/f+3kG/tRVc2q4c0IT8IQUQORL2RZGAuIQgiETbaQZINAqXK1BT9RJIQZwINzGlswlVBSUzIpfDiLQttfOyxcm6Eziv8MKFsbbqWoA6C6iSUaGE5xo2DMMwDMMsQDblmLfmWT44BQzDMH+/P/HHmBo5HKuMqPs3AXDNeV+2atZAUWOHSekrA+4CGnFxf53VFYZZFj4Bd6bJzA==",
+    "columns": [
+      853096,
+      853104,
+      853112,
+      853120,
+      853128,
+      853136,
+      853144,
+      853152,
+      853160,
+      853168,
+      853176,
+      853184,
+      853192,
+      853200,
+      853216,
+      853240,
+      853256,
+      853264,
+      853272,
+      874284,
+      885652,
+      889208,
+      893712
+    ]
+  },
+  {
+    "height": 127,
+    "group": [
+      81,
+      0,
+      1
+    ],
+    "levels": [
+      1,
+      122
+    ],
+    "base": 845159,
+    "width": 57207,
+    "doubles": 23,
+    "halo": 7941,
+    "high_sha256": "b88f1147731c4015407d76b5a3f0c4682a9645a631569ff878985efc41b1de93",
+    "high_zlib_base64": "eNrtmL1KA0EQx+18AAufQbS1txNBsEyRwsZHsFLCaiFibSOI2FmJvSiuYgoRwdLChLERixinyxab3fHudpP74C45ggE18ytyzOzM5L+zwyV3RAwzKiZtYvih+waUzUWf2qc4U6e/EzGbJZNaHLZYBAzb4am7qF6wcvYXkeiFyLjUFSXCE8UxoT/iNXJpl2u9HyDMkWQqglD6fRpL0HEVQo8N2qp1YIkww2iUtlVFGeQrArXe3MLPM7w417Dx/jY7t7ewe7B0X995qFdnVlZvlxtH+7XNxfpTw8xfH16eqKahDytqx5WgFOCL2O4EFxGIEG5fEPojGe1ItKPpuwrpc1SJtql4QcZekZwO30EVd0pnqgw8HAvYHXx64ufnHbLDnqus7GwxDMMwDMMwE40cc338LRu1Q9b1ACtbQVLuY6R3o47+hLdk+zH7rMowzKjosdygnrmx/w/8W3ItjfLmk4pfFUHZX3xdJsiQwrvyMvMDdXrVK7yhtS6P60QxPcVMFN/QkLyt",
+    "columns": [
+      853100,
+      853108,
+      853116,
+      853124,
+      853132,
+      853140,
+      853148,
+      853156,
+      853164,
+      853172,
+      853180,
+      853188,
+      853196,
+      853204,
+      853228,
+      853248,
+      853260,
+      853268,
+      854856,
+      879788,
+      887252,
+      893708,
+      894424
+    ]
+  }
+]

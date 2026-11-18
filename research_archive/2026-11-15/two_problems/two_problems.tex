@@ -61,14 +61,11 @@ $S=64$. Hence no argument through bounded degree can answer the problem.
 distinct $u,v$ of one colour with $u^2+4(v-u)^2$ a square. I proved this by adapting the work of
 Frantzikinakis, Klurman and Moreira on partition regularity of Pythagorean pairs. A positive
 answer must use the Hilbert order.
-\item If the pairs acted independently, a first-moment count would give no valid choice for
-$M=3$ beyond about $s=2^{16}$, and a larger $M$ would not help. I do not know whether the
-pairs are close to independent.
 \end{itemize}
 
 A negative answer would suggest that my method cannot reach $m_h=O(h^2)$. With $S$ of order
 $\log s$ the degree stays bounded, and the method then aims at $h^2\log h$. I would also like
-to know whether $m_h/h^2$ is unbounded. For $h\ge13$ I have no lower bound for $m_h$ above $q_h$.
+to know whether $m_h/h^2$ is unbounded. For large $h$ I have no lower bound for $m_h$ above $q_h$.
 
 \section*{Problem 2. All-double windows}
 
@@ -88,15 +85,16 @@ points is a window. Hence
 \[
  m_h\ge q_h+\left\lfloor\frac{q_h-1}{W(h)}\right\rfloor .
 \]
-So $W(h)\le h$ gives $m_h\ge q_h+h/4-O(1)$, and even $W(h)<q_h$ gives $m_h>q_h$. At present I
-cannot prove $m_h>q_h$ for $h\ge13$.
+So $W(h)\le h$ gives $m_h\ge q_h+h/4-O(1)$, and even $W(h)<q_h$ gives $m_h>q_h$. With $W(h)=h$
+for $h\le12$ the bound gives $m_h>q_h$ for $5\le h\le12$. For large $h$ I cannot prove $m_h>q_h$.
 
 What I know.
 \begin{itemize}
 \item $W(h)\ge h$ for every $h\ge4$. For even $h$ take the columns
-$\{1,2\},\{2,3\},\dots,\{h-1,h\},\{1,h\}$ with the parity partition.
-\item $W(h)=h$ for $4\le h\le12$, by computer search. Two programs agree for $h\le10$. The case $h=12$ rests on one SAT search with no proof certificate.
-\item A fractional argument cannot work. The weight $2/h$ on every cell meets every rectangle condition at every width. So a proof must use integrality.
+$\{1,2\},\{2,3\},\dots,\{h-1,h\},\{1,h\}$ with the parity partition. For odd $h$ take
+$\{1,h\},\{1,2\},\{2,3\},\dots,\{h-2,h-1\},\{1,h-1\}$.
+\item $W(h)=h$ for $4\le h\le12$, by SAT search. Each upper bound has an LRAT proof that 2 checkers accept. One program wrote the clauses, and a second program has confirmed the values only for $h\le10$.
+\item A fractional argument cannot work. Put weight $1/|A|$ on every cell in a row of $A$ and $1/|B|$ on every cell in a row of $B$. This meets every condition at every width. So a proof must use integrality.
 \item A window can have more columns than rows in use. For $h=12$ there is a window of width 9 on 6 rows.
 \item Suppose a window contains the graph of a walk $f$ with $|f(x+1)-f(x)|=1$ across all its
 columns. Then its width is at most $h$.

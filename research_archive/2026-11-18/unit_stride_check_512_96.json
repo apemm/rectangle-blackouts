@@ -1,0 +1,9 @@
+{
+  "side": 512,
+  "Q": 96,
+  "distinct_rank_lags": 405,
+  "zero_edges": 226796,
+  "monochromatic_pairs": 0,
+  "assignment_sha256": "a6396241259a9c30ce0b12054478e2d6b5cf615efe7aa20aae339c7bb72799df",
+  "status": "PASS"
+}

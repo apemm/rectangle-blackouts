@@ -1,0 +1,10 @@
+{
+  "side": 2048,
+  "choices": 3,
+  "stride": 32,
+  "offset": -4096,
+  "seed": 123,
+  "steps": 16000000,
+  "final_violations": 59247,
+  "minimum_seen": 59190
+}
